@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="244" height="120" viewBox="0 0 244 120">
+  <defs>
+    <filter id="Rectangle_837" x="0" y="0" width="244" height="91" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Polygon_35" x="16" y="54" width="71" height="66" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_3441" data-name="Group 3441" transform="translate(-1398 -10045)">
+    <g transform="matrix(1, 0, 0, 1, 1398, 10045)" filter="url(#Rectangle_837)">
+      <rect id="Rectangle_837-2" data-name="Rectangle 837" width="208" height="55" rx="10" transform="translate(12 12)" fill="#fff"/>
+    </g>
+    <text id="old_system" data-name="old system" transform="translate(1443 10093)" fill="#da1e37" font-size="25" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Old System</tspan></text>
+    <g transform="matrix(1, 0, 0, 1, 1398, 10045)" filter="url(#Polygon_35)">
+      <path id="Polygon_35-2" data-name="Polygon 35" d="M17.5,0,35,30H0Z" transform="translate(63 96) rotate(180)" fill="#f6f6f6"/>
+    </g>
+  </g>
+</svg>

@@ -126,13 +126,50 @@ const swiper7 = new Swiper('.best-view-section-slide', {
 
 
 
+const swiper8 = new Swiper('.whole-service-image-section', {
+
+  direction: 'horizontal',
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+      slidesPerView: 1,
+});
 
 
 
+const swiper9 = new Swiper('.payment-method-section-slider', {
+
+  direction: 'horizontal',
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+      slidesPerView: 1,
+});
 
 
 
+const swiper10 = new Swiper('.whole-service-image-section-slider', {
 
+  direction: 'horizontal',
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+      slidesPerView: 1,
+});
+
+
+const swiper11 = new Swiper('.bar-code-section-slider', {
+
+  direction: 'horizontal',
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+      slidesPerView: 1,
+});
 
 
 

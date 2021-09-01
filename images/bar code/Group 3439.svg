@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="239" height="73" viewBox="0 0 239 73">
+  <defs>
+    <filter id="Polygon_36" x="200" y="26.999" width="39" height="42" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.141"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_838" x="0" y="0" width="226" height="73" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_3439" data-name="Group 3439" transform="translate(-844 -10160)">
+    <g transform="matrix(1, 0, 0, 1, 844, 10160)" filter="url(#Polygon_36)">
+      <path id="Polygon_36-2" data-name="Polygon 36" d="M12,0,24,21H0Z" transform="translate(230 33) rotate(90)" fill="#f6f6f6"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 844, 10160)" filter="url(#Rectangle_838)">
+      <rect id="Rectangle_838-2" data-name="Rectangle 838" width="208" height="55" rx="10" transform="translate(3 6)" fill="#fff"/>
+    </g>
+    <text id="latest_system" data-name="latest system" transform="translate(864 10202)" fill="#50be23" font-size="25" font-family="Poppins-Medium, Poppins" font-weight="500"><tspan x="0" y="0">Latest System</tspan></text>
+  </g>
+</svg>
