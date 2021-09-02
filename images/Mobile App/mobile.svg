@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="480" height="934" viewBox="0 0 480 934">
+  <defs>
+    <filter id="Rectangle_569" x="0" y="0" width="480" height="934" filterUnits="userSpaceOnUse">
+      <feOffset dx="20" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="mobile" transform="translate(8111 -15203)">
+    <g transform="matrix(1, 0, 0, 1, -8111, 15203)" filter="url(#Rectangle_569)">
+      <rect id="Rectangle_569-2" data-name="Rectangle 569" width="390" height="844" rx="30" transform="translate(25 42)" fill="none"/>
+    </g>
+    <g id="Rectangle_570" data-name="Rectangle 570" transform="translate(-8086 15245)" fill="none" stroke="#0f1d2d" stroke-width="15">
+      <rect width="390" height="844" rx="35" stroke="none"/>
+      <rect x="7.5" y="7.5" width="375" height="829" rx="27.5" fill="none"/>
+    </g>
+    <rect id="Rectangle_571" data-name="Rectangle 571" width="8" height="51" rx="4" transform="translate(-8093 15364)" fill="#0f1d2d"/>
+    <rect id="Rectangle_572" data-name="Rectangle 572" width="8" height="97" rx="4" transform="translate(-8093 15485)" fill="#0f1d2d"/>
+    <rect id="Rectangle_573" data-name="Rectangle 573" width="8" height="97" rx="4" transform="translate(-8093 15592)" fill="#0f1d2d"/>
+    <path id="Rectangle_574" data-name="Rectangle 574" d="M0,0H187V22a23,23,0,0,1-23,23H23A23,23,0,0,1,0,22Z" transform="translate(-7984 15245)" fill="#0f1d2d"/>
+    <circle id="Ellipse_599" data-name="Ellipse 599" cx="9" cy="9" r="9" transform="translate(-7969 15262)" fill="#fff"/>
+    <g id="Group_365" data-name="Group 365" transform="translate(-8236 15099)">
+      <circle id="Ellipse_600" data-name="Ellipse 600" cx="2" cy="2" r="2" transform="translate(330 170)" fill="#fff"/>
+      <circle id="Ellipse_601" data-name="Ellipse 601" cx="2" cy="2" r="2" transform="translate(337 170)" fill="#fff"/>
+      <circle id="Ellipse_602" data-name="Ellipse 602" cx="2" cy="2" r="2" transform="translate(344 170)" fill="#fff"/>
+      <circle id="Ellipse_603" data-name="Ellipse 603" cx="2" cy="2" r="2" transform="translate(351 170)" fill="#fff"/>
+      <circle id="Ellipse_604" data-name="Ellipse 604" cx="2" cy="2" r="2" transform="translate(358 170)" fill="#fff"/>
+    </g>
+    <circle id="Ellipse_605" data-name="Ellipse 605" cx="7" cy="7" r="7" transform="translate(-7967 15264)" fill="#313131"/>
+  </g>
+</svg>

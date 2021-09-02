@@ -13,7 +13,7 @@ window.addEventListener("scroll", ()=>{
 
 
 // Swiper JS
-const swiper1 = new Swiper('.proffestional-slide-parent', {
+const swiper1 = new Swiper('.professional-slide-parent', {
 
     direction: 'horizontal',
     loop: true,
@@ -162,9 +162,11 @@ const swiper10 = new Swiper('.whole-service-image-section-slider', {
 
 
 const swiper11 = new Swiper('.bar-code-section-slider', {
-
   direction: 'horizontal',
   loop: true,
+  autoplay: {
+    delay: 2000,
+  },
   pagination: {
     el: '.swiper-pagination',
   },
@@ -173,14 +175,13 @@ const swiper11 = new Swiper('.bar-code-section-slider', {
 
 
 
+document.querySelector(".bar-code-section-slider").mouseenter(function(){
+  swiper11.stopAutoplay();
+});
 
-
-
-
-
-
-
-
+document.querySelector(".bar-code-section-slider").mouseleave(function(){
+  swiper11.startAutoplay();
+});
 
 
 
