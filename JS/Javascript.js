@@ -20,6 +20,7 @@ const swiper1 = new Swiper('.professional-slide-parent', {
     pagination: {
       el: '.swiper-pagination',
     },
+    
         slidesPerView: 1,
 });
 
@@ -32,6 +33,8 @@ const swiper2 = new Swiper('.create-meeting-section', {
   loop: true,
   autoplay: {
     delay: 5000,
+    disableOnInteraction: false,
+
   },
   pagination: {
     el: '.swiper-pagination',
@@ -63,6 +66,7 @@ const swiper4 = new Swiper('.social-media-section', {
   loop: true,
   autoplay: {
     delay: 5000,
+    disableOnInteraction: false,
   },
   pagination: {
     el: '.swiper-pagination',
@@ -87,6 +91,7 @@ const swiper5 = new Swiper('.biggest-service-slide', {
   loop: true,
   autoplay: {
     delay: 5000,
+    disableOnInteraction: false,
   },
   pagination: {
     el: '.swiper-pagination',
@@ -117,6 +122,7 @@ const swiper7 = new Swiper('.best-view-section-slide', {
   loop: true,
   autoplay: {
     delay: 4000,
+    disableOnInteraction: false,
   },
   pagination: {
     el: '.swiper-pagination',
@@ -166,21 +172,12 @@ const swiper11 = new Swiper('.bar-code-section-slider', {
   loop: true,
   autoplay: {
     delay: 2000,
+    disableOnInteraction: false,
   },
   pagination: {
     el: '.swiper-pagination',
   },
       slidesPerView: 1,
-});
-
-
-
-document.querySelector(".bar-code-section-slider").mouseenter(function(){
-  swiper11.stopAutoplay();
-});
-
-document.querySelector(".bar-code-section-slider").mouseleave(function(){
-  swiper11.startAutoplay();
 });
 
 
