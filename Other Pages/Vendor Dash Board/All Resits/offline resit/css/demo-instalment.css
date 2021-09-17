@@ -1,0 +1,229 @@
+.installment-table-container{
+    background: rgb(255, 255, 255);
+    /* height: 100%; */
+    height: 26vw;
+    height: auto;
+    width: 100%;
+    /* border-radius: 2vw; */
+    /* overflow-y: scroll; */
+    overflow: hidden;
+    padding-right: 0.5vw;
+    padding-left: 0.8vw;
+    /* border:1px solid rgba(0, 0, 0, 0.171); */
+    margin-top: 3vw;
+}
+
+
+
+
+
+/* Scrollbar customization */
+.installment-table-container::-webkit-scrollbar{
+    width: 1.5vw;
+    background: #FBF6F6;
+}
+
+
+.installment-table-container::-webkit-scrollbar-thumb{
+    background: #666666;
+    border-radius: 2vw;
+    border: 0.4vw solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+}
+
+
+
+
+/* Buttons */
+.installment-table-container::-webkit-scrollbar-button:single-button {
+    background-color: #FBF6F6;
+    display: block;
+    border-style: solid;
+    height: 2vw;
+    width: 1vw;
+  }
+
+  .installment-table-container::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 0.7vw 0.8vw 0.7vw;
+    border-color: transparent transparent #555555 transparent;
+}
+
+
+  .installment-table-container::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 0.7vw  0.8vw 0 0.7vw;
+    border-color: #555555 transparent transparent transparent;
+  }
+
+
+
+
+
+
+
+
+
+
+.installment-table{
+    position: relative;
+    border-top: 1px solid rgba(0, 0, 0, 0.171);
+    margin-bottom: 1.8vw;
+    margin-top: 1vw;
+
+}
+
+
+.installment-table-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vw;
+    background: #E22424;
+    color: white;
+    border-top-right-radius: 2vw;
+    border-top-left-radius: 2vw;
+
+}
+
+
+.installment-table-title p{
+    height: 100%;
+    padding: 2vw;
+    margin-top: 3vw;
+    font-size: 2vw;
+}
+
+.installment-table-title p:nth-child(2){
+    font-size: 1.6vw;
+    margin-top: 3.8vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.installment-table-number-circle{
+    position: absolute;
+    height: 2vw;
+    width: 2vw;
+    top: -1vw;
+    left: -0.5vw;
+    background: #E22424;
+    color: white;
+    border-radius: 100%;
+    font-size: 1.6vw;
+    opacity: 0.6;
+}
+
+.installment-table-row-1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 7vw;
+    width: 100%;
+    font-size: 1.8vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+    border-right: 1px solid rgba(0, 0, 0, 0.171);
+    border-left: 0.4vw dashed rgba(0, 0, 0, 0.171);
+    
+}
+
+.installment-table-row-1 .installment-table-col-left{
+    border-right: 1px solid rgba(0, 0, 0, 0.171);
+}
+
+.installment-table-row-1 .installment-table-col-left > div{
+    display: grid;
+    align-items: center;
+    padding-top: 0.8vw;
+    grid-template-columns: 60% 40%;
+}
+
+.installment-table-row-1 .installment-table-col-left > div p{
+    margin: 0vw;
+}
+
+.installment-table-row-1 .installment-table-col-left .date{
+    font-size: 1.2vw;
+}
+
+.installment-table-row-1 .installment-table-col-left .date p:nth-child(2){
+    color: red;
+}
+
+
+
+
+/* Row 1 Column 2 */
+.installment-table-row-1 .installment-table-col-right{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 7vw;
+    width: 100%;
+}
+
+.installment-table-row-1 .installment-table-col-right > div{
+    display: grid;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1.35vw;
+    padding: 0.8vw 0vw 0.8vw 0vw;
+
+}
+
+.installment-table-row-1 .installment-table-col-right > div:nth-child(1){
+    border-right: 1px solid rgba(0, 0, 0, 0.171);
+
+}
+
+.installment-table-row-1 .installment-table-col-right > div p{
+    padding: 0vw;
+    margin: 0vw;
+}
+
+.installment-table-row-1 .installment-table-col-right > div p:nth-child(1) span{
+    color: red;
+}
+
+
+
+
+
+
+
+/* Row 2 */
+.installment-table-row-2{
+    display: grid;
+    align-items: center;
+    height: 9vw;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+    border-right: 1px solid rgba(0, 0, 0, 0.171);
+    border-left: 0.4vw dashed rgba(0, 0, 0, 0.171);
+}
+
+
+.installment-table-row-2 > div{
+    font-size: 1.8vw;
+    height: 7vw;
+    width: 100%;
+}
+
+
+.installment-table-row-2 > div:nth-child(1){
+    border-right: 1px solid rgba(0, 0, 0, 0.171);
+
+}
+
+
+
+.installment-table-row-2 > div p{
+    margin: 0.5vw;
+}

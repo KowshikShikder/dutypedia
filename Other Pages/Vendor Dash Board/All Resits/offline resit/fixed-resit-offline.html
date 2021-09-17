@@ -1,0 +1,552 @@
+<html>
+      <head> </head>
+      <title> Fixed Service Offline  </title>
+
+      <link rel="stylesheet" href="../css/fixed-resit.css">
+      <link rel="stylesheet" href="./css/offline-resit.css">
+      <link rel="stylesheet" href="../../CSS/bootstrap.min.css">
+
+
+<body>
+      <div class="fixed-resit-section">
+      <!-- qr code -->
+            <div class="qr-code-section">
+                  <div class="qr-code-side">
+                        <div class="qr-code"> <img src="../../images/resite/qr code.svg" alt="">  </div>
+                        <div class="resit-name-section">
+                              <div> Shough Shariar  It Center </div>
+                              <div> Dutypedia Id No: <span> 89874534 </span> </div>
+                        </div>
+                  </div>
+
+                  <!-- print & share  -->
+                  <div class="print-share-side">
+                        <div class="print" onclick=printResit()> <img src="../../images/resite/printer.svg" alt="">  </div>
+                        <div class="share"> <img src="../../images/resite/share.svg" alt=""> </div>
+                  </div>
+            </div>
+
+            
+            <!-- TITLE -->
+            <div class="resit-title">
+                  Fixed Service (Off)
+            </div>
+
+
+
+            <!-- INVOICE & BAR CODE -->
+            <div class="resit-barcode">
+                  <div class=" resit-barcode-invoice">  
+                        <div> In Voice No: 72347938  </div>
+                        <div> Service /Item Name:  </div>
+                  </div>
+                  <div class="resit-barcode-invoice">
+                        <div class="bar-code-container"> 
+                              <div class="bar-code-image"> <img src="../../images/resite/Group 6189.svg" alt=""> </div>
+                              <div class="bar-code-date"> Date: <span>05th September 2021 </span> </div>
+                        </div>
+                  </div>
+            </div>
+
+
+            <!-- PRICE & DELIVERY -->
+            <div class="vendor-resit-section-two">
+
+
+                  <div class="service-items"> 
+
+                        <div class="service-item-table">
+                        <table>
+                              <th> <p> Purpose </p> </th>
+                              <tr> <td> <p>   Personal </p>  </td> </tr>
+                              <tr> <td> <p>  Business  </p> </td> </tr>
+                        </table>
+
+                        <table>
+                              <th> <p> Purpose </p> </th>
+                              <tr> <td> <p>  Personal  </p> </td> </tr>
+                              <tr> <td> <p>  Business  </p> </td> </tr>
+                        </table>
+
+                        <table>
+                              <th> <p> Purpose </p> </th>
+                              <tr> <td> <p>  Personal  </p> </td> </tr>
+                              <tr> <td> <p>  Business  </p> </td> </tr>
+                        </table>
+
+                        <table>
+                              <th> <p> Purpose </p> </th>
+                              <tr> <td> <p>  Personal  </p> </td> </tr>
+                              <tr> <td> <p>  Business  </p> </td> </tr>
+                        </table>
+
+                        <table>
+                              <th> <p> Purpose </p> </th>
+                              <tr> <td> <p>  Personal  </p> </td> </tr>
+                              <tr> <td> <p>  Business  </p> </td> </tr>
+                        </table>
+                  </div>
+                  </div>
+
+
+
+                  <div class="vendor-resit-price-section">
+                        
+                        <div class="price"> 
+                              <div> Price 
+                                    <div class="price-three-dots" onclick=showEditPriceSection()> <img src="../../images/resite/3 dot.svg" alt=""> 
+                                          <div class="hover-edit-price"> Edit Price </div>
+                                    </div> 
+                              </div>   
+                              <span> Price: 3,400 </span> 
+                        </div>
+                        
+                        <!-- Usual Delivery Time-->
+
+                        <div class="delivery">  
+                              <div> Delivery Date </div>
+                              <div class="offline-date-input-container"> 
+                                    <input type="date"  value="2021-09-11" id="delivery-date">
+                                    <div>to</div>
+                                    <input type="date"  value="2021-09-11" id="delivery-date">
+                              </div>
+                        </div>
+
+
+                        <!-- Updated Delivery Time -->
+
+                        <!-- <div class="delivery old-delivery">  
+                              <div> Old Delivery Date </div>
+                              <div class="delivery-date"> 
+                                    <div>1.</div><p> <span> Saturday </span>  15th Aug. 2021  <span class="calander-icon"> <img src="../../images/resite/calendar-line.svg" alt=""> </span> </p>
+                                    <div> to </div>
+                                    <p> <span> Sunday </span>  16th Aug. 2021  <span class="calander-icon"> <img src="../../images/resite/calendar-line.svg" alt=""> </span> </p>
+                              </div>
+
+                              <div class="delivery-date"> 
+                                    <div>2.</div><p> <span> Saturday </span>  15th Aug. 2021  <span class="calander-icon"> <img src="../../images/resite/calendar-line.svg" alt=""> </span> </p>
+                                    <div> to </div>
+                                    <p> <span> Sunday </span>  16th Aug. 2021  <span class="calander-icon"> <img src="../../images/resite/calendar-line.svg" alt=""> </span> </p>
+                              </div>
+
+                              <div class="delivery-date"> 
+                                    <div>3.</div><p> <span> Saturday </span>  15th Aug. 2021  <span class="calander-icon"> <img src="../../images/resite/calendar-line.svg" alt=""> </span> </p>
+                                    <div> to </div>
+                                    <p> <span> Sunday </span>  16th Aug. 2021  <span class="calander-icon"> <img src="../../images/resite/calendar-line.svg" alt=""> </span> </p>
+                              </div>
+                        </div>
+
+                        <div class="delivery new-delivery">  
+                              <div> New Delivery Date </div>
+                              <div class="delivery-date"> 
+                                    <p> <span> Saturday </span>  15th Aug. 2021  <span class="calander-icon"> <img src="../../images/resite/calendar-line.svg" alt=""> </span> </p>
+                                    <div> to </div>
+                                    <p> <span> Sunday </span>  16th Aug. 2021  <span class="calander-icon"> <img src="../../images/resite/calendar-line.svg" alt=""> </span> </p>
+                              </div>
+                              <div class="waiting-for-accept"> Waiting For Accept </div>
+
+                              <div class="cancel-request-button btn btn-danger"> Cancel Request </div>
+
+                              <div class="new-delivery-note"> (Important note: IF you can't deliver this order in this time, The money will be refund and this service add to your failed list.) </div>
+                        </div> -->
+
+
+                  </div>
+            </div>
+
+
+            <!-- PAYMENT & FACILITIES -->
+            <div class="facilities-payment-section">
+                  <div class="facilities">
+                        <div> Facilities </div>
+                        <div>  
+                              <ol>
+                                    <li> Installment Service: Yes </li>
+                                    <li> Home Service: Yes </li>
+                                    <li> Open Hour: 24/7 </li>
+                              </ul>
+                        </div>
+                  </div>
+                  <div class="payment">
+                        <div class="payment-status"> <div> Payment Status </div>
+                  
+                        <div class="drop-down-section payment-drop-down-section">
+                              <div class="drop-down-top payment-drop-down-top" onclick=paymentDropDownSection()> Due <div class="cross"> <img src="../../images/resite/cross.svg" alt="">   </div>  </div> 
+
+                              <div class="drop-down-option-section payment-drop-down-option-section">
+                                    <div class="drop-down-option"> Due    <div class="cross"> <img src="../../images/resite/cross.svg" alt="">   </div>  </div>
+                                    <div class="drop-down-option"> Refund <div class="cross"> <img src="../../images/resite/refund.svg" alt="">  </div>  </div>
+                                    <div class="drop-down-option"> Paid   <div class="cross"> <img src="../../images/resite/right.svg" alt="">     </div>  </div>
+                              </div>
+
+                              <div class="drop-down-btn" onclick=paymentDropDownSection()> <img src="../../images/resite/arrow dropdown.svg" alt="">  </div>
+                        </div>
+
+
+
+
+
+
+                        <!-- <div> Cross <div class="cross"> <img src="../../images/resite/cross.svg" alt="">   </div>  </div>  -->
+                        <!--  <div> Refund <div class="cross"> <img src="../../images/resite/refund.svg" alt="">  </div>  </div> -->
+                        <!--  <div> Paid <div class="cross"> <img src="../../images/resite/right.svg" alt="">     </div>  </div> -->
+                  
+                        </div>
+                              <div class="service-status"> 
+                                    <div> Service Status </div> 
+
+                                    <select class="service-status-select">
+                                          <option><div>   Processing   </div></option>
+                                          <option><div>   Completed   </div></option>
+                                          <option><div>   Canceled   </div></option>
+                                    </select>
+                              </div>
+                        <div class="service-status delivery-status"> <div> When Delivered The Order Then Click </div> <div class="btn btn-danger" onclick=showDeliveryPopUp()> Yes I Delivered </div> </div>
+                  </div>
+            </div>
+
+
+
+            <!-- Instruction section -->
+            <!-- Instruction section -->
+            <div class="facilities-instruction-section">
+                  <div class="title"> Instruction 
+                        <div class="instruction-edit-icon" onclick=showEditInstruction()> <img src="../../images/resite/edit.svg" alt=""> </div>
+                  </div> 
+                  
+                  <div class="details">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam pariatur aspernatur quibusdam optio? Assumenda, doloremque beatae! Nam, aliquid aut veniam commodi at quo fugit? Laudantium error in molestias sint ex mollitia, ea omnis rem vel itaque dignissimos. Cupiditate, animi. Nemo pariatur impedit porro modi dolore sunt unde reiciendis a excepturi. 
+                        <span class="more-instruction-data"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis saepe doloremque, ducimus optio magnam nulla. Repellat aperiam impedit animi aspernatur! </span><span class="instruction-data-btn" onclick=moreData()>read more...</span>
+                  </div>
+
+
+                  <div class="instruction-input-text-section">
+                        <textarea class="instruction-input-text" placeholder="Write Your Text..."></textarea>
+                        <div class="instruction-input-button-container">
+                              <div class="btn btn-danger preferred-button" onclick=hideEditInstruction()> Save </div>
+                              <div class="btn btn-outline-danger" onmouseenter=showMe() onclick=hideEditInstruction()> Cancel </div>
+                        </div>
+                        
+                  </div>
+            </div>
+
+
+
+
+            <!-- Button section -->
+            <!-- Button section -->
+            <div class="facilities-button-section">
+
+                  <div class="button-container"> 
+                        <!-- <div class="btn btn-danger preferred-button"> <span> Accept Order </span> </div> -->
+
+                        <!-- after order accepted -->
+                        <div class="btn btn-danger preferred-button" onclick=showNewDeliveryDateSection()> <span> Request For Payment </span> </div>  
+
+                        <!-- After payment -->
+                        <!-- <div class="btn btn-danger preferred-button" onclick=showNewDeliveryDateSection()> <span> Request For Extra Time </span> </div>   -->
+
+                        <div class="btn btn-outline-danger other-button" onclick=showCancelBeforePaymentSection() onmouseenter=showMe() > <span> Cancel Order </span> </div>
+                        
+                        <!-- WITH CANCEL WARNING AFTER PAYMENT -->
+                        <!-- <div class="btn btn-outline-danger other-button" onclick=showCancelAfterPaymentSection() onmouseenter=showMe() > <span> Cancel Order </span> </div> -->
+                  </div>
+
+
+
+
+                  <!-- need Help Section -->
+                  <div class="need-help">
+                        <p> Need Help </p>
+                        <a href="#"> <p> Contact With Us </p> </a>
+                  </div>
+
+
+
+                  <!-- To Request For Feedback -->
+                  <div class="footer-button-container" style="display: none;">
+                        <div class="btn btn-outline-danger"> Request For Feedback </div>
+                        
+                        <!-- after sending request for feedback -->
+                        <div class="after-review-text"> Waiting For Feedback </div>
+
+                        <!-- after Client reviewed -->
+                        <div class="after-review-text"> Client Review Received </div>
+                  </div>
+
+            </div>
+
+
+
+
+                  <!-- If client request to cancel order -->
+                  <div class="client-request-cancel-order-section" style="display: none;">
+                              <div class="client-request-cancel-order-title"> Client Request To Cancel This Order? </div>
+                              <div class="client-request-cancel-order-button-container">
+                                    <div class="btn btn-danger preferred-button" onclick=clientRequestToCancelSection()> Accept </div>
+                                    <div class="btn btn-outline-danger" onmouseenter=showMe() onclick=clientRequestToCancelSection()> Cancel </div>
+                              </div>
+                  </div>
+
+
+
+                  <!-- If client decline request canceled -->
+                  <div class="client-decline-section" style="display: none;">
+                        You Declined The Cancel Request. <a href="#"> Don't Show </a>
+                  </div>
+
+                  <!-- If client decline request Accepted -->
+                  <div class="client-decline-section" style="display: none;">
+                        You Accepted The Cancel Request
+                  </div>
+                  
+                  <!-- If vendor failed to delivered the order -->
+                  <div class="client-decline-section" style="display: none;">
+                        You Failed To Completed Your Order
+                  </div>
+            </div>
+
+
+
+
+
+
+
+
+
+<!-- Confirm Delivery warning popUp section -->
+<!-- Confirm Delivery warning popUp section -->
+
+<div class="delivery-confirm-pop-up">
+      <div class="delivery-confirm-container">
+            <div class="delivery-confirm-title"> Are You Sure To Delivered? </div>
+            <div class="delivery-confirm-button-container">
+                  <div class="btn btn-danger preferred-button" onclick=hideDeliveryPopUp()> Yes </div>
+                  <div class="btn btn-outline-danger" onmouseenter=showMe() onclick=hideDeliveryPopUp()> No </div>
+            </div>
+      </div>
+</div>
+
+
+
+
+
+<!-- Cancel order BEFORE payment section -->
+<!-- Cancel order BEFORE payment section -->
+
+<div class="cancel-before-payment-pop-up">
+      <div class="cancel-before-payment-container">
+            <div class="cancel-before-payment-title"> Are You Sure To Cancel? </div>
+            <div class="cancel-before-payment-button-container">
+                  <div class="btn btn-outline-danger"  onmouseenter=beforeButton() onclick=hideCancelBeforePaymentSection(),showOrderCanceledSuccessSection()> Yes </div>
+                  <div class="btn btn-danger preferred-buttons"  onclick=hideCancelBeforePaymentSection()> No </div>
+            </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+<!-- Cancel order after payment section -->
+<!-- Cancel order after payment section -->
+
+<div class="cancel-after-payment-pop-up">
+      <div class="cancel-after-payment-container">
+            <div class="cancel-after-payment-title"> Are You Sure To Cancel This Order? </div>
+            <div class="cancel-after-payment-warning"> (Note: If you cancel this order it will bad effect of your business profile.) </div>
+            <div class="cancel-after-payment-button-container">
+                  <div class="btn btn-outline-danger"  onmouseenter=beforeButton() onclick=hideCancelAfterPaymentSection(),showOrderCanceledSuccessSection()> Yes </div>
+                  <div class="btn btn-danger preferred-buttons"  onclick=hideCancelAfterPaymentSection()> No </div>
+            </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- NEW DELIVERY DATE SECTION -->
+<!-- NEW DELIVERY DATE SECTION -->
+
+<div class="new-delivery-date-pop-up">
+      <div class="new-delivery-date-container">
+            <div class="new-delivery-date-title"> Select New Delivery Date </div>
+
+            <div class="new-delivery-date-input-container"> 
+                  <input type="date"  value="2021-09-11" id="note-date">
+                  <div>to</div>
+                  <input type="date"  value="2021-09-11" id="note-date">
+            </div>
+
+            <div class="new-delivery-date-button-container">
+                  <div class="btn btn-danger" onclick=hideNewDeliveryDateSection(),showDeliveryRequestSentSection() > Send Request </div>
+            </div>
+
+
+            <!-- close button -->
+            <div class="new-delivery-date-close" onclick=hideNewDeliveryDateSection()>
+                  <img src="../../images/resite/cross ws.svg" alt="">
+            </div>
+      </div>
+</div>
+
+
+
+
+
+<!--  REQUEST SENT POPUP SECTION -->
+<!--  REQUEST SENT POPUP SECTION -->
+
+<div class="request-sent-pop-up">
+      <div class="request-sent-container">
+            <div class="request-sent-animation-container"> 
+                  <div class="image"> 
+                        <img src="../../images/resite/animation/Group 7230.svg" alt=""> 
+                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 597.svg" alt=""> </div>
+                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 598.svg" alt=""> </div>
+                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 599.svg" alt=""> </div>
+                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 600.svg" alt=""> </div>
+                  </div>
+            </div>
+            <div class="loader">Loading...</div>
+
+            <div class="request-sent-title"> Your request has been sent </div>
+
+            <div class="request-sent-button-container">
+                  <div class="btn btn-danger" onclick=hideDeliveryRequestSentSection()> Done </div>
+            </div>
+      </div>
+</div>
+
+
+
+<!--  order canceled success SECTION -->
+<!--  order canceled success SECTION -->
+
+<div class="loading-animation-pop-up order-cancel-success-pop-up">
+      <div class="loading-animation-container">
+            <div class="loading-animation-animation-container"> 
+                  <div class="image"> 
+                        <img src="../../images/resite/animation/Group 7230.svg" alt=""> 
+                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 597.svg" alt=""> </div>
+                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 598.svg" alt=""> </div>
+                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 599.svg" alt=""> </div>
+                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 600.svg" alt=""> </div>
+                  </div>
+            </div>
+            <div class="loader">Loading...</div>
+
+            <div class="loading-animation-title"> Your service order is successfully canceled! </div>
+
+            <div class="loading-animation-button-container">
+                  <div class="btn btn-danger" onclick=hideOrderCanceledSuccessSection()> Done </div>
+            </div>
+      </div>
+</div>
+
+
+
+<!-- OFFLINE POPUPS -->
+<!-- OFFLINE POPUPS -->
+<!-- OFFLINE POPUPS -->
+
+
+
+<!-- Edit Price -->
+
+<div class="edit-price-pop-up">
+      <div class="edit-price-container">
+            <div class="edit-price-title"> Edit Price </div>
+
+            <div class="edit-price-input number-wrapper"> 
+                  <input type="number" min="0" id="edit-price-input"> 
+                  <div class="spinner-button-container"> 
+                        <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
+                        <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
+                  </div>
+                  <div class="price-tk"> ৳ </div>
+            </div>
+            <div class="edit-price-button-container">
+                  <div class="btn btn-danger preferred-button"  onclick=hideEditPriceSection(),showPriceEditedLoadingSection()> Confirm </div>
+                  <div class="btn btn-outline-danger" onmouseenter=showMe()   onclick=hideEditPriceSection()> Cancel </div>
+            </div>
+      </div>
+</div>
+
+
+
+
+<!-- price edited loading -->
+<div class="loading-animation-pop-up edit-price-loading-pop-up">
+      <div class="loading-animation-container">
+            <div class="loading-animation-animation-container"> 
+                  <div class="image">
+                        <img src="../../images/resite/animation/Group 7230.svg" alt=""> 
+                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 597.svg" alt=""> </div>
+                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 598.svg" alt=""> </div>
+                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 599.svg" alt=""> </div>
+                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 600.svg" alt=""> </div>
+                  </div>
+            </div>
+            <div class="loader">Loading...</div>
+
+            <div class="loading-animation-title"> Your Price has been changed. </div>
+
+            <div class="loading-animation-button-container">
+                  <div class="btn btn-danger" onclick=hidePriceEditedLoadingSection()> Done </div>
+            </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script>
+
+const moreData=()=>{
+
+      const condition= document.querySelector('.more-instruction-data')
+      const moreInstructionButton= document.querySelector('.instruction-data-btn')
+
+    if( moreInstructionButton.innerHTML === "read more..." ){
+        document.querySelector('.instruction-data-btn').innerHTML="Less"
+        condition.style.display="inline"
+    }
+    else{
+        document.querySelector('.instruction-data-btn').innerHTML="read more..."
+        condition.style.display="none"
+    }
+}
+
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="../../JS/bootstrap.bundle.min.js"></script>
+<script src="../../JS/Javascript.js"></script>
+<script src="../js/fixed-resit.js"></script>
+<script src="./JS/offline-resit.js"></script>
+
+</html>

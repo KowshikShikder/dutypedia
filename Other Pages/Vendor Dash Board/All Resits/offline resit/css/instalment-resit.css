@@ -1,0 +1,1072 @@
+.installment-resit-section{
+    height: 100%;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.336);
+    border-radius: 1vw;
+
+}
+
+
+.installment-resit-section > div{
+    width: 100%;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.089);
+}
+
+
+
+/* title */
+/* title */
+.installment-resit-section .installment-title{
+    width: 30%;
+    font-size: 3.2vw;
+    background: white;
+    margin: auto;
+    color: #E22424;
+    border-bottom: 1px solid #E22424;
+    font-weight: 500;
+    padding: 0.4vw;
+    text-align: center;
+}
+
+
+
+/* barcode section */
+/* barcode section */
+.installment-resit-section .installment-barcode{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 12vw;
+    margin: auto;
+    padding: 1vw 2vw 0px 2vw;
+}
+
+
+
+.installment-barcode-invoice{
+    display: grid;
+    position: relative;
+    grid-template-rows: 20% 60%;
+    background-color: white;
+    height:100%;
+    width: 100%;
+}
+
+
+.installment-barcode-invoice > div:nth-child(1){
+    font-size: 1.4vw;
+    align-self: start;
+}
+
+.installment-barcode-invoice > div:nth-child(2){
+    align-self: end;
+    font-size: 2vw;
+}
+
+
+
+/* barcode */
+.bar-code-container{
+    width: 25vw;
+    height: 100%;
+    position: absolute;
+    right: 0vw;
+}
+
+.bar-code-image{
+    width: 24vw;
+    height: 65%;
+    padding: 0.3vw;
+    position: absolute;
+    right: 0.4vw;
+}
+
+.bar-code-image img{
+    height: 100%;
+    width: 100%;
+}
+
+.bar-code-date{
+    font-size: 1.6vw;
+    position: absolute;
+    bottom: 0.1vw;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* fixed price 2nd section */
+/* fixed price 2nd section */
+.installment-section-two{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: rgb(255, 255, 255);
+    height: 26vw;
+    padding: 2vw;
+}
+
+
+
+
+.installment-section-two .service-items{
+    padding-right: 0.9vw;
+    overflow-y: hidden;
+}
+
+.installment-section-two .service-items .service-item-table{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    font-size: 2vw;
+    padding-top: 0vw;
+    overflow-y: scroll;
+
+}
+
+/* Scrollbar customization */
+.service-item-table::-webkit-scrollbar{
+    width: 1.5vw;
+    background: #FBF6F6;
+}
+
+
+.service-item-table::-webkit-scrollbar-thumb{
+    background: #666666;
+    border-radius: 2vw;
+    border: 0.4vw solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+}
+
+
+
+
+/* Buttons */
+.service-item-table::-webkit-scrollbar-button:single-button {
+    background-color: #FBF6F6;
+    display: block;
+    border-style: solid;
+    height: 2vw;
+    width: 1vw;
+  }
+
+  .service-item-table::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 0.7vw 0.8vw 0.7vw;
+    border-color: transparent transparent #555555 transparent;
+}
+
+
+  .service-item-table::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 0.7vw  0.8vw 0 0.7vw;
+    border-color: #555555 transparent transparent transparent;
+  }
+
+
+
+
+
+
+
+/* Instalment Table */
+.installment-section-two table{
+    width: 100%;
+    margin-bottom: 2vw;
+    border-top-right-radius:  0.3vw;
+    border-top-left-radius:  0.3vw;
+    overflow: hidden;
+    padding: 1vw;
+    margin-right: 10vw;
+    width: 96%;
+    border-right: 1px solid black;
+}
+
+
+.installment-section-two table th,
+.installment-section-two table td{
+    font-size: 1.6vw;
+}
+
+
+.installment-section-two table td{
+    width: 90%;
+    border: 0.1vw solid rgba(0, 0, 0, 0.24);
+    padding: 0.6vw;
+    background:#ffffff;
+}
+
+
+.installment-section-two table th{
+    display: grid;
+    align-items: center;
+    background-color: #E22424;
+    color: white;
+    border-top-right-radius: 0.5vw;
+    border-top-left-radius: 0.5vw;
+    padding: 0.6vw;
+}
+
+
+.installment-section-two table th p{
+    display: inline-block;
+    margin: auto;
+    margin-left: 4vw;
+    font-weight: 500;
+}
+
+
+.installment-section-two table td p{
+    display: inline-block;
+    margin: auto;
+    margin-left: 2vw;
+}
+
+
+
+
+
+
+/* Instalment Price Section */
+.installment-second-right{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 45% 55%;
+    border-left: 1px solid rgba(0, 0, 0, 0.062);
+}
+
+
+.installment-second-right .installment-price{
+    display: grid;
+    align-items: center;
+    padding: 0.5vw;
+    border-bottom: 1px solid rgba(255, 34, 34, 0.164);
+}
+
+.installment-second-right .installment-price p{
+    text-align: center;
+    font-size: 2.2vw;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.installment-second-right .installment-price p:nth-child(2){
+    font-size: 1.8vw;
+    font-weight: 400;
+}
+
+.tk-sign{
+    font-weight: 800;
+}
+
+
+
+/* installment Nubmer */
+.installment-second-right .installment-number{
+    display: grid;
+    align-items: center;
+    padding: 0.5vw;
+}
+
+.installment-second-right .installment-number{
+    display: grid;
+    align-items: center;
+    padding: 0.5vw;
+}
+
+.installment-second-right .installment-number p{
+    text-align: center;
+    font-size: 2.2vw;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.installment-second-right .installment-number p:nth-child(2){
+    font-size: 1.8vw;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+/* installment-third-section*/
+/* installment-third-section*/
+.installment-third-section{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: rgb(255, 255, 255);
+    height: 65vw;
+}
+
+
+.installment-third-section .facilities{
+    padding: 2vw;
+}
+
+.installment-third-section .facilities > div{
+    font-size: 2.6vw;
+}
+
+
+.installment-third-section .facilities ol{
+    font-size: 2vw;
+}
+
+
+
+.installment-third-section .installment-third-right-section{
+    display: grid;
+    grid-template-rows: 28% 72%;
+    text-align: center;
+    border-left: 0.5px solid rgba(0, 0, 0, 0.089);
+    padding: 2vw;
+}
+
+
+
+.installment-third-section .installment-third-right-section .third-top-section{
+    display: flex;
+    border-right: 1px solid rgba(0, 0, 0, 0.096);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+
+}
+
+.installment-third-section .installment-third-right-section .third-top-section div{
+    border-right: 1px solid rgba(0, 0, 0, 0.096);
+    }
+
+.installment-third-section .installment-third-right-section .third-top-section div{
+    background: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    font-size: 2vw;
+    padding: 0vw;
+    padding: 4vw 0vw 4vw 0vw;
+    margin: auto;
+}
+
+
+.installment-third-section .installment-third-right-section .third-top-section .inst-number{
+    margin-top: -2vw;
+}
+
+
+
+
+.installment-third-section .installment-third-right-section .third-section-table-container{
+    padding: 0.5vw 0vw 0vw 0vw;
+    height: 44vw;
+}
+
+
+.installment-table-container{
+    background: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    border-radius: 2vw;
+    overflow-y: scroll;
+    padding-right: 0.5vw;
+    padding-left: 0.8vw;
+
+}
+
+
+
+
+
+/* Scrollbar customization */
+.installment-table-container::-webkit-scrollbar{
+    width: 1.5vw;
+    background: #FBF6F6;
+}
+
+
+.installment-table-container::-webkit-scrollbar-thumb{
+    background: #666666;
+    border-radius: 2vw;
+    border: 0.4vw solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+}
+
+
+
+
+/* Buttons */
+.installment-table-container::-webkit-scrollbar-button:single-button {
+    background-color: #FBF6F6;
+    display: block;
+    border-style: solid;
+    height: 2vw;
+    width: 1vw;
+  }
+
+  .installment-table-container::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 0.7vw 0.8vw 0.7vw;
+    border-color: transparent transparent #555555 transparent;
+}
+
+
+  .installment-table-container::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 0.7vw  0.8vw 0 0.7vw;
+    border-color: #555555 transparent transparent transparent;
+  }
+
+
+
+
+
+
+
+
+
+
+.installment-table{
+    position: relative;
+    border-top: 1px solid rgba(0, 0, 0, 0.171);
+    margin-bottom: 1.8vw;
+    margin-top: 1vw;
+
+}
+
+
+.installment-table-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vw;
+    background: #E22424;
+    color: white;
+    border-top-right-radius: 2vw;
+    border-top-left-radius: 2vw;
+
+}
+
+
+.installment-table-title p{
+    height: 100%;
+    padding: 2vw;
+    margin-top: 3vw;
+    font-size: 2vw;
+}
+
+.installment-table-title p:nth-child(2){
+    font-size: 1.6vw;
+    margin-top: 3.8vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.installment-table-number-circle{
+    position: absolute;
+    height: 2vw;
+    width: 2vw;
+    top: -1vw;
+    left: -0.5vw;
+    background: #E22424;
+    color: white;
+    border-radius: 100%;
+    font-size: 1.6vw;
+    opacity: 0.6;
+}
+
+.installment-table-row-1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 7vw;
+    width: 100%;
+    font-size: 1.8vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+    border-right: 1px solid rgba(0, 0, 0, 0.171);
+    border-left: 0.4vw dashed rgba(0, 0, 0, 0.171);
+    
+}
+
+.installment-table-row-1 .installment-table-col-left{
+    border-right: 1px solid rgba(0, 0, 0, 0.171);
+}
+
+.installment-table-row-1 .installment-table-col-left > div{
+    display: grid;
+    align-items: center;
+    padding-top: 0.8vw;
+    grid-template-columns: 60% 40%;
+}
+
+.installment-table-row-1 .installment-table-col-left > div p{
+    margin: 0vw;
+}
+
+.installment-table-row-1 .installment-table-col-left .date{
+    font-size: 1.2vw;
+}
+
+.installment-table-row-1 .installment-table-col-left .date p:nth-child(2){
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Row 1 Column 2 */
+.installment-table-row-1 .installment-table-col-right{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 7vw;
+    width: 100%;
+}
+
+.installment-table-row-1 .installment-table-col-right > div{
+    display: grid;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1.35vw;
+    padding: 0.8vw 0vw 0.8vw 0vw;
+
+}
+
+.installment-table-row-1 .installment-table-col-right > div:nth-child(1){
+    border-right: 1px solid rgba(0, 0, 0, 0.171);
+
+}
+
+.installment-table-row-1 .installment-table-col-right > div p{
+    padding: 0vw;
+    margin: 0vw;
+}
+
+.installment-table-row-1 .installment-table-col-right > div p:nth-child(1) span{
+    color: red;
+}
+
+
+
+
+
+
+
+/* Row 2 */
+.installment-table-row-2{
+    display: grid;
+    align-items: center;
+    height: 9vw;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+    border-right: 1px solid rgba(0, 0, 0, 0.171);
+    border-left: 0.4vw dashed rgba(0, 0, 0, 0.171);
+}
+
+
+.installment-table-row-2 > div{
+    font-size: 1.8vw;
+    height: 7vw;
+    width: 100%;
+}
+
+
+.installment-table-row-2 > div:nth-child(1){
+    border-right: 1px solid rgba(0, 0, 0, 0.171);
+
+}
+
+
+
+.installment-table-row-2 > div p{
+    margin: 0.5vw;
+}
+
+
+
+
+/* Need Help Section */
+/* Need Help Section */
+
+.need-help-section{
+    display: grid;
+    height: 10vw;
+    width: 100%;
+    border: 1ox solid white;
+}
+
+.need-help-container{
+    display: grid;
+    justify-self: end;
+    height: 100%;
+    width: 20vw;
+    margin-right: 5vw;
+    text-align: center;
+}
+
+
+.need-help-container div:nth-child(1){
+    font-size: 2.8vw
+}
+
+.need-help-container div:nth-child(1) a{
+    color: black;
+    text-decoration: none;
+}
+
+
+.need-help-container div:nth-child(2){
+    font-size: 2vw;
+}
+
+
+.need-help-container div:nth-child(2) a{
+    color: red;
+}
+
+
+
+
+
+/* Cancel button Section*/
+/* Cancel button Section*/
+.cancel-service-button-section{
+    display: grid;
+    width: 100%;
+    height: 8vw;
+    /* background: red; */
+}
+
+.cancel-service-button{
+    margin: auto;
+    width: 23vw;
+    height: 5vw;
+    border-radius: 1vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* instruction */
+/* instruction */
+.facilities-instruction-section{
+    display: grid;
+    min-height: 16vw;
+    width: 100%;
+    padding: 2vw;
+}
+
+.facilities-instruction-section .title{
+    font-size: 2.8vw;
+}
+
+.facilities-instruction-section .instruction-data-btn{
+    color: red;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.facilities-instruction-section div:nth-child(1){
+    height: 5vw;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+.facilities-instruction-section div:nth-child(2){
+    font-size: 2vw;
+}
+
+
+
+.btn{
+    padding: 0.4vw;
+}
+
+
+
+
+
+/* Fixed Service section */
+/* Fixed Service section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Freash Section start */
+/* Freash Section start */
+/* Freash Section start */
+
+/* .installment-resit-section{
+    height: 100%;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.336);
+    border-radius: 1vw;
+
+}
+
+
+.installment-resit-section > div{
+    width: 100%;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.089);
+} */
+
+
+
+/* title */
+/* title */
+/* .installment-resit-section .installment-title{
+    width: 30%;
+    font-size: 3.2vw;
+    background: white;
+    margin: auto;
+    color: #E22424;
+    border-bottom: 1px solid #E22424;
+    font-weight: 500;
+    padding: 0.4vw;
+    text-align: center;
+} */
+
+
+
+/* barcode section */
+/* barcode section */
+/* .installment-resit-section .installment-barcode{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 12vw;
+    margin: auto;
+    padding: 1vw 2vw 0px 2vw;
+}
+
+
+
+.installment-barcode-invoice{
+    display: grid;
+    position: relative;
+    grid-template-rows: 20% 60%;
+    background-color: white;
+    height:100%;
+    width: 100%;
+}
+
+
+.installment-barcode-invoice > div:nth-child(1){
+    font-size: 1.4vw;
+    align-self: start;
+}
+
+.installment-barcode-invoice > div:nth-child(2){
+    align-self: end;
+    font-size: 2vw;
+} */
+
+
+
+/* barcode */
+/* .bar-code-container{
+    width: 25vw;
+    height: 100%;
+    position: absolute;
+    right: 0vw;
+}
+
+.bar-code-image{
+    width: 24vw;
+    height: 65%;
+    padding: 0.3vw;
+    position: absolute;
+    right: 0.4vw;
+}
+
+.bar-code-image img{
+    height: 100%;
+    width: 100%;
+}
+
+.bar-code-date{
+    font-size: 1.6vw;
+    position: absolute;
+    bottom: 0.1vw;
+    width: 100%;
+    text-align: center;
+} */
+
+
+/* fixed price 2nd section */
+/* fixed price 2nd section */
+/* .installment-section-two{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: rgb(255, 255, 255);
+    height: 26vw;
+    padding: 2vw;
+}
+
+
+
+
+.installment-section-two .service-items{
+    padding-right: 0.9vw;
+    overflow-y: hidden;
+}
+
+.installment-section-two .service-items .service-item-table{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    font-size: 2vw;
+    padding-top: 0vw;
+    overflow-y: scroll; 
+
+}*/
+
+/* Scrollbar customization */
+/* .service-item-table::-webkit-scrollbar{
+    width: 1.5vw;
+    background: #FBF6F6;
+}
+
+
+.service-item-table::-webkit-scrollbar-thumb{
+    background: #666666;
+    border-radius: 2vw;
+    border: 0.4vw solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+} */
+
+
+
+
+/* Buttons */
+/* .service-item-table::-webkit-scrollbar-button:single-button {
+    background-color: #FBF6F6;
+    display: block;
+    border-style: solid;
+    height: 2vw;
+    width: 1vw;
+  }
+
+  .service-item-table::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 0.7vw 0.8vw 0.7vw;
+    border-color: transparent transparent #555555 transparent;
+}
+
+
+  .service-item-table::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 0.7vw  0.8vw 0 0.7vw;
+    border-color: #555555 transparent transparent transparent;
+  }
+
+
+
+.installment-section-two table{
+    width: 100%;
+    margin-bottom: 2vw;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    overflow: hidden;
+    padding: 1vw;
+}
+
+.installment-section-two table{
+    margin-right: 10vw;
+    width: 99%;
+    border-right: 1px solid black !important;
+
+}
+
+.installment-section-two table th,
+.installment-section-two table td{
+    font-size: 1.6vw;
+}
+
+
+.installment-section-two table td{
+    width: 90%;
+    border: 0.1vw solid rgba(0, 0, 0, 0.24);
+    padding: 0.6vw;
+    background:#ffffff;
+}
+
+
+.installment-section-two table th{
+    display: grid;
+    align-items: center;
+    background-color: #E22424;
+    color: white;
+    border-top-right-radius: 0.5vw;
+    border-top-left-radius: 0.5vw;
+    padding: 0.6vw;
+}
+
+
+.installment-section-two table th p{
+    display: inline-block;
+    margin: auto;
+    margin-left: 4vw;
+    font-weight: 500;
+}
+
+
+.installment-section-two table td p{
+    display: inline-block;
+    margin: auto;
+    margin-left: 2vw;
+} */
+
+
+
+
+
+
+/* Instalment Price Section */
+/* .installment-price-section{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 45% 55%;
+    border-left: 1px solid rgba(0, 0, 0, 0.062);
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* installment-third-section*/
+/* .installment-third-section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: rgb(255, 255, 255);
+    height: 23vw;
+}
+
+
+.installment-third-section .facilities{
+    padding: 2vw;
+}
+
+.installment-third-section .facilities > div{
+    font-size: 2.6vw;
+}
+
+
+.installment-third-section .facilities ol{
+    font-size: 2vw;
+}
+
+
+
+.installment-third-section .payment{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    text-align: center;
+    border-left: 0.5px solid rgba(0, 0, 0, 0.089);
+    padding: 2vw;
+} */
+
+
+
+
+/* instruction */
+/* 
+.facilities-instruction-section{
+    display: grid;
+    min-height: 16vw;
+    width: 100%;
+    padding: 2vw;
+}
+
+.facilities-instruction-section .title{
+    font-size: 2.8vw;
+}
+
+.facilities-instruction-section .instruction-data-btn{
+    color: red;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.facilities-instruction-section div:nth-child(1){
+    height: 5vw;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+.facilities-instruction-section div:nth-child(2){
+    font-size: 2vw;
+}
+
+
+
+.btn{
+    padding: 0.4vw;
+} */
+
+/* Freash Section end */

@@ -1,0 +1,1893 @@
+/* offline */
+/* offline */
+/* offline */
+/* offline */
+/* offline */
+/* offline */
+/* offline */
+/* offline */
+/* offline */
+
+
+
+/* Price section */
+/* Price section */
+/* Price section */
+.price div:nth-child(1){
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.price-three-dots{
+    display: inline-block;
+    background: rgb(255, 255, 255);
+    height: 2vw;
+    width: 2vw;
+    margin-left: 0.5vw;
+    padding: 0.3vw;
+    opacity: 0.7;
+}
+
+.price-three-dots img{
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+
+
+.hover-edit-price{
+    display: none;
+    position: absolute;
+    font-size: 1.5vw;
+    right: -7.5vw;
+    width: 8vw;
+    font-weight: 700 !important;
+}
+
+
+.price-three-dots:hover .hover-edit-price{
+    display: grid;
+}
+
+
+.price span{
+    position: relative;
+}
+
+
+.package-three-dot{
+    position: absolute;
+    right: -27.5vw;
+    top: -2.4vw !important;
+
+}
+
+
+
+
+
+/* PRICE DROPDOWN SECTION */
+/* PRICE DROPDOWN SECTION */
+.price-drop-down-top{
+    width: 19.2vw !important;
+    font-size: 2vw;
+}
+
+
+.price-drop-down-option-section{
+    width: 16.5vw !important;
+    left: 0vw;
+    top: 4vw !important;
+}
+
+.price-drop-down-option-section .drop-down-option{
+    display: grid;
+    justify-content: left !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* edit price popup */
+/* edit price popup */
+/* edit price popup */
+
+.edit-price-pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #f09fa43d;
+    z-index: 2000;
+}
+
+
+.edit-price-container{
+    display: grid;
+    justify-content: center;
+    width: 54vw;
+    height: 34vw;
+    background: rgb(255, 255, 255);
+    border-radius: 1.6vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
+}
+
+
+
+
+.edit-price-title{
+    text-align: center;
+    background: white;
+    font-size: 2.6vw;
+    height: 3vw;
+    margin-top: 8vw;
+}
+
+
+
+.edit-price-input{
+    position: relative;
+    height: 5vw;
+    width: 25vw;
+    margin: auto;
+}
+
+.price-tk{
+    position: absolute;
+    top: 1.2vw;
+    right: 7vw;
+    height: 3vw;
+    width: 2vw;
+    font-size: 1.9vw;
+    font-weight: 800;
+    z-index: 2;
+}
+
+/* price input customization */
+    .edit-price-input #edit-price-input{
+        position: absolute;
+        width: 25vw;
+        height: 5vw;
+        padding: 0vw;
+        font-size: 2vw;
+        border: solid 0.5px #000;
+        text-align: center;
+        z-index: 1;
+        background: #ffffff;
+        border: 0.08vw solid red;
+        outline: none;
+        border-radius: 0.8vw;
+        box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
+    }
+
+
+    .edit-price-input #edit-price-input::-webkit-inner-spin-button{
+        transform: scale(4.8);
+    }
+
+    .edit-price-input .spinner-button-container{
+        display: grid;
+        justify-content: center;
+        position: absolute;
+        right: 10vw;
+        z-index: 2;
+        height: 4.8vw;
+        width: 5vw;
+        pointer-events: none;
+        background: #E22222;
+        transform: translate(10vw,0vw);
+        border-radius:0vw 0.6vw 0.6vw 0vw;
+        overflow: hidden;
+    }
+
+    .edit-price-input .spinner-button{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        height: 2.55vw;
+        width: 4.8vw;
+        margin: auto;
+        pointer-events: none;
+        background: #E22222;
+    }
+
+    @media screen and (max-width:800px){
+        .edit-price-input #edit-price-input::-webkit-inner-spin-button{
+            transform: scale(4);
+        }
+    }
+
+    .edit-price-input #inc-button{
+        width: 4vw;
+        border-bottom: 0.08vw solid white;
+    }
+
+    .edit-price-input #dec-button{
+        top: 3.5vw;
+    }
+
+    .edit-price-input .spinner-button img{
+        height: 1.8vw;
+        width: 1.8vw;
+    }
+
+
+
+
+
+.edit-price-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vw;
+    width: 30vw;
+    margin: auto;
+}
+
+
+
+.edit-price-button-container div{
+    width: 14vw;
+    height: 5vw;
+    font-size: 1.8vw;
+    padding: 1vw;
+    border-radius: 0.8vw;
+    border: 0.08vw solid  #DC3545;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Delivery date input */
+/* Delivery date input */
+/* Delivery date input */
+.offline-date-input-container{
+    display: grid;
+    height: 4vw;
+    width: 95%;
+    margin: auto;
+    justify-content: center;
+    grid-template-columns: 45% 10% 45%;
+    text-align: center;
+}
+
+
+.offline-date-input-container div{
+    display: grid;
+    align-items: center;
+}
+
+
+.offline-date-input-container #delivery-date{
+    display: inline;
+    height: 4vw;
+    width: 100%;
+    font-size: 1.8vw;
+    padding-left: 1.2vw;
+    color: slategray;
+    margin-top: 0.6vw;
+    outline: none;
+    border: 0.06vw solid #E22424;
+    border-radius: 0.8vw;
+}
+
+
+.offline-date-input-container #delivery-date::-webkit-calendar-picker-indicator {
+    background: #E22424;
+    height: 80%;
+    width: 12%;
+    margin: -0.1vw;
+    padding:0.6vw 0.7vw 0.4vw 0.6vw;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../images/resite/calendar-line.svg);
+    border-radius: 0.8vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* PAYMENT STATUS DROPDOWN */
+/* PAYMENT STATUS DROPDOWN */
+/* PAYMENT STATUS DROPDOWN */
+.drop-down-section{
+    position: relative;
+    height: 3vw;
+    width: 40%;
+    margin: auto;
+    margin-top: 0.5vw;
+    font-size: 1.6vw;
+}
+
+.drop-down-top{
+    display: flex;
+    align-items: center;
+    cursor: default;
+    cursor: pointer;
+}
+
+
+.drop-down-btn{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.308);
+    height: 100%;
+    width: 2.3vw;
+    top: 0vw;
+    right: 0vw;
+    cursor: pointer;
+    padding: 0.6vw;
+}
+
+.drop-down-btn:hover{
+    background: #DEDEDE;
+}
+
+.drop-down-btn img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.drop-down-option-section{
+    display: none;
+    position: absolute;
+    top: 5vw;
+    right: 2.8vw;
+    height: 10.7vw;
+    width: 15vw;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.274);
+}
+
+
+.drop-down-option{
+    background: rgb(255, 255, 255);
+    height: 3.5vw;
+    border-top: 0.08vw solid rgba(0, 0, 0, 0.082);
+    font-size: 1.6vw;
+    text-align: left;
+    padding-left: 3vw;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.drop-down-option:hover{
+    background: #DEDEDE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SERVICE STATUS SELECT OPTION */
+/* SERVICE STATUS SELECT OPTION */
+/* SERVICE STATUS SELECT OPTION */
+
+.service-status select{
+    padding: 0vw 1vw 0vw 1vw;
+    border: 0.01vw solid white !important;
+    outline: none;
+    font-size: 1.8vw;
+    margin-top: 1vw;
+}
+
+
+.service-status select option{
+    font-size: 1.6vw;
+    height: 2vw;
+}
+
+
+
+
+
+
+
+/* INSTRUCTION EDIT SECTION */
+/* INSTRUCTION EDIT SECTION */
+/* INSTRUCTION EDIT SECTION */
+.facilities-instruction-section .title{
+    position: relative;
+}
+
+
+
+.instruction-edit-icon{
+    position: absolute;
+    height: 2.2vw !important;
+    right: 35vw;
+    top: 1.3vw;
+    cursor: pointer;
+}
+
+
+.instruction-edit-icon img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.instruction-input-text-section{
+    display: none;
+    grid-template-rows: 90% 10%;
+    height: 21vw;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+.instruction-input-text{
+    display: grid;
+    height: 15vw;
+    width: 100%;
+    outline: none;
+    border: 0.01vw solid white !important;
+    background: #F5F5F5;
+    background: transparent;
+    color: black;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.123);
+    font-size: 1.8vw;
+}
+
+
+
+.instruction-input-button-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 6vw;
+    margin-top: -4vw;
+    z-index: 2;
+}
+
+.instruction-input-button-container div{
+    height: 4vw;
+    width: 13vw;
+    margin-right: 3vw;
+    font-size: 1.6VW;
+    padding: 0.8vw;
+    border-radius: 0.8vw;
+    border: 0.08vw solid #DC3545;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+/* online */
+
+
+
+
+body{
+    background: #FFF1F2 !important;
+    padding: 1vw;
+}
+
+
+
+.fixed-resit-section{
+    width: 100%;
+    background: white;
+    margin: auto;
+    overflow: hidden;
+    padding: 0vw;
+    padding-top: 2vw;
+    padding-bottom: 4vw;
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.247);
+    border-radius: 1vw;
+}
+
+
+.fixed-resit-section > div{
+    width: 100%;
+    border-bottom: 0.05vw solid rgba(0, 0, 0, 0.089);
+}
+
+
+
+/* qr code section */
+.qr-code-section{
+    display: flex;
+    justify-content: space-between;
+    height: 8vw;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: none !important;
+
+}
+
+
+
+.qr-code-section .qr-code-side{
+    display: grid;
+    grid-template-columns:30% 70%;
+    height: 100%;
+    width: 26vw;
+    margin-left: 2vw;
+    padding: 1vw;
+}
+
+.qr-code-section .qr-code-side .qr-code img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.qr-code-section .qr-code-side .resit-name-section{
+    display: grid;
+    padding: 1vw;
+    font-size: 1.3vw;
+}
+
+
+.qr-code-section .qr-code-side .resit-name-section div:nth-child(2){
+    font-size: 1.1vw;
+}
+
+
+
+
+
+
+/* print & share Section */
+.qr-code-section .print-share-side{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    height: 100%;
+    width: 7vw;
+    margin-right: 2vw;
+    padding-top: 2vw;
+}
+
+.qr-code-section .print-share-side div{
+    height: 2.2vw;
+    width: 2.2vw;
+}
+
+.qr-code-section .print-share-side .print{
+    cursor: pointer;
+}
+
+.qr-code-section .print-share-side div img{
+    height: 100%;
+    width:100%;
+}
+
+
+
+
+/* title */
+/* title */
+.fixed-resit-section .resit-title{
+    width: 30%;
+    font-size: 3.2vw;
+    background: white;
+    margin: auto;
+    color: #E22424;
+    border-bottom: 0.08vw solid #E22424;
+    font-weight: 500;
+    padding: 0.4vw;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* barcode section */
+/* barcode section */
+.fixed-resit-section .resit-barcode{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 12vw;
+    margin: auto;
+    padding: 1vw 2vw 0px 2vw;
+}
+
+
+
+.resit-barcode-invoice{
+    display: grid;
+    position: relative;
+    grid-template-rows: 20% 60%;
+    background-color: white;
+    height:100%;
+    width: 100%;
+}
+
+
+.resit-barcode-invoice > div:nth-child(1){
+    font-size: 1.4vw;
+    align-self: start;
+}
+
+.resit-barcode-invoice > div:nth-child(2){
+    align-self: end;
+    font-size: 2vw;
+}
+
+
+
+/* barcode */
+.bar-code-container{
+    width: 25vw;
+    height: 100%;
+    position: absolute;
+    right: 0vw;
+}
+
+.bar-code-image{
+    width: 24vw;
+    height: 65%;
+    padding: 0.3vw;
+    position: absolute;
+    right: 0.4vw;
+}
+
+.bar-code-image img{
+    height: 100%;
+    width: 100%;
+}
+
+.bar-code-date{
+    font-size: 1.6vw;
+    position: absolute;
+    bottom: 0.1vw;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* fixed price 2nd section */
+/* fixed price 2nd section */
+.vendor-resit-section-two{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 2vw;
+}
+
+
+
+
+.vendor-resit-section-two .service-items{
+    padding-right: 0.9vw;
+    overflow-y: hidden;
+    height: 28vw;
+    padding: 0.1vw;
+    border-bottom: 0.1vw solid rgba(0, 0, 0, 0.24);
+}
+
+
+.vendor-resit-section-two .service-items .service-item-table{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    font-size: 2vw;
+    padding-top: 0vw;
+    overflow-y: auto;
+    padding-right: 0.3vw;
+}
+
+/* Scrollbar customization */
+.service-item-table::-webkit-scrollbar{
+    width: 1.5vw;
+    background: #FBF6F6;
+}
+
+
+.service-item-table::-webkit-scrollbar-thumb{
+    background: #666666;
+    border-radius: 2vw;
+    border: 0.4vw solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+
+}
+
+.service-item-table::-webkit-scrollbar-button:single-button {
+    background-color: #FBF6F6;
+    display: block;
+    border-style: solid;
+    height: 2vw;
+    width: 1vw;
+
+}
+
+.service-item-table::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 0.7vw 0.8vw 0.7vw;
+    border-color: transparent transparent #555555 transparent;
+
+}
+
+
+.service-item-table::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 0.7vw  0.8vw 0 0.7vw;
+    border-color: #555555 transparent transparent transparent;
+}
+
+
+
+.vendor-resit-section-two table{
+    width: 99%;
+    margin-bottom: 2vw;
+    margin-right: 10vw;
+    border-top-right-radius: 1vw;
+    border-top-left-radius: 1vw;
+    overflow: hidden;
+    padding: 1vw;
+    box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.137)
+}
+
+
+.vendor-resit-section-two table th,
+.vendor-resit-section-two table td{
+    font-size: 1.6vw;
+}
+
+
+.vendor-resit-section-two table td{
+    width: 90%;
+    border: 0.08vw solid rgba(0, 0, 0, 0.089);
+    padding: 0.6vw;
+    background:#ffffff;
+}
+
+
+.vendor-resit-section-two table th{
+    display: grid;
+    align-items: center;
+    background-color: #E22424;
+    color: white;
+    border-top-right-radius: 0.5vw;
+    border-top-left-radius: 0.5vw;
+    padding: 0.6vw;
+}
+
+
+.vendor-resit-section-two table th p{
+    display: inline-block;
+    margin: auto;
+    margin-left: 4vw;
+    font-weight: 500;
+}
+
+
+.vendor-resit-section-two table td p{
+    display: inline-block;
+    margin: auto;
+    margin-left: 2vw;
+}
+
+
+
+
+
+/* 2nd section right side */
+/* 2nd section right side */
+
+
+/* price section */
+.vendor-resit-price-section{
+    display: grid;
+    height: 100%;
+    border-left: 0.08vw solid rgba(0, 0, 0, 0.062);
+}
+
+.price{
+    display: grid;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 2.4vw;
+    font-weight: 500;
+    height: 11vw;
+}
+
+
+.price span{
+    font-size: 1.8vw;
+    font-weight: 400;
+    margin-top: -1vw;
+}
+
+
+
+
+
+
+
+
+
+
+/* delivery Section */
+.vendor-resit-price-section .delivery{
+    padding-top: 0.5vw;
+    display: grid;
+    align-items: center;
+    width: 100%;
+    font-size: 2.2vw;
+    font-weight: 500;
+    text-align: center;
+    border-top: 0.08vw solid rgba(0, 0, 0, 0.096);
+}
+
+.vendor-resit-price-section .delivery p{
+    font-size: 1.2vw;
+    display: inline-block;
+    border: 0.08vw solid red;
+    padding: 0.4vw;
+    padding-right: 0vw;
+    border-radius: 0.7vw;
+    overflow: hidden;
+    padding-top: 0.7vw;
+}
+
+
+
+.vendor-resit-price-section .delivery p span{
+    padding-right: 1vw;
+}
+
+.vendor-resit-price-section .delivery p .calander-icon{
+    margin-left: 0.3vw;
+}
+
+.delivery-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2vw;
+    padding-left: 2vw;
+}
+
+.delivery-date > div{
+    align-self: start;
+}
+
+.delivery-date .calander-icon{
+    display: inline;
+    height: 2vw;
+    width: 2vw;
+    padding: 0.8vw;
+    padding-bottom: 1.2vw;
+    padding-top: 1.2vw;
+    padding-right: 0.6vw !important;
+    background: #E22424;
+    border-radius: 0.8vw;
+}
+
+
+.delivery-date .calander-icon img{
+    height: 2.5vw;
+    width: 2.5vw;
+}
+
+
+.delivery-date input{
+    height: 3.5vw;
+    width: 20vw;
+    border-radius: 0.8vw;
+    border: 0.08vw solid red;
+    font-size: 2vw;
+}
+
+.old-delivery{
+    opacity: 0.7;
+}
+
+
+.new-delivery{
+    border-top: none !important;
+}
+
+
+.new-delivery .waiting-for-accept{
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+.new-delivery .cancel-request-button{
+    width: 16vw;
+    height: 3vw;
+    font-size: 1.2vw;
+    padding: 0.4vw;
+    border: 0.08vw solid #C82333;
+    margin: auto;
+    margin-top: 2vw;
+    border-radius: 0.8vw;
+}
+
+
+
+.new-delivery .new-delivery-note{
+    color: #E22424;
+    margin-top: 1.2vw;
+    font-size: 1.5vw;
+    text-align: left;
+    padding: 2vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FACILITIES & PAYMENT */
+/* FACILITIES & PAYMENT */
+.facilities-payment-section{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.facilities-payment-section .facilities{
+    padding: 2vw;
+}
+
+.facilities-payment-section .facilities > div{
+    font-size: 2.6vw;
+}
+
+
+
+
+.facilities-payment-section .facilities ol{
+    font-size: 1.9vw;
+    padding-left: 5vw;
+}
+
+
+
+/* INSTALLMENT TABLE CONTAINER PARENT */
+/* INSTALLMENT TABLE CONTAINER PARENT */
+/* INSTALLMENT TABLE CONTAINER PARENT */
+
+.facilities-payment-section .payment{
+    text-align: center;
+    border-left: 0.05vw solid rgba(0, 0, 0, 0.089);
+    padding-top: 2vw;
+    height: 44vw;
+    overflow-y: scroll;
+}
+
+
+
+
+
+/* Scrollbar customization */
+.payment::-webkit-scrollbar{
+    width: 1.5vw;
+    background: #FBF6F6;
+}
+
+
+.payment::-webkit-scrollbar-thumb{
+    background: #666666;
+    border-radius: 2vw;
+    border: 0.4vw solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+}
+
+
+
+
+/* Buttons */
+.payment::-webkit-scrollbar-button:single-button {
+    background-color: #FBF6F6;
+    display: block;
+    border-style: solid;
+    height: 2vw;
+    width: 1vw;
+}
+
+.payment::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 0.7vw 0.8vw 0.7vw;
+    border-color: transparent transparent #555555 transparent;
+}
+
+
+.payment::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 0.7vw  0.8vw 0 0.7vw;
+    border-color: #555555 transparent transparent transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Instruction section */
+/* Instruction section */
+
+.facilities-instruction-section{
+    display: grid;
+    min-height: 16vw;
+    width: 100%;
+    padding: 2vw;
+}
+
+.facilities-instruction-section .title{
+    font-size: 2.8vw;
+}
+
+.facilities-instruction-section .instruction-data-btn{
+    display: inline;
+    color: red;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.facilities-instruction-section > div:nth-child(1){
+    height: 5vw;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+/* instruction paragraph */
+.facilities-instruction-section > div:nth-child(2){
+    font-size: 1.6vw;
+}
+
+
+
+
+.more-instruction-data{
+    display: none;
+}
+
+
+
+
+
+
+
+/* BUTTON SECTION */
+/* BUTTON SECTION */
+.facilities-button-section{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    width: 100%;
+    height: 10vw;
+    border-bottom: none !important;
+
+    position: relative;
+}
+
+.facilities-button-section .button-container{
+    display: flex;
+    height: 10vw;
+    width: 100%;
+}
+
+
+.facilities-button-section .button-container div{
+    display: grid;
+    align-items: center;
+    width: 25vw !important;
+    height: 6vw;
+    text-align: center;
+    margin: auto;
+    border-radius: 1.3vw;
+    font-size: 2vw;
+    padding: 0vw;
+    border: 0.08vw solid  #DC3545;
+}
+
+
+
+
+/* need help section */
+.facilities-button-section .need-help{
+    display: grid;
+    justify-self: end;
+    align-items: center;
+    height: 8vw;
+    width: 18vw;
+}
+
+.facilities-button-section .need-help p{
+    font-size: 1.8vw;
+}
+
+.facilities-button-section .need-help a{
+    font-size: 1vw;
+    color: red;
+}
+
+.btn{
+    padding: 0.4vw;
+}
+
+
+
+/* FOOTER BUTTON SECTION */
+
+.footer-button-container{
+    display: grid;
+    justify-content: right;
+    position: absolute;
+    top: 2vw;
+    z-index: 100;
+    width: 60%;
+    background: white;
+}
+
+
+.footer-button-container .btn{
+    display: grid;
+    align-items: center;
+    width: 25vw !important;
+    height: 6vw;
+    text-align: center;
+    margin: auto;
+    border-radius: 1.3vw;
+    font-size: 2vw;
+    padding: 0vw;
+    border: 0.08vw solid  #DC3545;
+}
+
+
+.footer-button-container .after-review-text{
+    display: grid;
+    align-items: center;
+    height: 6vw;
+    font-size: 1.6vw;
+    color: red;
+}
+
+
+
+
+/* client decline request canceled */
+.client-decline-section{
+    width: 100%;
+    text-align: center;
+    color: red;
+    margin-top: 1vw;
+}
+
+.client-decline-section a{
+    color: black;
+    border-bottom: 0.08vw solid black;
+
+}
+
+.client-decline-section a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+/* Confirm Delivery warning popUp section */
+/* Confirm Delivery warning popUp section */
+/* Confirm Delivery warning popUp section */
+.delivery-confirm-pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #f09fa43d;
+    z-index: 2000;
+}
+
+.delivery-confirm-container{
+    display: grid;
+    justify-content: center;
+    width: 48vw;
+    height: 32vw;
+    background: rgb(255, 255, 255);
+    border-radius: 1.6vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
+}
+
+
+
+.delivery-confirm-title{
+    text-align: center;
+    background: white;
+    font-size: 3vw;
+    height: 3vw;
+    margin-top: 8vw;
+}
+
+.delivery-confirm-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vw;
+    width: 30vw;
+    margin: auto;
+    margin-top: -6vw;
+}
+
+
+.delivery-confirm-button-container div{
+    width: 14vw;
+    height: 5vw;
+    font-size: 2.3vw;
+    padding: 0.4vw;
+    border-radius: 1vw;
+    border: 0.08vw solid  #DC3545;
+}
+
+
+
+
+
+
+/* CANCEL AFTER PAYMENT popUp section */
+/* CANCEL AFTER PAYMENT popUp section */
+/* CANCEL AFTER PAYMENT popUp section */
+.cancel-after-payment-pop-up,
+.cancel-before-payment-pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #f09fa43d;
+    z-index: 2000;
+}
+
+.cancel-after-payment-container,
+.cancel-before-payment-container{
+    display: grid;
+    justify-content: center;
+    width: 54vw;
+    height: 34vw;
+    background: rgb(255, 255, 255);
+    border-radius: 1.6vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
+}
+
+
+
+.cancel-after-payment-title,
+.cancel-before-payment-title{
+    text-align: center;
+    background: white;
+    font-size: 3.2vw;
+    height: 3vw;
+    margin-top: 8vw;
+}
+
+.cancel-after-payment-warning{
+    font-size: 1.4vw;
+    color: red;
+    margin-top: -4vw;
+    text-align: center;
+}
+
+.cancel-after-payment-button-container,
+.cancel-before-payment-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vw;
+    width: 30vw;
+    margin: auto;
+    margin-top: -6vw;
+}
+
+
+.cancel-after-payment-button-container div,
+.cancel-before-payment-button-container div{
+    width: 14vw;
+    height: 5vw;
+    font-size: 2.3vw;
+    padding: 0.4vw;
+    border-radius: 0.5vw;
+    border: 0.08vw solid  #DC3545;
+}
+
+
+
+
+
+
+/* NEW DELIVERY DATE popUp section */
+/* NEW DELIVERY DATE popUp section */
+/* NEW DELIVERY DATE popUp section */
+
+.new-delivery-date-pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #f09fa43d;
+    z-index: 2000;
+}
+
+
+.new-delivery-date-container{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    width: 65vw;
+    height: 40vw;
+    background: rgb(255, 255, 255);
+    border-radius: 1.6vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
+
+}
+
+
+
+.new-delivery-date-title{
+    text-align: center;
+    background: white;
+    font-size: 3.6vw;
+    height: 3vw;
+    margin-top: 7vw;
+}
+
+
+
+/* delivery date input */
+.new-delivery-date-input-container{
+    display: grid;
+    height: 4vw;
+    width: 50vw;
+    justify-content: center;
+    grid-template-columns: 45% 10% 45%;
+    text-align: center;
+}
+
+
+.new-delivery-date-input-container div{
+    display: grid;
+    align-items: center;
+}
+
+
+.new-delivery-date-input-container #note-date{
+    display: inline;
+    height: 4vw;
+    width: 100%;
+    font-size: 2.2vw;
+    padding-left: 0.4vw;
+    color: slategray;
+    margin-top: 0.6vw;
+    outline: none;
+    border: 0.06vw solid #E22424;
+    border-radius: 0.8vw;
+}
+
+
+.new-delivery-date-input-container #note-date::-webkit-calendar-picker-indicator {
+    background: #E22424;
+    height: 80%;
+    width: 12%;
+    margin: -0.1vw;
+    padding:0.6vw 0.7vw 0.4vw 0.6vw;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../images/resite/calendar-line.svg);
+    border-radius: 0.8vw;
+}
+
+
+
+.new-delivery-date-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vw;
+    width: 30vw;
+    margin: auto;
+    margin-top: -6vw;
+}
+
+
+.new-delivery-date-button-container div{
+    width: 14vw;
+    height: 4vw;
+    font-size: 1.6vw;
+    padding: 0.6vw;
+    border-radius: 1vw;
+    border: 0.08vw solid  #DC3545;
+}
+
+
+/* new delivery close button */
+
+.new-delivery-date-close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -5vw;
+    right: -3vw;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.089);
+    transform: scale(1.02);
+}
+
+
+.new-delivery-date-close img{
+    height: 100%;
+    width: 100%;
+    transform: scale(1.6);
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+/* REQUEST SENT POPUP SECTION */
+/* REQUEST SENT POPUP SECTION */
+/* REQUEST SENT POPUP SECTION */
+
+.request-sent-pop-up,
+.loading-animation-pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #ffffff3d;
+    z-index: 2000;
+}
+
+
+
+.request-sent-container,
+.loading-animation-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 65vw;
+    height: 50vw;
+    background: rgb(255, 255, 255);
+    border-radius: 1.6vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
+    padding: 3vw;
+}
+
+
+/* REQUEST SENT ANIMATION START */
+.request-sent-animation-container,
+.loading-animation-animation-container{
+    display: grid;
+    height: 30vw;
+    width: 50vw;
+}
+
+
+.request-sent-animation-container .image,
+.loading-animation-animation-container .image{
+    position: relative;
+    align-self: flex-end;
+    justify-self: center;
+    height: 20vw;
+    width: 20vw;
+    margin-bottom: 2vw;
+}
+
+
+
+.request-sent-animation-container .image img,
+.loading-animation-animation-container .image img{
+    height: 100%;
+    width: 100%;
+    transform: scale(0);
+    animation: bubbleAnimations 0.4s linear 2s forwards;
+}
+
+/* ;olcosigbisauovclauiovc */
+/* ;olcosigbisauovclauiovc */
+/* ;olcosigbisauovclauiovc */
+/* ;olcosigbisauovclauiovc */
+.request-sent-animation-container .image .bubble,
+.loading-animation-animation-container .image .bubble{
+    position: absolute;
+    height: 3vw;
+    width: 3vw;
+}
+
+.request-sent-animation-container .image .bubble img,
+.loading-animation-animation-container .image .bubble img{
+    height: 100%;
+    width: 100%;
+}
+
+.request-sent-animation-container .image .bubble:nth-child(2),
+.loading-animation-animation-container .image .bubble:nth-child(2){
+    top: -4vw;
+    left: -8vw;
+    transform: translateY(8vw);
+    animation: bubbleAnimation 0.8s linear 0.3s forwards;
+}
+
+
+.request-sent-animation-container .image .bubble:nth-child(3),
+.loading-animation-animation-container .image .bubble:nth-child(3){
+    height: 3.8vw;
+    width: 3.8vw;
+    top: -1vw;
+    right: -2vw;
+    transform: translateY(8vw);
+    animation: bubbleAnimation 1.2s ease-out forwards;
+}
+
+
+.request-sent-animation-container .image .bubble:nth-child(4),
+.loading-animation-animation-container .image .bubble:nth-child(4){
+    height: 1.6vw;
+    width: 1.6vw;
+    bottom: 6vw;
+    right: -8vw;
+    transform: translateY(8vw);
+    animation: bubbleAnimation 0.9s ease-in 0.4s forwards;
+}
+
+
+.request-sent-animation-container .image .bubble:nth-child(5),
+.loading-animation-animation-container .image .bubble:nth-child(5){
+    height: 1.2vw;
+    width: 1.2vw;
+    left: -2.5vw;
+    bottom: 9vw;
+    transform: translateY(8vw);
+    animation: bubbleAnimation .8s ease-in-out forwards;
+}
+
+@keyframes bubbleAnimation {
+    from{ transform: translateY(8vw); }
+    to{ transform: translateY(0vw); }
+}
+
+
+@keyframes bubbleAnimations {
+    from{ transform: scale(0); }
+    to{ transform: scale(1);  }
+}
+
+
+.loader{
+    position: absolute;
+    top: -30.5vw;
+}
+
+
+
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 15em;
+  height: 15em;
+}
+.loader {
+  margin: 8.7vw 15.2vw;
+  font-size: 1.28vw;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(0, 0, 0, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation:  load8 2.5s 1 linear forwards;
+  animation: load8 2.5s 1 linear forwards;
+}
+
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  99% {
+    -webkit-transform: rotate(1440deg);
+    transform: rotate(1440deg);
+  }
+  100%{
+      opacity: 0;
+  }
+}
+
+
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  99% {
+    -webkit-transform: rotate(1440deg);
+    transform: rotate(1440deg);
+  }
+  100%{
+      opacity: 0;
+  }
+}
+
+/* REQUEST SENT ANIMATION END */
+
+
+
+
+
+.request-sent-title,
+.loading-animation-title{
+    text-align: center;
+    font-size: 2.7vw;
+    height: 3vw;
+    margin-top: -70vw;
+    opacity: 0;
+    animation: textAnimations 0.4s linear 2s forwards;
+}
+
+.loading-animation-title{
+    font-size: 2.4vw;
+}
+
+.request-sent-button-container,
+.loading-animation-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vw;
+    width: 30vw;
+    margin: auto;
+    margin-top: -32vw;
+    opacity: 0;
+    animation: textAnimations 0.4s linear 2s forwards;
+}
+
+
+.request-sent-button-container div,
+.loading-animation-button-container div{
+    width: 14vw;
+    height: 4vw;
+    font-size: 1.6vw;
+    padding: 0.6vw;
+    border-radius: 1vw;
+    border: 0.08vw solid  #DC3545;
+}
+
+
+
+
+@keyframes textAnimations {
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+
+
+
+
+/* CLIENT REQUEST TO CANCEL ORDER */
+.client-request-cancel-order-section{
+    height: 15vw;
+    width: 40vw !important;
+    background: #ffffff;
+    margin: auto;
+    padding: 2vw;
+}
+
+
+.client-request-cancel-order-title{
+    width: 100%;
+    background: white;
+    text-align: center;
+    font-size: 1.8vw;
+}
+
+
+.client-request-cancel-order-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 6vw;
+    width: 35vw;
+    margin: auto;
+    margin-top: 2vw;
+    
+}
+
+
+
+.client-request-cancel-order-button-container div{
+    width: 45%;
+    height: 4vw;
+    font-size: 1.6vw;
+}
+
+
+
+
+

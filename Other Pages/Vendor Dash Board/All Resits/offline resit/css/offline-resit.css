@@ -1,0 +1,489 @@
+/* Price section */
+/* Price section */
+/* Price section */
+.price div:nth-child(1){
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.price-three-dots{
+    display: inline-block;
+    background: rgb(255, 255, 255);
+    height: 2vw;
+    width: 2vw;
+    margin-left: 0.5vw;
+    padding: 0.3vw;
+    opacity: 0.7;
+}
+
+.price-three-dots img{
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+
+
+.hover-edit-price{
+    display: none;
+    position: absolute;
+    font-size: 1.5vw;
+    right: -7.5vw;
+    width: 8vw;
+    font-weight: 700 !important;
+}
+
+
+.price-three-dots:hover .hover-edit-price{
+    display: grid;
+}
+
+
+.price span{
+    position: relative;
+}
+
+
+.package-three-dot{
+    position: absolute;
+    right: -27.5vw;
+    top: -2.4vw !important;
+
+}
+
+
+
+
+
+/* PRICE DROPDOWN SECTION */
+/* PRICE DROPDOWN SECTION */
+.price-drop-down-top{
+    width: 19.2vw !important;
+    font-size: 2vw;
+}
+
+
+.price-drop-down-option-section{
+    width: 16.5vw !important;
+    left: 0vw;
+    top: 4vw !important;
+}
+
+.price-drop-down-option-section .drop-down-option{
+    display: grid;
+    justify-content: left !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* edit price popup */
+/* edit price popup */
+/* edit price popup */
+
+.edit-price-pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #f09fa43d;
+    z-index: 2000;
+}
+
+
+.edit-price-container{
+    display: grid;
+    justify-content: center;
+    width: 54vw;
+    height: 34vw;
+    background: rgb(255, 255, 255);
+    border-radius: 1.6vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
+}
+
+
+
+
+.edit-price-title{
+    text-align: center;
+    background: white;
+    font-size: 2.6vw;
+    height: 3vw;
+    margin-top: 8vw;
+}
+
+
+
+.edit-price-input{
+    position: relative;
+    height: 5vw;
+    width: 25vw;
+    margin: auto;
+}
+
+.price-tk{
+    position: absolute;
+    top: 1.2vw;
+    right: 7vw;
+    height: 3vw;
+    width: 2vw;
+    font-size: 1.9vw;
+    font-weight: 800;
+    z-index: 2;
+}
+
+/* price input customization */
+    .edit-price-input #edit-price-input{
+        position: absolute;
+        width: 25vw;
+        height: 5vw;
+        padding: 0vw;
+        font-size: 2vw;
+        border: solid 0.5px #000;
+        text-align: center;
+        z-index: 1;
+        background: #ffffff;
+        border: 0.08vw solid red;
+        outline: none;
+        border-radius: 0.8vw;
+        box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
+    }
+
+
+    .edit-price-input #edit-price-input::-webkit-inner-spin-button{
+        transform: scale(4.8);
+    }
+
+    .edit-price-input .spinner-button-container{
+        display: grid;
+        justify-content: center;
+        position: absolute;
+        right: 10vw;
+        z-index: 2;
+        height: 4.8vw;
+        width: 5vw;
+        pointer-events: none;
+        background: #E22222;
+        transform: translate(10vw,0vw);
+        border-radius:0vw 0.6vw 0.6vw 0vw;
+        overflow: hidden;
+    }
+
+    .edit-price-input .spinner-button{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        height: 2.55vw;
+        width: 4.8vw;
+        margin: auto;
+        pointer-events: none;
+        background: #E22222;
+    }
+
+    @media screen and (max-width:800px){
+        .edit-price-input #edit-price-input::-webkit-inner-spin-button{
+            transform: scale(4);
+        }
+    }
+
+    .edit-price-input #inc-button{
+        width: 4vw;
+        border-bottom: 0.08vw solid white;
+    }
+
+    .edit-price-input #dec-button{
+        top: 3.5vw;
+    }
+
+    .edit-price-input .spinner-button img{
+        height: 1.8vw;
+        width: 1.8vw;
+    }
+
+
+
+
+
+.edit-price-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vw;
+    width: 30vw;
+    margin: auto;
+}
+
+
+
+.edit-price-button-container div{
+    width: 14vw;
+    height: 5vw;
+    font-size: 1.8vw;
+    padding: 1vw;
+    border-radius: 0.8vw;
+    border: 0.08vw solid  #DC3545;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Delivery date input */
+/* Delivery date input */
+/* Delivery date input */
+.offline-date-input-container{
+    display: grid;
+    height: 4vw;
+    width: 95%;
+    margin: auto;
+    justify-content: center;
+    grid-template-columns: 45% 10% 45%;
+    text-align: center;
+}
+
+
+.offline-date-input-container div{
+    display: grid;
+    align-items: center;
+}
+
+
+.offline-date-input-container #delivery-date{
+    display: inline;
+    height: 4vw;
+    width: 100%;
+    font-size: 1.8vw;
+    padding-left: 1.2vw;
+    color: slategray;
+    margin-top: 0.6vw;
+    outline: none;
+    border: 0.06vw solid #E22424;
+    border-radius: 0.8vw;
+}
+
+
+.offline-date-input-container #delivery-date::-webkit-calendar-picker-indicator {
+    background: #E22424;
+    height: 80%;
+    width: 12%;
+    margin: -0.1vw;
+    padding:0.6vw 0.7vw 0.4vw 0.6vw;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../images/resite/calendar-line.svg);
+    border-radius: 0.8vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* PAYMENT STATUS DROPDOWN */
+/* PAYMENT STATUS DROPDOWN */
+/* PAYMENT STATUS DROPDOWN */
+.drop-down-section{
+    position: relative;
+    height: 3vw;
+    width: 40%;
+    margin: auto;
+    margin-top: 0.5vw;
+    font-size: 1.6vw;
+}
+
+.drop-down-top{
+    display: flex;
+    align-items: center;
+    cursor: default;
+    cursor: pointer;
+}
+
+
+.drop-down-btn{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.308);
+    height: 100%;
+    width: 2.3vw;
+    top: 0vw;
+    right: 0vw;
+    cursor: pointer;
+    padding: 0.6vw;
+}
+
+.drop-down-btn:hover{
+    background: #DEDEDE;
+}
+
+.drop-down-btn img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.drop-down-option-section{
+    display: none;
+    position: absolute;
+    top: 5vw;
+    right: 2.8vw;
+    height: 10.7vw;
+    width: 15vw;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.274);
+}
+
+
+.drop-down-option{
+    background: rgb(255, 255, 255);
+    height: 3.5vw;
+    border-top: 0.08vw solid rgba(0, 0, 0, 0.082);
+    font-size: 1.6vw;
+    text-align: left;
+    padding-left: 3vw;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.drop-down-option:hover{
+    background: #DEDEDE;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SERVICE STATUS SELECT OPTION */
+/* SERVICE STATUS SELECT OPTION */
+/* SERVICE STATUS SELECT OPTION */
+
+.service-status select{
+    padding: 0vw 1vw 0vw 1vw;
+    border: 0.01vw solid white !important;
+    outline: none;
+    font-size: 1.8vw;
+    margin-top: 1vw;
+}
+
+
+.service-status select option{
+    font-size: 1.6vw;
+    height: 2vw;
+}
+
+
+
+
+
+
+
+/* INSTRUCTION EDIT SECTION */
+/* INSTRUCTION EDIT SECTION */
+/* INSTRUCTION EDIT SECTION */
+.facilities-instruction-section .title{
+    position: relative;
+}
+
+
+
+.instruction-edit-icon{
+    position: absolute;
+    height: 2.2vw !important;
+    right: 35vw;
+    top: 1.3vw;
+    cursor: pointer;
+}
+
+
+.instruction-edit-icon img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.instruction-input-text-section{
+    display: none;
+    grid-template-rows: 90% 10%;
+    height: 21vw;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+.instruction-input-text{
+    display: grid;
+    height: 15vw;
+    width: 100%;
+    outline: none;
+    border: 0.01vw solid white !important;
+    background: #F5F5F5;
+    background: transparent;
+    color: black;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.123);
+    font-size: 1.8vw;
+}
+
+
+
+.instruction-input-button-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 6vw;
+    margin-top: -4vw;
+    z-index: 2;
+}
+
+.instruction-input-button-container div{
+    height: 4vw;
+    width: 13vw;
+    margin-right: 3vw;
+    font-size: 1.6VW;
+    padding: 0.8vw;
+    border-radius: 0.8vw;
+    border: 0.08vw solid #DC3545;
+}
+
+
+
+
