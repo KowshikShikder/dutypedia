@@ -370,6 +370,10 @@
     z-index: 5;
 }
 
+.drop-down-option .cross{
+    pointer-events: none;
+}
+
 .drop-down-option:hover{
     background: #DEDEDE;
 }
@@ -483,7 +487,3 @@
     border-radius: 0.8vw;
     border: 0.08vw solid #DC3545;
 }
-
-
-
-

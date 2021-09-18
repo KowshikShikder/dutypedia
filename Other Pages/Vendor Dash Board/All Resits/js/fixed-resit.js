@@ -187,7 +187,6 @@ const beforeButton=()=>{
         preferredButton.previousElementSibling.addEventListener('mouseout', function(){
         preferredButton.classList.replace("btn-outline-danger","btn-danger")
     })
-
     }
 }
 
@@ -201,6 +200,8 @@ const beforeButton=()=>{
 
 
 
+// PRINT RESIT
+// PRINT RESIT
 // PRINT RESIT
 const serviceItemTable= document.querySelector(".vendor-resit-section-two .service-items")
 

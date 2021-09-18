@@ -176,6 +176,7 @@
 
     .edit-price-input #edit-price-input::-webkit-inner-spin-button{
         transform: scale(4.8);
+        opacity: 0;
     }
 
     .edit-price-input .spinner-button-container{
@@ -252,6 +253,10 @@
 
 
 
+/* INSTALLMENT BUTTON RESIZE */
+.edit-instalment-section .edit-price-button-container .btn{
+    font-size: 1.6vw;
+}
 
 
 
@@ -1085,7 +1090,62 @@ body{
 /* INSTALLMENT TABLE CONTAINER PARENT */
 /* INSTALLMENT TABLE CONTAINER PARENT */
 
-.facilities-payment-section .payment{
+.facilities-payment-section .payment .number-of-installment{
+    display: flex;
+    height: 16vw;
+}
+
+
+.facilities-payment-section .payment .number-of-installment > div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    background: chocolate;
+    background: white;
+    font-size: 2.1vw;
+    border-bottom: 0.08vw solid rgba(0, 0, 0, 0.123);
+}
+
+
+.facilities-payment-section .payment .number-of-installment > div:nth-child(1){
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.123);
+    border-left: 0.08vw solid rgba(0, 0, 0, 0.123);
+}
+
+
+.facilities-payment-section .payment .number-of-installment .instalment-no{
+    font-size: 2vw;
+    margin-top: 1vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.facilities-payment-section .payment .installment-table-container-parent{
     text-align: center;
     border-left: 0.05vw solid rgba(0, 0, 0, 0.089);
     padding-top: 2vw;
@@ -1094,17 +1154,14 @@ body{
 }
 
 
-
-
-
 /* Scrollbar customization */
-.payment::-webkit-scrollbar{
+.installment-table-container-parent::-webkit-scrollbar{
     width: 1.5vw;
     background: #FBF6F6;
 }
 
 
-.payment::-webkit-scrollbar-thumb{
+.installment-table-container-parent::-webkit-scrollbar-thumb{
     background: #666666;
     border-radius: 2vw;
     border: 0.4vw solid rgba(0, 0, 0, 0);
@@ -1115,7 +1172,7 @@ body{
 
 
 /* Buttons */
-.payment::-webkit-scrollbar-button:single-button {
+.installment-table-container-parent::-webkit-scrollbar-button:single-button {
     background-color: #FBF6F6;
     display: block;
     border-style: solid;
@@ -1123,13 +1180,13 @@ body{
     width: 1vw;
 }
 
-.payment::-webkit-scrollbar-button:single-button:vertical:decrement {
+.installment-table-container-parent::-webkit-scrollbar-button:single-button:vertical:decrement {
     border-width: 0 0.7vw 0.8vw 0.7vw;
     border-color: transparent transparent #555555 transparent;
 }
 
 
-.payment::-webkit-scrollbar-button:single-button:vertical:increment {
+.installment-table-container-parent::-webkit-scrollbar-button:single-button:vertical:increment {
     border-width: 0.7vw  0.8vw 0 0.7vw;
     border-color: #555555 transparent transparent transparent;
 }
@@ -1139,7 +1196,292 @@ body{
 
 
 
+/* INSTALMENT TABLE START */
+/* INSTALMENT TABLE START */
+/* INSTALMENT TABLE START */
+.installment-table-container{
+    background: rgb(255, 255, 255);
+    /* height: 100%; */
+    height: 26vw;
+    height: auto;
+    width: 100%;
+    /* border-radius: 2vw; */
+    /* overflow-y: scroll; */
+    overflow: hidden;
+    padding-right: 0.5vw;
+    padding-left: 0.8vw;
+    /* border:0.08vw solid rgba(0, 0, 0, 0.171); */
+    margin-top: 3vw;
+}
 
+
+.installment-table-container:nth-child(1){
+    margin-top: 1vw;
+}
+
+
+/* Scrollbar customization */
+.installment-table-container::-webkit-scrollbar{
+    width: 1.5vw;
+    background: #FBF6F6;
+}
+
+
+.installment-table-container::-webkit-scrollbar-thumb{
+    background: #666666;
+    border-radius: 2vw;
+    border: 0.4vw solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+}
+
+
+
+.installment-table-container::-webkit-scrollbar-button:single-button {
+    background-color: #FBF6F6;
+    display: block;
+    border-style: solid;
+    height: 2vw;
+    width: 1vw;
+  }
+
+  .installment-table-container::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 0.7vw 0.8vw 0.7vw;
+    border-color: transparent transparent #555555 transparent;
+}
+
+
+  .installment-table-container::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 0.7vw  0.8vw 0 0.7vw;
+    border-color: #555555 transparent transparent transparent;
+  }
+
+
+
+
+
+
+
+
+
+/* INSTALMENT TABLE SECTION */
+.installment-table{
+    position: relative;
+    border-top: 0.08vw solid rgba(0, 0, 0, 0.171);
+    margin-bottom: 1.8vw;
+    margin-top: 1vw;
+}
+
+
+
+/* INSTALMENT TITLE SECTION */
+.installment-table-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vw;
+    position: relative;
+    background: #E22424;
+    color: white;
+    border-top-right-radius: 1.5vw;
+    border-top-left-radius: 1.5vw;
+
+}
+
+.installment-table-title-button{
+    position: absolute;
+    background: white;
+    color: #E22424;
+    height: 3.5vw;
+    width: 7vw;
+    font-size: 1.6vw;
+    right: 2vw;
+    padding: 0.5vw;
+    border-radius: 0.6vw;
+    font-weight: 600;
+}
+
+.installment-title-button-active{
+    background: rgba(255, 255, 255, 0.226);
+    color: white;
+}
+
+
+.installment-title-button-duo{
+    background: #E22424;
+    border: 0.08vw solid white;
+    color: white;
+    font-weight: 400;
+}
+
+
+.installment-table-title p{
+    display: grid;
+    align-items: center;
+    height: 100%;
+    /* margin-top: 8vw; */
+    margin-top: 2vw;
+    font-size: 2vw;
+}
+
+.installment-table-title p:nth-child(2){
+    font-size: 1.6vw;
+    /* margin-top: 8vw; */
+    margin-top: 2vw;    
+    margin-left: 1vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* INSTALMENT SIDE NUMBER  */
+.installment-table-number-circle{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 2vw;
+    width: 2vw;
+    top: -1vw;
+    left: -0.5vw;
+    background: #E22424;
+    color: white;
+    border-radius: 100%;
+    font-size: 1.2vw;
+    opacity: 0.6;
+}
+
+
+
+
+
+
+/* INSTALMENT TABLE ROW 1 */
+.installment-table-row-1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 7vw;
+    width: 100%;
+    font-size: 1.8vw;
+    border-bottom: 0.08vw solid rgba(0, 0, 0, 0.171);
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
+    border-left: 0.08vw dashed rgba(0, 0, 0, 0.171);
+    
+}
+
+
+
+/* INSTALMENT TABLE ROW 1 COLUMN 1 */
+.installment-table-row-1 .installment-table-col-left{
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
+}
+
+.installment-table-row-1 .installment-table-col-left > div{
+    display: grid;
+    align-items: center;
+    padding-top: 0.8vw;
+    grid-template-columns: 60% 40%;
+}
+
+.installment-table-row-1 .installment-table-col-left > div p{
+    margin: 0vw;
+}
+
+.installment-table-row-1 .installment-table-col-left .date{
+    font-size: 1.2vw;
+}
+
+.installment-table-row-1 .installment-table-col-left .date p:nth-child(2){
+    color: red;
+}
+
+
+
+
+
+
+/* INSTALMENT TABLE ROW 1 COLUMN 2 */
+.installment-table-row-1 .installment-table-col-right{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 7vw;
+    width: 100%;
+}
+
+.installment-table-row-1 .installment-table-col-right > div{
+    display: grid;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1.35vw;
+    padding: 0.8vw 0vw 0.8vw 0vw;
+
+}
+
+.installment-table-row-1 .installment-table-col-right > div:nth-child(1){
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
+
+}
+
+.installment-table-row-1 .installment-table-col-right > div p{
+    padding: 0vw;
+    margin: 0vw;
+}
+
+.installment-table-row-1 .installment-table-col-right > div p:nth-child(1) span{
+    color: red;
+}
+
+
+
+
+
+
+
+/* INSTALMENT TABLE ROW 2 */
+.installment-table-row-2{
+    display: grid;
+    align-items: center;
+    height: 9vw;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    border-bottom: 0.08vw solid rgba(0, 0, 0, 0.171);
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
+    border-left: 0.08vw dashed rgba(0, 0, 0, 0.171);
+}
+
+
+
+/* INSTALMENT TABLE ROW 1 COLUMN 1 & COLUMN 2 */
+
+.installment-table-row-2 > div{
+    font-size: 1.8vw;
+    height: 9vw;
+    padding: 1vw;
+    width: 100%;
+}
+
+
+.installment-table-row-2 > div:nth-child(1){
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
+}
+
+
+
+.installment-table-row-2 > div p{
+    margin: 0.5vw;
+}
+
+
+/* INSTALMENT TABLE END */
+/* INSTALMENT TABLE END */
+/* INSTALMENT TABLE END */
 
 
 
@@ -1213,9 +1555,8 @@ body{
     display: grid;
     grid-template-columns: 55% 45%;
     width: 100%;
-    height: 10vw;
+    height: 8vw;
     border-bottom: none !important;
-
     position: relative;
 }
 
@@ -1247,7 +1588,7 @@ body{
     display: grid;
     justify-self: end;
     align-items: center;
-    height: 8vw;
+    height: 3vw;
     width: 18vw;
 }
 
@@ -1265,17 +1606,13 @@ body{
 }
 
 
-
 /* FOOTER BUTTON SECTION */
-
 .footer-button-container{
     display: grid;
-    justify-content: right;
-    position: absolute;
-    top: 2vw;
-    z-index: 100;
-    width: 60%;
+    justify-content: center;
+    width: 100%;
     background: white;
+    margin-top: 2vw;
 }
 
 
@@ -1305,7 +1642,7 @@ body{
 
 
 /* client decline request canceled */
-.client-decline-section{
+/* .client-decline-section{
     width: 100%;
     text-align: center;
     color: red;
@@ -1322,7 +1659,7 @@ body{
     text-decoration: none;
     color: black;
 }
-
+ */
 
 
 
@@ -1335,7 +1672,7 @@ body{
 /* Confirm Delivery warning popUp section */
 /* Confirm Delivery warning popUp section */
 /* Confirm Delivery warning popUp section */
-.delivery-confirm-pop-up{
+/* .delivery-confirm-pop-up{
     display: none;
     justify-content: center;
     align-items: center;
@@ -1387,7 +1724,7 @@ body{
     border: 0.08vw solid  #DC3545;
 }
 
-
+ */
 
 
 
@@ -1464,11 +1801,410 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ALL PAYMENT DETAILS SECTION START */
+/* ALL PAYMENT DETAILS SECTION START */
+/* ALL PAYMENT DETAILS SECTION START */
+
+
+.all-payment-details-section{
+    height: 75vw;
+    width: 100%;
+    margin: auto;
+    margin-top: 6vw;
+    margin-bottom: 10vw;
+}
+
+
+
+
+
+
+ /* ALL PAYMENT DETAILS TITLE*/
+
+.all-payment-details-section .all-payment-details-title{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 55% 45%;
+    width: 100%;
+    height: 6vw;
+    font-weight: 490;
+    text-align: center;
+    font-size: 2.4vw;
+}
+
+
+
+
+
+ /* ALL PAYMENT DETAILS BOX */
+
+.all-payment-details-section .all-payment-details-box{
+    width: 95%;
+    height: 60vw;
+    margin: auto;
+    margin-top: 2vw;
+    border-radius: 1vw;
+    overflow-y: auto;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.11);
+}
+
+
+
+
+/* Scrollbar customization */
+.all-payment-details-box::-webkit-scrollbar{
+    width: 1.5vw;
+    background: #FBF6F6;
+}
+
+
+.all-payment-details-box::-webkit-scrollbar-thumb{
+    background: #666666;
+    border-radius: 2vw;
+    border: 0.4vw solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+}
+
+
+
+.all-payment-details-box::-webkit-scrollbar-button:single-button {
+    background-color: #FBF6F6;
+    display: block;
+    border-style: solid;
+    height: 2vw;
+    width: 1vw;
+  }
+
+  .all-payment-details-box::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 0.7vw 0.8vw 0.7vw;
+    border-color: transparent transparent #555555 transparent;
+}
+
+
+  .all-payment-details-box::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 0.7vw  0.8vw 0 0.7vw;
+    border-color: #555555 transparent transparent transparent;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ALL PAYMENT DETAILS BOX ROW 1*/
+.all-payment-details-box-row-1:nth-child(1){
+    height: 9vw;
+    font-size: 2.4vw;
+}
+
+
+.all-payment-details-box-row-1:nth-child(1) .all-payment-details-box-right{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+
+.all-payment-details-box-row-1{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 55% 45%;
+    height: 15vw;
+    border-bottom: 0.08vw solid rgba(0, 0, 0, 0.158);
+}
+
+
+
+ /* ALL PAYMENT DETAILS BOX LEFT*/
+
+.all-payment-details-box-left{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.075);
+
+}
+
+
+.all-payment-details-box-left div > div:nth-child(1){
+    margin-bottom: 2.4vw;
+}
+
+
+
+
+
+
+
+ /* ALL PAYMENT DETAILS BOX RIGHT */
+
+.all-payment-details-box-right{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+ /* ALL PAYMENT DETAILS BOX RIGHT REMAINING & PAID SECTION */
+
+
+.all-payment-details-box-right .remaining-section,
+.all-payment-details-box-right .paid-section{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 2vw;
+    font-size: 2vw;
+}
+
+.all-payment-details-box-right .remaining-section{
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.075);
+}
+
+
+
+
+
+/* REMAINING & PAID SECTION TITLE */
+
+.all-payment-details-box-right-title{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+    /* PAYMENT AMMOUNT  INPUT SECTION START */
+    /* PAYMENT AMMOUNT  INPUT SECTION START */
+    /* PAYMENT AMMOUNT  INPUT SECTION START */
+
+    .payment-ammount-input{
+        position: relative;
+        height: 3.8vw;
+        width: 17vw;
+        background: chartreuse;
+    }
+
+
+    .payment-ammount-input #edit-price-input{
+        width: 17vw;
+        height: 3.8vw;
+        font-size: 1.7vw;
+        box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
+        border-radius: 0.4vw;
+        text-align: left;
+        padding-left: 1.8vw;
+    }
+
+    .payment-ammount-input #edit-price-input::-webkit-inner-spin-button{
+        transform: scale(3);
+    }
+
+    .payment-ammount-input .spinner-button-container{
+        display: grid;
+        justify-content: center;
+        right: 10vw;
+        height: 4vw;
+        width: 3.5vw;
+    }
+
+    .payment-ammount-input .spinner-button{
+        height: 2vw;
+        width: 3.5vw;
+    }
+
+    .payment-ammount-input #inc-button{
+        width: 2.6vw;
+    }
+
+    .payment-ammount-input .spinner-button img{
+        height: 1.4vw;
+        width: 1.4vw;
+    }
+
+
+    .payment-ammount-input .price-tk{
+        top: 0.8vw;
+        right: 4vw;
+        font-size: 1.8vw;
+        pointer-events: none;
+    }
+    
+    /* PAYMENT AMMOUNT  INPUT SECTION START */
+    /* PAYMENT AMMOUNT  INPUT SECTION START */
+
+
+
+
+/* ADVANCE PAYMENT date input */
+/* ADVANCE PAYMENT date input */
+/* ADVANCE PAYMENT date input */
+.advanced-payment-date-input-container{
+    display: grid;
+    height: 4.5vw;
+    width: 40vw;
+    justify-content: center;
+    grid-template-columns: 45% 10% 45%;
+    text-align: center;
+}
+
+
+.advanced-payment-date-input-container div{
+    display: grid;
+    align-items: center;
+}
+
+
+.advanced-payment-date-input-container #instalment-date{
+    display: inline;
+    height: 3.5vw;
+    width: 100%;
+    font-size: 1.8vw;
+    padding-left: 0.4vw;
+    color: slategray;
+    margin-top: 0.6vw;
+    outline: none;
+    border: 0.06vw solid #E22424;
+    border-radius: 0.8vw;
+}
+
+
+.advanced-payment-date-input-container #instalment-date::-webkit-calendar-picker-indicator {
+    background: #E22424;
+    height: 76%;
+    width: 12%;
+    margin: -0.2vw;
+    padding:0.6vw 0.7vw 0.4vw 0.6vw;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../images/resite/calendar-line.svg);
+    border-radius: 0.4vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ALL PAYMENT DETAILS SECTION END */
+/* ALL PAYMENT DETAILS SECTION END */
+/* ALL PAYMENT DETAILS SECTION END */
+
 /* NEW DELIVERY DATE popUp section */
 /* NEW DELIVERY DATE popUp section */
 /* NEW DELIVERY DATE popUp section */
 
-.new-delivery-date-pop-up{
+/* .new-delivery-date-pop-up{
     display: none;
     justify-content: center;
     align-items: center;
@@ -1501,12 +2237,12 @@ body{
     font-size: 3.6vw;
     height: 3vw;
     margin-top: 7vw;
-}
+} */
 
 
 
 /* delivery date input */
-.new-delivery-date-input-container{
+/* .new-delivery-date-input-container{
     display: grid;
     height: 4vw;
     width: 50vw;
@@ -1569,11 +2305,11 @@ body{
     padding: 0.6vw;
     border-radius: 1vw;
     border: 0.08vw solid  #DC3545;
-}
+} */
 
 
 /* new delivery close button */
-
+/* 
 .new-delivery-date-close{
     display: flex;
     justify-content: center;
@@ -1594,7 +2330,7 @@ body{
     width: 100%;
     transform: scale(1.6);
     object-fit: cover;
-}
+} */
 
 
 
@@ -1605,7 +2341,7 @@ body{
 /* REQUEST SENT POPUP SECTION */
 /* REQUEST SENT POPUP SECTION */
 /* REQUEST SENT POPUP SECTION */
-
+/* 
 .request-sent-pop-up,
 .loading-animation-pop-up{
     display: none;
@@ -1633,11 +2369,11 @@ body{
     border-radius: 1.6vw;
     box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
     padding: 3vw;
-}
+} */
 
 
 /* REQUEST SENT ANIMATION START */
-.request-sent-animation-container,
+/* .request-sent-animation-container,
 .loading-animation-animation-container{
     display: grid;
     height: 30vw;
@@ -1663,13 +2399,13 @@ body{
     width: 100%;
     transform: scale(0);
     animation: bubbleAnimations 0.4s linear 2s forwards;
-}
+} */
 
 /* ;olcosigbisauovclauiovc */
 /* ;olcosigbisauovclauiovc */
 /* ;olcosigbisauovclauiovc */
 /* ;olcosigbisauovclauiovc */
-.request-sent-animation-container .image .bubble,
+/* .request-sent-animation-container .image .bubble,
 .loading-animation-animation-container .image .bubble{
     position: absolute;
     height: 3vw;
@@ -1793,11 +2529,325 @@ body{
   100%{
       opacity: 0;
   }
-}
+} */
 
 /* REQUEST SENT ANIMATION END */
 
 
+
+
+
+
+/* 
+.request-sent-title,
+.loading-animation-title{
+    text-align: center;
+    font-size: 2.7vw;
+    height: 3vw;
+    margin-top: -70vw;
+    opacity: 0;
+    animation: textAnimations 0.4s linear 2s forwards;
+}
+
+.loading-animation-title{
+    font-size: 2.4vw;
+}
+
+.request-sent-button-container,
+.loading-animation-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vw;
+    width: 30vw;
+    margin: auto;
+    margin-top: -32vw;
+    opacity: 0;
+    animation: textAnimations 0.4s linear 2s forwards;
+}
+
+
+.request-sent-button-container div,
+.loading-animation-button-container div{
+    width: 14vw;
+    height: 4vw;
+    font-size: 1.6vw;
+    padding: 0.6vw;
+    border-radius: 1vw;
+    border: 0.08vw solid  #DC3545;
+}
+
+
+
+
+@keyframes textAnimations {
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+ */
+
+
+
+
+
+
+
+
+
+/* CLIENT REQUEST TO CANCEL ORDER */
+/* .client-request-cancel-order-section{
+    height: 15vw;
+    width: 40vw !important;
+    background: #ffffff;
+    margin: auto;
+    padding: 2vw;
+}
+
+
+.client-request-cancel-order-title{
+    width: 100%;
+    background: white;
+    text-align: center;
+    font-size: 1.8vw;
+}
+
+
+.client-request-cancel-order-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 6vw;
+    width: 35vw;
+    margin: auto;
+    margin-top: 2vw;
+    
+}
+
+
+
+.client-request-cancel-order-button-container div{
+    width: 45%;
+    height: 4vw;
+    font-size: 1.6vw;
+} */
+
+
+
+
+
+
+
+
+.tk-sign{
+    font-weight: 800 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* REQUEST SENT POPUP SECTION */
+/* REQUEST SENT POPUP SECTION */
+/* REQUEST SENT POPUP SECTION */
+
+.request-sent-pop-up,
+.loading-animation-pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #ffffff3d;
+    z-index: 2000;
+}
+
+
+
+.request-sent-container,
+.loading-animation-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 65vw;
+    height: 50vw;
+    background: rgb(255, 255, 255);
+    border-radius: 1.6vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
+    padding: 3vw;
+}
+
+
+/* REQUEST SENT ANIMATION START */
+.request-sent-animation-container,
+.loading-animation-animation-container{
+    display: grid;
+    height: 30vw;
+    width: 50vw;
+}
+
+
+.request-sent-animation-container .image,
+.loading-animation-animation-container .image{
+    position: relative;
+    align-self: flex-end;
+    justify-self: center;
+    height: 20vw;
+    width: 20vw;
+    margin-bottom: 2vw;
+}
+
+
+
+.request-sent-animation-container .image img,
+.loading-animation-animation-container .image img{
+    height: 100%;
+    width: 100%;
+    transform: scale(0);
+    animation: bubbleAnimations 0.4s linear 2s forwards;
+}
+
+
+
+
+
+.request-sent-animation-container .image .bubble,
+.loading-animation-animation-container .image .bubble{
+    position: absolute;
+    height: 3vw;
+    width: 3vw;
+}
+
+.request-sent-animation-container .image .bubble img,
+.loading-animation-animation-container .image .bubble img{
+    height: 100%;
+    width: 100%;
+}
+
+.request-sent-animation-container .image .bubble:nth-child(2),
+.loading-animation-animation-container .image .bubble:nth-child(2){
+    top: -4vw;
+    left: -8vw;
+    transform: translateY(8vw);
+    animation: bubbleAnimation 0.8s linear 0.3s forwards;
+}
+
+
+.request-sent-animation-container .image .bubble:nth-child(3),
+.loading-animation-animation-container .image .bubble:nth-child(3){
+    height: 3.8vw;
+    width: 3.8vw;
+    top: -1vw;
+    right: -2vw;
+    transform: translateY(8vw);
+    animation: bubbleAnimation 1.2s ease-out forwards;
+}
+
+
+.request-sent-animation-container .image .bubble:nth-child(4),
+.loading-animation-animation-container .image .bubble:nth-child(4){
+    height: 1.6vw;
+    width: 1.6vw;
+    bottom: 6vw;
+    right: -8vw;
+    transform: translateY(8vw);
+    animation: bubbleAnimation 0.9s ease-in 0.4s forwards;
+}
+
+
+.request-sent-animation-container .image .bubble:nth-child(5),
+.loading-animation-animation-container .image .bubble:nth-child(5){
+    height: 1.2vw;
+    width: 1.2vw;
+    left: -2.5vw;
+    bottom: 9vw;
+    transform: translateY(8vw);
+    animation: bubbleAnimation .8s ease-in-out forwards;
+}
+
+@keyframes bubbleAnimation {
+    from{ transform: translateY(8vw); }
+    to{ transform: translateY(0vw); }
+}
+
+
+@keyframes bubbleAnimations {
+    from{ transform: scale(0); }
+    to{ transform: scale(1);  }
+}
+
+
+.loader{
+    position: absolute;
+    top: -30.5vw;
+}
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 15em;
+  height: 15em;
+}
+.loader {
+  margin: 8.7vw 15.2vw;
+  font-size: 1.28vw;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(0, 0, 0, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation:  load8 2.5s 1 linear forwards;
+  animation: load8 2.5s 1 linear forwards;
+}
+
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  99% {
+    -webkit-transform: rotate(1440deg);
+    transform: rotate(1440deg);
+  }
+  100%{
+      opacity: 0;
+  }
+}
+
+
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  99% {
+    -webkit-transform: rotate(1440deg);
+    transform: rotate(1440deg);
+  }
+  100%{
+      opacity: 0;
+  }
+}
+
+/* REQUEST SENT ANIMATION END */
 
 
 
@@ -1846,48 +2896,4 @@ body{
     from{ opacity: 0; }
     to{ opacity: 1; }
 }
-
-
-
-
-/* CLIENT REQUEST TO CANCEL ORDER */
-.client-request-cancel-order-section{
-    height: 15vw;
-    width: 40vw !important;
-    background: #ffffff;
-    margin: auto;
-    padding: 2vw;
-}
-
-
-.client-request-cancel-order-title{
-    width: 100%;
-    background: white;
-    text-align: center;
-    font-size: 1.8vw;
-}
-
-
-.client-request-cancel-order-button-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 6vw;
-    width: 35vw;
-    margin: auto;
-    margin-top: 2vw;
-    
-}
-
-
-
-.client-request-cancel-order-button-container div{
-    width: 45%;
-    height: 4vw;
-    font-size: 1.6vw;
-}
-
-
-
-
 

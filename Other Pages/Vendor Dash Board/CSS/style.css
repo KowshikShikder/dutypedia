@@ -920,10 +920,14 @@ a:hover{
     width: 100%;
     height: 5vw;
     display: grid;
+    font-size: 0.9vw;
+    padding: 0.1vw;
+    outline: none;
+    border: 0.05vw solid rgba(0, 0, 0, 0.158);
 }
 
-.edit-information-container .address textarea:focus{
-    outline: none;
+.edit-information-container .address textarea:hover{
+    border: 0.08vw solid rgba(0, 0, 0, 0.274);
 }
 
 .edit-information-container .button-container{
@@ -936,9 +940,12 @@ a:hover{
 }
 
 .edit-information-container .button-container .btn{
-    width: 7vw;
+    width: 45%;
     height: 2.5vw;
     font-size: 1vw;
+    border-radius: 0.4vw;
+    padding: 0.4vw;
+    border: 0.08vw solid #C62333;
 }
 
 
@@ -1264,21 +1271,8 @@ a:hover{
     font-size: 1.2vw;
     border-radius: 0.4vw;
     padding: 0.2vw;
-
+    border: 0.08vw solid #C62333;
 }
-
-.new-note-button-container div:nth-child(1){
-    border: 0.1vw solid #E22424;
-    background: #E22424;
-    color: white;
-}
-
-
-.new-note-button-container div:nth-child(2){
-    border: 0.1vw solid #E22424;
-    color: #E22424;
-}
-
 
 
 
@@ -1305,7 +1299,6 @@ a:hover{
     padding: 1vw 0.5vw 2vw 2vw;
     background: white;
     border-radius: 0.7vw;
-    /* background: blue; */
 }
 
 
@@ -1340,6 +1333,21 @@ a:hover{
     border-radius: 0.3vw;
 }
 
+.time-input-icon{
+    position: absolute;
+    background: crimson;
+    height: 2.4vw;
+    width: 2vw;
+    top: 0vw;
+    right: 0vw;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url(../images/resite/clock.svg);
+    background-position: center center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+
 
 .note-reminder-container #note-date::-webkit-calendar-picker-indicator {
     background: #E22424;
@@ -1359,12 +1367,10 @@ a:hover{
 
 .time-container{
     display: grid;
-    grid-template-columns: 39% 55%;
     height: 2.5vw;
     justify-content: space-between;
     align-items: center;
     margin-top: 0.7vw;
-
 }
 
 
@@ -1386,13 +1392,14 @@ a:hover{
 .note-reminder-container #note-time{
     height: 100%;
     width: 100%;
+    width: 10vw;
     outline: none;
-    border: 0.06vw solid #E22424;
+    border: none;
     font-size: 1.1vw;
 }
 
 
-
+/* 
 .reminder-number-icons{
     display: grid;
     align-items: center;
@@ -1442,7 +1449,7 @@ a:hover{
 .note-reminder-container select option{
     font-size: 1.1vw;
 
-}
+} */
 
 
 .note-reminder-button-container{
@@ -1460,20 +1467,9 @@ a:hover{
     font-size: 0.9vw;
     border-radius: 0.4vw;
     padding: 0.25vw;
+    border: 0.08vw solid #C62333;
 }
 
-
-.note-reminder-button-container div:nth-child(1){
-    /* border: 0.1vw solid #E22424; */
-    /* background: #E22424; */
-    color: white;
-}
-
-
-.note-reminder-button-container div:nth-child(2){
-    /* border: 0.1vw solid #E22424; */
-    /* color: #E22424; */
-}
 
 
 
@@ -3557,7 +3553,7 @@ a:hover{
     background-color: #FFF1F2;
     margin: auto;
     /* height: 67vw; */    /* for fixed cost */
-    height: 100vw;  /* for instalment */
+    height: 170vw;  /* for instalment */
     width: 100%;
     padding: 0vw;
     margin-top: 2vw;
@@ -3572,4 +3568,3 @@ a:hover{
     border-radius: 1vw;
     background: #FFF1F2;
 }
-

@@ -391,27 +391,27 @@ const hideNoteReminder=()=>{
 
 
 
-// NOTE NUMBER INCREMENT / DECREMENT
-    const noteTime= document.querySelector("#note-time")
+// // NOTE NUMBER INCREMENT / DECREMENT
+//     const noteTime= document.querySelector("#note-time")
 
-    const incrementNoteTime=()=>{
-        let noteTimeValue;
-        noteTimeValue= noteTime.value;
-        noteTimeValue++
-        noteTime.value = noteTimeValue;
-    }
+//     const incrementNoteTime=()=>{
+//         let noteTimeValue;
+//         noteTimeValue= noteTime.value;
+//         noteTimeValue++
+//         noteTime.value = noteTimeValue;
+//     }
 
-    const decrementNoteTime=()=>{
-        if (noteTime.value <= 0) {
-            noteTime.value=0;
-        }
+//     const decrementNoteTime=()=>{
+//         if (noteTime.value <= 0) {
+//             noteTime.value=0;
+//         }
 
-        else{
-            noteTimeValue= noteTime.value;
-            noteTimeValue--
-            noteTime.value = noteTimeValue;
-        }
-    }
+//         else{
+//             noteTimeValue= noteTime.value;
+//             noteTimeValue--
+//             noteTime.value = noteTimeValue;
+//         }
+//     }
 
 
 
@@ -907,7 +907,7 @@ const swiper1 = new Swiper('.vendor-dashboard', {
 // Vendor Resit Section
 // Vendor Resit Section
 
-document.querySelector('#resit').src="./All Resits/bargaining-resit.html"
+document.querySelector('#resit').src="./All Resits/offline resit/demo-installment.html"
 
 
 
@@ -943,4 +943,38 @@ const fixedOffline=()=>{
 
 const packageOffline=()=>{
     document.querySelector('#resit').src="./All Resits/offline resit/package-resit-offline.html"
+}
+
+
+
+
+// Button Decoration
+// Button Decoration
+
+const showMe=()=>{
+    for(let x=0; x<3; x++ ){
+
+        const preferredButton= document.querySelectorAll(".preferred-button")[x]
+        preferredButton.nextElementSibling.addEventListener('mouseover', function(){
+        preferredButton.classList.replace("btn-danger","btn-outline-danger")
+    })
+
+        preferredButton.nextElementSibling.addEventListener('mouseout', function(){
+        preferredButton.classList.replace("btn-outline-danger","btn-danger")
+    })
+    }
+}
+
+
+
+const beforeButton=()=>{
+    for(let x=0; x<3; x++ ){
+
+        const preferredButton= document.querySelectorAll(".preferred-buttons")[x]
+        preferredButton.classList.replace("btn-danger","btn-outline-danger")
+
+        preferredButton.previousElementSibling.addEventListener('mouseout', function(){
+        preferredButton.classList.replace("btn-outline-danger","btn-danger")
+    })
+    }
 }
