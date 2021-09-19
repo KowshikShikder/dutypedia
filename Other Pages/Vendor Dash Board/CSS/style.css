@@ -2443,25 +2443,27 @@ a:hover{
 }
 
 .appoinment-container-request-nav-bar div{
-    border-bottom: 0.08vw solid rgb(46, 46, 46);
     height: 2vw;
     width: 6vw;
     text-align: right;
     font-size: 1vw;
     padding: 0vw;
     cursor: pointer;
+    border-bottom: 0.08vw solid rgb(46, 46, 46);
 }
 
 
 
 .appoinment-container-request-nav-bar .appoinment-request-nav-received{
     text-align: left;
-    margin-left: 1vw;
     border-left: 0.1vw solid rgba(0, 0, 0, 0.329);
     padding-left: 0.8vw;
-
 }
 
+
+.appoinment-container-request-nav-bar .appoinment-request-nav-sent{
+    padding-right: 0.8vw;
+}
 
 .appoinment-request-nav-active-button{
     border-bottom: 0.08vw solid red !important;
@@ -2533,36 +2535,13 @@ a:hover{
     margin-top: 0.3vw;
 }
 
-/* 
-.sent-request-section .appoinment-icon{
-    align-self:center;
-    justify-self: center;
-    height: 2.3vw;
-    width: 2.3vw;
-    margin-left: 0.4vw;
-    overflow: hidden;
-    padding: 0.6vw;
-}
 
-
-.sent-request-section > div div:nth-child(1) img{
-    height: 100%;
-    width: 100%;
-}
-
-.sent-request-section div .appoinment-icon{
-    background: rgb(255, 255, 255);
-    width: 2.5vw;
-    height: 2.5vw;
-    border-radius: 100%;
-} */
 
 .sent-request-section div .appoinment-text{
     align-self: center;
     margin-left: 0.4vw;
     cursor: pointer;
 }
-
 
 
 
@@ -2718,10 +2697,6 @@ a:hover{
     margin-left: 0.6vw;
 }
 
-/* .appointment-sent-description-button-container div:hover{
-    background-color: rgb(255, 255, 255);
-    color: #E22424;
-} */
 
 
 .appointment-sent-description-button-container div .camera-icon{
@@ -2854,27 +2829,28 @@ a:hover{
     align-self: center;
 }
 
+
 .request-received-button-container div{
     padding: 0.3vw;
-    background-color: rgb(255, 255, 255);
-    color: #E22424;
+    /* background-color: rgb(255, 255, 255); */
+    /* color: #E22424; */
     height: 1.8vw;
     width: 6.6vw;
     font-size: 0.8vw;
     border-radius: 0.2vw;
     border: 0.08vw solid  #E22424;
-    transition: 0.2s;
-    cursor: pointer;
-    text-align: center;
-    transition: 0.2s;
+    /* transition: 0.2s; */
+    /* cursor: pointer; */
+    /* text-align: center; */
+    /* transition: 0.2s; */
 }
 
 
 
-.request-received-button-container div:hover{
+/* .request-received-button-container div:hover{
     background-color: #E22424;
     color: white;
-}
+} */
 
 
 
@@ -3568,3 +3544,6 @@ a:hover{
     border-radius: 1vw;
     background: #FFF1F2;
 }
+
+
+

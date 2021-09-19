@@ -62,6 +62,9 @@ const hideEditPriceSection=()=>{
 
 
 
+
+
+
 // PRICE EDITED loading POPUP
 // PRICE EDITED loading POPUP
 const priceEditedLoadingPopUpSection= document.querySelector(".edit-price-loading-pop-up")
@@ -105,6 +108,9 @@ const hideEditInstalmentSection=()=>{
 
 
 
+
+
+
 // instalment EDITED loading POPUP
 // instalment EDITED loading POPUP
 const instalmentEditedLoadingPopUpSection= document.querySelector(".edit-instalment-loading-pop-up")
@@ -137,7 +143,6 @@ const hideInstalmentEditedLoadingSection=()=>{
 const instructionText= document.querySelector(".details")
 const instructionInput= document.querySelector(".instruction-input-text-section")
 
-
 const showEditInstruction=()=>{
     instructionText.style.display="none"
     instructionInput.style.display="grid"
@@ -150,6 +155,69 @@ const hideEditInstruction=()=>{
 
 
 
+
+
+
+
+
+
+
+// INSTALMENT + INTEREST
+
+// All EDIT SECTION SHOW / HIDE
+// All EDIT SECTION SHOW / HIDE
+// All EDIT SECTION SHOW / HIDE
+
+const showEditSection=(hiddenSection,mainSection)=>{
+    document.querySelector(`#${hiddenSection}`).style.display="grid"
+    fullResitSection.style.filter="blur(0.4vw)";
+}
+
+const hideEditSection=(hiddenSection,mainSection)=>{
+    document.querySelector(`#${hiddenSection}`).style.display="none"
+    fullResitSection.style.filter="blur(0vw)";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $(document).on("click", function(event){
+//     console.log(event.target.className)
+// })
+
+
+
+// PAID AMMOUNT EDIT SECTION SHOW / HIDE START
+// PAID AMMOUNT EDIT SECTION SHOW / HIDE START
+// PAID AMMOUNT EDIT SECTION SHOW / HIDE START
+
+const showPaidAmmountEditSection=(x,y)=>{
+    const paidAmmountSection= document.querySelector(`#${x}`).style.display="none"
+    const paidAmmountEditSection= document.querySelector(`#${y}`).style.display="flex"
+}
+
+
+const hidePaidAmmountEditSection=(x,y)=>{
+    const paidAmmountSection= document.querySelector(`#${x}`).style.display="block"
+    const paidAmmountEditSection= document.querySelector(`#${y}`).style.display="none"
+}
+
+// PAID AMMOUNT EDIT SECTION SHOW / HIDE END
+// PAID AMMOUNT EDIT SECTION SHOW / HIDE END
+// PAID AMMOUNT EDIT SECTION SHOW / HIDE END
 
 
 

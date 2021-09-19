@@ -62,7 +62,7 @@
                               <span> <p>  </p> <p>  Delete Member </p> </span>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service1"> + </span> </div>
+                  </span> <span class="more-button btn" id="vendor-toggle-service1" onclick="sideBarMenuToggle('vendor-toggle-service1')">+</span> </div>
 
 
 
@@ -75,7 +75,7 @@
                               <span> <p>  </p>  Delete Member </span>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service2"> + </span> </div>
+                  </span> <span class="more-button btn" id="vendor-toggle-service2">+</span> </div>
 
 
 
@@ -88,7 +88,7 @@
                               <span> <p>  </p>  Delete Member </span>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service3"> + </span> </div>
+                  </span> <span class="more-button btn" id="vendor-toggle-service3">+</span> </div>
 
 
 
@@ -99,7 +99,7 @@
                               <span> <p>  </p>  Delete Member </span>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service4"> + </span> </div>
+                  </span> <span class="more-button btn" id="vendor-toggle-service4">+</span> </div>
 
 
 
@@ -111,7 +111,7 @@
                               <span> <p>  </p>  Delete Member </span>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service5"> + </span> </div>
+                  </span> <span class="more-button btn" id="vendor-toggle-service5">+</span> </div>
 
 
 
@@ -124,7 +124,7 @@
                               <span> <p>  </p>  Delete Member </span>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service6"> + </span> </div>
+                  </span> <span class="more-button btn" id="vendor-toggle-service6">+</span> </div>
 
 
 
@@ -137,7 +137,7 @@
                               <span> <p>  </p>  Delete Member </span>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service7"> + </span> </div>
+                  </span> <span class="more-button btn" id="vendor-toggle-service7">+</span> </div>
 
 
 
@@ -150,7 +150,7 @@
                               <span> <p>  </p>  Delete Member </span>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service8"> + </span> </div>
+                  </span> <span class="more-button btn" id="vendor-toggle-service8">+</span> </div>
 
 
 
@@ -163,7 +163,7 @@
                               <span> <p>  </p>  Delete Member </span>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service9"> + </span> </div>
+                  </span> <span class="more-button btn" id="vendor-toggle-service9">+</span> </div>
 
 
             </div>
@@ -335,7 +335,6 @@
                         <div class="new-note-section">
                               <div>
                                     <div class="new-note-container">
-                                    
                                           <div class="new-note-title"> <p>  Note  </p> </div>
                                           <div class="input-title"> Title </div>
                                           <input type="text" placeholder="Type Title..." >
@@ -773,8 +772,8 @@
                                           <div class="appoinment-icon"> 2 </div>
                                           <div class="appoinment-text" onclick=showRequestReceivedDescription()> 13th sept 2021, 10:00 AM <br> Meeting For Vendor Community. </div>
                                           <div class="request-received-button-container">
-                                                <div> Accept </div>
-                                                <div> Cancel </div>
+                                                <div class="btn btn-danger preferred-button"> Accept </div>
+                                                <div class="btn btn-outline-danger" onmouseenter=showMe() > Cancel </div>
                                           </div>
                                     </div>
 
@@ -782,8 +781,8 @@
                                           <div class="appoinment-icon"> 3 </div>
                                           <div class="appoinment-text" onclick=showRequestReceivedDescription()> 13th sept 2021, 10:00 AM <br> Meeting For Vendor Community. </div>
                                           <div class="request-received-button-container">
-                                                <div> Accept </div>
-                                                <div> Cancel </div>
+                                                <div class="btn btn-danger preferred-button"> Accept </div>
+                                                <div class="btn btn-outline-danger" onmouseenter=showMe() > Cancel </div>
                                           </div>
                                     </div>
 
@@ -797,8 +796,8 @@
                                           <div class="appoinment-icon"> 5 </div>
                                           <div class="appoinment-text" onclick=showRequestReceivedDescription()> 13th sept 2021, 10:00 AM <br> Meeting For Vendor Community. </div>
                                           <div class="request-received-button-container">
-                                                <div> Accept </div>
-                                                <div> Cancel </div>
+                                                <div class="btn btn-danger preferred-button"> Accept </div>
+                                                <div class="btn btn-outline-danger" onmouseenter=showMe() > Cancel </div>
                                           </div>
                                     </div>
 
@@ -806,8 +805,8 @@
                                           <div class="appoinment-icon"> 6 </div>
                                           <div class="appoinment-text" onclick=showRequestReceivedDescription()> 13th sept 2021, 10:00 AM <br> Meeting For Vendor Community. </div>
                                           <div class="request-received-button-container">
-                                                <div class="request-received-button"> Accept </div>
-                                                <div class="request-received-button"> Cancel </div>
+                                                <div class="btn btn-danger preferred-button"> Accept </div>
+                                                <div class="btn btn-outline-danger" onmouseenter=showMe() > Cancel </div>
                                           </div>
                                     </div>
 
@@ -836,8 +835,8 @@
 
                                           <!-- Accept / Cancel Button -->
                                           <div class="appointment-request-description-button-container">  
-                                                <div> Accept </div>
-                                                <div> Cancel </div>
+                                                <div class="btn btn-danger preferred-button"> Accept </div>
+                                                <div class="btn btn-outline-danger" onmouseenter=showMe() > Cancel </div>
                                           </div>
 
 
@@ -880,7 +879,7 @@
                                                             <input type="number" value="0" id="new-appo-time1" min="0">
       
                                                             <div class="new-appo-number-icons">
-                                                                  <div class="new-appo-plus-icon" onclick=incrementAppointment1()> + </div>
+                                                                  <div class="new-appo-plus-icon" onclick=incrementAppointment1()>+</div>
                                                                   <div class="new-appo-minus-icon" onclick=decrementAppointment1()> - </div>
                                                             </div>
                                                       </div>
@@ -895,7 +894,7 @@
                                                             <input type="number" value="0" id="new-appo-time2" min="0">
       
                                                             <div class="new-appo-number-icons">
-                                                                  <div class="new-appo-plus-icon" onclick=incrementAppointment2()> + </div>
+                                                                  <div class="new-appo-plus-icon" onclick=incrementAppointment2()>+</div>
                                                                   <div class="new-appo-minus-icon" onclick=decrementAppointment2()> - </div>
                                                             </div>
                                                       </div>

@@ -75,22 +75,57 @@ vendorSection.addEventListener('mouseout', function(){
 // SIDE BAR DROPDOWN SECTION START
 
 
-const toggleButtton1 = document.querySelector('#vendor-toggle-service1')
-const toggleOption1  = document.querySelector('#vendor-toggle-service1').previousElementSibling.querySelector('div')
+// All In One
+// All In One
+// All In One
 
+const sideBarMenuToggle=(sideId)=>{
 
-toggleButtton1.addEventListener('click', function(){
-    console.log("im clicked")
-    if(toggleButtton1.innerHTML === '+'){
-        toggleButtton1.innerHTML = '-'
-        toggleOption1.style.display="grid"
+const toggleButton = document.querySelector(`#${sideId}`)
+const toggleOption = toggleButton.previousElementSibling.querySelector('div')
 
+    if(toggleButton.innerHTML === '+'){
+        toggleButton.innerHTML = '-'
+        toggleOption.style.display="grid"
     }
+
+
     else{
-        toggleButtton1.innerHTML = '+'
-        toggleOption1.style.display="none"
+        toggleButton.innerHTML = '+'
+        toggleOption.style.display="none"
+
     }
-})
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const toggleButtton1 = document.querySelector('#vendor-toggle-service1')
+// const toggleOption1  = document.querySelector('#vendor-toggle-service1').previousElementSibling.querySelector('div')
+
+
+// toggleButtton1.addEventListener('click', function(){
+
+//     if(toggleButtton1.innerHTML === '+'){
+//         toggleButtton1.innerHTML = '-'
+//         toggleOption1.style.display="grid"
+
+//     }
+//     else{
+//         toggleButtton1.innerHTML = '+'
+//         toggleOption1.style.display="none"
+//     }
+// })
 
 
 
@@ -102,7 +137,7 @@ const toggleOption2  = document.querySelector('#vendor-toggle-service2').previou
 
 
 toggleButtton2.addEventListener('click', function(){
-    console.log("im clicked")
+
     if(toggleButtton2.innerHTML === '+'){
         toggleButtton2.innerHTML = '-'
         toggleOption2.style.display="grid"
@@ -125,7 +160,7 @@ const toggleOption3  = document.querySelector('#vendor-toggle-service3').previou
 
 
 toggleButtton3.addEventListener('click', function(){
-    console.log("im clicked")
+
     if(toggleButtton3.innerHTML === '+'){
         toggleButtton3.innerHTML = '-'
         toggleOption3.style.display="grid"
@@ -143,7 +178,7 @@ const toggleButtton4 = document.querySelector('#vendor-toggle-service4')
 const toggleOption4  = document.querySelector('#vendor-toggle-service4').previousElementSibling.querySelector('div')
 
 toggleButtton4.addEventListener('click', function(){
-    console.log("im clicked")
+
     if(toggleButtton4.innerHTML === '+'){
         toggleButtton4.innerHTML = '-'
         toggleOption4.style.display="grid"
@@ -164,7 +199,7 @@ const toggleOption5  = document.querySelector('#vendor-toggle-service5').previou
 
 
 toggleButtton5.addEventListener('click', function(){
-    console.log("im clicked")
+
     if(toggleButtton5.innerHTML === '+'){
         toggleButtton5.innerHTML = '-'
         toggleOption5.style.display="grid"
@@ -184,7 +219,7 @@ const toggleOption6  = document.querySelector('#vendor-toggle-service6').previou
 
 
 toggleButtton6.addEventListener('click', function(){
-    console.log("im clicked")
+
     if(toggleButtton6.innerHTML === '+'){
         toggleButtton6.innerHTML = '-'
         toggleOption6.style.display="grid"
@@ -202,7 +237,7 @@ const toggleOption7  = document.querySelector('#vendor-toggle-service7').previou
 
 
 toggleButtton7.addEventListener('click', function(){
-    console.log("im clicked")
+
     if(toggleButtton7.innerHTML === '+'){
         toggleButtton7.innerHTML = '-'
         toggleOption7.style.display="grid"
@@ -223,7 +258,7 @@ const toggleOption8  = document.querySelector('#vendor-toggle-service8').previou
 
 
 toggleButtton8.addEventListener('click', function(){
-    console.log("im clicked")
+
     if(toggleButtton8.innerHTML === '+'){
         toggleButtton8.innerHTML = '-'
         toggleOption8.style.display="grid"
@@ -946,13 +981,13 @@ const packageOffline=()=>{
 }
 
 
+const preferredButtonLenth= document.querySelectorAll(".preferred-button").length
 
 
 // Button Decoration
 // Button Decoration
-
 const showMe=()=>{
-    for(let x=0; x<3; x++ ){
+    for(let x=0; x<preferredButtonLenth; x++ ){
 
         const preferredButton= document.querySelectorAll(".preferred-button")[x]
         preferredButton.nextElementSibling.addEventListener('mouseover', function(){
@@ -968,7 +1003,7 @@ const showMe=()=>{
 
 
 const beforeButton=()=>{
-    for(let x=0; x<3; x++ ){
+    for(let x=0; x<preferredButtonLenth; x++ ){
 
         const preferredButton= document.querySelectorAll(".preferred-buttons")[x]
         preferredButton.classList.replace("btn-danger","btn-outline-danger")

@@ -254,7 +254,8 @@
 
 
 /* INSTALLMENT BUTTON RESIZE */
-.edit-instalment-section .edit-price-button-container .btn{
+#edit-instalment-section .edit-price-button-container .btn,
+#edit-interest-amount .edit-price-button-container .btn{
     font-size: 1.6vw;
 }
 
@@ -965,7 +966,7 @@ body{
     padding-right: 1vw;
 }
 
-.vendor-resit-price-section .delivery p .calander-icon{
+.vendor-resit-price-section .delivery p .calender-icon{
     margin-left: 0.3vw;
 }
 
@@ -981,7 +982,7 @@ body{
     align-self: start;
 }
 
-.delivery-date .calander-icon{
+.delivery-date .calender-icon{
     display: inline;
     height: 2vw;
     width: 2vw;
@@ -994,7 +995,7 @@ body{
 }
 
 
-.delivery-date .calander-icon img{
+.delivery-date .calender-icon img{
     height: 2.5vw;
     width: 2.5vw;
 }
@@ -1124,6 +1125,28 @@ body{
 
 
 
+
+
+
+
+
+/* TOTAL PAID AMMOUNT SECTION */
+/* TOTAL PAID AMMOUNT SECTION */
+/* TOTAL PAID AMMOUNT SECTION */
+.facilities-payment-section .payment .total-paid-ammount-section{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 14vw;
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.123);
+    border-left: 0.08vw solid rgba(0, 0, 0, 0.123);
+    border-bottom: 0.08vw solid rgba(0, 0, 0, 0.123);
+}
+
+.facilities-payment-section .payment .total-paid-ammount-section div:nth-child(2){
+    margin-top: 0.4vw;
+}
 
 
 
@@ -1273,6 +1296,22 @@ body{
 
 
 
+
+.installment-table-success-note{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    height: 16vw;
+    font-size: 1.8vw;
+    font-weight: 500;
+    border: 0.08vw solid rgba(0, 0, 0, 0.11);
+    border-top: 0.08vw solid rgba(0, 0, 0, 0);
+    margin-top: -2vw;
+}
+
+
+
 /* INSTALMENT TITLE SECTION */
 .installment-table-title{
     display: flex;
@@ -1318,14 +1357,12 @@ body{
     display: grid;
     align-items: center;
     height: 100%;
-    /* margin-top: 8vw; */
     margin-top: 2vw;
     font-size: 2vw;
 }
 
 .installment-table-title p:nth-child(2){
     font-size: 1.6vw;
-    /* margin-top: 8vw; */
     margin-top: 2vw;    
     margin-left: 1vw;
 }
@@ -1421,12 +1458,11 @@ body{
     width: 100%;
     font-size: 1.35vw;
     padding: 0.8vw 0vw 0.8vw 0vw;
-
 }
 
 .installment-table-row-1 .installment-table-col-right > div:nth-child(1){
     border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
-
+    padding-right: 0.5vw;
 }
 
 .installment-table-row-1 .installment-table-col-right > div p{
@@ -1434,9 +1470,173 @@ body{
     margin: 0vw;
 }
 
-.installment-table-row-1 .installment-table-col-right > div p:nth-child(1) span{
+.installment-table-row-1 .interest-section p:nth-child(1) span{
     color: red;
+    font-size: 1.1vw;
 }
+
+
+
+
+.interest-section .interest-three-dots{
+    position: absolute;
+    height: 1.8vw;
+    width: 1vw;
+    padding: 0.3vw;
+    margin-left: 0vw;
+    margin-top: 0.1vw;
+}
+
+.interest-section .interest-three-dots img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+
+.interest-section .interest-edit-hover{
+    display: none;
+    font-size: 1.2vw;
+    position: absolute;
+    right: -10vw;
+    top: -0.2vw;
+    width: 10vw;
+    background: white;
+    color: black !important;
+}
+
+
+.interest-section .interest-three-dots:hover .interest-edit-hover{
+    display: grid;
+}
+
+
+/* EDIT INTEREST SECTION START */
+/* EDIT INTEREST SECTION START */
+/* EDIT INTEREST SECTION START */
+
+
+
+.interest-edit-section{
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-around;
+    height: 3vw;
+    width: 108%;
+    margin-left: -0.3vw;
+    margin-top: 0.8vw;
+}
+
+
+
+.interest-edit-section .interest-edit-button{
+    height: 1.5vw;
+    width: 1.5vw;
+    background: white;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.342);
+    border-radius: 100%;
+    border: 0.03vw solid rgba(0, 0, 0, 0.171);
+    padding: 0.02vw;
+}
+
+
+.interest-edit-section .interest-edit-button img{
+    height: 90%;
+    width: 90%;
+}
+
+
+.interest-ammount-input{
+    position: relative;
+    height: 3vw;
+    width: 9vw;
+    background: #C82333;
+}
+
+.interest-ammount-input .price-tk{
+    position: absolute;
+    top: 0.5vw;
+    right: 4vw;
+    height: 3vw;
+    width: 2vw;
+    font-size: 1.9vw;
+    font-weight: 800;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+    .interest-ammount-input #interest-input{
+        position: absolute;
+        height: 3vw;
+        width: 9vw;
+        padding: 0vw;
+        padding-left: 0.6vw;
+        font-size: 1.6vw;
+        z-index: 1;
+        background: #ffffff;
+        border: 0.01vw solid red;
+        outline: none;
+        border-radius: 0.4vw;
+        box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
+        left: 0vw;
+    }
+
+
+    .interest-ammount-input #interest-input::-webkit-inner-spin-button{
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    .interest-ammount-input .spinner-button-container{
+        display: grid;
+        justify-content: center;
+        position: absolute;
+        right: 10vw;
+        z-index: 2;
+        height: 3vw;
+        width: 1.8vw;
+        pointer-events: none;
+        background: #E22222;
+        transform: translate(10vw,0vw);
+        border-radius:0vw 0.6vw 0.6vw 0vw;
+        overflow: hidden;
+    }
+
+    .interest-ammount-input .spinner-button{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        height: 1.6vw;
+        width: 1vw;
+        margin: auto;
+        pointer-events: none;
+        background: #E22222;
+    }
+
+
+    .interest-ammount-input #inc-button{
+        width: 0.8vw;
+        border-bottom: 0.08vw solid white;
+    }
+
+    .interest-ammount-input #dec-button{
+        top: 3.5vw;
+    }
+
+    .interest-ammount-input .spinner-button img{
+        height: 1.5vw;
+        width: 1.5vw;
+    }
+
+
+
+/* EDIT INTEREST SECTION END */
+/* EDIT INTEREST SECTION END */
+/* EDIT INTEREST SECTION END */
+
 
 
 
@@ -1448,7 +1648,7 @@ body{
 .installment-table-row-2{
     display: grid;
     align-items: center;
-    height: 9vw;
+    height: 11vw;
     width: 100%;
     grid-template-columns: 50% 50%;
     border-bottom: 0.08vw solid rgba(0, 0, 0, 0.171);
@@ -1469,7 +1669,9 @@ body{
 
 
 .installment-table-row-2 > div:nth-child(1){
+    display: grid;
     border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
+    position: relative;
 }
 
 
@@ -1477,6 +1679,176 @@ body{
 .installment-table-row-2 > div p{
     margin: 0.5vw;
 }
+
+.installment-paid-ammount{
+    display: block;
+
+}
+
+
+
+.installment-table-row-2 .paid-three-dots{
+    position: absolute;
+    height: 2vw;
+    width: 1vw;
+    padding: 0.1vw;
+    margin-left: 0.6vw;
+    margin-top: 0.3vw;
+}
+
+.installment-table-row-2 .paid-three-dots img{
+    position: relative;
+    height: 80%;
+    width: 80%;
+}
+
+
+.paid-edit-hover{
+    display: none;
+    font-size: 1.2vw;
+    position: absolute;
+    right: -9.5vw;
+    top: -0.2vw;
+    width: 10vw;
+}
+
+
+.paid-three-dots:hover .paid-edit-hover{
+    display: grid;
+}
+
+
+
+
+
+
+    /* PAID AMMOUNT INPUT SECTION START */
+    /* PAID AMMOUNT INPUT SECTION START */
+    /* PAID AMMOUNT INPUT SECTION START */
+
+
+    .paid-edit-section{
+        display: none;
+        justify-content: space-around;
+        height: 3.5vw;
+        width: 100%;
+        margin-top: 0.8vw;
+    }
+
+
+    .paid-edit-section .paid-edit-button{
+        height: 3.2vw;
+        width: 3.2vw;
+        background: white;
+        box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.178);
+        border-radius: 100%;
+        padding: 0.8vw;
+        border: 0.03vw solid rgba(0, 0, 0, 0.100);
+    }
+
+
+    .paid-edit-section .paid-edit-button img{
+        height: 100%;
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
+    .paid-ammount-input{
+        position: relative;
+        height: 3.5vw;
+        width: 15vw;
+        margin-left: 2vw;
+    }
+    
+    .paid-ammount-input .price-tk{
+        position: absolute;
+        top: 0.5vw;
+        right: 4vw;
+        height: 3vw;
+        width: 2vw;
+        font-size: 1.9vw;
+        font-weight: 800;
+        z-index: 2;
+        pointer-events: none;
+    }
+    
+
+        .paid-ammount-input #paid-ammount-input{
+            position: absolute;
+            height: 3.5vw;
+            width: 15vw;
+            padding: 0vw;
+            padding-left: 1.4vw;
+            font-size: 1.8vw;
+            border: solid 0.5px #000;
+            z-index: 1;
+            background: #ffffff;
+            border: 0.08vw solid red;
+            outline: none;
+            border-radius: 0.4vw;
+            box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
+            left: 0vw;
+        }
+    
+    
+        .paid-ammount-input #paid-ammount-input::-webkit-inner-spin-button{
+            transform: scale(3);
+            opacity: 0;
+        }
+    
+        .paid-ammount-input .spinner-button-container{
+            display: grid;
+            justify-content: center;
+            position: absolute;
+            right: 10vw;
+            z-index: 2;
+            height: 3.5vw;
+            width: 3.5vw;
+            pointer-events: none;
+            background: #E22222;
+            transform: translate(10vw,0vw);
+            border-radius:0vw 0.6vw 0.6vw 0vw;
+            overflow: hidden;
+        }
+    
+        .paid-ammount-input .spinner-button{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            height: 1.8vw;
+            width: 1vw;
+            margin: auto;
+            pointer-events: none;
+            background: #E22222;
+        }
+    
+    
+        .paid-ammount-input #inc-button{
+            width: 2.8vw;
+            border-bottom: 0.08vw solid white;
+        }
+    
+        .paid-ammount-input #dec-button{
+            top: 3.5vw;
+        }
+    
+        .paid-ammount-input .spinner-button img{
+            height: 1.5vw;
+            width: 1.5vw;
+        }
+    
+    /* PAID AMMOUNT  INPUT SECTION END */
+    /* PAID AMMOUNT  INPUT SECTION END */
+    /* PAID AMMOUNT  INPUT SECTION END */
+
+
 
 
 /* INSTALMENT TABLE END */
@@ -1613,7 +1985,9 @@ body{
     width: 100%;
     background: white;
     margin-top: 2vw;
+    padding-bottom: 4vw;
 }
+
 
 
 .footer-button-container .btn{
@@ -1627,6 +2001,7 @@ body{
     font-size: 2vw;
     padding: 0vw;
     border: 0.08vw solid  #DC3545;
+    
 }
 
 
@@ -1865,6 +2240,7 @@ body{
     border-radius: 1vw;
     overflow-y: auto;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.11);
+    padding-bottom: 4vw;
 }
 
 
@@ -1939,6 +2315,7 @@ body{
 .all-payment-details-box-row-1:nth-child(1) .all-payment-details-box-right{
     display: grid;
     grid-template-columns: 100%;
+    border-bottom: 0.08vw solid rgba(0, 0, 0, 0.158);
 }
 
 
@@ -1947,8 +2324,10 @@ body{
     align-items: center;
     grid-template-columns: 55% 45%;
     height: 15vw;
-    border-bottom: 0.08vw solid rgba(0, 0, 0, 0.158);
+    /* border-bottom: 0.08vw solid rgba(0, 0, 0, 0.158); */
+    padding-left: 2vw;
 }
+
 
 
 
@@ -1962,13 +2341,87 @@ body{
     height: 100%;
     width: 100%;
     border-right: 0.08vw solid rgba(0, 0, 0, 0.075);
-
+    border-bottom: 0.08vw solid rgba(0, 0, 0, 0.158);
 }
 
 
 .all-payment-details-box-left div > div:nth-child(1){
     margin-bottom: 2.4vw;
 }
+
+
+
+
+
+/* ALL PAYMENT DETAILS BOX LEFT TITLE */
+
+.all-payment-details-box-left-title{
+    font-size: 2.4vw;
+    position: relative;
+    margin-left: -4vw;
+}
+
+
+
+
+.condition-of-installment{
+    position: absolute;
+    top: 0.4vw;
+    right: 2vw;
+    height: 2.4vw;
+    width: 8vw;
+    background: #E22424;
+    font-size: 1.2vw;
+    border-radius: 0.8vw;
+    color: white;
+    padding: 0.3vw;
+}
+
+.condition-of-installment-paid{
+    background: #E22424;
+    color: white;
+}
+
+
+.condition-of-installment-active{
+    background: #3E910E;
+    
+}
+
+.condition-of-installment-due{
+    background: white;
+    border: 0.08vw solid #E22424;
+    color: #E22424;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1985,6 +2438,7 @@ body{
     align-items: center;
     height: 100%;
     width: 100%;
+    padding-right: 2vw;
 }
 
 
@@ -2001,10 +2455,13 @@ body{
     width: 100%;
     padding-bottom: 2vw;
     font-size: 2vw;
+    border-bottom: 0.08vw solid rgba(0, 0, 0, 0.158);
 }
 
 .all-payment-details-box-right .remaining-section{
     border-right: 0.08vw solid rgba(0, 0, 0, 0.075);
+    margin-right: -2vw;
+    width: 105%;
 }
 
 
@@ -2015,10 +2472,14 @@ body{
 
 .all-payment-details-box-right-title{
     text-align: center;
+    font-size: 2vw;
 }
 
 
 
+.all-payment-details-box-right .paid-section .all-payment-details-box-right-title{
+    margin-right: -1vw;
+}
 
 
 
@@ -2032,9 +2493,11 @@ body{
         position: relative;
         height: 3.8vw;
         width: 17vw;
-        background: chartreuse;
     }
 
+    .all-payment-details-box-right .paid-section .payment-ammount-input{
+        margin-right: -0.5vw;
+    }
 
     .payment-ammount-input #edit-price-input{
         width: 17vw;
@@ -2080,8 +2543,8 @@ body{
         pointer-events: none;
     }
     
-    /* PAYMENT AMMOUNT  INPUT SECTION START */
-    /* PAYMENT AMMOUNT  INPUT SECTION START */
+    /* PAYMENT AMMOUNT  INPUT SECTION END */
+    /* PAYMENT AMMOUNT  INPUT SECTION END */
 
 
 
@@ -2091,17 +2554,23 @@ body{
 /* ADVANCE PAYMENT date input */
 .advanced-payment-date-input-container{
     display: grid;
-    height: 4.5vw;
+    height: 3.5vw;
     width: 40vw;
     justify-content: center;
+    align-items: center;
     grid-template-columns: 45% 10% 45%;
     text-align: center;
+    margin-left: -2vw;
+    position: relative;
+    padding: 0vw;
+
 }
 
 
 .advanced-payment-date-input-container div{
     display: grid;
     align-items: center;
+    font-size: 2vw;
 }
 
 
@@ -2109,17 +2578,37 @@ body{
     display: inline;
     height: 3.5vw;
     width: 100%;
-    font-size: 1.8vw;
-    padding-left: 0.4vw;
+    font-size: 1.6vw;
+    padding-left: 1vw;
     color: slategray;
-    margin-top: 0.6vw;
     outline: none;
     border: 0.06vw solid #E22424;
     border-radius: 0.8vw;
 }
 
 
-.advanced-payment-date-input-container #instalment-date::-webkit-calendar-picker-indicator {
+
+.calender-icon{
+    position: absolute;
+    height: 3.5vw;
+    width: 3.5vw;
+    right: 0vw;
+    pointer-events: none;
+    /* transform: translate(15vw,0.6vw); */
+    z-index: 10;
+    background: #E22424;
+    border-radius: 0.8vw;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../images/resite/calendar-line.svg);
+}
+
+.calender-icon:nth-child(2){
+    right: 22vw;
+}
+
+/* .advanced-payment-date-input-container #instalment-date::-webkit-calendar-picker-indicator {
     background: #E22424;
     height: 76%;
     width: 12%;
@@ -2130,15 +2619,18 @@ body{
     background-position: center;
     background-image: url(../../../images/resite/calendar-line.svg);
     border-radius: 0.4vw;
+} */
+
+
+
+
+
+
+.all-payment-details-box-row-1:nth-last-child(1) .remaining-section,
+.all-payment-details-box-row-1:nth-last-child(1) .paid-section,
+.all-payment-details-box-row-1:nth-last-child(1) .all-payment-details-box-left{
+    border-bottom: 1vw solid white;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -2896,4 +3388,14 @@ body{
     from{ opacity: 0; }
     to{ opacity: 1; }
 }
+
+
+
+
+
+
+
+
+
+
 
