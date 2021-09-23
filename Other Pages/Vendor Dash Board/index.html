@@ -28,10 +28,10 @@
       </div>
 
       <div class="top-navigation-button-section">
-            <div class="nav-button"> <img src="./images/top bar/Repeat Grid 1.svg" alt="">  </div>
-            <div class="nav-button"> <img src="./images/top bar/fire.svg" alt="">  </div>
-            <div class="nav-button"> <img src="./images/top bar/telegram.svg" alt="">  </div>
-            <div class="nav-button"> <img src="./images/top bar/notifications-outline.svg" alt="">  </div>
+            <div class="nav-button"> <img src="./images/icons/night.svg" alt="">  </div>
+            <div class="nav-button"> <img src="./images/icons/Group 7482.svg" alt="">  </div>
+            <div class="nav-button"> <img src="./images/icons/Group 7464.svg" alt="">  </div>
+            <div class="nav-button"> <img src="./images/icons/Send_3_.svg" alt="">  </div>
             <div class="nav-account"> <div class="nav-account-image"> <img src="./images/top bar/brian-mercado-rm7rZYdl3rY-unsplash.jpg" alt=""> </div>   <p> Omar Akbar </p> </div>
       </div>
 </section>
@@ -53,119 +53,370 @@
 
 
             <div class="vendor-navigation">
-                  <div class="vendor-navigation-icon"> <img src="./images/side bar/home.svg" alt=""> <span>  Home </span>  </div>
 
-                  <div class="vendor-navigation-icon"> <img src="./images/side bar/box.svg" alt=""> <span>  <p> Service  </p>
-                        <div class="more-data">
-                              <span> <p> > </p> <p> All Member    </p> </span>
-                              <span> <p>  </p> <p>  Add Member    </p> </span>
-                              <span> <p>  </p> <p>  Delete Member </p> </span>
+
+                  <!-- Navigation Button -->
+                  <div class="vendor-nav"  id="side-nav1">
+                        <div class="vendor-nav-main"  onclick="sideBarMenuToggle('side-nav1')">
+                              <div class="vendor-nav-icon"> <img src="./images/icons/bxs-dashboard.svg" alt=""> </div>
+                              <div class="vendor-nav-text"> Dashboard </div>
+                              <div class="vendor-nav-btn"> <img src="./images/icons/plus.svg" alt=""> </div>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service1" onclick="sideBarMenuToggle('vendor-toggle-service1')">+</span> </div>
+                        <div class="vendor-nav-more" style="display:none;">
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Employee List   </span>
+                                          </p>
+                                    </a>
+
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Employee Attendance   </span>
+                                          </p>
+                                    </a>
+
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Company Holiday   </span>
+                                          </p>
+                                    </a>
+
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Employee Salary   </span>
+                                          </p>
+                                    </a>
+                        </div>
+                  </div>
 
 
-
-
-
-                  <div class="vendor-navigation-icon"> <img src="./images/side bar/user profile.svg" alt=""> <span> <p>  Member </p>
-                        <div class="more-data">
-                              <span> <p> > </p> All Member </span>
-                              <span> <p>  </p>  Add Member </span>
-                              <span> <p>  </p>  Delete Member </span>
+                  <!-- Navigation Button -->
+                  <div class="vendor-nav"  id="side-nav2">
+                        <div class="vendor-nav-main"  onclick="sideBarMenuToggle('side-nav2')">
+                              <div class="vendor-nav-icon"> <img src="./images/icons/settings-1.svg" alt=""> </div>
+                              <div class="vendor-nav-text"> Service </div>
+                              <div class="vendor-nav-btn"> <img src="./images/icons/plus.svg" alt=""> </div>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service2">+</span> </div>
+                        <div class="vendor-nav-more" style="display:none;">
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Employee List   </span>
+                                          </p>
+                                    </a>
+
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Employee Attendance   </span>
+                                          </p>
+                                    </a>
+
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Company Holiday   </span>
+                                          </p>
+                                    </a>
+
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Employee Salary   </span>
+                                          </p>
+                                    </a>
+                        </div>
+                  </div>
 
 
-
-
-
-                  <div class="vendor-navigation-icon"> <img src="./images/side bar/GROUP.svg" alt=""> <span> <p>  Group  </p>
-                        <div class="more-data">
-                              <span> <p> > </p> All Member </span>
-                              <span> <p>  </p>  Add Member </span>
-                              <span> <p>  </p>  Delete Member </span>
+                  <!-- Navigation Button -->
+                  <div class="vendor-nav"  id="side-nav3">
+                        <div class="vendor-nav-main"  onclick="sideBarMenuToggle('side-nav3')">
+                              <div class="vendor-nav-icon"> <img src="./images/icons/avatar.svg" alt=""> </div>
+                              <div class="vendor-nav-text"> Member </div>
+                              <div class="vendor-nav-btn"> <img src="./images/icons/plus.svg" alt=""> </div>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service3">+</span> </div>
+                        <div class="vendor-nav-more" style="display:none;">
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Employee List   </span>
+                                    </p>
+                              </a>
+
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Employee Attendance   </span>
+                                    </p>
+                              </a>
+
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Company Holiday   </span>
+                                    </p>
+                              </a>
+                        </div>
+                  </div>
+
+                  <!-- </div> -->
 
 
 
-                  <div class="vendor-navigation-icon"> <img src="./images/side bar/NOTICE.svg" alt=""> <span> <p>  Notice  </p>
-                        <div class="more-data">
-                              <span> <p> > </p> All Member </span>
-                              <span> <p>  </p>  Add Member </span>
-                              <span> <p>  </p>  Delete Member </span>
+                  <!-- Navigation Button -->
+                  <div class="vendor-nav"  id="side-nav4">
+                        <div class="vendor-nav-main"  onclick="sideBarMenuToggle('side-nav4')">
+                              <div class="vendor-nav-icon"> <img src="./images/icons/group.svg" alt=""> </div>
+                              <div class="vendor-nav-text"> Group </div>
+                              <div class="vendor-nav-btn"> <img src="./images/icons/plus.svg" alt=""> </div>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service4">+</span> </div>
+                        <div class="vendor-nav-more" style="display:none;">
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Employee List   </span>
+                                    </p>
+                              </a>
+
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Employee Attendance   </span>
+                                    </p>
+                              </a>
+
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Company Holiday   </span>
+                                    </p>
+                              </a>
+                        </div>
+                  </div>
 
 
 
-
-                  <div class="vendor-navigation-icon"> <img src="./images/side bar/employees.svg" alt=""> <span> <p>  Staff & Partner  </p>
-                        <div class="more-data">
-                              <span> <p> > </p> All Member </span>
-                              <span> <p>  </p>  Add Member </span>
-                              <span> <p>  </p>  Delete Member </span>
+                  <!-- Navigation Button -->
+                  <div class="vendor-nav"  id="side-nav5">
+                        <div class="vendor-nav-main"  onclick="sideBarMenuToggle('side-nav5')">
+                              <div class="vendor-nav-icon"> <img src="./images/icons/file.svg" alt=""> </div>
+                              <div class="vendor-nav-text"> Notice </div>
+                              <div class="vendor-nav-btn"> <img src="./images/icons/plus.svg" alt=""> </div>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service5">+</span> </div>
+                        <div class="vendor-nav-more" style="display:none;">
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Employee List   </span>
+                                    </p>
+                              </a>
+
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Employee Attendance   </span>
+                                    </p>
+                              </a>
+
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Company Holiday   </span>
+                                    </p>
+                              </a>
+                        </div>
+                  </div>
 
 
-
-
-
-                  <div class="vendor-navigation-icon"> <img src="./images/side bar/wallet (2).svg" alt=""> <span> <p>  Expencess  </p>
-                        <div class="more-data">
-                              <span> <p> > </p> All Member </span>
-                              <span> <p>  </p>  Add Member </span>
-                              <span> <p>  </p>  Delete Member </span>
+                  <!-- Navigation Button -->
+                  <div class="vendor-nav"  id="side-nav6">
+                        <div class="vendor-nav-main"  onclick="sideBarMenuToggle('side-nav6')">
+                              <div class="vendor-nav-icon"> <img src="./images/icons/team.svg" alt=""> </div>
+                              <div class="vendor-nav-text"> Staff & Partner </div>
+                              <div class="vendor-nav-btn"> <img src="./images/icons/plus.svg" alt=""> </div>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service6">+</span> </div>
+                        <div class="vendor-nav-more" style="display:none;">
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Employee List   </span>
+                                          </p>
+                                    </a>
+
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Employee Attendance   </span>
+                                          </p>
+                                    </a>
+
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Company Holiday   </span>
+                                          </p>
+                                    </a>
+
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Employee Salary   </span>
+                                          </p>
+                                    </a>
+                        </div>
+                  </div>
 
 
-
-
-
-                  <div class="vendor-navigation-icon"> <img src="./images/side bar/save-money.svg" alt=""> <span> <p>  Account Balance  </p>
-                        <div class="more-data">
-                              <span> <p> > </p> All Member </span>
-                              <span> <p>  </p>  Add Member </span>
-                              <span> <p>  </p>  Delete Member </span>
+                  <!-- Navigation Button -->
+                  <div class="vendor-nav"  id="side-nav7">
+                        <div class="vendor-nav-main"  onclick="sideBarMenuToggle('side-nav7')">
+                              <div class="vendor-nav-icon"> <img src="./images/icons/wallet.svg" alt=""> </div>
+                              <div class="vendor-nav-text"> Expenses </div>
+                              <div class="vendor-nav-btn"> <img src="./images/icons/plus.svg" alt=""> </div>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service7">+</span> </div>
+                        <div class="vendor-nav-more" style="display:none;">
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Employee List   </span>
+                                          </p>
+                                    </a>
+
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Employee Attendance   </span>
+                                          </p>
+                                    </a>
+
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Company Holiday   </span>
+                                          </p>
+                                    </a>
+
+                                    <a href="">
+                                          <p> 
+                                                <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                                <span class="vendor-nav-more-text"> Employee Salary   </span>
+                                          </p>
+                                    </a>
+                        </div>
+                  </div>
 
 
-
-
-
-                  <div class="vendor-navigation-icon"> <img src="./images/side bar/review.svg" alt=""> <span> <p>  Customer Review  </p>
-                        <div class="more-data">
-                              <span> <p> > </p> All Member </span>
-                              <span> <p>  </p>  Add Member </span>
-                              <span> <p>  </p>  Delete Member </span>
+                  <!-- Navigation Button -->
+                  <div class="vendor-nav"  id="side-nav8">
+                        <div class="vendor-nav-main"  onclick="sideBarMenuToggle('side-nav8')">
+                              <div class="vendor-nav-icon"> <img src="./images/icons/value.svg" alt=""> </div>
+                              <div class="vendor-nav-text"> Account Balance </div>
+                              <div class="vendor-nav-btn"> <img src="./images/icons/plus.svg" alt=""> </div>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service8">+</span> </div>
+                        <div class="vendor-nav-more" style="display:none;">
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Employee List   </span>
+                                    </p>
+                              </a>
+
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Employee Attendance   </span>
+                                    </p>
+                              </a>
+
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Company Holiday   </span>
+                                    </p>
+                              </a>
+                        </div>
+                  </div>
 
 
 
-
-
-                  <div class="vendor-navigation-icon"> <img src="./images/side bar/home.svg" alt=""> <span> <p>  Expenses  </p>
-                        <div class="more-data">
-                              <span> <p> > </p> All Member </span>
-                              <span> <p>  </p>  Add Member </span>
-                              <span> <p>  </p>  Delete Member </span>
+                  <!-- Navigation Button -->
+                  <div class="vendor-nav"  id="side-nav9">
+                        <div class="vendor-nav-main"  onclick="sideBarMenuToggle('side-nav9')">
+                              <div class="vendor-nav-icon"> <img src="./images/icons/rating.svg" alt=""> </div>
+                              <div class="vendor-nav-text"> Customer Review </div>
+                              <div class="vendor-nav-btn"> <img src="./images/icons/plus.svg" alt=""> </div>
                         </div>
 
-                  </span> <span class="more-button btn" id="vendor-toggle-service9">+</span> </div>
+                        <div class="vendor-nav-more" style="display:none;">
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Employee List   </span>
+                                    </p>
+                              </a>
+
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Employee Attendance   </span>
+                                    </p>
+                              </a>
+
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Company Holiday   </span>
+                                    </p>
+                              </a>
+                        </div>
+                  </div>
 
 
+
+                  <!-- Navigation Button -->
+                  <div class="vendor-nav"  id="side-nav10">
+                        <div class="vendor-nav-main"  onclick="sideBarMenuToggle('side-nav10')">
+                              <div class="vendor-nav-icon"> <img src="./images/icons/settings.svg" alt=""> </div>
+                              <div class="vendor-nav-text"> Settings </div>
+                              <div class="vendor-nav-btn"> <img src="./images/icons/plus.svg" alt=""> </div>
+                        </div>
+
+                        <div class="vendor-nav-more" style="display:none;">
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Employee List   </span>
+                                    </p>
+                              </a>
+
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Employee Attendance   </span>
+                                    </p>
+                              </a>
+
+                              <a href="">
+                                    <p> 
+                                          <span class="vendor-nav-more-icon"> <img src="./images/icons/Path 18839.svg" alt=""> </span> 
+                                          <span class="vendor-nav-more-text"> Company Holiday   </span>
+                                    </p>
+                              </a>
+                        </div>
+                  </div>
             </div>
 </div>
 
@@ -200,15 +451,19 @@
 
                         <div class="client-profile-footer-section">
                               <div class="client-profile-footer">
-                                    <div class="client-profile-icon"> <img src="./images/clients section/flat icon/speech-bubble.svg" alt="">  </div>
-                                    <div class="client-profile-icon">  <img src="./images/clients section/flat icon/whatsapp (1).svg" alt=""> </div>
-                                    <div class="client-profile-icon">  <img src="./images/clients section/flat icon/google (2).svg" alt=""> </div>
-                                    <div class="client-address"> <div> <img src="./images/clients section/flat icon/location.svg" alt=""> </div> Khulna, Chuknagar, Bangladesh  </div>
+                                    <div class="client-profile-icon"> <img src="./images/icons/Send_3_.svg" alt="">  </div>
+                                    <div class="client-profile-icon">  <img src="./images/icons/hangouts-meet (1).svg" alt=""> </div>
+                                    <div class="client-profile-icon">  <img src="./images/icons/google (2).svg" alt=""> </div>
+                                    <div class="client-address"> <div> <img src="./images/icons/location.svg" alt=""> </div> Khulna, Chuknagar, Bangladesh  </div>
                               </div>
                         </div>
 
                         <div class="client-profile-image-container">
-                              <div class="image"> <img src="./images/clients section/dahiana-waszaj-XQWfro4LrVs-unsplash.jpg" alt=""> </div>
+                              <div class="image"> 
+                                    <!-- <img src="./images/clients section/dahiana-waszaj-XQWfro4LrVs-unsplash.jpg" alt=""> -->
+                                    <img src="./images/icons/profile.svg" alt="">
+                                    <div class="upload-icon"> <img src="./images/icons/camera-fill.svg" alt=""> </div>
+                              </div>
                               <div> Tanjin Tisha <p> Personal Account </p> </div>
                         </div>
                   </div>
@@ -926,9 +1181,13 @@
 
                         </div>
                   </div>
+                  
             </div>
 
 
+            <!-- CLIENT DESCRIPTION END -->
+            <!-- CLIENT DESCRIPTION END -->
+            <!-- CLIENT DESCRIPTION END -->
 
 
 
@@ -940,19 +1199,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-            <!-- CLIENT DESCRIPTION START -->
-            <!-- CLIENT DESCRIPTION START -->
 
 
             <!-- vandor navigation dashboard -->
@@ -964,45 +1210,50 @@
                         <div class="swiper-wrapper">
 
                               <div class="vendor-services swiper-slide vendor-services-bargaining" onclick=bargaining()>
-                                    <div> Bargaining </div> <div> 3 Order </div>
+                                    <div> Bargaining on </div> <div> 3 Order </div>
                                     <div class="vendor-service-circle-1"></div> <div class="vendor-service-circle-2"> </div>
                               </div>
 
 
 
                               <div class="vendor-services swiper-slide vendor-services-fixed" onclick=fixed()>
-                                    <div> Fixed </div> <div> 3 Order </div>
+                                    <div> Bargaining off </div> <div> 3 Order </div>
                                     <div class="vendor-service-circle-1"></div> <div class="vendor-service-circle-2"> </div>
                               </div>
 
 
 
                               <div class="vendor-services swiper-slide vendor-services-installment" onclick=installment()>
-                                    <div> Installment </div> <div> 3 Order </div>
+                                    <div> fixed on </div> <div> 3 Order </div>
                                     <div class="vendor-service-circle-1"></div> <div class="vendor-service-circle-2"> </div>
                               </div>
 
 
 
                               <div class="vendor-services swiper-slide vendor-services-subscription" onclick=subscription()>
-                                    <div> Subscription </div> <div> 3 Order </div>
+                                    <div> fixed off </div> <div> 3 Order </div>
                                     <div class="vendor-service-circle-1"></div> <div class="vendor-service-circle-2"> </div>
                               </div>
 
 
                               <div class="vendor-services swiper-slide vendor-services-subscription" onclick=package()>
-                                    <div> package </div> <div> 3 Order </div>
+                                    <div> package on </div> <div> 3 Order </div>
                                     <div class="vendor-service-circle-1"></div> <div class="vendor-service-circle-2"> </div>
                               </div>
                               
                               <div class="vendor-services swiper-slide vendor-services-subscription" onclick=fixedOffline()>
-                                    <div> Offline fixed </div> <div> 4 Order </div>
+                                    <div> package off </div> <div> 4 Order </div>
                                     <div class="vendor-service-circle-1"></div> <div class="vendor-service-circle-2"> </div>
                               </div>
 
                               
                               <div class="vendor-services swiper-slide vendor-services-subscription" onclick=packageOffline()>
-                                    <div> Offline package </div> <div> 3 Order </div>
+                                    <div> installment on  </div> <div> 3 Order </div>
+                                    <div class="vendor-service-circle-1"></div> <div class="vendor-service-circle-2"> </div>
+                              </div>
+                              
+                              <div class="vendor-services swiper-slide vendor-services-subscription" onclick=installmentOff()>
+                                    <div> installment off </div> <div> 3 Order </div>
                                     <div class="vendor-service-circle-1"></div> <div class="vendor-service-circle-2"> </div>
                               </div>
                               
@@ -1010,11 +1261,8 @@
                                     <div> package </div> <div> 3 Order </div>
                                     <div class="vendor-service-circle-1"></div> <div class="vendor-service-circle-2"> </div>
                               </div>
-                              
-                              <div class="vendor-services swiper-slide vendor-services-subscription" onclick=package()>
-                                    <div> package </div> <div> 3 Order </div>
-                                    <div class="vendor-service-circle-1"></div> <div class="vendor-service-circle-2"> </div>
-                              </div>
+
+                              <div class=" swiper-slide"> </div>
                         </div>
 
                         

@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: #FFF1F2;
 }
@@ -5,9 +9,12 @@ body{
 
 a:hover{
     text-decoration: none;
+    color: black;
 }
 
-/* box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.322); */
+a{
+    color: black;
+}
 
 
 /* TOP NAV BAR START */
@@ -20,7 +27,7 @@ a:hover{
     width: 100%;
     height: 5vw;
     box-shadow:0px 0px 10px -4px rgba(0, 0, 0, 0.493);
-    background-color: white;
+    background-color: #FFECEC;
     position: fixed;
     z-index: 100;
 }
@@ -36,7 +43,7 @@ a:hover{
     width: 12vw;
     height: 90%;
     margin-left: 1.5vw;
-    background: white;
+    background: #FFECEC;
 }
 
 
@@ -122,23 +129,21 @@ a:hover{
 
 .shadow-remover{
     display: grid;
-    background-color: rgb(255, 255, 255);
+    background-color: #FFECEC;
     position: absolute;
-    top: 4.5vw;
-    width: 16.7vw;
+    top: 4.1vw;
     width: 4vw;
-    height: 1.8vw;
-    position: sticky;
-    z-index: 1005;
+    height: 1.5vw;
+    position: fixed;
+    z-index: 1400;
     transition: 0.5s;
-
 }
 
 
 .fill-space-top{
     background-color: transparent;
     width: 100%;
-    height: 3.4vw;
+    height: 5vw;
 }
 
 /* Shadow remover & Filling top end */
@@ -149,10 +154,10 @@ a:hover{
 /* SIDE NAVIGATION START */
 /* SIDE NAVIGATION START */
 .vendor-section{
-    background-color: rgb(255, 255, 255);
+    background: #FFECEC;
     height: 100%;
     width: 4vw;
-    margin-top: 5.3vw;
+    margin-top: 5vw;
     box-shadow:0px 0px 20px -6px rgba(0, 0, 0, 0.493);
     position: fixed;
     z-index: 1000;
@@ -164,17 +169,20 @@ a:hover{
 /* closing Side bar start */
 /* closing Side bar start */
 
-.vendor-section .vendor-navigation-icon span{
+.vendor-section .vendor-nav-text,
+.vendor-section .vendor-nav-btn,
+.vendor-section .vendor-about{
     display: none !important;
 }
 
-.vendor-section:hover .vendor-navigation-icon span,
+.vendor-section:hover .vendor-nav-text,
+.vendor-section:hover .vendor-nav-btn,
 .vendor-section:hover .vendor-about{
     display: grid !important;
 }
 
 .vendor-section:hover{
-    width: 16.7vw;
+    width: 20vw;
 }
 
 
@@ -191,7 +199,6 @@ a:hover{
     display: none;
     min-width: 100%;
     height: 12vw;
-    background-color: rgb(255, 255, 255);
     z-index: 100;
     padding-top: 1.8vw;
     transition: 0.5s;
@@ -204,6 +211,7 @@ a:hover{
     margin: auto;
     border-radius: 0.9vw;
     overflow: hidden;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.308);
 }
 
 
@@ -239,42 +247,98 @@ a:hover{
 .vendor-section .vendor-navigation{
     min-width: 100%;
     height: 35vw;
-    padding: 1.2vw;
+    padding: 0.6vw;
+    padding-left: 0vw;
     padding-top: 0vw;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 
 /* Scrollbar customization */
-.vendor-navigation::-webkit-scrollbar{
-    width: 1.2vw;
+.vendor-navigation::-webkit-scrollbar,
+.edit-information-container::-webkit-scrollbar,
+.appoinment-container-upcoming.clients-note-section::-webkit-scrollbar,
+.new-note-container::-webkit-scrollbar,
+.appointment-upcoming-description-text::-webkit-scrollbar,
+.appoinment-container-previous::-webkit-scrollbar,
+.appointment-previous-description-text::-webkit-scrollbar,
+.sent-request-section::-webkit-scrollbar,
+.appointment-sent-description-text::-webkit-scrollbar,
+.received-request-section::-webkit-scrollbar,
+.appointment-request-description-text::-webkit-scrollbar,
+.clients-note-section::-webkit-scrollbar{
+    width: 0.5vw;
     background: #FBF6F6;
 }
 
 
-.vendor-navigation::-webkit-scrollbar-thumb{
-    background: #666666;
-    border-radius: 2vw;
-    border: 0.4vw solid rgba(0, 0, 0, 0);
-    background-clip: padding-box;
+.vendor-navigation::-webkit-scrollbar-thumb,
+.edit-information-container::-webkit-scrollbar-thumb,
+.appoinment-container-upcoming.clients-note-section::-webkit-scrollbar-thumb,
+.new-note-container::-webkit-scrollbar-thumb,
+.appointment-upcoming-description-text::-webkit-scrollbar-thumb,
+.appoinment-container-previous::-webkit-scrollbar-thumb,
+.appointment-previous-description-text::-webkit-scrollbar-thumb,
+.sent-request-section::-webkit-scrollbar-thumb,
+.appointment-sent-description-text::-webkit-scrollbar-thumb,
+.received-request-section::-webkit-scrollbar-thumb,
+.appointment-request-description-text::-webkit-scrollbar-thumb,
+.clients-note-section::-webkit-scrollbar-thumb{
+    background: #9e9e9e;
+    border-radius: 5vw;
+    border: 0.2vw solid rgba(0, 0, 0, 0);
 }
 
-.vendor-navigation::-webkit-scrollbar-button:single-button {
-    background-color: #FBF6F6;
+.vendor-navigation::-webkit-scrollbar-button:single-button,
+.edit-information-container::-webkit-scrollbar-button:single-button,
+.appoinment-container-upcoming.clients-note-section::-webkit-scrollbar-button:single-button,
+.new-note-container::-webkit-scrollbar-button:single-button,
+.appointment-upcoming-description-text::-webkit-scrollbar-button:single-button,
+.appoinment-container-previous::-webkit-scrollbar-button:single-button,
+.appointment-previous-description-text::-webkit-scrollbar-button:single-button,
+.sent-request-section::-webkit-scrollbar-button:single-button,
+.appointment-sent-description-text::-webkit-scrollbar-button:single-button,
+.received-request-section::-webkit-scrollbar-button:single-button,
+.appointment-request-description-text::-webkit-scrollbar-button:single-button,
+.clients-note-section::-webkit-scrollbar-button:single-button{
+    background-color: #ffffff;
     display: block;
     border-style: solid;
-    height: 2vw;
+    height: 1.5vw;
     width: 1vw;
 }
 
-.vendor-navigation::-webkit-scrollbar-button:single-button:vertical:decrement {
-    border-width: 0 0.7vw 0.8vw 0.7vw;
+.vendor-navigation::-webkit-scrollbar-button:single-button:vertical:decrement,
+.edit-information-container::-webkit-scrollbar-button:single-button:vertical:decrement,
+.appoinment-container-upcoming.clients-note-section::-webkit-scrollbar-button:single-button:vertical:decrement,
+.new-note-container::-webkit-scrollbar-button:single-button:vertical:decrement,
+.appointment-upcoming-description-text::-webkit-scrollbar-button:single-button:vertical:decrement,
+.appoinment-container-previous::-webkit-scrollbar-button:single-button:vertical:decrement,
+.appointment-previous-description-text::-webkit-scrollbar-button:single-button:vertical:decrement,
+.sent-request-section::-webkit-scrollbar-button:single-button:vertical:decrement,
+.appointment-sent-description-text::-webkit-scrollbar-button:single-button:vertical:decrement,
+.received-request-section::-webkit-scrollbar-button:single-button:vertical:decrement,
+.appointment-request-description-text::-webkit-scrollbar-button:single-button:vertical:decrement,
+.clients-note-section::-webkit-scrollbar-button:single-button:vertical:decrement{
+    border-width: 0vw .3vw 0.4vw .3vw;
     border-color: transparent transparent #555555 transparent;
 }
 
 
-.vendor-navigation::-webkit-scrollbar-button:single-button:vertical:increment {
-    border-width: 0.7vw  0.8vw 0 0.7vw;
+.vendor-navigation::-webkit-scrollbar-button:single-button:vertical:increment,
+.edit-information-container::-webkit-scrollbar-button:single-button:vertical:increment,
+.appoinment-container-upcoming.clients-note-section::-webkit-scrollbar-button:single-button:vertical:increment,
+.new-note-container::-webkit-scrollbar-button:single-button:vertical:increment,
+.appointment-upcoming-description-text::-webkit-scrollbar-button:single-button:vertical:increment,
+.appoinment-container-previous::-webkit-scrollbar-button:single-button:vertical:increment,
+.appointment-previous-description-text::-webkit-scrollbar-button:single-button:vertical:increment,
+.sent-request-section::-webkit-scrollbar-button:single-button:vertical:increment,
+.appointment-sent-description-text::-webkit-scrollbar-button:single-button:vertical:increment,
+.received-request-section::-webkit-scrollbar-button:single-button:vertical:increment,
+.appointment-request-description-text::-webkit-scrollbar-button:single-button:vertical:increment,
+.clients-note-section::-webkit-scrollbar-button:single-button:vertical:increment{
+    border-width:0vw 0.3vw  0.4vw 0 0.3vw;
     border-color: #555555 transparent transparent transparent;
 }
 
@@ -283,88 +347,127 @@ a:hover{
 
 
 
+/* Vendor side Navigation Start */
+/* Vendor side Navigation Start */
+/* Vendor side Navigation Start */
 
-.vendor-section .vendor-navigation-icon{
+
+.vendor-nav{
     display: grid;
+    margin-top: 0.2vw;
+}
+
+
+
+
+.vendor-nav-main{
+    display: flex;
     align-items: center;
-    grid-template-columns: 15% auto auto;
+    justify-content: space-between;
     width: 100%;
-    font-family: aller, sans-serif;
-    margin: 0.8vw 0vw 0.8vw 0vw;
-}
-
-
-
-
-
-
-
-.vendor-section .vendor-navigation-icon img{
-    height: 1.3vw;
-    width: 1.3vw;
-    align-self: baseline;
-    margin-top: 0.4vw;
-}
-
-.vendor-section .vendor-navigation-icon > span:nth-child(2){
-    font-size: 1.1vw;
-    font-family: aller, sans-serif;
-    margin-left: 0.4vw;
-    align-self: center;
-}
-
-.vendor-section .vendor-navigation-icon > span:nth-child(2) > p{
-    height: 1.8vw;
-    padding: 0vw;
-    margin: 0.12vw;
-    margin-top: 0.5vw;
-}
-
-
-.vendor-section .vendor-navigation-icon .more-button{
-    justify-self: end;
-    align-self: baseline;
-    margin-right: 0.6vw;
-    font-size: 1.3vw;
-    font-weight: 800;
-    font-family: aller, sans-serif;
+    height: 2.8vw;
+    background: #FFECEC;
+    margin: auto;
+    border-radius: 0.6vw;
+    padding: 0vw 0.8vw 0vw 0.8vw;
     cursor: pointer;
-    padding: 0.2vw;
+    transition: 0.2s;
 }
 
 
-/* Toggle Data */
-/* Toggle Data */
-.more-data{
-    display: none;
-    width: 8vw;
-    justify-content: baseline;
-    margin-top: -0.8vw;
-    margin-left: 0.3vw;
-    font-size: 0.9vw;
-    font-family: aller, sans-serif;
-
+.vendor-nav-main:hover{
+    background: #C62333;
+    color: white;
 }
 
 
-.more-data > span{
+
+/* vendor navigation icon */
+.vendor-nav-icon{
+    height: 2.2vw;
+    width: 2.4vw;
+    padding: 0.5vw;
+    pointer-events: none;
+}
+
+
+.vendor-nav-icon img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+/* vendor navigation text */
+.vendor-nav-text{
     display: grid;
     align-items: center;
-    justify-content: left;
-    grid-template-columns: 10% 90%;
-    width: 9vw;
-    height: 2vw;
-}
-
-
-.more-data > span p{
-    display: inline;
-    height:0.9vw;
-    margin: 0vw;
-    padding: 0vw;
-    margin-right: 0.3vw;
+    padding-left: 0.4vw;
+    height: 2.2vw;
+    width: 12vw;
     font-size: 1vw;
+    pointer-events: none;
 }
+
+
+
+
+/* vendor navigation btn */
+.vendor-nav-btn{
+    height: 2vw;
+    width: 2vw;
+    padding: 0.4vw;
+    pointer-events: none;
+}
+
+
+.vendor-nav-btn img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* vendor navigation more data */
+.vendor-nav-more{
+    justify-self: flex-end;
+    padding-top: 0.4vw;
+    width: 75%;
+}
+
+
+
+.vendor-nav-more p{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 10% 90%;
+    width: 100%;
+    height: 1.8vw;
+    margin: 0;
+    font-size: 0.9vw;
+}
+
+
+.vendor-nav-more-icon img{
+    display: none;
+}
+
+
+.vendor-nav-more a:nth-child(1) .vendor-nav-more-icon img{
+    display: grid;
+}
+
+/* Vendor side Navigation End */
+/* Vendor side Navigation End */
+/* Vendor side Navigation End */
+
+
+
+
+
 
 
 
@@ -389,8 +492,8 @@ a:hover{
 
 
 .full-screen-section-width-class{
-    margin-left: 16.8vw;
-    width: calc(100% - 16.8vw);
+    margin-left: 19.5vw;
+    width: calc(100% - 19.5vw);
 }
 
 
@@ -410,7 +513,9 @@ a:hover{
     justify-content: center;
     width: 36vw;
     height: 88vw;
-    padding: 1.8vw;
+    padding: 2vw;
+    padding-top: 0vw;
+    margin-top: 1vw;
     padding-bottom: 18vw;
     transition: 0.5s;
 
@@ -534,18 +639,34 @@ a:hover{
 
 
 
+/* upload image icon */
+.client-profile-image-container .upload-icon{
+    height: 1.6vw;
+    width: 1.6vw;
+    background: white;
+    position: absolute;
+    top: 0.6vw;
+    right: 0.4vw;
+    padding: 0.35vw;
+    border: 0.1vw solid #D1D1D1;
+    border-radius: 100%;
+}
+
+
 
 .client-profile-image-container .image{
     height: 100%;
-    width: 100%;
+    width: 95%;
+    margin: auto;
     border-radius: 0.9vw;
     overflow: hidden;
+    box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.233);
 }
 
 .client-profile-image-container .image img{
     height: 100%;
     width: 100%;
-    align-self: baseline;
+    align-self: center;
     object-fit: cover;
 }
 
@@ -558,12 +679,16 @@ a:hover{
     font-weight: 600;
 }
 
+.client-profile-image-container div:nth-child(2){
+    padding-top: 0.5vw ;
+}
 
 .client-profile-image-container p{
     font-size: 0.9vw;
     font-family: aller, sans-serif;
     align-self: flex-end;
-    margin-top: 0.2vw;
+    margin-top: 0vw;
+
 }
 
 
@@ -762,7 +887,7 @@ a:hover{
 
 
 /* Scrollbar customization */
-.edit-information-container::-webkit-scrollbar{
+/* .edit-information-container::-webkit-scrollbar{
     width: 1.5vw;
     background: #FBF6F6;
 }
@@ -791,7 +916,7 @@ a:hover{
   .edit-information-container::-webkit-scrollbar-button:single-button:vertical:increment {
     border-width: 0.7vw  0.8vw 0 0.7vw;
     border-color: #555555 transparent transparent transparent;
-  }
+  } */
 
 
 
@@ -1007,7 +1132,7 @@ a:hover{
 
 
 /* Scrollbar customization */
-.clients-note-section::-webkit-scrollbar{
+/* .clients-note-section::-webkit-scrollbar{
     width: 0.5vw;
     background: #FBF6F6;
 }
@@ -1039,7 +1164,7 @@ a:hover{
 .clients-note-section::-webkit-scrollbar-button:single-button:vertical:increment {
     border-width:0vw 0.6vw  0.8vw 0 0.6vw;
     border-color: #555555 transparent transparent transparent;
-}
+} */
 
 
 
@@ -1153,7 +1278,7 @@ a:hover{
 
 /* Scrollbar customization start */
 /* Scrollbar customization start */
-.new-note-container::-webkit-scrollbar{
+/* .new-note-container::-webkit-scrollbar{
     width: 1.2vw;
     background: #FBF6F6;
 }
@@ -1184,7 +1309,7 @@ a:hover{
 .new-note-container::-webkit-scrollbar-button:single-button:vertical:increment {
     border-width: 0.7vw  0.8vw 0 0.7vw;
     border-color: #555555 transparent transparent transparent;
-}
+} */
 
 /* Scrollbar customization End */
 /* Scrollbar customization End */
@@ -1399,7 +1524,7 @@ a:hover{
 }
 
 
-/* 
+/*
 .reminder-number-icons{
     display: grid;
     align-items: center;
@@ -1809,39 +1934,39 @@ a:hover{
 /* updated scrollbar */
 
 /* Scrollbar customization */
-.appoinment-container-upcoming::-webkit-scrollbar{
+/* .appoinment-container-upcoming::-webkit-scrollbar{
     width: 0.5vw;
     background: #FBF6F6;
 }
 
 
 .appoinment-container-upcoming::-webkit-scrollbar-thumb{
-    background: #666666;
-    border-radius: 2vw;
-    border: 0.5vw solid rgba(0, 0, 0, 0);
+    background: #9e9e9e;
+    border-radius: 5vw;
+    border: 0.2vw solid rgba(0, 0, 0, 0);
 }
 
 
 
 
 .appoinment-container-upcoming::-webkit-scrollbar-button:single-button {
-    background-color: #FBF6F6;
+    background-color: #ffffff;
     display: block;
     border-style: solid;
-    height: 0.5vw;
+    height: 1.5vw;
     width: 1vw;
 }
 
 .appoinment-container-upcoming::-webkit-scrollbar-button:single-button:vertical:decrement {
-    border-width: 0vw 0.3vw 0.4vw 0.3vw;
+    border-width: 0vw .3vw 0.4vw .3vw;
     border-color: transparent transparent #555555 transparent;
 }
 
 
 .appoinment-container-upcoming::-webkit-scrollbar-button:single-button:vertical:increment {
-    border-width:0vw 0.6vw  0.8vw 0 0.6vw;
+    border-width:0vw 0.3vw  0.4vw 0 0.3vw;
     border-color: #555555 transparent transparent transparent;
-}
+} */
 
 
 
@@ -1978,7 +2103,7 @@ a:hover{
 
 
 
-
+/* 
 .appointment-upcoming-description-text::-webkit-scrollbar{
     width: 1.5vw;
     background: #FBF6F6;
@@ -2010,7 +2135,7 @@ a:hover{
 .appointment-upcoming-description-text::-webkit-scrollbar-button:single-button:vertical:increment {
     border-width: 0.7vw  0.8vw 0 0.7vw;
     border-color: #555555 transparent transparent transparent;
-}
+} */
 
 
 
@@ -2200,40 +2325,39 @@ a:hover{
 
 
 /* Scrollbar customization */
-.appoinment-container-previous::-webkit-scrollbar{
-    width: 1.5vw;
+/* .appoinment-container-previous::-webkit-scrollbar{
+    width: 0.5vw;
     background: #FBF6F6;
 }
 
 
 .appoinment-container-previous::-webkit-scrollbar-thumb{
-    background: #666666;
-    border-radius: 2vw;
-    border: 0.5vw solid rgba(0, 0, 0, 0);
-    background-clip: padding-box;
+    background: #9e9e9e;
+    border-radius: 5vw;
+    border: 0.2vw solid rgba(0, 0, 0, 0);
 }
 
 
 
 
 .appoinment-container-previous::-webkit-scrollbar-button:single-button {
-    background-color: #FBF6F6;
+    background-color: #ffffff;
     display: block;
     border-style: solid;
-    height: 2vw;
+    height: 1.5vw;
     width: 1vw;
 }
 
 .appoinment-container-previous::-webkit-scrollbar-button:single-button:vertical:decrement {
-    border-width: 0 0.7vw 0.8vw 0.7vw;
+    border-width: 0vw .3vw 0.4vw .3vw;
     border-color: transparent transparent #555555 transparent;
 }
 
 
 .appoinment-container-previous::-webkit-scrollbar-button:single-button:vertical:increment {
-    border-width: 0.7vw  0.8vw 0 0.7vw;
+    border-width:0vw 0.3vw  0.4vw 0 0.3vw;
     border-color: #555555 transparent transparent transparent;
-}
+} */
 
 
 
@@ -2252,7 +2376,7 @@ a:hover{
     cursor: pointer;
 }
 
-/* 
+/*
 .appoinment-container-previous .appoinment-icon{
     align-self:center;
     justify-self: center;
@@ -2333,7 +2457,7 @@ a:hover{
 
 
 
-
+/* 
 .appointment-previous-description-text::-webkit-scrollbar{
     width: 1.5vw;
     background: #FBF6F6;
@@ -2365,7 +2489,7 @@ a:hover{
 .appointment-previous-description-text::-webkit-scrollbar-button:single-button:vertical:increment {
     border-width: 0.7vw  0.8vw 0 0.7vw;
     border-color: #555555 transparent transparent transparent;
-}
+} */
 
 
 
@@ -2484,7 +2608,7 @@ a:hover{
 
 
 /* Scrollbar customization */
-.sent-request-section::-webkit-scrollbar{
+/* .sent-request-section::-webkit-scrollbar{
     width: 1.5vw;
     background: #FBF6F6;
 }
@@ -2517,7 +2641,7 @@ a:hover{
 .sent-request-section::-webkit-scrollbar-button:single-button:vertical:increment {
     border-width: 0.7vw  0.8vw 0 0.7vw;
     border-color: #555555 transparent transparent transparent;
-}
+} */
 
 
 
@@ -2626,7 +2750,7 @@ a:hover{
 
 
 
-.appointment-sent-description-text::-webkit-scrollbar{
+/* .appointment-sent-description-text::-webkit-scrollbar{
     width: 1.5vw;
     background: #FBF6F6;
 }
@@ -2658,7 +2782,7 @@ a:hover{
 .appointment-sent-description-text::-webkit-scrollbar-button:single-button:vertical:increment {
     border-width: 0.7vw  0.8vw 0 0.7vw;
     border-color: #555555 transparent transparent transparent;
-}
+} */
 
 
 
@@ -2736,7 +2860,7 @@ a:hover{
 
 
 /* Scrollbar customization */
-.received-request-section::-webkit-scrollbar{
+/* .received-request-section::-webkit-scrollbar{
     width: 1.2vw;
     background: #FBF6F6;
 }
@@ -2770,7 +2894,7 @@ a:hover{
     border-width: 0.7vw  0.8vw 0 0.7vw;
     border-color: #555555 transparent transparent transparent;
 }
-
+ */
 
 
 
@@ -2790,7 +2914,7 @@ a:hover{
 
 
 
-/* 
+/*
 .received-request-section .appoinment-icon{
     align-self:center;
     justify-self: center;
@@ -2928,7 +3052,7 @@ a:hover{
 
 
 /* Scrollbar customization */
-.appointment-request-description-text::-webkit-scrollbar{
+/* .appointment-request-description-text::-webkit-scrollbar{
     width: 1.5vw;
     background: #FBF6F6;
 }
@@ -2961,7 +3085,7 @@ a:hover{
     border-width: 0.7vw  0.8vw 0 0.7vw;
     border-color: #555555 transparent transparent transparent;
 }
-
+ */
 
 
 
@@ -3242,7 +3366,7 @@ a:hover{
 .new-appointment-container input{
     font-size: 1.3vw;
     outline: none;
-    
+
 }
 
 
@@ -3344,6 +3468,7 @@ a:hover{
     background: #FFF1F2;
     padding: 0.4vw;
     width: 100%;
+    height: 70vw !important;
 }
 
 
@@ -3356,6 +3481,7 @@ a:hover{
     width: 100%;
     overflow: hidden;
     margin-top: 0.5vw;
+    padding:1vw;
 }
 
 .vendor-dashboard .swiper-wrapper{
@@ -3370,12 +3496,21 @@ a:hover{
     border-radius: 0.5vw;
     position: relative;
     overflow: hidden;
-    margin-left: 0.6vw;
-    background-color: red;
-    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.322);
     cursor: pointer;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.123);
+    transition: 0.2s;
+    border: 0.2vw solid transparent;
+}
+
+
+.vendor-dashboard .vendor-services:hover{
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.39);
+    transform: scale(1.015);
+    border: 0.2vw solid white;
 
 }
+
+
 
 .vendor-dashboard  .vendor-services div:nth-child(1){
     font-size: 1.15vw;
@@ -3547,3 +3682,5 @@ a:hover{
 
 
 
+
+top-nav-bar-section

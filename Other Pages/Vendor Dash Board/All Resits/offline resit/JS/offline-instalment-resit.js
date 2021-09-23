@@ -1,44 +1,3 @@
-// INSTALMENT CALCULATION SECTION START
-// INSTALMENT CALCULATION SECTION START
-// INSTALMENT CALCULATION SECTION START
-
-const installmentAmountID= document.querySelector("#installment-amount-tk")
-const installmentInterestID= document.querySelector("#installment-interest-tk")
-const installmentTotalAmountID= document.querySelector("#installment-total-amount-tk")
-
-const installmentPaidID= document.querySelector("#installment-paid-amount-tk")
-const installmentRemindingID= document.querySelector("#installment-remaining-amount-tk")
-
-
-
-
-
-    let installmentAmount= parseInt(installmentAmountID.innerHTML.replace(',', '')) //amount of instalment
-
-    const installmentInterest=installmentAmount * .1  //calc interest
-
-    installmentInterestID.innerHTML= (installmentInterest)  //print interest
-
-    const InstalmentTotalAmount=installmentAmount + installmentInterest // calc total amount
-
-    installmentTotalAmountID.innerHTML= InstalmentTotalAmount; // print total amount
-
-
-
-    let paidAmount= parseInt(installmentPaidID.innerHTML.replace(',', '')) //amount of instalment
-
-    const remainingAmount= InstalmentTotalAmount-paidAmount;
-
-    installmentRemindingID.innerHTML= remainingAmount
-
-// INSTALMENT CALCULATION SECTION END
-// INSTALMENT CALCULATION SECTION END
-// INSTALMENT CALCULATION SECTION END
-
-
-
-
-
 
 
 
@@ -65,31 +24,6 @@ const hideEditPriceSection=()=>{
 
 
 
-// PRICE EDITED loading POPUP
-// PRICE EDITED loading POPUP
-const priceEditedLoadingPopUpSection= document.querySelector(".edit-price-loading-pop-up")
-
-const showPriceEditedLoadingSection=()=>{
-    priceEditedLoadingPopUpSection.style.display="flex"
-    fullResitSection.style.filter="blur(0.4vw)";
-}
-
-const hidePriceEditedLoadingSection=()=>{
-    priceEditedLoadingPopUpSection.style.display="none"
-    fullResitSection.style.filter="blur(0vw)";
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 // EDIT instalment POPUP SECTION SHOW / HIDE
 // EDIT instalment POPUP SECTION SHOW / HIDE
@@ -109,21 +43,66 @@ const hideEditInstalmentSection=()=>{
 
 
 
+// INSTALLMENT TABLE SHOW / HIDE START
+// INSTALLMENT TABLE SHOW / HIDE START
+// INSTALLMENT TABLE SHOW / HIDE START
 
+let i=0;
+let showTable=(tableId)=>{
 
-// instalment EDITED loading POPUP
-// instalment EDITED loading POPUP
-const instalmentEditedLoadingPopUpSection= document.querySelector(".edit-instalment-loading-pop-up")
+    let tableSection= document.querySelector(`#${tableId} .side-dashed-border`)
+    let tableButton= document.querySelector(`#${tableId} .collapse-button`)
 
-const showInstalmentEditedLoadingSection=()=>{
-    instalmentEditedLoadingPopUpSection.style.display="flex"
-    fullResitSection.style.filter="blur(0.4vw)";
+    if(i === 0){
+        tableSection.style.height="auto"
+        tableButton.style.transform="rotate(180deg)"
+        
+        i=1;
+    }
+
+    else{
+        tableSection.style.height="15vw"
+        tableButton.style.transform="rotate(0deg)"
+        
+        i=0;
+    }
 }
 
-const hideInstalmentEditedLoadingSection=()=>{
-    instalmentEditedLoadingPopUpSection.style.display="none"
-    fullResitSection.style.filter="blur(0vw)";
+// INSTALLMENT TABLE SHOW / HIDE END
+// INSTALLMENT TABLE SHOW / HIDE END
+// INSTALLMENT TABLE SHOW / HIDE END
+
+
+
+// INSTALLMENT INTEREST TABLE SHOW / HIDE START
+// INSTALLMENT INTEREST TABLE SHOW / HIDE START
+// INSTALLMENT INTEREST TABLE SHOW / HIDE START
+
+let j=0;
+let showTableInterest=(tableId)=>{
+
+    let tableSection= document.querySelector(`#${tableId} .side-dashed-border`)
+    let tableButton= document.querySelector(`#${tableId} .collapse-button`)
+
+    if(j === 0){
+        tableSection.style.height="auto"
+        tableButton.style.transform="rotate(180deg)"
+        
+        j=1;
+    }
+
+    else{
+        tableSection.style.height="19.5vw"
+        tableButton.style.transform="rotate(0deg)"
+        
+        j=0;
+    }
 }
+
+// INSTALLMENT INTEREST TABLE SHOW / HIDE END
+// INSTALLMENT INTEREST TABLE SHOW / HIDE END
+// INSTALLMENT INTEREST TABLE SHOW / HIDE END
+
 
 
 
@@ -185,78 +164,59 @@ const hideEditSection=(hiddenSection,mainSection)=>{
 
 
 
-
-
-
-
-
-
-
-
-
-// $(document).on("click", function(event){
-//     console.log(event.target.className)
-// })
-
-
-
 // PAID AMMOUNT EDIT SECTION SHOW / HIDE START
 // PAID AMMOUNT EDIT SECTION SHOW / HIDE START
 // PAID AMMOUNT EDIT SECTION SHOW / HIDE START
 
-const showPaidAmmountEditSection=(x,y)=>{
-    const paidAmmountSection= document.querySelector(`#${x}`).style.display="none"
-    const paidAmmountEditSection= document.querySelector(`#${y}`).style.display="flex"
+const showAllEditSection=(title, btn1, btn2)=>{
+    document.querySelector("#all-edit-section div .edit-price-title").innerHTML=title;
+    document.querySelector("#all-edit-section .edit-price-button-container .btn-1").innerHTML=btn1;
+    document.querySelector("#all-edit-section .edit-price-button-container .btn-2").innerHTML=btn2;
+
+    document.querySelector("#all-edit-section").style.display="grid";
+    fullResitSection.style.filter="blur(0.4vw)";
+}
+
+const hideAllEditSection=()=>{
+    document.querySelector("#all-edit-section").style.display="none";
+    fullResitSection.style.filter="blur(0vw)";
 }
 
 
-const hidePaidAmmountEditSection=(x,y)=>{
-    const paidAmmountSection= document.querySelector(`#${x}`).style.display="block"
-    const paidAmmountEditSection= document.querySelector(`#${y}`).style.display="none"
+
+// PAID AMMOUNT EDIT SECTION SHOW / HIDE END
+// PAID AMMOUNT EDIT SECTION SHOW / HIDE END
+// PAID AMMOUNT EDIT SECTION SHOW / HIDE END
+
+
+
+
+
+
+
+
+
+// Universal Loading Popup section start
+// Universal Loading Popup section start
+// Universal Loading Popup section start
+
+
+const showAllLoadingSection=(title)=>{
+    document.querySelector(`#all-loading-pop-up`).style.display="flex"
+    document.querySelector('#all-loading-pop-up .loading-animation-title').innerHTML=title;
+    fullResitSection.style.filter="blur(0.4vw)";
 }
 
-// PAID AMMOUNT EDIT SECTION SHOW / HIDE END
-// PAID AMMOUNT EDIT SECTION SHOW / HIDE END
-// PAID AMMOUNT EDIT SECTION SHOW / HIDE END
+
+const hideAllLoadingSection=()=>{
+    document.querySelector(`#all-loading-pop-up`).style.display="none"
+    fullResitSection.style.filter="blur(0vw)";
+}
 
 
-
-
-
-
-
-// Button Decoration
-// Button Decoration
-// Button Decoration
-
-// const showMe=()=>{
-//     for(let x=0; x<3; x++ ){
-
-//         const preferredButton= document.querySelectorAll(".preferred-button")[x]
-//         preferredButton.nextElementSibling.addEventListener('mouseover', function(){
-//         preferredButton.classList.replace("btn-danger","btn-outline-danger")
-//     })
-
-//         preferredButton.nextElementSibling.addEventListener('mouseout', function(){
-//         preferredButton.classList.replace("btn-outline-danger","btn-danger")
-//     })
-//     }
-// }
-
-
-
-// const beforeButton=()=>{
-//     for(let x=0; x<3; x++ ){
-
-//         const preferredButton= document.querySelectorAll(".preferred-buttons")[x]
-//         preferredButton.classList.replace("btn-danger","btn-outline-danger")
-
-//         preferredButton.previousElementSibling.addEventListener('mouseout', function(){
-//         preferredButton.classList.replace("btn-outline-danger","btn-danger")
-//     })
-
-//     }
-// }
+// Universal Loading Popup section end
+// Universal Loading Popup section end
+// Universal Loading Popup section end
 
 
 
@@ -265,19 +225,13 @@ const hidePaidAmmountEditSection=(x,y)=>{
 
 
 
-// PRINT RESIT
-// PRINT RESIT
-// PRINT RESIT
 
-// const serviceItemTable= document.querySelector(".vendor-resit-section-two .service-items")
 
-// const printResit=()=>{
-//     serviceItemTable.style.cssText="height:100%; border-bottom:none"
 
-//     for(let x=0; x<10; x++){
 
-//     const tableWidth= document.querySelectorAll(".vendor-resit-section-two table")[x]
-//     tableWidth.style.width="98%"
 
-// }
-// }
+
+
+
+
+

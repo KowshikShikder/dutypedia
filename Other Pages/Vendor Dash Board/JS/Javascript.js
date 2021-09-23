@@ -20,17 +20,16 @@ const appointmentSection= document.querySelector(".appointment-section")
 
 
 vendorSection.addEventListener('mouseover', function(){
-    vendorSection.style.width="16.7vw"
-    shadowRemover.style.width="16.7vw"
+    shadowRemover.style.width="20vw"
 
-    vendorAbout.style.display="grid"
-    vendorName.style.display="grid"
 
     fullScreenSection.classList.add('full-screen-section-width-class')
     clientSection.style.cssText="width:30vw; height:75vw"
-    clientImageSection.style.cssText="width:23vw; height:22vw"
-    clientInfoSection.style.cssText="width:23vw; height:22vw"
-    appointmentSection.style.cssText="width:23vw; height:22vw"
+
+    let hoverAfter="width:23vw; height:22vw"
+    clientImageSection.style.cssText= hoverAfter;
+    clientInfoSection.style.cssText= hoverAfter;
+    appointmentSection.style.cssText= hoverAfter;
 
     // ClientMoreInfoSection.style.display="block" //on Check
 })
@@ -38,16 +37,14 @@ vendorSection.addEventListener('mouseover', function(){
 
 
 vendorSection.addEventListener('mouseout', function(){
-    vendorSection.style.width="4vw"
-    vendorAbout.style.display="none"
-    vendorName.style.display="grid"
     shadowRemover.style.width="4vw"
     fullScreenSection.classList.remove('full-screen-section-width-class')    
 
+    let hoverBefore="width:30vw; height:26vw"
     clientSection.style.cssText="width:36vw; height:88vw"
-    clientImageSection.style.cssText="width:30vw; height:26vw"
-    clientInfoSection.style.cssText="width:30vw; height:26vw"
-    appointmentSection.style.cssText="width:30vw; height:26vw"
+    clientImageSection.style.cssText= hoverBefore;
+    clientInfoSection.style.cssText= hoverBefore;
+    appointmentSection.style.cssText= hoverBefore;
 
     // ClientMoreInfoSection.style.display="block" //on Check
 })
@@ -75,224 +72,111 @@ vendorSection.addEventListener('mouseout', function(){
 // SIDE BAR DROPDOWN SECTION START
 
 
-// All In One
-// All In One
-// All In One
+// const sideBarMenuToggle=(sideId)=>{
+
+// const toggleButton = document.querySelector(`#${sideId}`)
+
+// const toggleOption = toggleButton.previousElementSibling.querySelector('div')
+
+//         // Close All other toggled bar
+//         // Close All other toggled bar
+//         let sideArray=["side-menu1","side-menu2","side-menu3","side-menu4","side-menu5",]
+
+//         sideArray.map((x)=>{
+//             let newToggleButton= document.querySelector(`#${x}`);
+
+//             if(newToggleButton !== toggleButton){
+//                 let newToggleOption= newToggleButton.previousElementSibling.querySelector('div');        
+//                 newToggleButton.innerHTML = '+'
+//                 newToggleOption.style.display="none"
+//             }
+//         })
+
+
+//         // Open toggle bar
+//         if(toggleButton.innerHTML === '+'){
+//             toggleButton.innerHTML = '-'
+//             toggleOption.style.display="grid"
+//             console.log("I am clicked1")
+//         }
+        
+//         // Close opened toggle bar
+//         else{
+//             toggleButton.innerHTML = '+'
+//             toggleOption.style.display="none"
+//             console.log("I am clicked2")
+//         }
+        
+
+// }
+
+
+
+
+
 
 const sideBarMenuToggle=(sideId)=>{
 
-const toggleButton = document.querySelector(`#${sideId}`)
-const toggleOption = toggleButton.previousElementSibling.querySelector('div')
+    const toggleButton = document.querySelector(`#${sideId}`)
+    
+    const toggleOption = toggleButton.querySelector('.vendor-nav-more')
+    
 
-    if(toggleButton.innerHTML === '+'){
-        toggleButton.innerHTML = '-'
-        toggleOption.style.display="grid"
+        // Close All other toggled bar
+        // Close All other toggled bar
+        let sideArray=["side-nav1","side-nav2","side-nav3","side-nav4","side-nav5","side-nav6","side-nav7","side-nav8","side-nav9","side-nav10"]
+
+        sideArray.map((x)=>{
+            let newToggleButton= document.querySelector(`#${x}`);
+
+            if(newToggleButton !== toggleButton){
+                let newToggleOption= newToggleButton.querySelector('.vendor-nav-more');        
+                newToggleOption.style.display="none"
+            }
+        })
+
+
+            // Open toggle bar
+            if(toggleOption.style.display === "none"){
+                toggleOption.style.display="grid"
+            }
+            
+            // Close opened toggle bar
+            else{
+                toggleOption.style.display="none"
+            }
+            
+    
     }
+    
 
+// document.querySelector(".vendor-nav-btn img").src="./images/icons/minus.svg"
 
-    else{
-        toggleButton.innerHTML = '+'
-        toggleOption.style.display="none"
-
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const toggleButtton1 = document.querySelector('#vendor-toggle-service1')
-// const toggleOption1  = document.querySelector('#vendor-toggle-service1').previousElementSibling.querySelector('div')
-
-
-// toggleButtton1.addEventListener('click', function(){
-
-//     if(toggleButtton1.innerHTML === '+'){
-//         toggleButtton1.innerHTML = '-'
-//         toggleOption1.style.display="grid"
-
-//     }
-//     else{
-//         toggleButtton1.innerHTML = '+'
-//         toggleOption1.style.display="none"
-//     }
-// })
-
-
-
-
-
-
-const toggleButtton2 = document.querySelector('#vendor-toggle-service2')
-const toggleOption2  = document.querySelector('#vendor-toggle-service2').previousElementSibling.querySelector('div')
-
-
-toggleButtton2.addEventListener('click', function(){
-
-    if(toggleButtton2.innerHTML === '+'){
-        toggleButtton2.innerHTML = '-'
-        toggleOption2.style.display="grid"
-    }
-    else{
-        toggleButtton2.innerHTML = '+'
-        toggleOption2.style.display="none"
-    }
-})
-
-
-
-
-
-
-
-
-const toggleButtton3 = document.querySelector('#vendor-toggle-service3')
-const toggleOption3  = document.querySelector('#vendor-toggle-service3').previousElementSibling.querySelector('div')
-
-
-toggleButtton3.addEventListener('click', function(){
-
-    if(toggleButtton3.innerHTML === '+'){
-        toggleButtton3.innerHTML = '-'
-        toggleOption3.style.display="grid"
-    }
-    else{
-        toggleButtton3.innerHTML = '+'
-        toggleOption3.style.display="none"
-    }
-})
-
-
-
-
-const toggleButtton4 = document.querySelector('#vendor-toggle-service4')
-const toggleOption4  = document.querySelector('#vendor-toggle-service4').previousElementSibling.querySelector('div')
-
-toggleButtton4.addEventListener('click', function(){
-
-    if(toggleButtton4.innerHTML === '+'){
-        toggleButtton4.innerHTML = '-'
-        toggleOption4.style.display="grid"
-    }
-    else{
-        toggleButtton4.innerHTML = '+'
-        toggleOption4.style.display="none"
-    }
-})
-
-
-
-
-
-
-const toggleButtton5 = document.querySelector('#vendor-toggle-service5')
-const toggleOption5  = document.querySelector('#vendor-toggle-service5').previousElementSibling.querySelector('div')
-
-
-toggleButtton5.addEventListener('click', function(){
-
-    if(toggleButtton5.innerHTML === '+'){
-        toggleButtton5.innerHTML = '-'
-        toggleOption5.style.display="grid"
-    }
-    else{
-        toggleButtton5.innerHTML = '+'
-        toggleOption5.style.display="none"
-    }
-})
-
-
-
-
-
-const toggleButtton6 = document.querySelector('#vendor-toggle-service6')
-const toggleOption6  = document.querySelector('#vendor-toggle-service6').previousElementSibling.querySelector('div')
-
-
-toggleButtton6.addEventListener('click', function(){
-
-    if(toggleButtton6.innerHTML === '+'){
-        toggleButtton6.innerHTML = '-'
-        toggleOption6.style.display="grid"
-    }
-    else{
-        toggleButtton6.innerHTML = '+'
-        toggleOption6.style.display="none"
-    }
-})
-
-
-
-const toggleButtton7 = document.querySelector('#vendor-toggle-service7')
-const toggleOption7  = document.querySelector('#vendor-toggle-service7').previousElementSibling.querySelector('div')
-
-
-toggleButtton7.addEventListener('click', function(){
-
-    if(toggleButtton7.innerHTML === '+'){
-        toggleButtton7.innerHTML = '-'
-        toggleOption7.style.display="grid"
-    }
-    else{
-        toggleButtton7.innerHTML = '+'
-        toggleOption7.style.display="none"
-    }
-})
-
-
-
-
-
-
-const toggleButtton8 = document.querySelector('#vendor-toggle-service8')
-const toggleOption8  = document.querySelector('#vendor-toggle-service8').previousElementSibling.querySelector('div')
-
-
-toggleButtton8.addEventListener('click', function(){
-
-    if(toggleButtton8.innerHTML === '+'){
-        toggleButtton8.innerHTML = '-'
-        toggleOption8.style.display="grid"
-    }
-    else{
-        toggleButtton8.innerHTML = '+'
-        toggleOption8.style.display="none"
-    }
-})
-
-
-
-
-
-
-
-const toggleButtton9 = document.querySelector('#vendor-toggle-service9')
-const toggleOption9  = document.querySelector('#vendor-toggle-service9').previousElementSibling.querySelector('div')
-
-
-toggleButtton9.addEventListener('click', function(){
-    if(toggleButtton9.innerHTML === '+'){
-        toggleButtton9.innerHTML = '-'
-        toggleOption9.style.display="grid"
-    }
-    else{
-        toggleButtton9.innerHTML = '+'
-        toggleOption9.style.display="none"
-    }
-})
 
 // SIDE BAR DROPDOWN SECTION END
 // SIDE BAR DROPDOWN SECTION END
 // SIDE BAR DROPDOWN SECTION END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -422,32 +306,6 @@ const hideNoteReminder=()=>{
     ClientMoreInfoSection.style.display="grid"
     noteReminderSection.style.display="none"
 }
-
-
-
-
-// // NOTE NUMBER INCREMENT / DECREMENT
-//     const noteTime= document.querySelector("#note-time")
-
-//     const incrementNoteTime=()=>{
-//         let noteTimeValue;
-//         noteTimeValue= noteTime.value;
-//         noteTimeValue++
-//         noteTime.value = noteTimeValue;
-//     }
-
-//     const decrementNoteTime=()=>{
-//         if (noteTime.value <= 0) {
-//             noteTime.value=0;
-//         }
-
-//         else{
-//             noteTimeValue= noteTime.value;
-//             noteTimeValue--
-//             noteTime.value = noteTimeValue;
-//         }
-//     }
-
 
 
 
@@ -918,6 +776,7 @@ const swiper1 = new Swiper('.vendor-dashboard', {
 
     direction: 'horizontal',
     loop: false,
+    spaceBetween:20,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -942,22 +801,22 @@ const swiper1 = new Swiper('.vendor-dashboard', {
 // Vendor Resit Section
 // Vendor Resit Section
 
-document.querySelector('#resit').src="./All Resits/offline resit/demo-installment.html"
+document.querySelector('#resit').src="./All Resits/fixed-resit.html"
 
 
 
 const bargaining=()=>{
-document.querySelector('#resit').src="./All Resits/bargaining-resit.html"
+document.querySelector('#resit').src="./All Resits/offline resit/offline-installment.html"
 }
 
 
 const fixed=()=>{
-    document.querySelector('#resit').src="./All Resits/fixed-resit.html"
+    document.querySelector('#resit').src="./All Resits/offline resit/offline-installment-compounding.html"
 }
 
 
 const installment=()=>{
-    document.querySelector('#resit').src="./All Resits/offline resit/installment-resit-offline.html"
+    document.querySelector('#resit').src="./All Resits/offline resit/offline-installment-without-interest.html"
 }
 
 
@@ -972,13 +831,30 @@ const package=()=>{
 
 
 const fixedOffline=()=>{
-    document.querySelector('#resit').src="./All Resits/offline resit/fixed-resit-offline.html"
+    document.querySelector('#resit').src="./All Resits/offline resit/offline-installment-compounding.html"
 }
 
 
 const packageOffline=()=>{
-    document.querySelector('#resit').src="./All Resits/offline resit/package-resit-offline.html"
+    document.querySelector('#resit').src="./All Resits/online-installment-com.html"
 }
+
+
+
+const installmentOff=()=>{
+    document.querySelector('#resit').src="./All Resits/online-installment-com.html"
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 const preferredButtonLenth= document.querySelectorAll(".preferred-button").length
@@ -1013,3 +889,7 @@ const beforeButton=()=>{
     })
     }
 }
+
+
+
+// document.querySelector('#edit-instalment-loading-pop-up .loading-animation-title').innerHTML="Your Installment durationss has been changed."

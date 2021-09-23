@@ -1124,7 +1124,9 @@ body{
 
 
 
-
+.total-paid-ammount-section{
+    font-size: 2.1vw;
+}
 
 
 
@@ -1135,6 +1137,7 @@ body{
 /* TOTAL PAID AMMOUNT SECTION */
 .facilities-payment-section .payment .total-paid-ammount-section{
     display: grid;
+    grid-template-columns: 50% 50%;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -1144,8 +1147,18 @@ body{
     border-bottom: 0.08vw solid rgba(0, 0, 0, 0.123);
 }
 
-.facilities-payment-section .payment .total-paid-ammount-section div:nth-child(2){
+
+
+.facilities-payment-section .payment .total-paid-ammount-section > div:nth-child(1){
+    display: grid;
+    align-items: center;
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.123);
+    height: 14vw;
+}
+
+.facilities-payment-section .payment .total-paid-ammount-section div > div:nth-child(2){
     margin-top: 0.4vw;
+
 }
 
 
@@ -1173,7 +1186,8 @@ body{
     border-left: 0.05vw solid rgba(0, 0, 0, 0.089);
     padding-top: 2vw;
     height: 44vw;
-    overflow-y: scroll;
+    overflow-y: auto;
+    padding-bottom: 5vw;
 }
 
 
@@ -1224,61 +1238,30 @@ body{
 /* INSTALMENT TABLE START */
 .installment-table-container{
     background: rgb(255, 255, 255);
-    /* height: 100%; */
-    height: 26vw;
     height: auto;
-    width: 100%;
-    /* border-radius: 2vw; */
-    /* overflow-y: scroll; */
-    overflow: hidden;
-    padding-right: 0.5vw;
-    padding-left: 0.8vw;
-    /* border:0.08vw solid rgba(0, 0, 0, 0.171); */
+    width: 95%;
+    margin: auto;
+    position: relative;
+    border-top-right-radius: 1.5vw;
+    border-top-left-radius: 1.5vw;
     margin-top: 3vw;
+    padding-bottom: 6vw;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.199);
 }
-
 
 .installment-table-container:nth-child(1){
     margin-top: 1vw;
 }
 
 
-/* Scrollbar customization */
-.installment-table-container::-webkit-scrollbar{
-    width: 1.5vw;
-    background: #FBF6F6;
+.installment-table-container .side-dashed-border{
+    width:97%; 
+    margin: auto; 
+    border-left: 1px dashed rgba(0, 0, 0, 0.308);
+    height: 19.2vw;
+    overflow: hidden;
+    padding-bottom: 0vw;
 }
-
-
-.installment-table-container::-webkit-scrollbar-thumb{
-    background: #666666;
-    border-radius: 2vw;
-    border: 0.4vw solid rgba(0, 0, 0, 0);
-    background-clip: padding-box;
-}
-
-
-
-.installment-table-container::-webkit-scrollbar-button:single-button {
-    background-color: #FBF6F6;
-    display: block;
-    border-style: solid;
-    height: 2vw;
-    width: 1vw;
-  }
-
-  .installment-table-container::-webkit-scrollbar-button:single-button:vertical:decrement {
-    border-width: 0 0.7vw 0.8vw 0.7vw;
-    border-color: transparent transparent #555555 transparent;
-}
-
-
-  .installment-table-container::-webkit-scrollbar-button:single-button:vertical:increment {
-    border-width: 0.7vw  0.8vw 0 0.7vw;
-    border-color: #555555 transparent transparent transparent;
-  }
-
-
 
 
 
@@ -1308,6 +1291,10 @@ body{
     border: 0.08vw solid rgba(0, 0, 0, 0.11);
     border-top: 0.08vw solid rgba(0, 0, 0, 0);
     margin-top: -2vw;
+    background-image: url(../../../images/resite/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 18%;
 }
 
 
@@ -1317,7 +1304,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 8vw;
+    height: 6vw;
     position: relative;
     background: #E22424;
     color: white;
@@ -1386,14 +1373,13 @@ body{
     height: 2vw;
     width: 2vw;
     top: -1vw;
-    left: -0.5vw;
+    left: 0vw;
     background: #E22424;
     color: white;
     border-radius: 100%;
     font-size: 1.2vw;
     opacity: 0.6;
 }
-
 
 
 
@@ -1407,9 +1393,8 @@ body{
     width: 100%;
     font-size: 1.8vw;
     border-bottom: 0.08vw solid rgba(0, 0, 0, 0.171);
-    border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
-    border-left: 0.08vw dashed rgba(0, 0, 0, 0.171);
-    
+    /* border-right: 0.08vw solid rgba(0, 0, 0, 0.171); */
+    /* border-left: 0.08vw dashed rgba(0, 0, 0, 0.171); */
 }
 
 
@@ -1417,6 +1402,7 @@ body{
 /* INSTALMENT TABLE ROW 1 COLUMN 1 */
 .installment-table-row-1 .installment-table-col-left{
     border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
+    font-size: 1.6vw;
 }
 
 .installment-table-row-1 .installment-table-col-left > div{
@@ -1456,7 +1442,7 @@ body{
     justify-content: center;
     height: 100%;
     width: 100%;
-    font-size: 1.35vw;
+    font-size: 1.2vw;
     padding: 0.8vw 0vw 0.8vw 0vw;
 }
 
@@ -1519,7 +1505,6 @@ body{
 
 .interest-edit-section{
     display: none;
-    /* display: flex; */
     align-items: center;
     justify-content: space-around;
     height: 3vw;
@@ -1652,8 +1637,6 @@ body{
     width: 100%;
     grid-template-columns: 50% 50%;
     border-bottom: 0.08vw solid rgba(0, 0, 0, 0.171);
-    border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
-    border-left: 0.08vw dashed rgba(0, 0, 0, 0.171);
 }
 
 
@@ -1672,6 +1655,7 @@ body{
     display: grid;
     border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
     position: relative;
+    
 }
 
 
@@ -1682,12 +1666,15 @@ body{
 
 .installment-paid-ammount{
     display: block;
-
 }
 
 
 
-.installment-table-row-2 .paid-three-dots{
+
+
+.installment-table-row-2 .paid-three-dots,
+.installment-table-row-2-compounding .paid-three-dots,
+.paid-amount-section .paid-three-dots{
     position: absolute;
     height: 2vw;
     width: 1vw;
@@ -1696,7 +1683,11 @@ body{
     margin-top: 0.3vw;
 }
 
-.installment-table-row-2 .paid-three-dots img{
+
+
+.installment-table-row-2 .paid-three-dots img,
+.installment-table-row-2-compounding .paid-three-dots img,
+.paid-amount-section .paid-three-dots img{
     position: relative;
     height: 80%;
     width: 80%;
@@ -1707,9 +1698,11 @@ body{
     display: none;
     font-size: 1.2vw;
     position: absolute;
-    right: -9.5vw;
+    right: -10vw;
     top: -0.2vw;
     width: 10vw;
+    background: white;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.219);
 }
 
 
@@ -1751,10 +1744,6 @@ body{
         height: 100%;
         width: 100%;
     }
-
-
-
-
 
 
 
@@ -2324,7 +2313,6 @@ body{
     align-items: center;
     grid-template-columns: 55% 45%;
     height: 15vw;
-    /* border-bottom: 0.08vw solid rgba(0, 0, 0, 0.158); */
     padding-left: 2vw;
 }
 
@@ -2456,7 +2444,9 @@ body{
     padding-bottom: 2vw;
     font-size: 2vw;
     border-bottom: 0.08vw solid rgba(0, 0, 0, 0.158);
+    padding: 1.6vw 0vw 1.6vw 0vw;
 }
+
 
 .all-payment-details-box-right .remaining-section{
     border-right: 0.08vw solid rgba(0, 0, 0, 0.075);
@@ -2554,7 +2544,7 @@ body{
 /* ADVANCE PAYMENT date input */
 .advanced-payment-date-input-container{
     display: grid;
-    height: 3.5vw;
+    height: 3.8vw;
     width: 40vw;
     justify-content: center;
     align-items: center;
@@ -2576,28 +2566,28 @@ body{
 
 .advanced-payment-date-input-container #instalment-date{
     display: inline;
-    height: 3.5vw;
+    height: 3.8vw;
     width: 100%;
     font-size: 1.6vw;
     padding-left: 1vw;
     color: slategray;
     outline: none;
     border: 0.06vw solid #E22424;
-    border-radius: 0.8vw;
+    border-radius: 0.4vw;
+    box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
 }
 
 
 
 .calender-icon{
     position: absolute;
-    height: 3.5vw;
+    height: 3.8vw;
     width: 3.5vw;
     right: 0vw;
     pointer-events: none;
-    /* transform: translate(15vw,0.6vw); */
     z-index: 10;
     background: #E22424;
-    border-radius: 0.8vw;
+    border-radius: 0.4vw;
     background-size: 60%;
     background-repeat: no-repeat;
     background-position: center;
@@ -2607,23 +2597,6 @@ body{
 .calender-icon:nth-child(2){
     right: 22vw;
 }
-
-/* .advanced-payment-date-input-container #instalment-date::-webkit-calendar-picker-indicator {
-    background: #E22424;
-    height: 76%;
-    width: 12%;
-    margin: -0.2vw;
-    padding:0.6vw 0.7vw 0.4vw 0.6vw;
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url(../../../images/resite/calendar-line.svg);
-    border-radius: 0.4vw;
-} */
-
-
-
-
 
 
 .all-payment-details-box-row-1:nth-last-child(1) .remaining-section,
@@ -2686,460 +2659,9 @@ body{
 
 
 
-
-
 /* ALL PAYMENT DETAILS SECTION END */
 /* ALL PAYMENT DETAILS SECTION END */
 /* ALL PAYMENT DETAILS SECTION END */
-
-/* NEW DELIVERY DATE popUp section */
-/* NEW DELIVERY DATE popUp section */
-/* NEW DELIVERY DATE popUp section */
-
-/* .new-delivery-date-pop-up{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    top: 0vw;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background: #f09fa43d;
-    z-index: 2000;
-}
-
-
-.new-delivery-date-container{
-    display: grid;
-    justify-content: center;
-    position: relative;
-    width: 65vw;
-    height: 40vw;
-    background: rgb(255, 255, 255);
-    border-radius: 1.6vw;
-    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
-
-}
-
-
-
-.new-delivery-date-title{
-    text-align: center;
-    background: white;
-    font-size: 3.6vw;
-    height: 3vw;
-    margin-top: 7vw;
-} */
-
-
-
-/* delivery date input */
-/* .new-delivery-date-input-container{
-    display: grid;
-    height: 4vw;
-    width: 50vw;
-    justify-content: center;
-    grid-template-columns: 45% 10% 45%;
-    text-align: center;
-}
-
-
-.new-delivery-date-input-container div{
-    display: grid;
-    align-items: center;
-}
-
-
-.new-delivery-date-input-container #note-date{
-    display: inline;
-    height: 4vw;
-    width: 100%;
-    font-size: 2.2vw;
-    padding-left: 0.4vw;
-    color: slategray;
-    margin-top: 0.6vw;
-    outline: none;
-    border: 0.06vw solid #E22424;
-    border-radius: 0.8vw;
-}
-
-
-.new-delivery-date-input-container #note-date::-webkit-calendar-picker-indicator {
-    background: #E22424;
-    height: 80%;
-    width: 12%;
-    margin: -0.1vw;
-    padding:0.6vw 0.7vw 0.4vw 0.6vw;
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url(../../images/resite/calendar-line.svg);
-    border-radius: 0.8vw;
-}
-
-
-
-.new-delivery-date-button-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 9vw;
-    width: 30vw;
-    margin: auto;
-    margin-top: -6vw;
-}
-
-
-.new-delivery-date-button-container div{
-    width: 14vw;
-    height: 4vw;
-    font-size: 1.6vw;
-    padding: 0.6vw;
-    border-radius: 1vw;
-    border: 0.08vw solid  #DC3545;
-} */
-
-
-/* new delivery close button */
-/* 
-.new-delivery-date-close{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -5vw;
-    right: -3vw;
-    height: 5vw;
-    width: 5vw;
-    border-radius: 100%;
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.089);
-    transform: scale(1.02);
-}
-
-
-.new-delivery-date-close img{
-    height: 100%;
-    width: 100%;
-    transform: scale(1.6);
-    object-fit: cover;
-} */
-
-
-
-
-
-
-
-/* REQUEST SENT POPUP SECTION */
-/* REQUEST SENT POPUP SECTION */
-/* REQUEST SENT POPUP SECTION */
-/* 
-.request-sent-pop-up,
-.loading-animation-pop-up{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    top: 0vw;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background: #ffffff3d;
-    z-index: 2000;
-}
-
-
-
-.request-sent-container,
-.loading-animation-container{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 65vw;
-    height: 50vw;
-    background: rgb(255, 255, 255);
-    border-radius: 1.6vw;
-    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
-    padding: 3vw;
-} */
-
-
-/* REQUEST SENT ANIMATION START */
-/* .request-sent-animation-container,
-.loading-animation-animation-container{
-    display: grid;
-    height: 30vw;
-    width: 50vw;
-}
-
-
-.request-sent-animation-container .image,
-.loading-animation-animation-container .image{
-    position: relative;
-    align-self: flex-end;
-    justify-self: center;
-    height: 20vw;
-    width: 20vw;
-    margin-bottom: 2vw;
-}
-
-
-
-.request-sent-animation-container .image img,
-.loading-animation-animation-container .image img{
-    height: 100%;
-    width: 100%;
-    transform: scale(0);
-    animation: bubbleAnimations 0.4s linear 2s forwards;
-} */
-
-/* ;olcosigbisauovclauiovc */
-/* ;olcosigbisauovclauiovc */
-/* ;olcosigbisauovclauiovc */
-/* ;olcosigbisauovclauiovc */
-/* .request-sent-animation-container .image .bubble,
-.loading-animation-animation-container .image .bubble{
-    position: absolute;
-    height: 3vw;
-    width: 3vw;
-}
-
-.request-sent-animation-container .image .bubble img,
-.loading-animation-animation-container .image .bubble img{
-    height: 100%;
-    width: 100%;
-}
-
-.request-sent-animation-container .image .bubble:nth-child(2),
-.loading-animation-animation-container .image .bubble:nth-child(2){
-    top: -4vw;
-    left: -8vw;
-    transform: translateY(8vw);
-    animation: bubbleAnimation 0.8s linear 0.3s forwards;
-}
-
-
-.request-sent-animation-container .image .bubble:nth-child(3),
-.loading-animation-animation-container .image .bubble:nth-child(3){
-    height: 3.8vw;
-    width: 3.8vw;
-    top: -1vw;
-    right: -2vw;
-    transform: translateY(8vw);
-    animation: bubbleAnimation 1.2s ease-out forwards;
-}
-
-
-.request-sent-animation-container .image .bubble:nth-child(4),
-.loading-animation-animation-container .image .bubble:nth-child(4){
-    height: 1.6vw;
-    width: 1.6vw;
-    bottom: 6vw;
-    right: -8vw;
-    transform: translateY(8vw);
-    animation: bubbleAnimation 0.9s ease-in 0.4s forwards;
-}
-
-
-.request-sent-animation-container .image .bubble:nth-child(5),
-.loading-animation-animation-container .image .bubble:nth-child(5){
-    height: 1.2vw;
-    width: 1.2vw;
-    left: -2.5vw;
-    bottom: 9vw;
-    transform: translateY(8vw);
-    animation: bubbleAnimation .8s ease-in-out forwards;
-}
-
-@keyframes bubbleAnimation {
-    from{ transform: translateY(8vw); }
-    to{ transform: translateY(0vw); }
-}
-
-
-@keyframes bubbleAnimations {
-    from{ transform: scale(0); }
-    to{ transform: scale(1);  }
-}
-
-
-.loader{
-    position: absolute;
-    top: -30.5vw;
-}
-
-
-
-
-.loader,
-.loader:after {
-  border-radius: 50%;
-  width: 15em;
-  height: 15em;
-}
-.loader {
-  margin: 8.7vw 15.2vw;
-  font-size: 1.28vw;
-  position: relative;
-  text-indent: -9999em;
-  border-top: 1.1em solid rgba(0, 0, 0, 0.2);
-  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-left: 1.1em solid #ffffff;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation:  load8 2.5s 1 linear forwards;
-  animation: load8 2.5s 1 linear forwards;
-}
-
-
-@-webkit-keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  99% {
-    -webkit-transform: rotate(1440deg);
-    transform: rotate(1440deg);
-  }
-  100%{
-      opacity: 0;
-  }
-}
-
-
-@keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  99% {
-    -webkit-transform: rotate(1440deg);
-    transform: rotate(1440deg);
-  }
-  100%{
-      opacity: 0;
-  }
-} */
-
-/* REQUEST SENT ANIMATION END */
-
-
-
-
-
-
-/* 
-.request-sent-title,
-.loading-animation-title{
-    text-align: center;
-    font-size: 2.7vw;
-    height: 3vw;
-    margin-top: -70vw;
-    opacity: 0;
-    animation: textAnimations 0.4s linear 2s forwards;
-}
-
-.loading-animation-title{
-    font-size: 2.4vw;
-}
-
-.request-sent-button-container,
-.loading-animation-button-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 9vw;
-    width: 30vw;
-    margin: auto;
-    margin-top: -32vw;
-    opacity: 0;
-    animation: textAnimations 0.4s linear 2s forwards;
-}
-
-
-.request-sent-button-container div,
-.loading-animation-button-container div{
-    width: 14vw;
-    height: 4vw;
-    font-size: 1.6vw;
-    padding: 0.6vw;
-    border-radius: 1vw;
-    border: 0.08vw solid  #DC3545;
-}
-
-
-
-
-@keyframes textAnimations {
-    from{ opacity: 0; }
-    to{ opacity: 1; }
-}
- */
-
-
-
-
-
-
-
-
-
-/* CLIENT REQUEST TO CANCEL ORDER */
-/* .client-request-cancel-order-section{
-    height: 15vw;
-    width: 40vw !important;
-    background: #ffffff;
-    margin: auto;
-    padding: 2vw;
-}
-
-
-.client-request-cancel-order-title{
-    width: 100%;
-    background: white;
-    text-align: center;
-    font-size: 1.8vw;
-}
-
-
-.client-request-cancel-order-button-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 6vw;
-    width: 35vw;
-    margin: auto;
-    margin-top: 2vw;
-    
-}
-
-
-
-.client-request-cancel-order-button-container div{
-    width: 45%;
-    height: 4vw;
-    font-size: 1.6vw;
-} */
-
-
-
-
-
-
-
-
-.tk-sign{
-    font-weight: 800 !important;
-}
-
-
-
-
-
-
-
 
 
 
@@ -3391,10 +2913,282 @@ body{
 
 
 
+.tk-sign{
+    font-weight: 800 !important;
+}
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* ### Interest Rate Compounding START ### */
+/* ### Interest Rate Compounding START ### */
+/* ### Interest Rate Compounding START ### */
+/* ### Interest Rate Compounding START ### */
+
+.installment-table-row-2-compounding{
+    display: grid;
+    align-items: center;
+    height: 11vw;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    border-bottom: 0.08vw solid rgba(0, 0, 0, 0.171);
+}
+
+.installment-table-row-2-compounding > div:nth-child(2) {
+    padding-top: 2vw;
+}
+
+.installment-table-row-2-compounding > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    font-size: 1.6vw;
+    height: 100%;
+    width: 100%;
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
+}
+
+.installment-table-row-2-compounding > div:nth-child(1) div{
+    padding-top: 2vw;
+}
+
+.installment-table-row-2-compounding > div:nth-child(1) > div{
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
+    height: 100%;
+    padding-top: 2.4vw ;
+}
+
+
+
+.installment-table-row-2-compounding > div p:nth-child(2){
+    margin-top: -1.5vw;
+}
+
+
+
+/* ### Interest  Rate Compounding END ### */
+/* ### Interest  Rate Compounding END ### */
+/* ### Interest  Rate Compounding END ### */
+/* ### Interest  Rate Compounding END ### */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ### WITHOUT Interest Rate START ### */
+/* ### WITHOUT Interest Rate START ### */
+/* ### WITHOUT Interest Rate START ### */
+/* ### WITHOUT Interest Rate START ### */
+
+.installment-table-section-without-interest{
+    position: relative;
+    margin-bottom: 1.8vw;
+    margin-top: 1vw;
+    width: 95%;
+    padding-bottom: 6vw;
+    margin: auto;
+    margin-bottom: 5vw;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.144);
+}
+
+.installment-table-section-without-interest .side-dashed-border{
+    border-left: 0.08vw dashed rgba(0, 0, 0, 0.171);
+    width: 97%;
+    margin: auto;
+    height: 15vw;
+    overflow: hidden;
+}
+
+.installment-table-section-without-interest .installment-table{
+    border-top: 0.1vw solid white !important;
+    margin-top: 2vw;
+}
+
+.installment-table-section-without-interest .installment-table:nth-child(1){
+    margin-top: 0.2vw;
+}
+
+
+
+.installment-table-section-without-interest .installment-table > div{
+    border-bottom: 0.08vw solid rgba(0, 0, 0, 0.171);
+
+}
+
+
+
+
+/* INSTALMENT TABLE DATE START */
+.installment-table-date{
+    height: 2.5vw;
+    padding: 0.4vw 0vw 0.4vw 0vw;
+    font-size: 1.5vw;
+    border-bottom: 0.1vw solid white !important;
+}
+
+
+
+/* INSTALMENT TABLE DATE START */
+
+.installment-table-amount{
+    display: flex;
+    justify-content: center;
+    height: 4vw;
+    padding: 0.3vw 0vw 0.3vw 0vw;
+    font-size: 1.8vw;
+}
+
+
+.installment-table-amount div{
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
+    border-left: 0.08vw solid rgba(0, 0, 0, 0.171);
+}
+
+
+.installment-table-amount p:nth-child(2){
+    margin-left: 3vw;
+}
+/* INSTALMENT TABLE DATE END */
+
+
+
+
+
+
+
+/* INSTALMENT TABLE PAID & REMAINING START*/
+.installment-table-3rd-section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 8vw;
+    font-size: 1.8vw;
+}
+
+
+.installment-table-3rd-section div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 8vw;
+    width: 100%;
+    margin: auto;
+    padding: 1vw 0vw 1vw 0vw;
+}
+
+.installment-table-3rd-section div:nth-child(1){
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
+    height: 8vw;
+
+}
+
+.installment-table-3rd-section div p{
+    padding: 0vw;
+    margin: 0vw;
+}
+
+.installment-table-3rd-section div p:nth-child(2){
+    margin-top: 1vw;
+}
+
+/* INSTALMENT TABLE PAID & REMAINING END */
+
+
+
+
+
+/* INSTALMENT TABLE NUMBER START*/
+.installment-table-number{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+    height: 1.7vw;
+    width: 1.7vw;
+    background: #E22222;
+    border-radius: 100%;
+    font-size: 1vw;
+    color: white;
+    z-index: 3;
+}
+/* INSTALMENT TABLE NUMBER END */
+
+
+
+/* COLLAPSE BUTTON SECTION START */
+.collapse-button{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -2.5vw;
+    left: 24.3vw;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 100%;
+}
+
+.collapse-button img{
+    height: 100%;
+    width: 100%;
+
+}
+
+/* COLLAPSE BUTTON SECTION END */
+
+
+
+
+
+
+
+
+
+
+/* ### WITHOUT Interest Rate END ### */
+/* ### WITHOUT Interest Rate END ### */
+/* ### WITHOUT Interest Rate END ### */
+/* ### WITHOUT Interest Rate END ### */
 
 
 

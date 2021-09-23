@@ -159,6 +159,44 @@ const clientRequestToCancelSection=()=>{
 
 
 
+
+
+// const showLoadingPopupSection=(idName, title, btn1, btn2)=>{
+//     document.querySelector('#edit-instalment-loading-pop-up .loading-animation-title').innerHTML="Your Installment duration has been changed."
+
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Button Decoration
 // Button Decoration
 
@@ -204,9 +242,12 @@ const beforeButton=()=>{
 // PRINT RESIT
 // PRINT RESIT
 const serviceItemTable= document.querySelector(".vendor-resit-section-two .service-items")
+const installmentTable= document.querySelector(".installment-table-container-parent")
 
 const printResit=()=>{
     serviceItemTable.style.cssText="height:100%; border-bottom:none"
+    installmentTable.style.height="auto"
+    
 
     for(let x=0; x<10; x++){
 
