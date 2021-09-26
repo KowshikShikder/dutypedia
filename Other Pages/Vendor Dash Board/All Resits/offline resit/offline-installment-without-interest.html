@@ -33,9 +33,10 @@
                 <!-- print & share  -->
                 <!-- print & share  -->
                 <div class="print-share-side">
-                        <div class="print" onclick=printResit()> <img src="../../images/resite/printer.svg" alt="">  </div>
-                        <div class="share"> <img src="../../images/resite/share.svg" alt=""> </div>
-                </div>
+                    <div class="print" onclick=printResit()> <img src="../../images/icons/resit-view.svg" alt="">  </div>
+                    <div class="share"> <img src="../../images/icons/resit-print.svg" alt=""> </div>
+                    <div class="share"> <img src="../../images/icons/resit-share.svg" alt=""> </div>
+              </div>
             </div>
 
             <!-- qr code section END -->
@@ -146,29 +147,24 @@
 
                 <div class="vendor-resit-price-section">
 
-                            <div class="price">
-                            <div> Installment Price
-                                        <div class="price-three-dots" onclick=showEditPriceSection()> <img src="../../images/resite/3 dot.svg" alt="">
-
-                                                <div class="hover-edit-price"> Edit Price </div>
-                                        </div>
-                            </div>
-                            <span> Every Week 3,400 <span class="tk-sign"> ৳ </span>  </span>
-                            </div>
-
-
-                            <!-- Usual Delivery Time-->
-                            <div class="delivery">
-                            <div class="price">
-                                    <div> Total Installment
-                                        <div class="price-three-dots" onclick="showEditSection('edit-instalment-section')"> <img src="../../images/resite/3 dot.svg" alt="">
-                                                <div class="hover-edit-price"> Change No  </div>
-                                        </div>
+                    <div class="price">
+                        <div> Installment Price
+                                    <div class="price-three-dots" onclick="showEditSection('edit-price-section')"> <img src="../../images/resite/3 dot.svg" alt="">
+                                        <div class="hover-edit-price"> Edit Amount </div>
                                     </div>
-                                    <span> 12 </span>
-                            </div>
+                        </div>
+                        <span> Every Week 3,400 <span class="tk-sign"> ৳ </span>  </span>
+                    </div>
 
-                            </div>
+
+                    <!-- Total Installment-->
+                    <div class="delivery">
+                        <div class="price">
+                            <div> Total Installment </div>
+                            <span> 12 </span>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
@@ -249,62 +245,127 @@
 
 
                     <div class="installment-table-container-parent">
+
+
+                        <!-- Advance Payment start-->
+                        <!-- Advance Payment start-->
+                        <!-- Advance Payment start-->
+                        <div class="installment-table-container   advance-payment-table" style="opacity: 0.5 !important;  pointer-events: none !important;">    <!-- style="opacity: 0.5;  pointer-events: none; pointer-events: none;" >> Opacity will down and pointer-event will be disable if advance payment paid  -->
+
+                            <div class="installment-table-title"> <p> Advance Payment </p> </div>
+
+                            <!-- Advance Payment -->
+                            <!-- Advance Payment -->
+                            <div class="installment-table">
+
+
+                                    <!-- Row two -->
+                                    <div class="installment-table-row-2">
+                                        <div>
+                                                <p> Ammount <span class="paid-three-dots" onclick='showEditSection("edit-advance-payment")'> <img src="../../images/resite/3 dot.svg" alt="">
+                                                    <span class="paid-edit-hover"> Change Ammount </span>
+                                                </span> </p>
+                                                <p class="installment-paid-ammount">
+                                                    <span id="installment-paid-amount-tk"> 2000 </span>
+                                                    <span class="tk-sign"> ৳ </span>
+                                                </p>
+                                        </div>
+
+                                        <div>
+                                                <p> Status </p>
+
+                                                <!-- DropDown section -->
+
+                                                <div class="drop-down-section payment-drop-down-section">
+                                                    <div class="drop-down-top payment-drop-down-top" onclick=paymentDropDownSection()> Due <div class="cross"> <img src="../../images/resite/cross.svg" alt="">   </div>  </div> 
+                        
+                                                    <div class="drop-down-option-section payment-drop-down-option-section">
+                                                            <div class="drop-down-option"> Due <div class="cross"> <img src="../../images/resite/cross.svg" alt="">   </div>  </div>
+                                                            <div class="drop-down-option"> Paid <div class="cross"> <img src="../../images/resite/right.svg" alt="">     </div>  </div>
+                                                    </div>
+                        
+                                                    <div class="drop-down-btn" onclick=paymentDropDownSection()> <img src="../../images/resite/arrow dropdown.svg" alt="">  </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Advance Payment End-->
+                        <!-- Advance Payment End-->
+                        <!-- Advance Payment End-->
+                        
                         
                                 <!-- Instalment Table 1 section start-->
                                 <!-- Instalment Table 1 section start-->
                                 <!-- Instalment Table 1 section start-->
 
-                        <div class="installment-table-section-without-interest" id="table-1">
+                        <div class="installment-table-section-without-interest" id="table-1"  style="opacity: 0.5;">   <!--  style="opacity: 0.5;" >>  Opacity will down will be disable if "Advance Payment is Due"  -->  
 
                             <!-- Instalment Table Title -->
-                            <div class="installment-table-section-title  installment-table-title"> <p>  Installment No: 01 </p> <div class="installment-table-title-button installment-title-button-duo"> Due </div>  </div>
+                            <div class="installment-table-section-title  installment-table-title" style="opacity: 0.5;"> <p>  Installment No: 01 </p> <div class="installment-table-title-button  installment-title-button-paid"> Paid </div>  </div>
                         
                             <div class="side-dashed-border">
 
 
+                                    <!-- if installment Completed -->
+                                    <div class="installment-completed installment-table-success-note">
+                                        You Successfully Completed Your First Installment
+                                    </div>
+
 
 
                                 <!-- Instalment Table start-->
                                 <!-- Instalment Table start-->
                                 
-                        <div class="installment-table">
-                                <!-- Instalment Table Date -->
-                                <div class="installment-table-date">
-                                    25/03/2021 to 28/03/2021
-                            </div>
+                            <div class="installment-table" style="opacity: 0.5;  pointer-events: none;">    <!-- style="opacity: 0.5;  pointer-events: none; pointer-events: none;" >> Opacity will down and pointer-event will be disable according to condition  -->
+                                    <!-- Instalment Table Date -->
+                                    <div class="installment-table-date">
+                                        25/03/2021 to 28/03/2021
+                                    </div>
 
-                                <!-- Instalment Table Amount section -->
-                            <div class="installment-table-amount">
-                                <p> Installment Amount  </p>
-                                <p> 10,000 <span class="tk-sign"> ৳ </span> </p>
-                            </div>
-                            
-
-                                <!-- Instalment Table Paid And Remaining section -->
-                            <div class="installment-table-3rd-section">
-                                <div class="paid-amount-section">   
-                                    <p> Paid Amount <span class="paid-three-dots"   onclick='showAllEditSection("Edit Your Payment","Confirm","Cancel")'> <img src="../../images/resite/3 dot.svg" alt=""> 
-                                        <span class="paid-edit-hover"> Paid Ammount </span>
-                                    </span> </p>
-
-                                        <p>
-                                            0 <span class="tk-sign"> ৳ </span>
-                                        </p>
+                                    <!-- Instalment Table Amount section -->
+                                <div class="installment-table-amount">
+                                    <p> Installment Amount  </p>
+                                    <div class="installment-ammount"> 10,000 
+                                        <span class="tk-sign"> ৳ </span>
+                                        <div class="installment-amount-three-dots" onclick="showEditSection('edit-instalment-section')"> <img src="../../images/resite/3 dot.svg" alt="">
+                                            <div class="installment-amount-hover"> Edit Ammount  </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                
 
-                                <div class="remining-amount-section">   
-                                    <p>
-                                        Remaining Amount
-                                    </p>
+                            <!-- Instalment Table Paid And Remaining section -->
+                                    <div class="installment-table-3rd-section">
+                                        <div class="paid-amount-section">   
+                                            <p> Paid Amount
+                                                <span class="paid-three-dots"   onclick='showEditSection("paid-edit-section")'> <img src="../../images/resite/3 dot.svg" alt=""> 
+                                                <span class="paid-edit-hover"> Add Ammount </span>
+                                                </span> 
+                                            </p>
 
-                                    <p>
-                                        10,000 <span class="tk-sign"> ৳ </span>
-                                    </p>
-                                </div>
+                                                <p>
+                                                    0 <span class="tk-sign"> ৳ </span>
+                                                </p>
+                                        </div>
+
+                                        <div class="remining-amount-section">   
+                                            <p>
+                                                Remaining Amount
+                                            </p>
+
+                                            <p>
+                                                10,000 <span class="tk-sign"> ৳ </span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="installment-table-number"> 4 </div>
                             </div>
-
-                                <div class="installment-table-number"> 4 </div>
-                        </div>
 
                                 <!-- Instalment Table End-->
                                 <!-- Instalment Table End-->
@@ -318,7 +379,7 @@
                                 <!-- Instalment Table start-->
                                 
 
-                            <div class="installment-table">
+                            <div class="installment-table" style="opacity: 0.5;  pointer-events: none;">    <!-- style="opacity: 0.5;  pointer-events: none; pointer-events: none;" >> Opacity will down and pointer-event will be disable according to condition  -->
                                 <!-- Instalment Table Date -->
                                 <div class="installment-table-date">
                                     25/03/2021 to 28/03/2021
@@ -327,16 +388,23 @@
                                 <!-- Instalment Table Amount section -->
                                 <div class="installment-table-amount">
                                     <p> Installment Amount  </p>
-                                    <p> 10,000 <span class="tk-sign"> ৳ </span> </p>
+                                    <div class="installment-ammount"> 10,000 
+                                        <span class="tk-sign"> ৳ </span>
+                                        <div class="installment-amount-three-dots" onclick="showEditSection('edit-instalment-section')"> <img src="../../images/resite/3 dot.svg" alt="">
+                                            <div class="installment-amount-hover"> Edit Ammount  </div>
+                                        </div>
+                                    </div>
                                 </div>
                             
 
-                                <!-- Instalment Table Paid And Remaining section -->
+                        <!-- Instalment Table Paid And Remaining section -->
                                 <div class="installment-table-3rd-section">
                                     <div class="paid-amount-section">   
-                                            <p>
-                                                Paid Amount
-                                            </p>
+                                        <p> Paid Amount
+                                            <span class="paid-three-dots"   onclick='showEditSection("paid-edit-section")'> <img src="../../images/resite/3 dot.svg" alt=""> 
+                                            <span class="paid-edit-hover"> Add Ammount </span>
+                                            </span> 
+                                        </p>
 
                                             <p>
                                                 0 <span class="tk-sign"> ৳ </span>
@@ -368,7 +436,7 @@
                                 <!-- Instalment Table start-->
                                 
 
-                            <div class="installment-table">
+                            <div class="installment-table" style="opacity: 0.5;  pointer-events: none;">    <!-- style="opacity: 0.5;  pointer-events: none; pointer-events: none;" >> Opacity will down and pointer-event will be disable according to condition  -->
                                 <!-- Instalment Table Date -->
                                 <div class="installment-table-date">
                                     25/03/2021 to 28/03/2021
@@ -377,16 +445,23 @@
                                 <!-- Instalment Table Amount section -->
                                 <div class="installment-table-amount">
                                     <p> Installment Amount  </p>
-                                    <p> 10,000 <span class="tk-sign"> ৳ </span> </p>
+                                    <div class="installment-ammount"> 10,000 
+                                        <span class="tk-sign"> ৳ </span>
+                                        <div class="installment-amount-three-dots" onclick="showEditSection('edit-instalment-section')"> <img src="../../images/resite/3 dot.svg" alt="">
+                                            <div class="installment-amount-hover"> Edit Ammount  </div>
+                                        </div>
+                                    </div>
                                 </div>
                             
 
-                                <!-- Instalment Table Paid And Remaining section -->
+                        <!-- Instalment Table Paid And Remaining section -->
                                 <div class="installment-table-3rd-section">
                                     <div class="paid-amount-section">   
-                                            <p>
-                                                Paid Amount
-                                            </p>
+                                        <p> Paid Amount
+                                            <span class="paid-three-dots"   onclick='showEditSection("paid-edit-section")'> <img src="../../images/resite/3 dot.svg" alt=""> 
+                                            <span class="paid-edit-hover"> Add Ammount </span>
+                                            </span> 
+                                        </p>
 
                                             <p>
                                                 0 <span class="tk-sign"> ৳ </span>
@@ -419,7 +494,7 @@
                                 <!-- Instalment Table start-->
                                 
 
-                            <div class="installment-table">
+                            <div class="installment-table"  style="opacity: 0.5;  pointer-events: none;">    <!-- style="opacity: 0.5;  pointer-events: none; pointer-events: none;" >> Opacity will down and pointer-event will be disable according to condition  -->
                                 <!-- Instalment Table Date -->
                                 <div class="installment-table-date">
                                     25/03/2021 to 28/03/2021
@@ -428,21 +503,29 @@
                                 <!-- Instalment Table Amount section -->
                                 <div class="installment-table-amount">
                                     <p> Installment Amount  </p>
-                                    <p> 10,000 <span class="tk-sign"> ৳ </span> </p>
+                                    <div class="installment-ammount"> 10,000 
+                                        <span class="tk-sign"> ৳ </span>
+                                        <div class="installment-amount-three-dots" onclick="showEditSection('edit-instalment-section')"> <img src="../../images/resite/3 dot.svg" alt="">
+                                            <div class="installment-amount-hover"> Edit Ammount  </div>
+                                        </div>
+                                    </div>
                                 </div>
                             
 
-                                <!-- Instalment Table Paid And Remaining section -->
+                        <!-- Instalment Table Paid And Remaining section -->
                                 <div class="installment-table-3rd-section">
                                     <div class="paid-amount-section">   
-                                            <p>
-                                                Paid Amount
-                                            </p>
+                                        <p> Paid Amount
+                                            <span class="paid-three-dots"   onclick='showEditSection("paid-edit-section")'> <img src="../../images/resite/3 dot.svg" alt=""> 
+                                            <span class="paid-edit-hover"> Add Ammount </span>
+                                            </span> 
+                                        </p>
 
                                             <p>
                                                 0 <span class="tk-sign"> ৳ </span>
                                             </p>
                                     </div>
+
 
                                     <div class="remining-amount-section">   
                                         <p>
@@ -457,6 +540,23 @@
 
                                 <div class="installment-table-number"> 1 </div>
                             </div>
+
+
+
+                            <!-- when Installment Completed -->
+                            <div class="installment-table installment-table-success-note">
+                                    You Successfully Completed Your First Installment
+                            </div>
+
+
+
+                            <!-- Note About Change -->
+                            <div class="note-about-changes">
+                                <div>
+                                        <p> Masud Reja Update The Installment Amount </p>
+                                </div>
+                            </div>
+
                         </div>
 
                                 <!-- Instalment Table End-->
@@ -479,13 +579,14 @@
                                 <div class="installment-table-section-without-interest" id="table-2">
 
                                     <!-- Instalment Table Title -->
-                                    <div class="installment-table-section-title  installment-table-title"> <p>  Installment No: 01 </p> <div class="installment-table-title-button installment-title-button-active"> Active </div>  </div>
+                                    <div class="installment-table-section-title  installment-table-title"> <p>  Installment No: 02 </p> <div class="installment-table-title-button installment-title-button-duo"> Due </div>  </div>
                                 
                                     <div class="side-dashed-border">
 
                                         <!-- Instalment Table start-->
                                         <!-- Instalment Table start-->
-                                    <div class="installment-table">
+                                    <div class="installment-table" style="opacity: 0.5;  pointer-events: none;">    <!-- style="opacity: 0.5;  pointer-events: none; pointer-events: none;" >> Opacity will down and pointer-event will be disable according to condition  -->
+
                                         <!-- Instalment Table Date -->
                                         <div class="installment-table-date">
                                             25/03/2021 to 28/03/2021
@@ -494,21 +595,28 @@
                                         <!-- Instalment Table Amount section -->
                                         <div class="installment-table-amount">
                                             <p> Installment Amount  </p>
-                                            <p> 10,000 <span class="tk-sign"> ৳ </span> </p>
+                                            <div class="installment-ammount"> 10,000 
+                                                <span class="tk-sign"> ৳ </span>
+                                                <div class="installment-amount-three-dots" onclick="showEditSection('edit-instalment-section')"> <img src="../../images/resite/3 dot.svg" alt="">
+                                                    <div class="installment-amount-hover"> Edit Ammount  </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    
+                                            
 
                                         <!-- Instalment Table Paid And Remaining section -->
                                         <div class="installment-table-3rd-section">
                                             <div class="paid-amount-section">   
-                                                    <p>
-                                                        Paid Amount
-                                                    </p>
-
+                                                <p> Paid Amount
+                                                    <span class="paid-three-dots"   onclick='showEditSection("paid-edit-section")'> <img src="../../images/resite/3 dot.svg" alt=""> 
+                                                    <span class="paid-edit-hover"> Add Ammount </span>
+                                                    </span> 
+                                                </p>
+    
                                                     <p>
                                                         0 <span class="tk-sign"> ৳ </span>
                                                     </p>
-                                            </div>
+                                            </div>    
 
                                             <div class="remining-amount-section">   
                                                 <p>
@@ -541,21 +649,29 @@
                                         <!-- Instalment Table Amount section -->
                                         <div class="installment-table-amount">
                                             <p> Installment Amount  </p>
-                                            <p> 10,000 <span class="tk-sign"> ৳ </span> </p>
+                                            <div class="installment-ammount"> 10,000 
+                                                <span class="tk-sign"> ৳ </span>
+                                                <div class="installment-amount-three-dots" onclick="showEditSection('edit-instalment-section')"> <img src="../../images/resite/3 dot.svg" alt="">
+                                                    <div class="installment-amount-hover"> Edit Ammount  </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    
+                                            
 
                                         <!-- Instalment Table Paid And Remaining section -->
                                         <div class="installment-table-3rd-section">
                                             <div class="paid-amount-section">   
-                                                    <p>
-                                                        Paid Amount
-                                                    </p>
-
+                                                <p> Paid Amount
+                                                    <span class="paid-three-dots"   onclick='showEditSection("paid-edit-section")'> <img src="../../images/resite/3 dot.svg" alt=""> 
+                                                    <span class="paid-edit-hover"> Add Ammount </span>
+                                                    </span> 
+                                                </p>
+    
                                                     <p>
                                                         0 <span class="tk-sign"> ৳ </span>
                                                     </p>
                                             </div>
+    
 
                                             <div class="remining-amount-section">   
                                                 <p>
@@ -590,124 +706,138 @@
 
 
 
-                                <!-- Instalment Table 3 section start-->
-                                <!-- Instalment Table 3 section start-->
-                                <!-- Instalment Table 3 section start-->
+                        <!-- Instalment Table 3 section start-->
+                        <!-- Instalment Table 3 section start-->
+                        <!-- Instalment Table 3 section start-->
 
-                                <div class="installment-table-section-without-interest" id="table-3">
+                        <div class="installment-table-section-without-interest" id="table-3">
 
-                                    <!-- Instalment Table Title -->
-                                    <div class="installment-table-section-title  installment-table-title"> <p>  Installment No: 03 </p> <div class="installment-table-title-button installment-title-button-paid"> Paid </div>  </div>
-                                
-                                    <div class="side-dashed-border">
+                            <!-- Instalment Table Title -->
+                            <div class="installment-table-section-title  installment-table-title"> <p>  Installment No: 03 </p> <div class="installment-table-title-button installment-title-button-duo"> Due </div>  </div>
+                        
+                            <div class="side-dashed-border">
 
-                                        <!-- Instalment Table start-->
-                                        <!-- Instalment Table start-->
-                                    <div class="installment-table">
-                                        <!-- Instalment Table Date -->
-                                        <div class="installment-table-date">
-                                            25/03/2021 to 28/03/2021
-                                        </div>
-
-                                        <!-- Instalment Table Amount section -->
-                                        <div class="installment-table-amount">
-                                            <p> Installment Amount  </p>
-                                            <p> 10,000 <span class="tk-sign"> ৳ </span> </p>
-                                        </div>
-                                    
-
-                                        <!-- Instalment Table Paid And Remaining section -->
-                                        <div class="installment-table-3rd-section">
-                                            <div class="paid-amount-section">   
-                                                    <p>
-                                                        Paid Amount
-                                                    </p>
-
-                                                    <p>
-                                                        0 <span class="tk-sign"> ৳ </span>
-                                                    </p>
-                                            </div>
-
-                                            <div class="remining-amount-section">   
-                                                <p>
-                                                    Remaining Amount
-                                                </p>
-
-                                                <p>
-                                                    10,000 <span class="tk-sign"> ৳ </span>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="installment-table-number"> 2 </div>
-                                    </div>
-
-                                        <!-- Instalment Table End-->
-                                        <!-- Instalment Table End-->
-
-
-
-                                        <!-- Instalment Table start-->
-                                        <!-- Instalment Table start-->
-
-                                    <div class="installment-table">
-                                        <!-- Instalment Table Date -->
-                                        <div class="installment-table-date">
-                                            25/03/2021 to 28/03/2021
-                                        </div>
-
-                                        <!-- Instalment Table Amount section -->
-                                        <div class="installment-table-amount">
-                                            <p> Installment Amount  </p>
-                                            <p> 10,000 <span class="tk-sign"> ৳ </span> </p>
-                                        </div>
-                                    
-
-                                        <!-- Instalment Table Paid And Remaining section -->
-                                        <div class="installment-table-3rd-section">
-                                            <div class="paid-amount-section">   
-                                                    <p>
-                                                        Paid Amount
-                                                    </p>
-
-                                                    <p>
-                                                        0 <span class="tk-sign"> ৳ </span>
-                                                    </p>
-                                            </div>
-
-                                            <div class="remining-amount-section">   
-                                                <p>
-                                                    Remaining Amount
-                                                </p>
-
-                                                <p>
-                                                    10,000 <span class="tk-sign"> ৳ </span>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="installment-table-number"> 1 </div>
-                                    </div>
-
-                                        <!-- Instalment Table End-->
-                                        <!-- Instalment Table End-->
-
+                                <!-- Instalment Table start-->
+                                <!-- Instalment Table start-->
+                            <div class="installment-table">
+                                <!-- Instalment Table Date -->
+                                <div class="installment-table-date">
+                                    25/03/2021 to 28/03/2021
                                 </div>
 
-                                        <!-- Instalment Table 3 section End-->
-                                        <!-- Instalment Table 3 section End-->
-                                        <!-- Instalment Table 3 section End-->
+                                <!-- Instalment Table Amount section -->
+                                <div class="installment-table-amount">
+                                    <p> Installment Amount  </p>
+                                    <div class="installment-ammount"> 10,000 
+                                        <span class="tk-sign"> ৳ </span>
+                                        <div class="installment-amount-three-dots" onclick="showEditSection('edit-instalment-section')"> <img src="../../images/resite/3 dot.svg" alt="">
+                                            <div class="installment-amount-hover"> Edit Ammount  </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
 
-                                <div class="collapse-button" onclick="showTable('table-3')"> <img src="../../images/resite/button.svg" alt=""> </div>
+                                <!-- Instalment Table Paid And Remaining section -->
+                                <div class="installment-table-3rd-section">
+                                    <div class="paid-amount-section">   
+                                        <p> Paid Amount
+                                            <span class="paid-three-dots"   onclick='showEditSection("paid-edit-section")'> <img src="../../images/resite/3 dot.svg" alt=""> 
+                                            <span class="paid-edit-hover"> Add Ammount </span>
+                                            </span> 
+                                        </p>
+
+                                            <p>
+                                                0 <span class="tk-sign"> ৳ </span>
+                                            </p>
+                                    </div>    
+
+                                    <div class="remining-amount-section">   
+                                        <p>
+                                            Remaining Amount
+                                        </p>
+
+                                        <p>
+                                            10,000 <span class="tk-sign"> ৳ </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="installment-table-number"> 2 </div>
+                            </div>
+
+                                <!-- Instalment Table End-->
+                                <!-- Instalment Table End-->
+
+
+
+                                <!-- Instalment Table start-->
+                                <!-- Instalment Table start-->
+
+                            <div class="installment-table">
+                                <!-- Instalment Table Date -->
+                                <div class="installment-table-date">
+                                    25/03/2021 to 28/03/2021
+                                </div>
+
+                                <!-- Instalment Table Amount section -->
+                                <div class="installment-table-amount">
+                                    <p> Installment Amount  </p>
+                                    <div class="installment-ammount"> 10,000 
+                                        <span class="tk-sign"> ৳ </span>
+                                        <div class="installment-amount-three-dots" onclick="showEditSection('edit-instalment-section')"> <img src="../../images/resite/3 dot.svg" alt="">
+                                            <div class="installment-amount-hover"> Edit Ammount  </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+
+                                <!-- Instalment Table Paid And Remaining section -->
+                                <div class="installment-table-3rd-section">
+                                    <div class="paid-amount-section">   
+                                        <p> Paid Amount
+                                            <span class="paid-three-dots"   onclick='showEditSection("paid-edit-section")'> <img src="../../images/resite/3 dot.svg" alt=""> 
+                                            <span class="paid-edit-hover"> Add Ammount </span>
+                                            </span> 
+                                        </p>
+
+                                            <p>
+                                                0 <span class="tk-sign"> ৳ </span>
+                                            </p>
+                                    </div>    
+
+                                    <div class="remining-amount-section">   
+                                        <p>
+                                            Remaining Amount
+                                        </p>
+
+                                        <p>
+                                            10,000 <span class="tk-sign"> ৳ </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="installment-table-number"> 1 </div>
+                            </div>
+
+                                <!-- Instalment Table End-->
+                                <!-- Instalment Table End-->
+
                         </div>
-                    </div>
 
-                </div>
-                </div>
+                                <!-- Instalment Table 3 section End-->
+                                <!-- Instalment Table 3 section End-->
+                                <!-- Instalment Table 3 section End-->
 
-                <!-- PAYMENT & FACILITIES END-->
-                <!-- PAYMENT & FACILITIES END-->
-                <!-- PAYMENT & FACILITIES END-->
+                        <div class="collapse-button" onclick="showTable('table-3')"> <img src="../../images/resite/button.svg" alt=""> </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        <!-- PAYMENT & FACILITIES END-->
+        <!-- PAYMENT & FACILITIES END-->
+        <!-- PAYMENT & FACILITIES END-->
 
 
 
@@ -803,424 +933,223 @@
 
 
 
-            <!-- ALL PAYMENT DETAILS SECTION START -->
-            <!-- ALL PAYMENT DETAILS SECTION START -->
-            <!-- ALL PAYMENT DETAILS SECTION START -->
+    <!-- ALL PAYMENT DETAILS SECTION START -->
+    <!-- ALL PAYMENT DETAILS SECTION START -->
+    <!-- ALL PAYMENT DETAILS SECTION START -->
 
-            <div class="all-payment-details-section">
-                <div class="all-payment-details-title">
-                        <div> All Payment Details </div>
-                        <div> Amount </div>
+    <div class="all-payment-details-section">
+        <div class="all-payment-details-title">
+                <div> All Payment Details </div>
+                <div> Amount </div>
+        </div>
+
+        <div class="all-payment-details-box">
+
+
+
+                <!-- ROW-1 -->
+                <div class="all-payment-details-box-row-1">
+
+
+                    <!-- ROW-4 COL -- LEFT -->
+                    <div class="all-payment-details-box-left"> Advance Payment <div class="condition-of-all-payment condition-of-installment-paid">Paid</div> </div>
+                    <!-- Add class "condition-of-installment-due" if it is paid -->
+
+
+
+
+                    <!-- ROW-4 COL -- RIGHT -->
+                    <div class="all-payment-details-box-right">
+                            <div class="all-payment-details-ammount">
+                                <span> 230000 </span> <span class="tk-sign"> ৳ </span>
+                            </div>
+                    </div>
                 </div>
 
-                <div class="all-payment-details-box">
-
-
-
-                        <!-- ROW-1 -->
-                        <div class="all-payment-details-box-row-1">
-
-
-                            <!-- ROW-4 COL -- LEFT -->
-                            <div class="all-payment-details-box-left"> Advance Payment </div>
 
 
 
 
+                <!-- ROW-2 -->
+                <div class="all-payment-details-box-row-1">
 
-                            <!-- ROW-4 COL -- RIGHT -->
-                            <div class="all-payment-details-box-right"> 
+                    <!-- ROW-4 COL -- LEFT -->
+                    <div class="all-payment-details-box-left">
 
-                                    <div class="edit-price-input number-wrapper payment-ammount-input">
-                                        <input type="number"  value="230000" min="0" id="edit-price-input">
-                                        <div class="spinner-button-container">
-                                                <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                        </div>
-                                        <div class="price-tk"> ৳ </div>
-                                    </div>
+                            <div>
+                                <div class="all-payment-details-box-left-title"> 1st Installment   <div class="condition-of-installment condition-of-installment-paid"> Paid </div>   </div>
 
+                                <!-- <div class="advanced-payment-date-input-container">
+                                        <input type="date"  value="2021-09-11" id="instalment-date">
+                                        <div class="calender-icon"></div>
+                                            <div>to</div>
+                                        <input type="date"  value="2021-09-11" id="instalment-date">
+                                        <div class="calender-icon"></div>
+                                </div> -->
+                                <div class="all-payment-details-date-container">
+                                        <div class="all-payment-details-date"> 15th Aug. 2021 </div> <div class="to"> to </div>  <div class="all-payment-details-date"> 15th Aug. 2021 </div>
+                                </div>
                             </div>
-                        </div>
+
+                    </div>
 
 
 
 
 
-                        <!-- ROW-2 -->
-                        <div class="all-payment-details-box-row-1">
+                    <!-- ROW-4 COL -- RIGHT -->
+                    <div class="all-payment-details-box-right">
 
-                            <!-- ROW-4 COL -- LEFT -->
-                            <div class="all-payment-details-box-left">
+                            <div class="remaining-section">
+                                <div class="all-payment-details-box-right-title">  Remaining Ammount </div>
 
-                                    <div>
-                                        <div class="all-payment-details-box-left-title"> 1st Installment   <div class="condition-of-installment condition-of-installment-paid"> Paid </div>   </div>
-
-                                        <div class="advanced-payment-date-input-container">
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                                    <div>to</div>
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                        </div>
-                                    </div>
-
+                                <div class="all-payment-details-ammount">
+                                    <span> 00 </span> <span class="tk-sign"> ৳ </span>
+                                </div>
                             </div>
 
 
 
+                            <div class="paid-section">
+                                <div class="all-payment-details-box-right-title">  Total Paid </div>
 
-
-                            <!-- ROW-4 COL -- RIGHT -->
-                            <div class="all-payment-details-box-right"> 
-                                    
-                                    <div class="remaining-section">
-                                        <div class="all-payment-details-box-right-title">  Remaining Ammount </div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="paid-section">
-                                        <div class="all-payment-details-box-right-title">  Total Paid </div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
+                                <div class="all-payment-details-ammount">
+                                    <span> 230000 </span> <span class="tk-sign"> ৳ </span>
+                                </div>
                             </div>
-                        </div>
-
-
-
-                        <!-- ROW-3 -->
-                        <div class="all-payment-details-box-row-1">
-                            
-
-
-                            <!-- ROW-4 COL -- LEFT -->
-                            <div class="all-payment-details-box-left">
-                                    
-                                    <div>
-                                        <div class="all-payment-details-box-left-title"> 2nd Installment <div class="condition-of-installment condition-of-installment-active"> Active </div> </div>
-
-                                        <div class="advanced-payment-date-input-container"> 
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                                <div>to</div>
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                        </div>
-                                    </div>
-
-                            </div>
-
-
-
-
-
-                            <!-- ROW-4 COL -- RIGHT -->
-                            <div class="all-payment-details-box-right"> 
-                                    <div class="remaining-section">
-                                        <div class="all-payment-details-box-right-title">  </div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="paid-section">
-                                        <div class="all-payment-details-box-right-title">  </div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-
-
-                        <!-- ROW-4 -->
-                        <div class="all-payment-details-box-row-1">
-                            
-                            <!-- ROW-4 COL -- LEFT -->
-                            <div class="all-payment-details-box-left">
-                                    <div>
-                                        <div class="all-payment-details-box-left-title" > 3rd Installment <div class="condition-of-installment condition-of-installment-due"> Due </div></div>
-                                        <div class="advanced-payment-date-input-container"> 
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                                <div>to</div>
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                        </div>
-                                    </div>
-                            </div>
-
-                            <!-- ROW-4 COL -- RIGHT -->
-                            <div class="all-payment-details-box-right"> 
-                                    <div class="remaining-section">
-                                        <div class="all-payment-details-box-right-title"></div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="paid-section">
-                                        <div class="all-payment-details-box-right-title"></div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-
-
-                        <!-- ROW-4 -->
-                        <div class="all-payment-details-box-row-1">
-                            
-                            <!-- ROW-4 COL -- LEFT -->
-                            <div class="all-payment-details-box-left">
-                                    <div>
-                                        <div class="all-payment-details-box-left-title" > 3rd Installment <div class="condition-of-installment condition-of-installment-due"> Due </div></div>
-                                        <div class="advanced-payment-date-input-container"> 
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                                <div>to</div>
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                        </div>
-                                    </div>
-                            </div>
-
-                            <!-- ROW-4 COL -- RIGHT -->
-                            <div class="all-payment-details-box-right"> 
-                                    <div class="remaining-section">
-                                        <div class="all-payment-details-box-right-title"></div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="paid-section">
-                                        <div class="all-payment-details-box-right-title"></div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-
-                        <!-- ROW-4 -->
-                        <div class="all-payment-details-box-row-1">
-                            
-                            <!-- ROW-4 COL -- LEFT -->
-                            <div class="all-payment-details-box-left">
-                                    <div>
-                                        <div class="all-payment-details-box-left-title" > 3rd Installment <div class="condition-of-installment condition-of-installment-due"> Due </div></div>
-                                        <div class="advanced-payment-date-input-container"> 
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                                <div>to</div>
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                        </div>
-                                    </div>
-                            </div>
-
-                            <!-- ROW-4 COL -- RIGHT -->
-                            <div class="all-payment-details-box-right"> 
-                                    <div class="remaining-section">
-                                        <div class="all-payment-details-box-right-title"></div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="paid-section">
-                                        <div class="all-payment-details-box-right-title"></div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-
-
-                        <!-- ROW-4 -->
-                        <div class="all-payment-details-box-row-1">
-                            
-                            <!-- ROW-4 COL -- LEFT -->
-                            <div class="all-payment-details-box-left">
-                                    <div>
-                                        <div class="all-payment-details-box-left-title" > 3rd Installment <div class="condition-of-installment condition-of-installment-due"> Due </div></div>
-                                        <div class="advanced-payment-date-input-container"> 
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                                <div>to</div>
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                        </div>
-                                    </div>
-                            </div>
-
-                            <!-- ROW-4 COL -- RIGHT -->
-                            <div class="all-payment-details-box-right"> 
-                                    <div class="remaining-section">
-                                        <div class="all-payment-details-box-right-title"></div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="paid-section">
-                                        <div class="all-payment-details-box-right-title"></div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-
-
-                            <!-- ROW-4 -->
-                            <div class="all-payment-details-box-row-1">
-                            
-                            <!-- ROW-4 COL -- LEFT -->
-                            <div class="all-payment-details-box-left">
-                                    <div>
-                                        <div class="all-payment-details-box-left-title" > 3rd Installment <div class="condition-of-installment condition-of-installment-due"> Due </div></div>
-                                        <div class="advanced-payment-date-input-container"> 
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                                <div>to</div>
-                                                <input type="date"  value="2021-09-11" id="instalment-date">
-                                                <div class="calender-icon"></div>
-                                        </div>
-                                    </div>
-                            </div>
-
-                            <!-- ROW-4 COL -- RIGHT -->
-                            <div class="all-payment-details-box-right"> 
-                                    <div class="remaining-section">
-                                        <div class="all-payment-details-box-right-title"></div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="paid-section">
-                                        <div class="all-payment-details-box-right-title"></div>
-                                        
-                                        <div class="edit-price-input number-wrapper payment-ammount-input">
-                                                <input type="number"  value="160000" min="0" id="edit-price-input">
-                                                <div class="spinner-button-container">
-                                                    <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
-                                                    <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
-                                                </div>
-                                                <div class="price-tk"> ৳ </div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-
+                    </div>
                 </div>
-            </div>
 
 
 
-            <!-- ALL PAYMENT DETAILS SECTION END -->
-            <!-- ALL PAYMENT DETAILS SECTION END -->
-            <!-- ALL PAYMENT DETAILS SECTION END -->
+                <!-- ROW-3 -->
+                <div class="all-payment-details-box-row-1">
+
+
+
+                    <!-- ROW-4 COL -- LEFT -->
+                    <div class="all-payment-details-box-left">
+
+                            <div>
+                                <div class="all-payment-details-box-left-title"> 2nd Installment <div class="condition-of-installment condition-of-installment-paid"> Paid </div> </div>
+
+                                <div class="all-payment-details-date-container">
+                                        <div class="all-payment-details-date"> 15th Aug. 2021 </div> <div class="to"> to </div>  <div class="all-payment-details-date"> 15th Aug. 2021 </div>
+                                </div>
+                            </div>
+
+                    </div>
+
+
+
+
+
+                    <!-- ROW-4 COL -- RIGHT -->
+                    <div class="all-payment-details-box-right">
+                            <div class="remaining-section">
+                                <div class="all-payment-details-box-right-title">  </div>
+
+                                <div class="all-payment-details-ammount">
+                                    <span> 00 </span> <span class="tk-sign"> ৳ </span>
+                                </div>
+                            </div>
+
+
+
+                            <div class="paid-section">
+                                <div class="all-payment-details-box-right-title">  </div>
+
+                                <div class="all-payment-details-ammount">
+                                    <span> 230000 </span> <span class="tk-sign"> ৳ </span>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+
+
+
+                <!-- ROW-4 -->
+                <div class="all-payment-details-box-row-1">
+
+                    <!-- ROW-4 COL -- LEFT -->
+                    <div class="all-payment-details-box-left">
+                            <div>
+                                <div class="all-payment-details-box-left-title" > 4th Installment <div class="condition-of-installment condition-of-installment-due"> Due </div></div>
+                                <div class="all-payment-details-date-container">
+                                        <div class="all-payment-details-date"> 15th Aug. 2021 </div> <div class="to"> to </div>  <div class="all-payment-details-date"> 15th Aug. 2021 </div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <!-- ROW-4 COL -- RIGHT -->
+                    <div class="all-payment-details-box-right">
+                            <div class="remaining-section">
+                                <div class="all-payment-details-box-right-title"></div>
+
+                                <div class="all-payment-details-ammount">
+                                    <span> 230000 </span> <span class="tk-sign"> ৳ </span>
+                                </div>
+                            </div>
+
+
+
+                            <div class="paid-section">
+                                <div class="all-payment-details-box-right-title"></div>
+
+                                <div class="all-payment-details-ammount">
+                                    <span> 230000 </span> <span class="tk-sign"> ৳ </span>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+
+
+
+                    <!-- ROW-4 -->
+                    <div class="all-payment-details-box-row-1">
+
+                        <!-- ROW-4 COL -- LEFT -->
+                        <div class="all-payment-details-box-left">
+                                <div>
+                                    <div class="all-payment-details-box-left-title" > 5th Installment <div class="condition-of-installment condition-of-installment-due"> Due </div></div>
+                                    <div class="all-payment-details-date-container">
+                                            <div class="all-payment-details-date"> 15th Aug. 2021 </div> <div class="to"> to </div>  <div class="all-payment-details-date"> 15th Aug. 2021 </div>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <!-- ROW-4 COL -- RIGHT -->
+                        <div class="all-payment-details-box-right">
+                                <div class="remaining-section">
+                                    <div class="all-payment-details-box-right-title"></div>
+
+                                    <div class="all-payment-details-ammount">
+                                        <span> 230000 </span> <span class="tk-sign"> ৳ </span>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="paid-section">
+                                    <div class="all-payment-details-box-right-title"></div>
+
+                                    <div class="all-payment-details-ammount">
+                                        <span> 230000 </span> <span class="tk-sign"> ৳ </span>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!-- ALL PAYMENT DETAILS SECTION END -->
+    <!-- ALL PAYMENT DETAILS SECTION END -->
+    <!-- ALL PAYMENT DETAILS SECTION END -->
+
 
     </div>
 
@@ -1232,6 +1161,215 @@
 
 
 
+    <!-- Cancel order after payment section -->  <!-- 2nd time done-->
+    <!-- Cancel order after payment section -->
+
+    <div class="cancel-after-payment-pop-up" >
+        <div class="cancel-after-payment-container">
+                <div class="cancel-after-payment-title"> Are You Sure To Cancel This Service? </div>
+                <div class="cancel-after-payment-button-container">
+                    <div class="btn btn-outline-danger"  onmouseenter=beforeButton() onclick="hideCancelAfterPaymentSection(),showAllLoadingSection('Your service order is successfully canceled!')"> Yes </div>
+                    <div class="btn btn-danger preferred-buttons"  onclick=hideCancelAfterPaymentSection()> No </div>
+                </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Edit Price -->  <!-- 2nd time done-->
+    <!-- Edit Price -->
+    <!-- Edit Price -->
+
+    <div class="edit-price-pop-up" id="edit-price-section">
+            <div class="edit-price-container">
+                <div class="edit-price-title"> Edit All Installment Price </div>
+
+                <div class="edit-price-input number-wrapper">
+                        <input type="number" min="0" id="edit-price-input">
+                        <div class="spinner-button-container">
+                            <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
+                            <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
+                        </div>
+                        <div class="price-tk"> ৳ </div>
+                </div>
+                <div class="edit-price-button-container">
+                        <div class="btn btn-danger preferred-button"  onclick="hideEditSection('edit-price-section'),showAllLoadingSection('Your All Installment Amount has been changed.')"> Confirm </div>
+                        <div class="btn btn-outline-danger" onmouseenter=showMe() onclick="hideEditSection('edit-price-section')"> Cancel </div>
+                </div>
+            </div>
+    </div>
+
+
+
+
+
+    <!-- Edit ADVANCE PAYMENT -->  <!-- 2nd time done-->
+    <!-- Edit ADVANCE PAYMENT -->
+    <!-- Edit ADVANCE PAYMENT -->
+
+    <div class="edit-price-pop-up" id="edit-advance-payment">
+        <div class="edit-price-container">
+            <div class="edit-price-title"> Change Advance Amount </div>
+
+            <div class="edit-price-input number-wrapper">
+                    <input type="number" min="0" id="edit-price-input">
+                    <div class="spinner-button-container">
+                        <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
+                        <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
+                    </div>
+                    <div class="price-tk"> ৳ </div>
+            </div>
+            <div class="edit-price-button-container">
+                    <div class="btn btn-danger preferred-button"  onclick="hideEditSection('edit-advance-payment')"> Confirm </div>
+                    <div class="btn btn-outline-danger" onmouseenter=showMe() onclick="hideEditSection('edit-advance-payment')"> Cancel </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Edit installment -->  <!-- 2nd time done-->
+    <!-- Edit installment -->
+    <!-- Edit installment -->
+
+    <div class="edit-price-pop-up" id="edit-instalment-section">
+            <div class="edit-price-container">
+                <div class="edit-price-title"> Edit Installment Ammount </div>
+
+                <div class="edit-price-input number-wrapper">
+                        <input type="number" min="0" id="edit-price-input">
+                        <div class="spinner-button-container">
+                            <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
+                            <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
+                        </div>
+                        <div class="price-tk"> ৳ </div>
+                </div>
+                <div class="edit-price-button-container">
+                        <div class="btn btn-danger preferred-button"   onclick="hideEditSection('edit-instalment-section'),showAllLoadingSection('Your Installment amount has been changed.')"> Confirm </div>
+                        <div class="btn btn-outline-danger" onmouseenter=showMe()   onclick="hideEditSection('edit-instalment-section')"> Cancel </div>
+                </div>
+            </div>
+    </div>
+
+
+
+
+
+
+        <!-- EDIT PAID AMOUNT SECTION START -->  <!-- 2nd time done-->
+        <!-- EDIT PAID AMOUNT SECTION START -->
+        <!-- EDIT PAID AMOUNT SECTION START -->
+
+        <div class="edit-price-pop-up" id="paid-edit-section">
+            <div class="edit-price-container">
+                <div class="edit-price-title"> Edit Paid Ammount </div>
+
+                <div class="edit-price-input number-wrapper">
+                        <input type="number" min="0" id="edit-price-input">
+
+                        <div class="spinner-button-container">
+                            <div id="inc-button" class="spinner-button">   <img src="../../images/resite/arrow1.svg" alt="">     </div>
+                            <div id="dec-button" class="spinner-button">   <img src="../../images/resite/arrow4.svg" alt="">     </div>
+                        </div>
+                        <div class="price-tk"> ৳ </div>
+                </div>
+
+                <div class="edit-price-button-container">
+                        <div class="btn btn-danger preferred-button  btn-1"   onclick="hideEditSection('paid-edit-section'),showAllLoadingSection('Your Paid ammount has been successfully added!')"> Confirm </div>
+                        <div class="btn btn-outline-danger  btn-2" onmouseenter=showMe()   onclick="hideEditSection('paid-edit-section')"> Cancel </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDIT PAID AMOUNT SECTION END -->
+        <!-- EDIT PAID AMOUNT SECTION END -->
+        <!-- EDIT PAID AMOUNT SECTION END -->
+
+
+
+
+
+
+
+
+        <!-- ALL loading START -->   <!-- 2nd time done-->
+        <!-- ALL loading START -->
+        <!-- ALL loading START -->
+        <div class="loading-animation-pop-up" id="all-loading-pop-up">
+            <div class="loading-animation-container">
+                <div class="loading-animation-animation-container">
+                        <div class="image">
+                            <img src="../../images/resite/animation/Group 7230.svg" alt="">
+                            <div class="bubble"> <img src="../../images/resite/animation/Ellipse 597.svg" alt=""> </div>
+                            <div class="bubble"> <img src="../../images/resite/animation/Ellipse 598.svg" alt=""> </div>
+                            <div class="bubble"> <img src="../../images/resite/animation/Ellipse 599.svg" alt=""> </div>
+                            <div class="bubble"> <img src="../../images/resite/animation/Ellipse 600.svg" alt=""> </div>
+                        </div>
+                </div>
+                <div class="loader">Loading...</div>
+
+                <div class="loading-animation-title"> Your Installment Amount successfully added! </div>
+
+                <div class="loading-animation-button-container">
+                        <div class="btn btn-danger" onclick=hideAllLoadingSection()> Done </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ALL loading END -->
+        <!-- ALL loading END -->
+        <!-- ALL loading END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1245,7 +1383,7 @@
 <!-- Cancel order after payment section -->
 <!-- Cancel order after payment section -->
 
-<div class="cancel-after-payment-pop-up">
+<!-- <div class="cancel-after-payment-pop-up">
     <div class="cancel-after-payment-container">
             <div class="cancel-after-payment-title"> Are You Sure To Cancel This Service? </div>
             <div class="cancel-after-payment-button-container">
@@ -1253,7 +1391,7 @@
                 <div class="btn btn-danger preferred-buttons"  onclick=hideCancelAfterPaymentSection()> No </div>
             </div>
     </div>
-</div>
+</div> -->
 
 
 <!-- OFFLINE POPUPS -->
@@ -1272,7 +1410,7 @@
 <!-- Edit Price -->
 <!-- Edit Price -->
 
-<div class="edit-price-pop-up  edit-price-section">
+<!-- <div class="edit-price-pop-up  edit-price-section">
     <div class="edit-price-container">
             <div class="edit-price-title"> Edit Price </div>
 
@@ -1289,7 +1427,7 @@
                 <div class="btn btn-outline-danger" onmouseenter=showMe()   onclick=hideEditPriceSection()> Cancel </div>
             </div>
     </div>
-</div>
+</div> -->
 
 
 
@@ -1330,7 +1468,7 @@
 <!-- Edit installment -->
 <!-- Edit installment -->
 
-<div class="edit-price-pop-up" id="edit-instalment-section">
+<!-- <div class="edit-price-pop-up" id="edit-instalment-section">
     <div class="edit-price-container">
             <div class="edit-price-title"> Change Instalment Number </div>
 
@@ -1346,7 +1484,7 @@
                 <div class="btn btn-outline-danger" onmouseenter=showMe()   onclick="hideEditSection('edit-instalment-section')"> Cancel </div>
             </div>
     </div>
-</div>
+</div> -->
 
 
 
@@ -1382,7 +1520,7 @@
 <!-- Edit INTEREST START -->
 <!-- Edit INTEREST START -->
 
-<div class="edit-price-pop-up" id="edit-interest-amount">
+<!-- <div class="edit-price-pop-up" id="edit-interest-amount">
     <div class="edit-price-container">
             <div class="edit-price-title"> Edit Interest Amount </div>
 
@@ -1399,7 +1537,7 @@
                 <div class="btn btn-outline-danger" onmouseenter=showMe()   onclick="hideEditSection('edit-interest-amount')"> Cancel </div>
             </div>
     </div>
-</div>
+</div> -->
 
 <!-- Edit INTEREST END -->
 <!-- Edit INTEREST END -->
@@ -1449,7 +1587,7 @@
 <!-- ALL EDIT SECTION START -->
 <!-- ALL EDIT SECTION START -->
 
-<div class="edit-price-pop-up" id="all-edit-section">
+<!-- <div class="edit-price-pop-up" id="all-edit-section">
     <div class="edit-price-container">
             <div class="edit-price-title"> Edit Interest Amount </div>
 
@@ -1468,82 +1606,11 @@
                 <div class="btn btn-outline-danger  btn-2" onmouseenter=showMe()   onclick="hideAllEditSection()"> Cancel </div>
             </div>
     </div>
-</div>
+</div> -->
 
 <!-- ALL EDIT SECTION END -->
 <!-- ALL EDIT SECTION END -->
 <!-- ALL EDIT SECTION END -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ALL loading START -->
-<!-- ALL loading START -->
-<!-- ALL loading START -->
-<div class="loading-animation-pop-up" id="all-loading-pop-up">
-    <div class="loading-animation-container">
-            <div class="loading-animation-animation-container">
-                <div class="image">
-                        <img src="../../images/resite/animation/Group 7230.svg" alt="">
-                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 597.svg" alt=""> </div>
-                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 598.svg" alt=""> </div>
-                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 599.svg" alt=""> </div>
-                        <div class="bubble"> <img src="../../images/resite/animation/Ellipse 600.svg" alt=""> </div>
-                </div>
-            </div>
-            <div class="loader">Loading...</div>
-
-            <div class="loading-animation-title"> Your Installment Amount successfully added! </div>
-
-            <div class="loading-animation-button-container">
-                <div class="btn btn-danger" onclick=hideAllLoadingSection()> Done </div>
-            </div>
-    </div>
-</div>
-
-
-<!-- ALL loading END -->
-<!-- ALL loading END -->
-<!-- ALL loading END -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

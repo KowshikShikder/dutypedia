@@ -135,7 +135,6 @@ const sideBarMenuToggle=(sideId)=>{
             }
         })
 
-
             // Open toggle bar
             if(toggleOption.style.display === "none"){
                 toggleOption.style.display="grid"
@@ -786,11 +785,6 @@ const swiper1 = new Swiper('.vendor-dashboard', {
     },
         slidesPerView: 5,
   });
-  
-
-
-
-
 
 
 
@@ -801,48 +795,61 @@ const swiper1 = new Swiper('.vendor-dashboard', {
 // Vendor Resit Section
 // Vendor Resit Section
 
-document.querySelector('#resit').src="./All Resits/fixed-resit.html"
+document.querySelector('#resit').src="./All Resits/offline resit/offline-installment-interest.html"
 
 
 
 const bargaining=()=>{
-document.querySelector('#resit').src="./All Resits/offline resit/offline-installment.html"
+    document.querySelector('#resit').src="./All Resits/offline resit/offline-installment-interest.html"
 }
 
+// const bargaining=()=>{
+//     document.querySelector('#resit').src="./All Resits/offline resit/package-resit-offline.html"
+// }
 
 const fixed=()=>{
-    document.querySelector('#resit').src="./All Resits/offline resit/offline-installment-compounding.html"
+    document.querySelector('#resit').src="./All Resits/online-installment-compounding.html"
 }
+
+
+// const fixed=()=>{
+//     document.querySelector('#resit').src="./All Resits/offline resit/fixed-resit-offline.html"
+// }
+
+
+
+
+
 
 
 const installment=()=>{
-    document.querySelector('#resit').src="./All Resits/offline resit/offline-installment-without-interest.html"
+    document.querySelector('#resit').src="./All Resits/offline resit/offline-installment-compounding.html"
 }
 
 
 const subscription=()=>{
-    document.querySelector('#resit').src="./All Resits/subscription-resit.html"
+    document.querySelector('#resit').src="./All Resits/online-installment-without-interest.html"
 }
 
 
 const package=()=>{
-    document.querySelector('#resit').src="./All Resits/package-resit.html"
+    document.querySelector('#resit').src="./All Resits/offline resit/offline-installment-without-interest.html"
 }
 
 
 const fixedOffline=()=>{
-    document.querySelector('#resit').src="./All Resits/offline resit/offline-installment-compounding.html"
+    document.querySelector('#resit').src="./All Resits/fixed-resit.html"
 }
 
 
 const packageOffline=()=>{
-    document.querySelector('#resit').src="./All Resits/online-installment-com.html"
+    document.querySelector('#resit').src="./All Resits/package-resit.html"
 }
 
 
 
 const installmentOff=()=>{
-    document.querySelector('#resit').src="./All Resits/online-installment-com.html"
+    document.querySelector('#resit').src="./All Resits/subscription-resit.html"
 }
 
 

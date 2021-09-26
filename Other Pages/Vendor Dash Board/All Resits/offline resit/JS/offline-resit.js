@@ -75,9 +75,9 @@ const paymentDropDownSection=()=>{
 
 
 
-// DROPDOWN MENU SECTION FOR PAYMENT STATUS
-// DROPDOWN MENU SECTION FOR PAYMENT STATUS
-// DROPDOWN MENU SECTION FOR PAYMENT STATUS
+// DROPDOWN MENU SECTION FOR PRICE STATUS
+// DROPDOWN MENU SECTION FOR PRICE STATUS
+// DROPDOWN MENU SECTION FOR PRICE STATUS
 const  priceDropDownSection= document.querySelector(".price-drop-down-option-section")
 const  priceDropDownOption= document.querySelector(".price-drop-down-option")
 const priceTopDropDownOption=  document.querySelector(".price-drop-down-top")

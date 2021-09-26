@@ -43,8 +43,8 @@
     display: none;
     position: absolute;
     font-size: 1.5vw;
-    right: -7.5vw;
-    width: 8vw;
+    right: -9vw;
+    width: 9vw;
     font-weight: 700 !important;
 }
 
@@ -269,7 +269,7 @@
 /* Delivery date input */
 /* Delivery date input */
 /* Delivery date input */
-.offline-date-input-container{
+/* .offline-date-input-container{
     display: grid;
     height: 4vw;
     width: 95%;
@@ -311,7 +311,7 @@
     background-position: center;
     background-image: url(../../../images/resite/calendar-line.svg);
     border-radius: 0.8vw;
-}
+} */
 
 
 
@@ -657,7 +657,7 @@ body{
     justify-content: space-around;
     align-items: baseline;
     height: 100%;
-    width: 7vw;
+    width: 12vw;
     margin-right: 2vw;
     padding-top: 2vw;
 }
@@ -1187,7 +1187,7 @@ body{
     padding-top: 2vw;
     height: 44vw;
     overflow-y: auto;
-    padding-bottom: 5vw;
+    padding-bottom: 13vw;
 }
 
 
@@ -1245,9 +1245,12 @@ body{
     border-top-right-radius: 1.5vw;
     border-top-left-radius: 1.5vw;
     margin-top: 3vw;
-    padding-bottom: 6vw;
+    padding-bottom: 4vw;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.199);
 }
+
+
+
 
 .installment-table-container:nth-child(1){
     margin-top: 1vw;
@@ -1280,6 +1283,129 @@ body{
 
 
 
+
+/* Advance Payment Table START */
+/* Advance Payment Table START */
+/* Advance Payment Table START */
+
+.advance-payment-table{
+    height: 18vw;
+    opacity: 1 !important;
+    pointer-events: painted !important;
+}
+
+
+.advance-payment-table .installment-table{
+    border-top: 1vw solid transparent;
+    border-bottom: 1vw solid transparent;
+    margin-top: 0vw;
+}
+
+
+
+
+
+
+
+
+
+/* INstallment STATUS DROPDOWN START */
+.drop-down-section{
+    display: grid;
+    position: relative;
+    height: 3vw;
+    width: 40%;
+    margin: auto;
+    margin-top: 0.5vw;
+    font-size: 1.6vw;
+}
+
+.drop-down-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: default;
+    cursor: pointer;
+    padding-right: 3vw;
+}
+
+
+.drop-down-btn{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.308);
+    height: 100%;
+    width: 2.3vw;
+    top: 0vw;
+    right: 0vw;
+    cursor: pointer;
+    padding: 0.6vw;
+}
+
+.drop-down-btn:hover{
+    background: #DEDEDE;
+}
+
+.drop-down-btn img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.drop-down-option-section{
+    display: none;
+    position: absolute;
+    top: -2.4vw;
+    right: 2.5vw;
+    height: 7vw;
+    width: 10vw;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.274);
+    z-index: 5;
+    background: white;
+}
+
+
+.drop-down-option{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    height: 3vw;
+    width: 9.7vw;
+    border-top: 0.08vw solid rgba(0, 0, 0, 0.082);
+    font-size: 1.6vw;
+    cursor: pointer;
+    padding-left: 0vw;
+    padding-right: 2vw;
+}
+
+.drop-down-option .cross{
+    pointer-events: none;
+}
+
+.drop-down-option:hover{
+    background: #DEDEDE;
+}
+
+
+
+/* INstallment STATUS DROPDOWN END */
+
+
+/* Advance Payment Table END */
+/* Advance Payment Table END */
+/* Advance Payment Table END */
+
+
+
+
+
+/* Installment Completed Successfully */
+/* Installment Completed Successfully */
+/* Installment Completed Successfully */
+
+
 .installment-table-success-note{
     display: grid;
     justify-content: center;
@@ -1296,6 +1422,62 @@ body{
     background-position: center center;
     background-size: 18%;
 }
+
+
+
+.note-about-changes{
+    display: grid;
+    padding: 0.5vw;
+    padding-top: -10vw;
+    font-size: 1.3vw !important;
+    margin-top: -1.6vw;
+    border-bottom: 0.08vw solid rgba(0, 0, 0, 0.171);
+}
+
+
+.note-about-changes p{
+    margin: 0.7vw;
+
+}
+
+
+
+.installment-completed{
+    position: absolute;
+    background: white;
+    font-size: 2vw;
+    bottom: -0vw;
+    left: 0vw;
+    width: 100%;
+    height: 23.4vw;
+    z-index: 3;
+    background-image: url(../../../images/resite/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 22%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1324,11 +1506,6 @@ body{
     padding: 0.5vw;
     border-radius: 0.6vw;
     font-weight: 600;
-}
-
-.installment-title-button-active{
-    background: rgba(255, 255, 255, 0.226);
-    color: white;
 }
 
 
@@ -1393,8 +1570,6 @@ body{
     width: 100%;
     font-size: 1.8vw;
     border-bottom: 0.08vw solid rgba(0, 0, 0, 0.171);
-    /* border-right: 0.08vw solid rgba(0, 0, 0, 0.171); */
-    /* border-left: 0.08vw dashed rgba(0, 0, 0, 0.171); */
 }
 
 
@@ -1426,7 +1601,44 @@ body{
 
 
 
+/* installment amount section */
+.installment-ammount{
+    position: relative;
+}
 
+
+.installment-three-dots{
+    position: absolute;
+    height: 1.8vw;
+    width: 1vw;
+    padding: 0.3vw;
+    top: 1.2vw;
+    right:0.8vw;
+}
+
+
+.installment-three-dots img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.hover-edit-installment{
+    display: none;
+    position: absolute;
+    font-size: 1.2vw;
+    top: -0.3vw;
+    right: -10vw;
+    width: 10vw;
+    background: white;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.219);
+}
+
+
+.installment-three-dots:hover .hover-edit-installment{
+    display: grid;
+}
 
 
 /* INSTALMENT TABLE ROW 1 COLUMN 2 */
@@ -1480,13 +1692,14 @@ body{
 }
 
 
+/* interest edit hover  */
 .interest-section .interest-edit-hover{
     display: none;
     font-size: 1.2vw;
     position: absolute;
-    right: -10vw;
+    right: -9vw;
     top: -0.2vw;
-    width: 10vw;
+    width: 9vw;
     background: white;
     color: black !important;
 }
@@ -1495,6 +1708,43 @@ body{
 .interest-section .interest-three-dots:hover .interest-edit-hover{
     display: grid;
 }
+
+
+/* installment interest button */
+.interest-edit-btn{
+    display: grid;
+    display: none;
+    align-items: center;
+    position: absolute;
+    height: 5vw;
+    width: 8vw;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.349);
+    font-size: 1.2vw;
+    right: 4.7vw;
+    top: 0vw;
+    padding: 0.6vw;
+}
+
+
+.interest-edit-btn p{
+    font-size: 1.2vw;
+    height: 1.4vw;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+.interest-edit-btn p:hover{
+    color: red;
+}
+
+
+
+
+
+
+
 
 
 /* EDIT INTEREST SECTION START */
@@ -2326,6 +2576,7 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
     height: 100%;
     width: 100%;
     border-right: 0.08vw solid rgba(0, 0, 0, 0.075);
@@ -2337,7 +2588,16 @@ body{
     margin-bottom: 2.4vw;
 }
 
-
+.all-payment-details-box-left .condition-of-all-payment{
+    position: absolute;
+    top: 3vw;
+    right: 5vw;
+    height: 2.4vw;
+    width: 8vw;
+    font-size: 1.2vw;
+    border-radius: 0.8vw;
+    padding: 0.3vw;
+}
 
 
 
@@ -2366,21 +2626,17 @@ body{
 }
 
 .condition-of-installment-paid{
-    background: #E22424;
-    color: white;
-}
-
-
-.condition-of-installment-active{
-    background: #3E910E;
-    
-}
-
-.condition-of-installment-due{
     background: white;
     border: 0.08vw solid #E22424;
     color: #E22424;
     font-weight: 600;
+}
+
+
+
+.condition-of-installment-due{
+    background: #E22424;
+    color: white;
 }
 
 
@@ -2455,6 +2711,9 @@ body{
 }
 
 
+.all-payment-details-box-right .paid-section .all-payment-details-ammount{
+    margin-left: 4vw;
+}
 
 
 
@@ -2475,10 +2734,60 @@ body{
 
 
 
+
     /* PAYMENT AMMOUNT  INPUT SECTION START */
     /* PAYMENT AMMOUNT  INPUT SECTION START */
     /* PAYMENT AMMOUNT  INPUT SECTION START */
 
+.all-payment-details-ammount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 5vw;
+    padding: 0vw 1.5vw 0vw 1.5vw;
+    position: relative;
+    margin: auto;
+}
+
+.all-payment-details-ammount .tk-sign{
+    width: 2vw;
+    text-align: right;
+}
+
+
+
+
+
+
+/* All payment details Date */
+
+.all-payment-details-date-container{
+    display: flex;
+}
+
+
+
+.all-payment-details-date{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 4vw;
+    width: 18vw;
+
+}
+
+.all-payment-details-date-container .to{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 3vw;
+    height: 4vw;
+}
+
+
+
+/* 
     .payment-ammount-input{
         position: relative;
         height: 3.8vw;
@@ -2531,7 +2840,7 @@ body{
         right: 4vw;
         font-size: 1.8vw;
         pointer-events: none;
-    }
+    } */
     
     /* PAYMENT AMMOUNT  INPUT SECTION END */
     /* PAYMENT AMMOUNT  INPUT SECTION END */
@@ -2542,7 +2851,7 @@ body{
 /* ADVANCE PAYMENT date input */
 /* ADVANCE PAYMENT date input */
 /* ADVANCE PAYMENT date input */
-.advanced-payment-date-input-container{
+/* .advanced-payment-date-input-container{
     display: grid;
     height: 3.8vw;
     width: 40vw;
@@ -2575,9 +2884,7 @@ body{
     border: 0.06vw solid #E22424;
     border-radius: 0.4vw;
     box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
-}
-
-
+} 
 
 .calender-icon{
     position: absolute;
@@ -2603,56 +2910,7 @@ body{
 .all-payment-details-box-row-1:nth-last-child(1) .paid-section,
 .all-payment-details-box-row-1:nth-last-child(1) .all-payment-details-box-left{
     border-bottom: 1vw solid white;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+} */
 
 
 
@@ -2731,11 +2989,8 @@ body{
     height: 100%;
     width: 100%;
     transform: scale(0);
-    animation: bubbleAnimations 0.4s linear 2s forwards;
+    animation: bubbleAnimations 0.4s linear 1.2s forwards;
 }
-
-
-
 
 
 .request-sent-animation-container .image .bubble,
@@ -2827,9 +3082,11 @@ body{
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
-  -webkit-animation:  load8 2.5s 1 linear forwards;
-  animation: load8 2.5s 1 linear forwards;
+
+  -webkit-animation:  load8 1.4s 1 linear forwards;
+  animation: load8 1.4s 1 linear forwards;
 }
+
 
 
 @-webkit-keyframes load8 {
@@ -2838,8 +3095,8 @@ body{
     transform: rotate(0deg);
   }
   99% {
-    -webkit-transform: rotate(1440deg);
-    transform: rotate(1440deg);
+    -webkit-transform: rotate(1260deg);
+    transform: rotate(1260deg);
   }
   100%{
       opacity: 0;
@@ -2853,8 +3110,8 @@ body{
     transform: rotate(0deg);
   }
   99% {
-    -webkit-transform: rotate(1440deg);
-    transform: rotate(1440deg);
+    -webkit-transform: rotate(1260deg);
+    transform: rotate(1260deg);
   }
   100%{
       opacity: 0;
@@ -2872,7 +3129,7 @@ body{
     height: 3vw;
     margin-top: -70vw;
     opacity: 0;
-    animation: textAnimations 0.4s linear 2s forwards;
+    animation: textAnimations 0.4s linear 1.2s forwards;
 }
 
 .loading-animation-title{
@@ -2889,7 +3146,7 @@ body{
     margin: auto;
     margin-top: -32vw;
     opacity: 0;
-    animation: textAnimations 0.4s linear 2s forwards;
+    animation: textAnimations 0.4s linear 1.2s forwards;
 }
 
 
@@ -2976,6 +3233,43 @@ body{
 
 
 
+
+
+
+/* Advance payment Online  */
+.advance-payment-table-online{
+    height: 28vw;
+}
+
+
+
+.advance-payment-table-online .advance-payment-row-3{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 10VW;
+    width: 100%;
+}
+
+.advance-payment-note{
+    color: #E22424;
+}
+
+
+.advance-payment-bottom{
+    font-size: 1.7vw;
+    height: 5vw;
+    width: 20vw;
+    border-radius: 0.8vw;
+    border: 0.08vw solid red;
+    padding: 0.9vw;
+}
+
+
+
+
+
+
 /* ### Interest  Rate Compounding END ### */
 /* ### Interest  Rate Compounding END ### */
 /* ### Interest  Rate Compounding END ### */
@@ -3019,6 +3313,14 @@ body{
 /* ### WITHOUT Interest Rate START ### */
 /* ### WITHOUT Interest Rate START ### */
 
+.installment-table-container-parent-without-interest{
+    padding-bottom: 10vw !important;
+}
+
+
+
+
+/* Installment Table */
 .installment-table-section-without-interest{
     position: relative;
     margin-bottom: 1.8vw;
@@ -3028,7 +3330,17 @@ body{
     margin: auto;
     margin-bottom: 5vw;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.144);
+
 }
+
+
+.installment-table-section-without-interest:nth-child(2){
+    margin-top: 2.5vw;
+}
+
+
+
+
 
 .installment-table-section-without-interest .side-dashed-border{
     border-left: 0.08vw dashed rgba(0, 0, 0, 0.171);
@@ -3055,6 +3367,19 @@ body{
 }
 
 
+.installment-table-section-without-interest .installment-completed{
+    height: 21vw;
+    bottom: 0vw;
+}
+
+
+
+
+
+
+
+
+
 
 
 /* INSTALMENT TABLE DATE START */
@@ -3067,7 +3392,7 @@ body{
 
 
 
-/* INSTALMENT TABLE DATE START */
+/* INSTALMENT TABLE AMOUNT START */
 
 .installment-table-amount{
     display: flex;
@@ -3078,16 +3403,48 @@ body{
 }
 
 
-.installment-table-amount div{
-    border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
-    border-left: 0.08vw solid rgba(0, 0, 0, 0.171);
-}
 
 
-.installment-table-amount p:nth-child(2){
+
+.installment-table-amount .installment-ammount{
     margin-left: 3vw;
+    position: relative;
 }
-/* INSTALMENT TABLE DATE END */
+
+
+.installment-amount-three-dots{
+    position: absolute;
+    height: 2vw;
+    width: 1vw;
+    padding: 0.3vw;
+    top: 0.4vw;
+    right: -1.5vw;
+}
+
+.installment-amount-three-dots img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.installment-amount-hover{
+    display: none;
+    width: 10vw;
+    position: absolute;
+    font-size: 1.3vw;
+    right: -10vw;
+    top: 0vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.308);
+}
+
+
+.installment-amount-three-dots:hover .installment-amount-hover{
+    display: grid;
+}
+
+
+/* INSTALMENT TABLE AMOUNT END */
 
 
 
@@ -3166,6 +3523,7 @@ body{
     width: 6vw;
     height: 6vw;
     border-radius: 100%;
+    z-index: 5;
 }
 
 .collapse-button img{
@@ -3189,7 +3547,5 @@ body{
 /* ### WITHOUT Interest Rate END ### */
 /* ### WITHOUT Interest Rate END ### */
 /* ### WITHOUT Interest Rate END ### */
-
-
 
 

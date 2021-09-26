@@ -161,12 +161,78 @@ const clientRequestToCancelSection=()=>{
 
 
 
-// const showLoadingPopupSection=(idName, title, btn1, btn2)=>{
-//     document.querySelector('#edit-instalment-loading-pop-up .loading-animation-title').innerHTML="Your Installment duration has been changed."
+
+// TRial 2nd time upgrade start
+// TRial 2nd time upgrade start
+// TRial 2nd time upgrade start
+// TRial 2nd time upgrade start
+// TRial 2nd time upgrade start
+// TRial 2nd time upgrade start
+// TRial 2nd time upgrade start
+// TRial 2nd time upgrade start
+// TRial 2nd time upgrade start
+// TRial 2nd time upgrade start
+// TRial 2nd time upgrade start
 
 
-// }
 
+// All EDIT SECTION SHOW / HIDE
+// All EDIT SECTION SHOW / HIDE
+// All EDIT SECTION SHOW / HIDE
+
+const showEditSection=(hiddenSection,mainSection)=>{
+    document.querySelector(`#${hiddenSection}`).style.display="grid"
+    fullResitSection.style.filter="blur(0.4vw)";
+
+}
+
+const hideEditSection=(hiddenSection,mainSection)=>{
+    document.querySelector(`#${hiddenSection}`).style.display="none"
+    fullResitSection.style.filter="blur(0vw)";
+}
+
+
+
+// All Loading Popup section start
+// All Loading Popup section start
+// All Loading Popup section start
+
+
+const showAllLoadingSection=(title)=>{
+    document.querySelector(`#all-loading-pop-up`).style.display="flex"
+    document.querySelector('#all-loading-pop-up .loading-animation-title').innerHTML=title;
+    fullResitSection.style.filter="blur(0.4vw)";
+}
+
+
+const hideAllLoadingSection=()=>{
+    document.querySelector(`#all-loading-pop-up`).style.display="none"
+    fullResitSection.style.filter="blur(0vw)";
+}
+
+
+// All Loading Popup section end
+// All Loading Popup section end
+// All Loading Popup section end
+
+
+
+
+
+
+
+
+// TRial 2nd time upgrade end
+// TRial 2nd time upgrade end
+// TRial 2nd time upgrade end
+// TRial 2nd time upgrade end
+// TRial 2nd time upgrade end
+// TRial 2nd time upgrade end
+// TRial 2nd time upgrade end
+// TRial 2nd time upgrade end
+// TRial 2nd time upgrade end
+// TRial 2nd time upgrade end
+// TRial 2nd time upgrade end
 
 
 

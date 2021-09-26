@@ -1,0 +1,221 @@
+/* .fixed-resit-section{
+    transform: scale(0.7,0.7);
+    margin-top: -10vw;
+} */
+
+.fixed-resit-section{
+    padding: 2vw;
+}
+
+
+/* Service and Facilities Section Start */
+
+.service-item-facilities-section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding: 2vw;
+}
+
+
+
+
+
+.service-item-section{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0vw;
+}
+
+
+
+.service-item-facilities-section .service-item-section .service-items{
+    height: auto;
+    width: 45vw ;
+    margin: auto;
+}
+
+
+.service-item-facilities-section .service-item-section .service-items .service-item-table{
+    width: 100% !important;
+    padding: 1vw;
+}
+
+table{
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.247) !important;
+}
+
+
+
+/* Service and Facilities Section End */
+
+
+
+
+
+/* Facilities Section start*/
+
+.facilities-section{
+    border-left: 0.08vw solid rgba(0, 0, 0, 0.075);
+}
+
+
+/* title */
+.facilities-title{
+    position: absolute;
+    bottom: 1.8vw;
+    left: 3.4vw;
+    font-size: 2.1vw !important;
+}
+
+
+
+.service-item-section .service-items{
+    border-bottom: 1vw solid transparent;
+}
+
+
+.facilities-section li{
+    margin-top: 0.6vw;
+}
+
+
+
+
+/* Facilities Section End*/
+
+
+/* Installment price Section start */
+
+.installment-price-section{
+    height: 28vw;
+    width: 100%;
+    padding: 2vw 0vw 2vw 0vw;
+}
+
+.installment-price-section div{
+    border-left: 1vw solid transparent;
+    font-weight: 400;
+
+}
+
+.installment-price-section > div > div{
+    padding: 1vw 0vw 1vw 0vw !important;
+}
+
+
+/* Installment price Section end */
+
+
+
+/* Installment Number Section start */
+
+.installment-number-section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 27vw;
+    width: 100%;
+
+}
+
+.installment-number-section .installment-number-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2vw 0vw 2vw 0vw;
+}
+
+.installment-number-section .installment-number-container:nth-child(1) {
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.075);
+}
+
+
+.installment-number-section .installment-number-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.installment-number-section .installment-number-container > div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+
+
+.installment-number-section .installment-number-container > div:nth-child(1){
+    border-bottom: 0.08vw solid rgba(0, 0, 0, 0.075);
+}
+
+.installment-number-section .installment-number-container > div div:nth-child(2){
+    margin-top: 0.5vw;
+}
+
+
+
+/* Installment Number Section end */
+
+/* Installment Table Section start */
+
+
+
+.installment-table-main-section{
+    background-color: red;
+    height: auto;
+    width: 80% !important;
+    margin: auto;
+}
+
+.installment-table-main-section .installment-table-container{
+    height: auto !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Installment Table Section End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

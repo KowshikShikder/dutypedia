@@ -21,8 +21,9 @@
 
                   <!-- print & share  -->
                   <div class="print-share-side">
-                        <div class="print" onclick=printResit()> <img src="../images/resite/printer.svg" alt="">  </div>
-                        <div class="share"> <img src="../images/resite/share.svg" alt=""> </div>
+                        <div class="print" onclick=printResit()> <img src="../images/icons/resit-view.svg" alt="">  </div>
+                        <div class="share"> <img src="../images/icons/resit-print.svg" alt=""> </div>
+                        <div class="share"> <img src="../images/icons/resit-share.svg" alt=""> </div>
                   </div>
             </div>
 
@@ -169,7 +170,7 @@
                         </div>
                         
                         <div class="service-status"> <div> Service Status </div> <div> Waiting for Accept </div> </div>
-                        <div class="service-status delivery-status"> <div> When Delivered The Order Then Click </div> <a href="#come-here"> <div class="btn btn-danger" onclick=showDeliveryPopUp()> Yes I Delivered </div> </a> </div>
+                        <div class="service-status delivery-status"> <div> When Delivered The Order Then Click </div> <a href="#come-here"> <div class="btn btn-danger" onclick="showEditSection('delivery-confirm-pop-up')"> Yes I Delivered </div> </a> </div>
                   </div>
             </div>
 
@@ -196,15 +197,15 @@
                         <!-- <div class="btn btn-danger preferred-button"> <span> Accept Order </span> </div> -->
 
                         <!-- after order accepted -->
-                        <div class="btn btn-danger preferred-button" onclick=showNewDeliveryDateSection()> <span> Request For Payment </span> </div>  
+                        <!-- <div class="btn btn-danger preferred-button"> <span> Request For Payment </span> </div>   -->
 
                         <!-- After payment -->
-                        <!-- <div class="btn btn-danger preferred-button" onclick=showNewDeliveryDateSection()> <span> Request For Extra Time </span> </div>   -->
+                        <div class="btn btn-danger preferred-button"  onclick="showEditSection('new-delivery-date-pop-up')"> <span> Request For Extra Time </span> </div>  
 
-                        <div class="btn btn-outline-danger other-button" onclick=showCancelBeforePaymentSection() onmouseenter=showMe() > <span> Cancel Order </span> </div>
+                        <!-- <div class="btn btn-outline-danger other-button" onclick="showEditSection('cancel-before-payment-pop-up')" onmouseenter=showMe() > <span> Cancel Order </span> </div> -->
                         
                         <!-- WITH CANCEL WARNING AFTER PAYMENT -->
-                        <!-- <div class="btn btn-outline-danger other-button" onclick=showCancelAfterPaymentSection() onmouseenter=showMe() > <span> Cancel Order </span> </div> -->
+                        <div class="btn btn-outline-danger other-button"  onclick="showEditSection('cancel-after-payment-pop-up')" onmouseenter=showMe() > <span> Cancel Order </span> </div>
                   </div>
 
 
@@ -270,15 +271,23 @@
 
 
 
-<!-- Confirm Delivery warning popUp section -->
-<!-- Confirm Delivery warning popUp section -->
 
-<div class="delivery-confirm-pop-up">
+
+
+
+
+
+
+
+<!-- Confirm Delivery warning popUp section -->
+<!-- Confirm Delivery warning popUp section -->  <!-- 2nd time done-->
+
+<div class="delivery-confirm-pop-up" id="delivery-confirm-pop-up">
       <div class="delivery-confirm-container">
             <div class="delivery-confirm-title"> Are You Sure To Delivered? </div>
             <div class="delivery-confirm-button-container">
-                  <div class="btn btn-danger preferred-button" onclick=hideDeliveryPopUp()> Yes </div>
-                  <div class="btn btn-outline-danger" onmouseenter=showMe() onclick=hideDeliveryPopUp()> No </div>
+                  <div class="btn btn-danger preferred-button" onclick="hideEditSection('delivery-confirm-pop-up')"> Yes </div>
+                  <div class="btn btn-outline-danger" onmouseenter=showMe() onclick="hideEditSection('delivery-confirm-pop-up')"> No </div>
             </div>
       </div>
 </div>
@@ -287,15 +296,21 @@
 
 
 
-<!-- Cancel order BEFORE payment section -->
+
+
+
+
+
+
+<!-- Cancel order BEFORE payment section -->  <!-- 2nd time done-->
 <!-- Cancel order BEFORE payment section -->
 
-<div class="cancel-before-payment-pop-up">
+<div class="cancel-before-payment-pop-up" id="cancel-before-payment-pop-up">
       <div class="cancel-before-payment-container">
             <div class="cancel-before-payment-title"> Are You Sure To Cancel? </div>
             <div class="cancel-before-payment-button-container">
-                  <div class="btn btn-outline-danger"  onmouseenter=beforeButton() onclick=hideCancelBeforePaymentSection(),showOrderCanceledSuccessSection()> Yes </div>
-                  <div class="btn btn-danger preferred-buttons"  onclick=hideCancelBeforePaymentSection()> No </div>
+                  <div class="btn btn-outline-danger"  onmouseenter=beforeButton()  onclick="hideEditSection('cancel-before-payment-pop-up'),showAllLoadingSection('Your service order is successfully canceled!')"> Yes </div>
+                  <div class="btn btn-danger preferred-buttons"  onclick="hideEditSection('cancel-before-payment-pop-up')"> No </div>
             </div>
       </div>
 </div>
@@ -306,16 +321,16 @@
 
 
 
-<!-- Cancel order after payment section -->
+<!-- Cancel order after payment section -->  <!-- 2nd time done-->
 <!-- Cancel order after payment section -->
 
-<div class="cancel-after-payment-pop-up">
+<div class="cancel-after-payment-pop-up" id="cancel-after-payment-pop-up">
       <div class="cancel-after-payment-container">
             <div class="cancel-after-payment-title"> Are You Sure To Cancel This Order? </div>
             <div class="cancel-after-payment-warning"> (Note: If you cancel this order it will bad effect of your business profile.) </div>
             <div class="cancel-after-payment-button-container">
-                  <div class="btn btn-outline-danger"  onmouseenter=beforeButton() onclick=hideCancelAfterPaymentSection(),showOrderCanceledSuccessSection()> Yes </div>
-                  <div class="btn btn-danger preferred-buttons"  onclick=hideCancelAfterPaymentSection()> No </div>
+                  <div class="btn btn-outline-danger"  onmouseenter=beforeButton() onclick="hideEditSection('cancel-after-payment-pop-up'),showAllLoadingSection('Your service order is successfully canceled!')"> Yes </div>
+                  <div class="btn btn-danger preferred-buttons"   onclick="hideEditSection('cancel-after-payment-pop-up')"> No </div>
             </div>
       </div>
 </div>
@@ -327,10 +342,10 @@
 
 
 
-<!-- NEW DELIVERY DATE SECTION -->
+<!-- NEW DELIVERY DATE SECTION -->  <!-- 2nd time done-->
 <!-- NEW DELIVERY DATE SECTION -->
 
-<div class="new-delivery-date-pop-up">
+<div class="new-delivery-date-pop-up" id="new-delivery-date-pop-up">
       <div class="new-delivery-date-container">
             <div class="new-delivery-date-title"> Select New Delivery Date </div>
 
@@ -341,12 +356,12 @@
             </div>
 
             <div class="new-delivery-date-button-container">
-                  <div class="btn btn-danger" onclick=hideNewDeliveryDateSection(),showDeliveryRequestSentSection() > Send Request </div>
+                  <div class="btn btn-danger" onclick="hideEditSection('new-delivery-date-pop-up'),showAllLoadingSection('Your request has been sent')" > Send Request </div>
             </div>
 
 
             <!-- close button -->
-            <div class="new-delivery-date-close" onclick=hideNewDeliveryDateSection()>
+            <div class="new-delivery-date-close" onclick="hideEditSection('new-delivery-date-pop-up')">
                   <img src="../images/resite/cross ws.svg" alt="">
             </div>
       </div>
@@ -356,10 +371,10 @@
 
 
 
-<!--  REQUEST SENT POPUP SECTION -->
+<!--  REQUEST SENT POPUP SECTION -->               <!-- OLD -->
 <!--  REQUEST SENT POPUP SECTION -->
 
-<div class="request-sent-pop-up">
+<!-- <div class="request-sent-pop-up">
       <div class="request-sent-container">
             <div class="request-sent-animation-container"> 
                   <div class="image"> 
@@ -378,13 +393,13 @@
                   <div class="btn btn-danger" onclick=hideDeliveryRequestSentSection()> Done </div>
             </div>
       </div>
-</div>
+</div> -->
 
 
 
 <!--  order canceled success SECTION -->
 <!--  order canceled success SECTION -->
-
+<!-- 
 <div class="loading-animation-pop-up  order-cancel-success-pop-up">
       <div class="loading-animation-container">
             <div class="loading-animation-animation-container"> 
@@ -404,7 +419,90 @@
                   <div class="btn btn-danger" onclick=hideOrderCanceledSuccessSection()> Done </div>
             </div>
       </div>
-</div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- ALL loading START -->   <!-- 2nd time done-->
+      <!-- ALL loading START -->
+      <!-- ALL loading START -->
+      <div class="loading-animation-pop-up" id="all-loading-pop-up">
+            <div class="loading-animation-container">
+                  <div class="loading-animation-animation-container">
+                        <div class="image">
+                              <img src="../images/resite/animation/Group 7230.svg" alt="">
+                              <div class="bubble"> <img src="../images/resite/animation/Ellipse 597.svg" alt=""> </div>
+                              <div class="bubble"> <img src="../images/resite/animation/Ellipse 598.svg" alt=""> </div>
+                              <div class="bubble"> <img src="../images/resite/animation/Ellipse 599.svg" alt=""> </div>
+                              <div class="bubble"> <img src="../images/resite/animation/Ellipse 600.svg" alt=""> </div>
+                        </div>
+                  </div>
+                  <div class="loader">Loading...</div>
+
+                  <div class="loading-animation-title"> Your Installment Amount successfully added! </div>
+
+                  <div class="loading-animation-button-container">
+                        <div class="btn btn-danger" onclick=hideAllLoadingSection()> Done </div>
+                  </div>
+            </div>
+      </div>
+
+
+      <!-- ALL loading END -->
+      <!-- ALL loading END -->
+      <!-- ALL loading END -->
+
+
+
+
+
+
+
+
+
+
 
 
 

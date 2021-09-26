@@ -131,6 +131,7 @@ a{
     display: grid;
     background-color: #FFECEC;
     position: absolute;
+    box-shadow: 0px 0px 0px -1px red;
     top: 4.1vw;
     width: 4vw;
     height: 1.5vw;
@@ -158,7 +159,7 @@ a{
     height: 100%;
     width: 4vw;
     margin-top: 5vw;
-    box-shadow:0px 0px 20px -6px rgba(0, 0, 0, 0.493);
+    box-shadow:0px 0px 10px -3px rgba(0, 0, 0, 0.432);
     position: fixed;
     z-index: 1000;
     overflow: hidden;
@@ -258,7 +259,7 @@ a{
 /* Scrollbar customization */
 .vendor-navigation::-webkit-scrollbar,
 .edit-information-container::-webkit-scrollbar,
-.appoinment-container-upcoming.clients-note-section::-webkit-scrollbar,
+.appoinment-container-upcoming::-webkit-scrollbar,
 .new-note-container::-webkit-scrollbar,
 .appointment-upcoming-description-text::-webkit-scrollbar,
 .appoinment-container-previous::-webkit-scrollbar,
@@ -275,7 +276,7 @@ a{
 
 .vendor-navigation::-webkit-scrollbar-thumb,
 .edit-information-container::-webkit-scrollbar-thumb,
-.appoinment-container-upcoming.clients-note-section::-webkit-scrollbar-thumb,
+.appoinment-container-upcoming::-webkit-scrollbar-thumb,
 .new-note-container::-webkit-scrollbar-thumb,
 .appointment-upcoming-description-text::-webkit-scrollbar-thumb,
 .appoinment-container-previous::-webkit-scrollbar-thumb,
@@ -292,7 +293,7 @@ a{
 
 .vendor-navigation::-webkit-scrollbar-button:single-button,
 .edit-information-container::-webkit-scrollbar-button:single-button,
-.appoinment-container-upcoming.clients-note-section::-webkit-scrollbar-button:single-button,
+.appoinment-container-upcoming::-webkit-scrollbar-button:single-button,
 .new-note-container::-webkit-scrollbar-button:single-button,
 .appointment-upcoming-description-text::-webkit-scrollbar-button:single-button,
 .appoinment-container-previous::-webkit-scrollbar-button:single-button,
@@ -311,7 +312,7 @@ a{
 
 .vendor-navigation::-webkit-scrollbar-button:single-button:vertical:decrement,
 .edit-information-container::-webkit-scrollbar-button:single-button:vertical:decrement,
-.appoinment-container-upcoming.clients-note-section::-webkit-scrollbar-button:single-button:vertical:decrement,
+.appoinment-container-upcoming::-webkit-scrollbar-button:single-button:vertical:decrement,
 .new-note-container::-webkit-scrollbar-button:single-button:vertical:decrement,
 .appointment-upcoming-description-text::-webkit-scrollbar-button:single-button:vertical:decrement,
 .appoinment-container-previous::-webkit-scrollbar-button:single-button:vertical:decrement,
@@ -328,7 +329,7 @@ a{
 
 .vendor-navigation::-webkit-scrollbar-button:single-button:vertical:increment,
 .edit-information-container::-webkit-scrollbar-button:single-button:vertical:increment,
-.appoinment-container-upcoming.clients-note-section::-webkit-scrollbar-button:single-button:vertical:increment,
+.appoinment-container-upcoming::-webkit-scrollbar-button:single-button:vertical:increment,
 .new-note-container::-webkit-scrollbar-button:single-button:vertical:increment,
 .appointment-upcoming-description-text::-webkit-scrollbar-button:single-button:vertical:increment,
 .appoinment-container-previous::-webkit-scrollbar-button:single-button:vertical:increment,
@@ -375,9 +376,13 @@ a{
 }
 
 
-.vendor-nav-main:hover{
+.vendor-nav-main:hover,
+.vendor-nav-main:hover .vendor-nav-icon svg,
+.vendor-nav-main:hover .vendor-nav-btn svg{
     background: #C62333;
     color: white;
+    fill: white;
+    stroke:white;
 }
 
 
@@ -389,6 +394,14 @@ a{
     padding: 0.5vw;
     pointer-events: none;
 }
+
+.vendor-nav-icon svg{
+    fill:#666;
+    height: 1.2vw;
+    width: 1.2vw;
+}
+
+
 
 
 .vendor-nav-icon img{
@@ -422,6 +435,12 @@ a{
     width: 2vw;
     padding: 0.4vw;
     pointer-events: none;
+}
+
+.vendor-nav-btn svg{
+    stroke:rgb(143, 141, 141);
+    height: 1vw;
+    width: 1vw;
 }
 
 
@@ -458,6 +477,10 @@ a{
 
 .vendor-nav-more a:nth-child(1) .vendor-nav-more-icon img{
     display: grid;
+}
+
+.vendor-nav-more a:nth-child(1) .vendor-nav-more-text{
+    color: red;
 }
 
 /* Vendor side Navigation End */
@@ -3681,6 +3704,3 @@ a{
 }
 
 
-
-
-top-nav-bar-section
