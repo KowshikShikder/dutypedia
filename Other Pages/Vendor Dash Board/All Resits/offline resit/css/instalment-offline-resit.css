@@ -266,57 +266,6 @@
 
 
 
-/* Delivery date input */
-/* Delivery date input */
-/* Delivery date input */
-/* .offline-date-input-container{
-    display: grid;
-    height: 4vw;
-    width: 95%;
-    margin: auto;
-    justify-content: center;
-    grid-template-columns: 45% 10% 45%;
-    text-align: center;
-}
-
-
-.offline-date-input-container div{
-    display: grid;
-    align-items: center;
-}
-
-
-.offline-date-input-container #delivery-date{
-    display: inline;
-    height: 4vw;
-    width: 100%;
-    font-size: 1.8vw;
-    padding-left: 1.2vw;
-    color: slategray;
-    margin-top: 0.6vw;
-    outline: none;
-    border: 0.06vw solid #E22424;
-    border-radius: 0.8vw;
-}
-
-
-.offline-date-input-container #delivery-date::-webkit-calendar-picker-indicator {
-    background: #E22424;
-    height: 80%;
-    width: 12%;
-    margin: -0.1vw;
-    padding:0.6vw 0.7vw 0.4vw 0.6vw;
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url(../../../images/resite/calendar-line.svg);
-    border-radius: 0.8vw;
-} */
-
-
-
-
-
 
 
 
@@ -505,8 +454,314 @@
 
 
 
+/*  Subscription START*/
+/*  Subscriotion START*/
+/*  Subscriotion START*/
+/*  Subscriotion START*/
+/*  Subscriotion START*/
+/*  Subscriotion START*/
+/*  Subscriotion START*/
+/*  Subscriotion START*/
+/*  Subscriotion START*/
+/*  Subscriotion START*/
+/*  Subscriotion START*/
 
 
+/* NEW DELIVERY DATE popUp section Start */
+/* NEW DELIVERY DATE popUp section Start */
+/* NEW DELIVERY DATE popUp section Start */
+
+
+/* NEW DELIVERY DATE popUp section */
+/* NEW DELIVERY DATE popUp section */
+/* NEW DELIVERY DATE popUp section */
+
+.new-delivery-date-pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #f09fa43d;
+    z-index: 2000;
+}
+
+
+.new-delivery-date-container{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    width: 65vw;
+    height: 40vw;
+    background: rgb(255, 255, 255);
+    border-radius: 1.6vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
+
+}
+
+
+
+.new-delivery-date-title{
+    text-align: center;
+    background: white;
+    font-size: 3.6vw;
+    height: 3vw;
+    margin-top: 7vw;
+}
+
+
+
+/* delivery date input */
+/* .new-delivery-date-input-container{
+    display: grid;
+    height: 4vw;
+    width: 50vw;
+    justify-content: center;
+    grid-template-columns: 45% 10% 45%;
+    text-align: center;
+}
+
+
+.new-delivery-date-input-container div{
+    display: grid;
+    align-items: center;
+}
+
+
+.new-delivery-date-input-container #note-date{
+    display: inline;
+    height: 4vw;
+    width: 100%;
+    font-size: 2.2vw;
+    padding-left: 0.4vw;
+    color: slategray;
+    margin-top: 0.6vw;
+    outline: none;
+    border: 0.06vw solid #E22424;
+    border-radius: 0.8vw;
+}
+
+
+.new-delivery-date-input-container #note-date::-webkit-calendar-picker-indicator {
+    background: #E22424;
+    height: 80%;
+    width: 12%;
+    margin: -0.1vw;
+    padding:0.6vw 0.7vw 0.4vw 0.6vw;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../images/resite/calendar-line.svg);
+    border-radius: 0.8vw;
+}
+
+ */
+
+
+
+/* ADVANCE PAYMENT date input Start */
+/* ADVANCE PAYMENT date input Start */
+/* ADVANCE PAYMENT date input Start */
+
+.advanced-payment-date-input-container{
+    display: grid;
+    height: 3.8vw;
+    width: 40vw;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 45% 10% 45%;
+    text-align: center;
+    margin-left: -2vw;
+    position: relative;
+    padding: 0vw;
+
+}
+
+
+.advanced-payment-date-input-container div{
+    display: grid;
+    align-items: center;
+    font-size: 2vw;
+}
+
+
+.advanced-payment-date-input-container #instalment-date{
+    display: inline;
+    padding: 1vw;
+    height: 3.8vw;
+    width: 100%;
+    font-size: 1.6vw;
+    padding-left: 1vw;
+    color: slategray;
+    background: white;
+    outline: none;
+    border: 0.06vw solid #E22424;
+    border-radius: 0.6vw;
+    box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
+}
+
+.calender-icon{
+    position: absolute;
+    height: 3.8vw;
+    width: 3.5vw;
+    right: 0vw;
+    pointer-events: none;
+    z-index: 10;
+    background: #E22424;
+    border-radius: 0.6vw;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../images/resite/calendar-line.svg);
+}
+
+.calender-icon:nth-child(2){
+    right: 22vw;
+}
+
+/* ADVANCE PAYMENT date input End */
+/* ADVANCE PAYMENT date input End */
+/* ADVANCE PAYMENT date input End */
+
+
+.new-delivery-date-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vw;
+    width: 30vw;
+    margin: auto;
+    margin-top: -6vw;
+}
+
+
+.new-delivery-date-button-container div{
+    width: 14vw;
+    height: 4vw;
+    font-size: 1.6vw;
+    padding: 0.6vw;
+    border-radius: 1vw;
+    border: 0.08vw solid  #DC3545;
+}
+
+
+/* new delivery close button */
+
+.new-delivery-date-close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -5vw;
+    right: -3vw;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.089);
+    transform: scale(1.02);
+}
+
+
+.new-delivery-date-close img{
+    height: 100%;
+    width: 100%;
+    transform: scale(1.6);
+    object-fit: cover;
+}
+
+
+/* NEW DELIVERY DATE popUp section END */
+/* NEW DELIVERY DATE popUp section END */
+/* NEW DELIVERY DATE popUp section END */
+
+
+
+
+
+/* Confirm Delivery warning popUp section START */
+/* Confirm Delivery warning popUp section START */
+/* Confirm Delivery warning popUp section START */
+.delivery-confirm-pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #f09fa43d;
+    z-index: 2000;
+}
+
+.delivery-confirm-container{
+    display: grid;
+    justify-content: center;
+    width: 48vw;
+    height: 32vw;
+    background: rgb(255, 255, 255);
+    border-radius: 1.6vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
+}
+
+
+
+.delivery-confirm-title{
+    text-align: center;
+    background: white;
+    font-size: 3vw;
+    height: 3vw;
+    margin-top: 8vw;
+}
+
+.delivery-confirm-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 9vw;
+    width: 30vw;
+    margin: auto;
+    margin-top: -6vw;
+}
+
+
+.delivery-confirm-button-container div{
+    width: 14vw;
+    height: 5vw;
+    font-size: 2.3vw;
+    padding: 0.4vw;
+    border-radius: 1vw;
+    border: 0.08vw solid  #DC3545;
+}
+
+/* Confirm Delivery warning popUp section END */
+/* Confirm Delivery warning popUp section END */
+/* Confirm Delivery warning popUp section END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Subscriotion END*/
+/*  Subscriotion END*/
+/*  Subscriotion END*/
+/*  Subscriotion END*/
+/*  Subscriotion END*/
+/*  Subscriotion END*/
+/*  Subscriotion END*/
+/*  Subscriotion END*/
+/*  Subscriotion END*/
+/*  Subscriotion END*/
+/*  Subscriotion END*/
 
 
 
@@ -1237,7 +1492,7 @@ body{
 /* INSTALMENT TABLE START */
 /* INSTALMENT TABLE START */
 .installment-table-container{
-    background: rgb(255, 255, 255);
+    /* background: rgb(255, 255, 255); */
     height: auto;
     width: 95%;
     margin: auto;
@@ -1247,6 +1502,10 @@ body{
     margin-top: 3vw;
     padding-bottom: 4vw;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.199);
+
+    border-bottom-left-radius: 1.5vw;
+    border-bottom-right-radius: 1.5vw;
+    /* overflow: hidden; */
 }
 
 
@@ -1258,14 +1517,17 @@ body{
 
 
 .installment-table-container .side-dashed-border{
-    width:97%; 
-    margin: auto; 
+    width:97%;
+    margin: auto;
     border-left: 1px dashed rgba(0, 0, 0, 0.308);
     height: 19.2vw;
     overflow: hidden;
     padding-bottom: 0vw;
 }
 
+.side-dashed-border > div:nth-last-child(1){
+    margin-bottom: 0vw;
+}
 
 
 
@@ -1279,7 +1541,6 @@ body{
     margin-bottom: 1.8vw;
     margin-top: 1vw;
 }
-
 
 
 
@@ -1427,17 +1688,19 @@ body{
 
 .note-about-changes{
     display: grid;
-    padding: 0.5vw;
-    padding-top: -10vw;
+    /* padding: 0.5vw; */
+    /* padding-top: -10vw; */
     font-size: 1.3vw !important;
-    margin-top: -1.6vw;
+    /* margin-top: -1.6vw; */
     border-bottom: 0.08vw solid rgba(0, 0, 0, 0.171);
+    padding: 0vw 0vw 1vw 0vw;
+
 }
 
 
 .note-about-changes p{
-    margin: 0.7vw;
-
+    margin: 0vw !important;
+    margin-top: 0.4vw !important;
 }
 
 
@@ -1527,7 +1790,7 @@ body{
 
 .installment-table-title p:nth-child(2){
     font-size: 1.6vw;
-    margin-top: 2vw;    
+    margin-top: 2vw;
     margin-left: 1vw;
 }
 
@@ -1905,7 +2168,7 @@ body{
     display: grid;
     border-right: 0.08vw solid rgba(0, 0, 0, 0.171);
     position: relative;
-    
+
 }
 
 
@@ -2004,7 +2267,7 @@ body{
         width: 15vw;
         margin-left: 2vw;
     }
-    
+
     .paid-ammount-input .price-tk{
         position: absolute;
         top: 0.5vw;
@@ -2016,7 +2279,7 @@ body{
         z-index: 2;
         pointer-events: none;
     }
-    
+
 
         .paid-ammount-input #paid-ammount-input{
             position: absolute;
@@ -2034,13 +2297,13 @@ body{
             box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
             left: 0vw;
         }
-    
-    
+
+
         .paid-ammount-input #paid-ammount-input::-webkit-inner-spin-button{
             transform: scale(3);
             opacity: 0;
         }
-    
+
         .paid-ammount-input .spinner-button-container{
             display: grid;
             justify-content: center;
@@ -2055,7 +2318,7 @@ body{
             border-radius:0vw 0.6vw 0.6vw 0vw;
             overflow: hidden;
         }
-    
+
         .paid-ammount-input .spinner-button{
             display: grid;
             justify-content: center;
@@ -2067,22 +2330,22 @@ body{
             pointer-events: none;
             background: #E22222;
         }
-    
-    
+
+
         .paid-ammount-input #inc-button{
             width: 2.8vw;
             border-bottom: 0.08vw solid white;
         }
-    
+
         .paid-ammount-input #dec-button{
             top: 3.5vw;
         }
-    
+
         .paid-ammount-input .spinner-button img{
             height: 1.5vw;
             width: 1.5vw;
         }
-    
+
     /* PAID AMMOUNT  INPUT SECTION END */
     /* PAID AMMOUNT  INPUT SECTION END */
     /* PAID AMMOUNT  INPUT SECTION END */
@@ -2240,7 +2503,7 @@ body{
     font-size: 2vw;
     padding: 0vw;
     border: 0.08vw solid  #DC3545;
-    
+
 }
 
 
@@ -2253,6 +2516,30 @@ body{
 }
 
 
+
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
+/* online end */
 
 
 /* client decline request canceled */
@@ -2440,11 +2727,12 @@ body{
 
 
 .all-payment-details-section{
-    height: 75vw;
+    /* height: 75vw; */
     width: 100%;
     margin: auto;
     margin-top: 6vw;
     margin-bottom: 10vw;
+    /* background: chartreuse; */
 }
 
 
@@ -2581,11 +2869,12 @@ body{
     width: 100%;
     border-right: 0.08vw solid rgba(0, 0, 0, 0.075);
     border-bottom: 0.08vw solid rgba(0, 0, 0, 0.158);
+    padding-top: 3vw;
 }
 
 
 .all-payment-details-box-left div > div:nth-child(1){
-    margin-bottom: 2.4vw;
+    margin-bottom: 1.6vw;
 }
 
 .all-payment-details-box-left .condition-of-all-payment{
@@ -2604,9 +2893,9 @@ body{
 /* ALL PAYMENT DETAILS BOX LEFT TITLE */
 
 .all-payment-details-box-left-title{
-    font-size: 2.4vw;
+    font-size: 2.2vw;
     position: relative;
-    margin-left: -4vw;
+    margin-left: -1vw;
 }
 
 
@@ -2638,17 +2927,6 @@ body{
     background: #E22424;
     color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2769,11 +3047,12 @@ body{
 
 
 .all-payment-details-date{
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 4vw;
-    width: 18vw;
+    font-size: 1.5vw;
+    width: 21vw;
 
 }
 
@@ -2783,11 +3062,19 @@ body{
     align-items: center;
     width: 3vw;
     height: 4vw;
+    font-size: 1.5vw;
+}
+
+
+.all-payment-details-week{
+    margin-right: 0.8vw;
 }
 
 
 
-/* 
+
+
+/*
     .payment-ammount-input{
         position: relative;
         height: 3.8vw;
@@ -2841,77 +3128,33 @@ body{
         font-size: 1.8vw;
         pointer-events: none;
     } */
-    
+
     /* PAYMENT AMMOUNT  INPUT SECTION END */
     /* PAYMENT AMMOUNT  INPUT SECTION END */
 
 
 
 
-/* ADVANCE PAYMENT date input */
-/* ADVANCE PAYMENT date input */
-/* ADVANCE PAYMENT date input */
-/* .advanced-payment-date-input-container{
-    display: grid;
-    height: 3.8vw;
-    width: 40vw;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 45% 10% 45%;
-    text-align: center;
-    margin-left: -2vw;
-    position: relative;
-    padding: 0vw;
-
-}
 
 
-.advanced-payment-date-input-container div{
-    display: grid;
-    align-items: center;
-    font-size: 2vw;
-}
 
 
-.advanced-payment-date-input-container #instalment-date{
-    display: inline;
-    height: 3.8vw;
-    width: 100%;
-    font-size: 1.6vw;
-    padding-left: 1vw;
-    color: slategray;
-    outline: none;
-    border: 0.06vw solid #E22424;
-    border-radius: 0.4vw;
-    box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
-} 
-
-.calender-icon{
-    position: absolute;
-    height: 3.8vw;
-    width: 3.5vw;
-    right: 0vw;
-    pointer-events: none;
-    z-index: 10;
-    background: #E22424;
-    border-radius: 0.4vw;
-    background-size: 60%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url(../../../images/resite/calendar-line.svg);
-}
-
-.calender-icon:nth-child(2){
-    right: 22vw;
-}
 
 
-.all-payment-details-box-row-1:nth-last-child(1) .remaining-section,
+
+
+
+
+
+
+
+
+/* .all-payment-details-box-row-1:nth-last-child(1) .remaining-section,
 .all-payment-details-box-row-1:nth-last-child(1) .paid-section,
 .all-payment-details-box-row-1:nth-last-child(1) .all-payment-details-box-left{
     border-bottom: 1vw solid white;
-} */
-
+}
+ */
 
 
 

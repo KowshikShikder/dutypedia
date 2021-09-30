@@ -506,7 +506,9 @@ body{
 
 
 
-/* .payment section */
+/* payment section */
+/* payment section */
+/* payment section */
 .facilities-payment-section .payment{
     display: grid;
     text-align: center;
@@ -934,7 +936,7 @@ body{
 
 
 /* delivery date input */
-.new-delivery-date-input-container{
+/* .new-delivery-date-input-container{
     display: grid;
     height: 4vw;
     width: 50vw;
@@ -975,7 +977,73 @@ body{
     background-position: center;
     background-image: url(../../images/resite/calendar-line.svg);
     border-radius: 0.8vw;
+} */
+
+
+
+/* ADVANCE PAYMENT date input Start */
+/* ADVANCE PAYMENT date input Start */
+/* ADVANCE PAYMENT date input Start */
+
+.advanced-payment-date-input-container{
+    display: grid;
+    height: 3.8vw;
+    width: 40vw;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 45% 10% 45%;
+    text-align: center;
+    margin-left: -2vw;
+    position: relative;
+    padding: 0vw;
+
 }
+
+
+.advanced-payment-date-input-container div{
+    display: grid;
+    align-items: center;
+    font-size: 2vw;
+}
+
+
+.advanced-payment-date-input-container #instalment-date{
+    display: inline;
+    padding: 1vw;
+    height: 3.8vw;
+    width: 100%;
+    font-size: 1.6vw;
+    padding-left: 1vw;
+    color: slategray;
+    background: white;
+    outline: none;
+    border: 0.06vw solid #E22424;
+    border-radius: 0.6vw;
+    box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
+}
+
+.calender-icon{
+    position: absolute;
+    height: 3.8vw;
+    width: 3.5vw;
+    right: 0vw;
+    pointer-events: none;
+    z-index: 10;
+    background: #E22424;
+    border-radius: 0.6vw;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../images/resite/calendar-line.svg);
+}
+
+.calender-icon:nth-child(2){
+    right: 22vw;
+}
+
+/* ADVANCE PAYMENT date input End */
+/* ADVANCE PAYMENT date input End */
+/* ADVANCE PAYMENT date input End */
 
 
 

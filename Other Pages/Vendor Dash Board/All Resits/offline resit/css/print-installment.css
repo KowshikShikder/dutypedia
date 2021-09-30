@@ -1,6 +1,6 @@
 /* .fixed-resit-section{
-    transform: scale(0.7,0.7);
-    margin-top: -10vw;
+    transform: scale(0.7);
+    margin-top: -60vw;
 } */
 
 .fixed-resit-section{
@@ -95,7 +95,7 @@ table{
 }
 
 .installment-price-section div{
-    border-left: 1vw solid transparent;
+    border-left: 0.0vw solid transparent;
     font-weight: 400;
 
 }
@@ -164,37 +164,77 @@ table{
 
 
 .installment-table-main-section{
-    background-color: red;
     height: auto;
-    width: 80% !important;
+    width: 100% !important;
     margin: auto;
 }
 
-.installment-table-main-section .installment-table-container{
+
+
+.installment-table-title-button,
+.installment-table-section-without-interest .installment-table{
+    text-align: center;
+}
+
+
+.installment-table-main-section .installment-table-container .side-dashed-border,
+.installment-table-section-without-interest .side-dashed-border{
     height: auto !important;
 }
 
 
+.installment-table:nth-last-child(1){
+    margin-bottom: 0vw;
+}
+
+
+.installment-table-main-section .advance-payment-table .installment-table-row-2{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.installment-table-main-section .installment-table-row-2-compounding{
+    text-align: center;
+}
 
 
 
+.installment-table-row-2-compounding > div:nth-child(1) > div:nth-child(2){
+    border-right: 0.08vw solid transparent;
+}
 
 
+.installment-table-row-1{
+    text-align: center;
+}
 
 
+.installment-table-row-1 .installment-table-col-left{
+    padding-left: 0vw;
+    padding-right: 20%;
+}
 
 
+.note-about-changes{
+    text-align: center;
+    padding: 1vw 0vw 1vw 0vw;
+}
 
 
+.note-about-changes P{
+    margin: 0vw !important;
+    margin-top: 0.4vw !important;
+}
 
 
-
-
-
-
-
-
-
+.installment-table-success-note{
+    border-right: 0.008vw solid transparent;
+    border-left: 0.008vw solid transparent;
+    background-size: 12%;
+    margin-top: 0vw;
+}
 
 /* Installment Table Section End */
 
@@ -205,12 +245,13 @@ table{
 
 
 
+/* Installment Interest Start */
 
+.installment-table-row-2{
+    text-align: center;
+}
 
-
-
-
-
+/* Installment Interest End */
 
 
 

@@ -763,11 +763,6 @@ const cancelAppoButtonFromDescription=()=>{
 
 
 
-
-
-
-
-
 // Vendor Resit Section
 // Vendor Resit Section
 
@@ -795,29 +790,19 @@ const swiper1 = new Swiper('.vendor-dashboard', {
 // Vendor Resit Section
 // Vendor Resit Section
 
-document.querySelector('#resit').src="./All Resits/offline resit/offline-installment-interest.html"
+document.querySelector('#resit').src="./All Resits/offline resit/online-subscription.html"
+// document.querySelector('#resit').src="./All Resits/offline resit/package-resit-offline.html"
 
 
 
 const bargaining=()=>{
-    document.querySelector('#resit').src="./All Resits/offline resit/offline-installment-interest.html"
+    document.querySelector('#resit').src="./All Resits/offline resit/"
 }
 
-// const bargaining=()=>{
-//     document.querySelector('#resit').src="./All Resits/offline resit/package-resit-offline.html"
-// }
 
 const fixed=()=>{
-    document.querySelector('#resit').src="./All Resits/online-installment-compounding.html"
+    document.querySelector('#resit').src="./All Resits/offline resit/offline-subscription.html"
 }
-
-
-// const fixed=()=>{
-//     document.querySelector('#resit').src="./All Resits/offline resit/fixed-resit-offline.html"
-// }
-
-
-
 
 
 

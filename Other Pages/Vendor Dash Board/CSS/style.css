@@ -3687,7 +3687,7 @@ a{
     background-color: #FFF1F2;
     margin: auto;
     /* height: 67vw; */    /* for fixed cost */
-    height: 170vw;  /* for instalment */
+    height: 200vw;  /* for instalment */
     width: 100%;
     padding: 0vw;
     margin-top: 2vw;
@@ -3704,3 +3704,19 @@ a{
 }
 
 
+
+
+/* btn style  */
+
+/* .btn{
+    display: grid;
+    align-items: center;
+    width: 25vw !important;
+    height: 6vw;
+    text-align: center;
+    margin: auto;
+    border-radius: 1.3vw;
+    font-size: 2vw;
+    padding: 0vw;
+    border: 0.08vw solid  #DC3545;
+} */

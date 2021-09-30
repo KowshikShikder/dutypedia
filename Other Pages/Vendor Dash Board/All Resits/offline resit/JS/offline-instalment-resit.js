@@ -256,6 +256,61 @@ const hideEditInterestBtnSection=(x)=>{
 
 
 
+// DROPDOWN MENU SECTION FOR PRICE STATUS (for package resit) 
+// DROPDOWN MENU SECTION FOR PRICE STATUS (for package resit)
+// DROPDOWN MENU SECTION FOR PRICE STATUS (for package resit)
+const  priceDropDownSection= document.querySelector(".price-drop-down-option-section")
+const  priceDropDownOption= document.querySelector(".price-drop-down-option")
+const priceTopDropDownOption=  document.querySelector(".price-drop-down-top")
+
+
+priceDropDownSection.addEventListener('click', x=>{
+    if(x.target !== x.currentTarget){
+        var clickedItem= x.target.innerHTML;
+        clickedItem= x.target.innerHTML;
+
+        priceTopDropDownOption.innerHTML=clickedItem;
+
+        priceDropDownSectionButton(); // To close the dropdown section 
+    }
+    x.stopPropagation();
+})
+
+
+
+// DROPDOWN MENU OPEN / CLOSE FOR PAYMENT
+let p=0;
+
+const priceDropDownSectionButton=()=>{
+    if(p===0){
+        priceDropDownSection.style.display="grid";
+        p = 1;
+    }
+
+    else{
+        priceDropDownSection.style.display="none";
+        p=0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // DROPDOWN MENU SECTION FOR PAYMENT STATUS
 // DROPDOWN MENU SECTION FOR PAYMENT STATUS
@@ -289,14 +344,10 @@ const paymentDropDownSection=()=>{
 
     else{
         dropDownSection.style.display="none"
-        d=0;
+        d = 0;
+        
     }
 }
-
-
-
-
-
 
 
 

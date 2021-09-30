@@ -31,8 +31,8 @@
     display: none;
     position: absolute;
     font-size: 1.5vw;
-    right: -7.5vw;
-    width: 8vw;
+    right: -12vw;
+    width: 12vw;
     font-weight: 700 !important;
 }
 
@@ -51,7 +51,6 @@
     position: absolute;
     right: -27.5vw;
     top: -2.4vw !important;
-
 }
 
 
@@ -252,16 +251,17 @@
 /* Delivery date input */
 /* Delivery date input */
 .offline-date-input-container{
-    display: grid;
+    margin: auto;
+    /* display: grid;
     height: 4vw;
     width: 95%;
     margin: auto;
     justify-content: center;
     grid-template-columns: 45% 10% 45%;
-    text-align: center;
+    text-align: center; */
 }
 
-
+/* 
 .offline-date-input-container div{
     display: grid;
     align-items: center;
@@ -293,7 +293,7 @@
     background-position: center;
     background-image: url(../../../images/resite/calendar-line.svg);
     border-radius: 0.8vw;
-}
+} */
 
 
 
@@ -377,12 +377,6 @@
 .drop-down-option:hover{
     background: #DEDEDE;
 }
-
-
-
-
-
-
 
 
 
