@@ -1,0 +1,445 @@
+/* Price section */
+/* Price section */
+/* Price section */
+.price div:nth-child(1){
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.price-three-dots{
+    display: inline-block;
+    background: white;
+    height: 1.30vw;
+    width: 1.30vw;
+    margin-left: 0.3250vw;
+    padding: 0.1950vw;
+    opacity: 0.7;
+}
+
+.price-three-dots img{
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+
+
+.hover-edit-price{
+    display: none;
+    position: absolute;
+    font-size: 0.9750vw;
+    right: -6.60vw;
+    width: 7.80vw;
+    font-weight: 700 !important;
+}
+
+
+.price-three-dots:hover .hover-edit-price{
+    display: grid;
+}
+
+
+.price span{
+    position: relative;
+}
+
+
+.package-three-dot{
+    position: absolute;
+    right: -17.8750vw;
+    top: -1.560vw !important;
+}
+
+
+
+
+
+/* PRICE DROPDOWN SECTION */
+/* PRICE DROPDOWN SECTION */
+.price-drop-down-top{
+    width: 12.48vw !important;
+    font-size: 1.30vw;
+}
+
+
+.price-drop-down-option-section{
+    width: 10.7250vw !important;
+    left: 0vw;
+    top: 2.60vw !important;
+}
+
+.price-drop-down-option-section .drop-down-option{
+    display: grid;
+    justify-content: left !important;
+}
+
+
+
+
+
+/* edit price popup */
+/* edit price popup */
+/* edit price popup */
+
+.edit-price-pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0vw;
+    left: 0vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #f09fa43d;
+    z-index: 2000;
+}
+
+
+.edit-price-container{
+    display: grid;
+    justify-content: center;
+    width: 35.10vw;
+    height: 22.10vw;
+    background: white;
+    border-radius: 1.040vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
+}
+
+
+
+
+.edit-price-title{
+    text-align: center;
+    background: white;
+    font-size: 1.690vw;
+    height: 1.950vw;
+    margin-top: 5.20vw;
+}
+
+
+
+.edit-price-input{
+    position: relative;
+    height: 3.250vw;
+    width: 16.250vw;
+    margin: auto;
+}
+
+.price-tk{
+    position: absolute;
+    top: 0.780vw;
+    right: 3.5vw;
+    height: 1.950vw;
+    width: 1.30vw;
+    font-size: 1.2350vw;
+    font-weight: 800;
+    z-index: 2;
+}
+
+/* price input customization */
+    .edit-price-input #edit-price-input{
+        position: absolute;
+        width: 16.250vw;
+        height: 3.250vw;
+        padding: 0vw;
+        font-size: 1.30vw;
+        border: solid 0.5px #000;
+        text-align: center;
+        z-index: 1;
+        background: #ffffff;
+        border: 0.050vw solid #E22424;
+        outline: none;
+        border-radius: 0.50vw;
+        box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
+    }
+
+
+    .edit-price-input #edit-price-input::-webkit-inner-spin-button{
+        transform: scale(4.8);
+    }
+
+    .edit-price-input .spinner-button-container{
+        display: grid;
+        justify-content: center;
+        position: absolute;
+        right: 6.50vw;
+        z-index: 2;
+        height: 3.120vw;
+        width: 3.050vw;
+        pointer-events: none;
+        background: #E22424;
+        transform: translate(6.5vw,0vw);
+        border-radius:0vw 0.39vw 0.39vw 0vw;
+        overflow: hidden;
+    }
+
+    .edit-price-input .spinner-button{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        height: 1.660vw;
+        width: 3.120vw;
+        margin: auto;
+        pointer-events: none;
+        background: #E22424;
+    }
+
+    @media screen and (max-width:800px){
+        .edit-price-input #edit-price-input::-webkit-inner-spin-button{
+            transform: scale(4);
+        }
+    }
+
+    .edit-price-input #inc-button{
+        width: 2.60vw;
+        border-bottom: 0.050vw solid white;
+    }
+
+    .edit-price-input #dec-button{
+        top: 2.2750vw;
+    }
+
+    .edit-price-input .spinner-button img{
+        height: 1.170vw;
+        width: 1.170vw;
+    }
+
+
+
+
+
+.edit-price-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5.850vw;
+    width: 19.50vw;
+    margin: auto;
+}
+
+
+
+.edit-price-button-container div{
+    width: 9.10vw;
+    height: 3.250vw;
+    font-size: 1.170vw;
+    padding: 0.650vw;
+    border-radius: 0.50vw;
+    border: 0.050vw solid  #E22424;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Delivery date input */
+/* Delivery date input */
+/* Delivery date input */
+.offline-date-input-container{
+    margin: auto;
+}
+
+
+
+
+
+
+
+/* PAYMENT STATUS DROPDOWN */
+/* PAYMENT STATUS DROPDOWN */
+/* PAYMENT STATUS DROPDOWN */
+.drop-down-section{
+    position: relative;
+    height: 1.950vw;
+    width: 40%;
+    margin: auto;
+    margin-top: 0.3250vw;
+    font-size: 1.040vw;
+}
+
+.drop-down-top{
+    display: flex;
+    align-items: center;
+    cursor: default;
+    cursor: pointer;
+}
+
+
+.drop-down-btn{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.308);
+    height: 100%;
+    width: 1.50vw;
+    top: 0vw;
+    right: 0vw;
+    cursor: pointer;
+    padding: 0.39vw;
+}
+
+.drop-down-btn:hover{
+    background: #DEDEDE;
+}
+
+.drop-down-btn img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.drop-down-option-section{
+    display: none;
+    position: absolute;
+    top: -3.5vw;
+    right: 1.82vw;
+    height: 7.0vw;
+    width: 9.750vw;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.274);
+}
+
+
+.drop-down-option{
+    background: white;
+    height: 2.2750vw;
+    border-top: 0.050vw solid #ECECEC;
+    font-size: 1.040vw;
+    text-align: left;
+    padding-left: 1.950vw;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.drop-down-option .cross{
+    pointer-events: none;
+}
+
+.drop-down-option:hover{
+    background: #DEDEDE;
+}
+
+
+
+
+
+
+
+
+
+/* SERVICE STATUS SELECT OPTION */
+/* SERVICE STATUS SELECT OPTION */
+/* SERVICE STATUS SELECT OPTION */
+
+.service-status select{
+    padding: 0vw 0.650vw 0vw 0.650vw;
+    border: 0.01vw solid white !important;
+    outline: none;
+    font-size: 1.170vw;
+    margin-top: 0.650vw;
+}
+
+
+.service-status select option{
+    font-size: 1.040vw;
+    height: 1.30vw;
+}
+
+
+
+
+
+
+
+/* INSTRUCTION EDIT SECTION */
+/* INSTRUCTION EDIT SECTION */
+/* INSTRUCTION EDIT SECTION */
+.facilities-instruction-section .title{
+    position: relative;
+}
+
+
+
+.instruction-edit-icon{
+    position: absolute;
+    height: 1.43vw !important;
+    right: 22.750vw;
+    top: 0.8450vw;
+    cursor: pointer;
+}
+
+
+.instruction-edit-icon img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.instruction-input-text-section{
+    display: none;
+    grid-template-rows: 90% 10%;
+    height: 13.65vw;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+.instruction-input-text{
+    display: grid;
+    height: 9.750vw;
+    width: 100%;
+    outline: none;
+    border: 0.01vw solid white !important;
+    background: #F5F5F5;
+    background: transparent;
+    color: black;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.123);
+    font-size: 1.170vw;
+}
+
+
+
+.instruction-input-button-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 3.90vw;
+    margin-top: -2.60vw;
+    z-index: 2;
+}
+
+.instruction-input-button-container div{
+    height: 2.60vw;
+    width: 8.650vw;
+    margin-right: 1.950vw;
+    font-size: 1.040vw;
+    padding: 0.50vw;
+    border-radius: 0.50vw;
+    border: 0.050vw solid #E22424;
+}
+
+
+/* Cancel Order Button */
+.facilities-button-section-offline{
+    grid-template-columns: 100%;
+}
+
+
+
+
+

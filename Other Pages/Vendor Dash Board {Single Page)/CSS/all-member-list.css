@@ -1,0 +1,811 @@
+/* Full Main Section Start */
+/* Full Main Section Start */
+
+
+
+.full-screen-section-all-member{
+    background: #FFF1F2;
+    padding: 2.5vw 2.5vw 0vw 3vw;
+    /* width: calc(100% - 1.5vw);
+    margin-left: 1.5vw; */
+}
+
+
+
+/* All Member Main Container start */
+/* All Member Main Container start */
+.all-member-list-main-section{
+    height:100%; 
+    width: 100%;
+    margin-left: 0.5vw;
+    border-radius: 1vw;
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.24);
+    background: white;
+    /* padding: 2.5vw 2.5vw 0vw 3vw; */
+}
+
+
+#offline-user-list{
+    display: none;
+}
+
+
+
+/* Resit Navigation Section Start */
+/* Resit Navigation Section Start */
+.all-member-dashboard{
+    width: 72vw;
+    height: 16vw;
+}
+
+
+.all-member-dashboard a{
+    margin: 0vw !important;
+    padding: 0vw !important;
+
+}
+/* Resit Navigation Section End */
+/* Resit Navigation Section End */
+
+
+
+
+
+
+/* All Member Section Start  */
+
+.all-member-list-section{
+    margin-top: 4vw;
+}
+
+
+
+/* All Member list Nav & Search Start */
+/* All Member list Nav & Search Start */
+.all-member-list-top-section{
+    display: flex;
+    justify-content: space-between;
+    height: 3.8vw;
+}
+
+
+
+/* Navigation */
+.all-member-list-nav{
+    display: flex;
+    height: 60%;
+}
+
+.all-member-list-nav > div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+
+.all-member-list-nav > div p{
+    margin: 0vw;
+    width: 100%;
+    padding: 0vw 1.5vw 0vw 1.5vw;
+}
+
+.all-member-list-nav > div:nth-child(1) p{
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.075);
+}
+
+
+.all-member-list-nav-active{
+    border-bottom: 0.08vw solid red;
+    color: red;
+}
+
+
+
+
+
+/* Search Start */
+.all-member-list-search{
+    width: 20vw;
+    height: 100%;
+    height: 80%;
+    margin-right: 1vw;
+}
+
+.search-bar-section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    font-size: 0.8vw;
+}
+
+.search-bar-section .search-bar{
+    width: 85%;
+}
+
+.search-bar-section .search-bar input{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 0.6vw;
+    border-bottom-left-radius: 0.6vw;
+    border: 0.08px solid #CBCBCB;
+    border-right: none;
+    padding-left: 1vw;
+    color: #909090;
+    font-weight: 600;
+}
+
+
+
+.search-bar-section .search-bar input:focus{
+    outline: white;
+}
+
+.search-bar-section .search-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    padding-right: 1vw;
+    background-color: white;
+    border-top-right-radius: 0.6vw;
+    border-bottom-right-radius: 0.6vw;
+    border: 0.08px solid #CBCBCB;
+    border-left: none;
+}
+
+.search-bar-section .search-icon img{
+    height: 55%;
+    width: 55%;
+}
+/* Search End */
+
+
+/* All Member list Nav & Search End */
+/* All Member list Nav & Search End */
+
+
+
+
+/* All Member Scroll */
+
+.all-member-list-container{
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-image: url(../images/resite/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: center center;
+}
+
+
+/* Scrollbar customization */
+.all-member-list-container::-webkit-scrollbar{
+    width: 0.5vw;
+    background: #FBF6F6;
+}
+
+
+
+.all-member-list-container::-webkit-scrollbar-thumb{
+    background: #9e9e9e;
+    border-radius: 5vw;
+    border: 0.2vw solid rgba(0, 0, 0, 0);
+}
+
+
+.all-member-list-container::-webkit-scrollbar-button:single-button{
+    background-color: #ffffff;
+    display: block;
+    border-style: solid;
+    height: 1.5vw;
+    width: 1vw;
+}
+
+
+.all-member-list-container::-webkit-scrollbar-button:single-button:vertical:decrement{
+    border-width: 0vw .3vw 0.4vw .3vw;
+    border-color: transparent transparent #555555 transparent;
+}
+
+
+
+.all-member-list-container::-webkit-scrollbar-button:single-button:vertical:increment{
+    border-width:0vw 0.3vw  0.4vw 0 0.3vw;
+    border-color: #555555 transparent transparent transparent;
+}
+
+
+
+
+
+
+
+/* All Member List Container Start */
+/* All Member List Container Start */
+
+
+.all-member-list-container{
+    height: 40vw;
+    width: 100%;
+}
+
+
+/* All Member List Heading Start */
+.all-member-list-heading{
+    display: grid;
+    grid-template-columns: 9% 22% 15% 17% 15% 22%;
+    width: 100%;
+    height: 3vw;
+    padding-right: 0.6vw;
+    background: rgb(255, 255, 255);
+}
+
+
+.nav-filter{
+    display: flex;
+    justify-content: space-around;
+    padding: 0vw 2vw 0vw 2vw;
+}
+
+.nav-filter div:nth-child(1){
+    display: grid;
+    align-items: center;
+    font-size: 0.9vw;
+}
+
+.nav-filter select{
+    font-size: 0.8vw;
+    height: 2vw;
+    width: 7vw;
+    position: relative;
+    border: 0.08vw solid red;
+    border-radius: 0.4vw;
+    outline: none;
+}
+
+
+.nav-filter .select-style{
+    height: 2vw;
+    width: 2vw;
+    background: #DC3545;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+    padding: 0.6vw;
+    border-top-right-radius: 0.4vw;
+    border-bottom-right-radius: 0.4vw;
+    transform: translateX(5.6vw);
+}
+
+
+.nav-filter .select-style img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+/* All Member List Heading End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* All Member List Members Start */
+.all-member-list-heading > div{
+    align-self: center;
+    text-align: center;
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+
+
+
+
+.member-list-row{
+    display: grid;
+    grid-template-columns: 9% 22% 15% 17% 15% 22%;
+    width: 99%;
+}
+
+
+/* All Member List Members End */
+
+
+
+
+.member-list-row > div{
+    height: 9.5vw;
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.062);
+    border-top: 0.08vw solid rgba(0, 0, 0, 0.062);
+}
+
+
+
+
+/* Members Serial Start */
+.member-list-row .serial{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+}
+/* Members Serial End */
+
+
+
+
+/* Members Profile Start */
+.member-list-row .member-list-client-profiles{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 1.5vw 1vw 1.5vw;
+}
+
+
+/* image */
+.member-list-row .member-list-client-profiles .client-profiles-image{
+    height: 100%;
+    min-width: 6.5vw !important;
+    border-radius: 0.8vw;
+    position: relative;
+}
+
+
+.member-list-row .member-list-client-profiles .client-profiles-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.8vw;
+}
+
+
+.img-logo-circle{
+    height: 1.6vw;
+    width: 1.6vw;
+    position: absolute;
+    bottom: -0.4vw;
+    right: -0.4vw;
+}
+
+
+
+/* Name & Id */
+.member-list-row .member-list-client-profiles .client-profiles-text{
+    display: grid;
+    height: 4vw;
+    width: 10vw;
+    margin: auto;
+    padding-left: 1vw;
+}
+
+
+.member-list-row .member-list-client-profiles .client-profiles-text .client-profiles-name {
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+
+.member-list-row .member-list-client-profiles .client-profiles-text .client-profiles-id {
+    font-size: 0.8vw;
+}
+
+/* Members Profile End */
+
+
+
+
+
+/* Members Order, Price, Duration & Details Start */
+.member-list-row .price,
+.member-list-row .duration,
+.member-list-row .view-details,
+.member-list-row .order-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+}
+/* Members Order, Price, Duration & Details End */
+
+
+
+
+
+/* SERVICE STATUS SELECT OPTION Start */
+
+.duration .service-status-select{
+    padding: 0vw 1vw 0vw 1vw;
+    border: 0.01vw solid white !important;
+    outline: none;
+}
+
+/* SERVICE STATUS SELECT OPTION End */
+
+
+
+
+
+/* For Fixed Section */
+.duration-fixed{
+    font-size: 1vw !important;
+}
+
+
+/* Members Order List Start */
+.member-list-row .order-list{
+    font-size: 1vw;
+}
+
+.member-list-row .order-list ul{
+    padding: 0vw;
+    margin: 0vw;
+}
+
+.member-list-row .order-list ul li{
+    margin-top: 0.3vw;
+}
+/* Members Order List End */
+
+
+
+
+/* Members Order Payment Start */
+
+
+.member-list-row .payment{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+.member-list-row .payment .payment-status{
+    margin-top: 0.5vw;
+    font-size: 1vw;
+}
+
+
+.member-list-row .payment .payment-status .cross{
+    display: inline;
+}
+
+
+
+
+/* Offline Start */
+/* Offline Start */
+/* Offline Start */
+
+/* Offline Payment Start */
+/* Offline Payment Start */
+/* Offline Payment Start */
+
+
+/* Waiting For Accept Section START */
+.client-change-request-section{
+    text-align: center;
+}
+
+
+.client-change-request-section p{
+    font-size: 0.8vw;
+    margin-bottom: 0.3vw;
+}
+
+
+
+.client-change-request-button-container{
+    display: flex;
+    width: 8vw;
+    margin: auto;
+}
+
+.client-change-request-button-container .btn{
+    display: grid;
+    align-items: center;
+    width: 3vw !important;
+    height: 1.2vw;
+    text-align: center;
+    margin: auto;
+    border-radius: 0.3vw;
+    font-size: 0.6vw;
+    padding: 0vw;
+    border: 0.08vw solid  #DC3545;
+}
+
+/* Waiting For Accept Section END */
+
+
+
+
+
+/* PAYMENT STATUS DROPDOWN Start */
+/* PAYMENT STATUS DROPDOWN Start */
+/* PAYMENT STATUS DROPDOWN Start */
+.drop-down-section{
+    position: relative;
+    height: 1.6vw;
+    width: 5.5vw;
+    margin: auto;
+    margin-top: 0.5vw;
+    font-size: 0.9vw;
+}
+
+.drop-down-top{
+    display: flex;
+    align-items: center;
+    cursor: default;
+    cursor: pointer;
+}
+
+
+.drop-down-btn{
+    position: absolute;
+    background: rgba(170, 166, 166, 0.212);
+    height: 100%;
+    width: 1.2vw;
+    top: 0vw;
+    right: 0vw;
+    cursor: pointer;
+    padding: 0.2vw;
+}
+
+.drop-down-btn:hover{
+    background: #DEDEDE;
+}
+
+.drop-down-btn img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.drop-down-option-section{
+    display:none;
+    position: absolute;
+    top: 0vw;
+    right: 2.4vw;
+    height: 5vw;
+    width: 5vw;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.274);
+}
+
+
+.drop-down-option{
+    display: flex;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    height: 1.6vw;
+    border-top: 0.08vw solid rgba(0, 0, 0, 0.082);
+    font-size: 0.9vw;
+    text-align: center;
+    padding-left: 1vw;
+    width: 6vw;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.drop-down-option .cross,
+.drop-down-top .cross{
+    pointer-events: none;
+    margin-left: 0.4vw;
+}
+
+.drop-down-option:hover{
+    background: #DEDEDE;
+}
+
+
+/* PAYMENT STATUS DROPDOWN End */
+/* PAYMENT STATUS DROPDOWN End */
+/* PAYMENT STATUS DROPDOWN End */
+
+
+/* Offline Payment End */
+/* Offline Payment End */
+/* Offline Payment End */
+
+
+/* Offline End */
+/* Offline End */
+/* Offline End */
+
+
+
+/* Request For Payment Button Section */
+.request-for-payment-btn{
+    display: grid;
+    align-items: center;
+    width: 7vw;
+    height: 1.6vw;
+    text-align: center;
+    margin: auto;
+    border-radius: 0.3vw;
+    font-size: 0.7vw;
+    padding: 0vw;
+    margin-top: 0.4vw;
+    border: 0.08vw solid  #DC3545;
+}
+
+
+
+.request-for-payment-text{
+    font-size: 0.7vw;
+    margin-top: 0.4vw;
+    opacity: 0.7;
+}
+
+
+
+
+
+/* Members Order Payment End */
+
+
+
+
+
+
+
+
+
+
+/* Members Order Details Start */
+
+.member-list-row .view-details .btn{
+    display: grid;
+    align-items: center;
+    width: 10vw !important;
+    height: 3vw;
+    text-align: center;
+    margin: auto;
+    border-radius: 0.6vw;
+    font-size: 1vw;
+    padding: 0vw;
+    border: 0.08vw solid  #DC3545;
+    position: relative;
+}
+
+
+/* Main Circle */
+.view-details-circle{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: .85vw;
+    width: .8vw;
+    background: crimson;
+    top: -0.45vw;
+    left: -0.45vw;
+    border-radius: 100%;
+}
+
+
+/* Inside Circle */
+.view-details-circle-2{
+    height: .75vw;
+    width: .65vw;
+    background: crimson;
+    border: 0.01vw solid rgba(255, 255, 255, 0.568);
+    border-radius: 100%;
+
+}
+/* Members Order Details End */
+
+
+
+
+
+
+
+
+/* All Member List Container End */
+/* All Member List Container End */
+
+
+
+
+
+
+
+
+
+
+
+/* All Member Section End  */
+/* All Member Section End  */
+
+
+/* All Member Main Container End */
+/* All Member Main Container End */
+
+/* Full Main Section End */
+/* Full Main Section End */
+
+
+
+.tk-sign{
+    font-weight: 800 !important;
+    margin-left: 0.2vw;
+    margin-top: 0.1vw !important;
+    font-size: 1vw !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Single Client Section Start  */
+/* Single Client Section Start  */
+/* Single Client Section Start  */
+.full-screen-section-client-list{
+    padding: 0VW;
+}
+
+
+
+.client-service-description-client-list{
+    /* padding: 2vw 1.5vw 0vw 0.5vw; */
+    padding: 2vw 1vw 0vw 0.5vw;
+    height: 100%;
+    width: 100%;
+}
+
+.single-client-list-heading{
+    grid-template-columns: 24% 24% 23% 30%;
+}
+
+
+
+.single-client-row{
+    grid-template-columns: 24% 24% 23% 30%;
+    border: 0.08vw solid rgba(0, 0, 0, 0.062);
+    border-right: none;
+    width: 95%;
+    border-radius: 0.8vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.24);
+    margin: auto;
+    margin-top: 1vw;
+}
+
+
+.single-client-row > div:nth-last-child(1){
+    border-right: none;
+    border-top: none;
+}
+
+
+.nav-filter .single-client-select-style{
+    transform: translateX(5vw);
+}
+
+
+
+/* Single Client Section End  */
+/* Single Client Section End  */
+/* Single Client Section End  */

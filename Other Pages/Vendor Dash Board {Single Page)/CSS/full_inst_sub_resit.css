@@ -1,0 +1,1912 @@
+
+/* Price section */
+.hover-edit-price{
+    right: -5.850vw;
+    width: 5.850vw;
+}
+/* edit price popup */
+
+
+
+.edit-price-input #edit-price-input::-webkit-inner-spin-button{
+    opacity: 0;
+}
+
+
+
+/* INSTALLMENT BUTTON RESIZE */
+#edit-instalment-section .edit-price-button-container .btn,
+#edit-interest-amount .edit-price-button-container .btn{
+    font-size: 1.040vw;
+}
+
+
+
+
+.fixed-resit-section{
+    background-image: none;
+}
+
+
+.qr-code-section .qr-code-side .resit-name-section div:nth-child(2){
+    font-size: 0.7150vw;
+}
+
+
+
+
+
+.vendor-resit-section-two{
+    grid-template-columns: 40% 60%;
+}
+
+
+
+
+.vendor-resit-section-two table td{
+    background:white;
+}
+
+
+
+
+
+
+
+
+
+/* delivery Section */
+.vendor-resit-price-section .delivery{
+    padding-top: 0.3250vw;
+    display: grid;
+    align-items: center;
+    width: 100%;
+    font-size: 1.430vw;
+    font-weight: 500;
+    text-align: center;
+    border-top: 0.050vw solid rgba(0, 0, 0, 0.096);
+}
+
+.delivery-date .calender-icon{
+    display: inline;
+    height: 1.30vw;
+    width: 1.30vw;
+    padding: 0.50vw;
+    padding-bottom: 0.780vw;
+    padding-top: 0.780vw;
+    padding-right: 0.40vw !important;
+    background: #E22424;
+    border-radius: 0.50vw;
+}
+
+
+.delivery-date .calender-icon img{
+    height: 1.6250vw;
+    width: 1.6250vw;
+}
+
+
+
+
+
+
+
+/* FACILITIES & PAYMENT */
+/* FACILITIES & PAYMENT */
+.facilities-payment-section{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-image: url(../images/resite/logo.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 25%;
+}
+
+
+
+
+/* INSTALLMENT TABLE CONTAINER PARENT */
+/* INSTALLMENT TABLE CONTAINER PARENT */
+/* INSTALLMENT TABLE CONTAINER PARENT */
+
+.facilities-payment-section .payment .number-of-installment{
+    display: flex;
+    height: 10.40vw;
+    margin-top: -1vw;
+    border-bottom: 0.050vw solid rgba(0, 0, 0, 0.123);
+    padding: 0vw;
+}
+
+
+
+.facilities-payment-section .payment .number-of-installment > div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    font-size: 1.30vw;
+}
+
+
+.facilities-payment-section .payment .number-of-installment > div:nth-child(2){
+    border-right: 0.050vw solid rgba(0, 0, 0, 0.123);
+    border-left: 0.050vw solid rgba(0, 0, 0, 0.123);
+}
+
+
+.facilities-payment-section .payment .number-of-installment .instalment-no{
+    font-size: 1.30vw;
+    margin-top: 0.650vw;
+}
+
+
+
+.total-paid-ammount-section{
+    font-size: 1.30vw;
+}
+
+
+
+
+
+/* TOTAL PAID AMMOUNT SECTION */
+/* TOTAL PAID AMMOUNT SECTION */
+/* TOTAL PAID AMMOUNT SECTION */
+.facilities-payment-section .payment .total-paid-ammount-section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 9.10vw;
+    border-right: 0.050vw solid rgba(0, 0, 0, 0.123);
+    /* border-left: 0.050vw solid rgba(0, 0, 0, 0.123); */
+    /* border-bottom: 0.050vw solid rgba(0, 0, 0, 0.123); */
+    /* background: #E22424; */
+    padding: 0vw;
+}
+
+
+
+.facilities-payment-section .payment .total-paid-ammount-section > div:nth-child(1){
+    display: grid;
+    align-items: center;
+    height: 9.10vw;
+}
+
+.facilities-payment-section .payment .total-paid-ammount-section > div:nth-child(2){
+    display: grid;
+    align-items: center;
+    height: 100%;
+    border-left: 0.050vw solid rgba(0, 0, 0, 0.123);
+
+}
+
+.facilities-payment-section .payment .total-paid-ammount-section div > div:nth-child(2){
+    margin-top: 0.260vw;
+}
+
+
+
+
+
+
+
+.facilities-payment-section .payment .installment-table-container-parent{
+    text-align: center;
+    border-left: 0.03250vw solid rgba(0, 0, 0, 0.089);
+    padding-top: 1.30vw;
+    height: 28.60vw;
+    overflow-y: auto;
+    padding-bottom: 8.450vw;
+}
+
+
+/* Scrollbar customization */
+.installment-table-container-parent::-webkit-scrollbar{
+    width: 0.5vw;
+    background: #FBF6F6;
+}
+
+
+.installment-table-container-parent::-webkit-scrollbar-thumb{
+    background: #9e9e9e;
+    border-radius: 5vw;
+    border: 0.2vw solid rgba(0, 0, 0, 0);
+}
+
+
+
+
+/* Buttons */
+.installment-table-container-parent::-webkit-scrollbar-button:single-button {
+    background-color: white;
+    display: block;
+    border-style: solid;
+    height: 1.5vw;
+    width: 1vw;
+}
+
+.installment-table-container-parent::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0vw .3vw 0.4vw .3vw;
+    border-color: transparent transparent #555555 transparent;
+}
+
+
+.installment-table-container-parent::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width:0vw 0.3vw  0.4vw 0 0.3vw;
+    border-color: #555555 transparent transparent transparent;
+}
+
+
+
+
+
+
+/* INSTALMENT TABLE START */
+/* INSTALMENT TABLE START */
+/* INSTALMENT TABLE START */
+.installment-table-container{
+    height: auto;
+    width: 95%;
+    margin: auto;
+    position: relative;
+    border-top-right-radius: 0.9750vw;
+    border-top-left-radius: 0.9750vw;
+    margin-top: 1.950vw;
+    padding-bottom: 2.60vw;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.199);
+    border-bottom-left-radius: 0.9750vw;
+    border-bottom-right-radius: 0.9750vw;
+    /* overflow: hidden; */
+}
+
+
+
+
+.installment-table-container:nth-child(1){
+    margin-top: 0.650vw;
+}
+
+
+.installment-table-container .side-dashed-border{
+    width:97%;
+    margin: auto;
+    border-left: 0.050vw dashed rgba(0, 0, 0, 0.308);
+    height: 12.480vw;
+    overflow: hidden;
+    padding-bottom: 0vw;
+}
+
+.side-dashed-border > div:nth-last-child(1){
+    margin-bottom: 0vw;
+}
+
+
+
+
+
+
+/* INSTALMENT TABLE SECTION */
+.installment-table{
+    position: relative;
+    border-top: 0.050vw solid #ECECEC;
+    margin-bottom: 1.170vw;
+    margin-top: 0.650vw;
+}
+
+
+
+
+/* Advance Payment Table START */
+/* Advance Payment Table START */
+/* Advance Payment Table START */
+
+.advance-payment-table{
+    height: 11.70vw;
+    opacity: 1 !important;
+    pointer-events: painted !important;
+}
+
+
+.advance-payment-table .installment-table{
+    border-top: 0.650vw solid transparent;
+    border-bottom: 0.650vw solid transparent;
+    margin-top: 0vw;
+}
+
+
+
+
+
+
+
+
+
+/* INstallment STATUS DROPDOWN START */
+.drop-down-section{
+    display: grid;
+    position: relative;
+    height: 1.950vw;
+    width: 40%;
+    margin: auto;
+    margin-top: 0.3250vw;
+    font-size: 1.040vw;
+}
+
+.drop-down-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: default;
+    cursor: pointer;
+    padding-right: 1.950vw;
+}
+
+
+.drop-down-btn{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.308);
+    height: 100%;
+    width: 1.4950vw;
+    top: 0vw;
+    right: 0vw;
+    cursor: pointer;
+    padding: 0.40vw;
+}
+
+.drop-down-btn:hover{
+    background: #DEDEDE;
+}
+
+.drop-down-btn img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.drop-down-option-section{
+    display: none;
+    position: absolute;
+    top: -1.560vw;
+    right: 1.6250vw;
+    height: 4.550vw;
+    width: 6.50vw;
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.274);
+    z-index: 5;
+    background: white;
+}
+
+
+.drop-down-option{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    height: 1.950vw;
+    width: 6.30vw;
+    border-top: 0.050vw solid rgba(0, 0, 0, 0.082);
+    font-size: 1.040vw;
+    cursor: pointer;
+    padding-left: 0vw;
+    padding-right: 1.30vw;
+}
+
+.drop-down-option .cross{
+    pointer-events: none;
+}
+
+.drop-down-option:hover{
+    background: #DEDEDE;
+}
+
+
+
+/* INstallment STATUS DROPDOWN END */
+
+
+/* Advance Payment Table END */
+/* Advance Payment Table END */
+/* Advance Payment Table END */
+
+
+
+
+
+/* Installment Completed Successfully */
+/* Installment Completed Successfully */
+/* Installment Completed Successfully */
+
+
+.installment-table-success-note{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #E22424;
+    height: 10.40vw;
+    font-size: 1.170vw;
+    font-weight: 500;
+    border: 0.050vw solid #ECECEC;
+    border-top: 0.050vw solid rgba(0, 0, 0, 0);
+    margin-top: -1.30vw;
+    background-image: url(../images/resite/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 18%;
+}
+
+
+
+.note-about-changes{
+    display: grid;
+    font-size: 0.8450vw !important;
+    border-bottom: 0.050vw solid #ECECEC;
+    padding: 0vw 0vw 0.650vw 0vw;
+
+}
+
+
+.note-about-changes p{
+    margin: 0vw !important;
+    margin-top: 0.260vw !important;
+}
+
+
+
+.installment-completed{
+    position: absolute;
+    background: white;
+    font-size: 1.30vw;
+    bottom: -0vw;
+    left: 0vw;
+    width: 100%;
+    height: 15.210vw;
+    z-index: 3;
+    background-image: url(../images/resite/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 22%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INSTALMENT TITLE SECTION */
+.installment-table-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.90vw;
+    position: relative;
+    background: #E22424;
+    color: white;
+    border-top-right-radius: 0.9750vw;
+    border-top-left-radius: 0.9750vw;
+}
+
+.installment-table-title p{
+    margin: 1vw;
+}
+
+.installment-table-title-button{
+    position: absolute;
+    background: white;
+    color: #E22424;
+    height: 2.2750vw;
+    width: 4.550vw;
+    font-size: 1.040vw;
+    right: 1.30vw;
+    padding: 0.3250vw;
+    border-radius: 0.40vw;
+    font-weight: 600;
+}
+
+
+.installment-title-button-duo{
+    background: #E22424;
+    border: 0.050vw solid white;
+    color: white;
+    font-weight: 400;
+}
+
+
+.installment-table-title p{
+    display: grid;
+    align-items: center;
+    height: 100%;
+    margin-top: 1.30vw;
+    font-size: 1.30vw;
+}
+
+.installment-table-title p:nth-child(2){
+    font-size: 1.040vw;
+    margin-top: 1.30vw;
+    margin-left: 0.650vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* INSTALMENT SIDE NUMBER  */
+.installment-table-number-circle{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 1.30vw;
+    width: 1.30vw;
+    top: -0.650vw;
+    left: 0vw;
+    background: #E22424;
+    color: white;
+    border-radius: 100%;
+    font-size: 0.780vw;
+    opacity: 0.6;
+}
+
+
+
+
+
+/* INSTALMENT TABLE ROW 1 */
+.installment-table-row-1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 4.550vw;
+    width: 100%;
+    font-size: 1.170vw;
+    border-bottom: 0.050vw solid #ECECEC;
+}
+
+
+
+/* INSTALMENT TABLE ROW 1 COLUMN 1 */
+.installment-table-row-1 .installment-table-col-left{
+    border-right: 0.050vw solid #ECECEC;
+    font-size: 1.040vw;
+}
+
+
+.installment-table-row-1 .installment-table-col-left > div{
+    display: grid;
+    align-items: bottom;
+    padding-top: 0.50vw;
+}
+
+
+.installment-table-row-1 .installment-table-col-left > div:nth-child(2){
+    display: grid;
+    align-items: bottom;
+    padding-top: 0.50vw;
+    grid-template-columns: 60% 40%;
+}
+
+.installment-table-row-1 .installment-table-col-left > div p{
+    margin: 0vw;
+}
+
+.installment-table-row-1 .installment-table-col-left .date{
+    font-size: 0.780vw;
+}
+
+.installment-table-row-1 .installment-table-col-left .date p{
+    width: 100%;
+    margin: 0vw;
+    padding: 0vw;
+    padding-left: 0.8vw;
+    text-align: left;
+}
+
+.installment-table-row-1 .installment-table-col-left .date p:nth-child(2){
+    color: #E22424;
+}
+
+
+
+/* installment amount section */
+.installment-ammount{
+    position: relative;
+    width: 100%;
+    font-size: 0.85vw;
+}
+
+
+.installment-three-dots{
+    position: absolute;
+    height: 1.170vw;
+    width: 0.650vw;
+    padding: 0.1950vw;
+    top: 0.580vw;
+    right:0.10vw;
+}
+
+
+.installment-three-dots img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.hover-edit-installment{
+    display: none;
+    position: absolute;
+    font-size: 0.780vw;
+    top: -0.1950vw;
+    right: -6.50vw;
+    width: 6.50vw;
+    background: white;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.219);
+}
+
+
+.installment-three-dots:hover .hover-edit-installment{
+    display: grid;
+}
+
+
+/* INSTALMENT TABLE ROW 1 COLUMN 2 */
+.installment-table-row-1 .installment-table-col-right{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 4.550vw;
+    width: 100%;
+}
+
+.installment-table-row-1 .installment-table-col-right > div{
+    display: grid;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.780vw;
+    padding: 0.50vw 0vw 0.50vw 0vw;
+}
+
+.installment-table-row-1 .installment-table-col-right > div:nth-child(1){
+    border-right: 0.050vw solid #ECECEC;
+    padding-right: 0.3250vw;
+}
+
+.installment-table-row-1 .installment-table-col-right > div:nth-child(1) p{
+    font-size: 90% !important;
+}
+
+
+.installment-table-row-1 .installment-table-col-right > div p{
+    padding: 0vw;
+    margin: 0vw;
+    font-size: 0.7vw;
+}
+
+.installment-table-row-1 .interest-section p:nth-child(1) span{
+    color: #E22424;
+    /* font-size: 0.7150vw; */
+    font-size: 0.8em;
+}
+
+
+
+
+.interest-section .interest-three-dots{
+    position: absolute;
+    height: 1.00vw;
+    width: 0.60vw;
+    padding: 0.1950vw;
+    margin-left: 0vw;
+    margin-top: 0.0650vw;
+}
+
+.interest-section .interest-three-dots img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* interest edit hover  */
+.interest-section .interest-edit-hover{
+    display: none;
+    font-size: 0.780vw !important;
+    position: absolute;
+    right: -6.60vw;
+    top: -0.130vw;
+    width: 6.50vw;
+    padding: 0vw 0.1vw 0vw 0.1vw;
+    background: white;
+    color: black !important;
+}
+
+
+.interest-section .interest-three-dots:hover .interest-edit-hover{
+    display: grid;
+}
+
+
+/* installment interest button */
+.interest-edit-btn{
+    display: none;
+    align-items: center;
+    position: absolute;
+    height: 3.250vw;
+    width: 5.20vw;
+    background: white;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.349);
+    font-size: 0.780vw;
+    right: 3.0550vw;
+    top: 0vw;
+    padding: 0.40vw;
+}
+
+
+.interest-edit-btn p{
+    font-size: 0.780vw;
+    height: 0.910vw;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+.interest-edit-btn p:hover{
+    color: #E22424;
+}
+
+
+
+
+
+
+
+
+
+/* EDIT INTEREST SECTION START */
+/* EDIT INTEREST SECTION START */
+/* EDIT INTEREST SECTION START */
+
+
+
+.interest-edit-section{
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    height: 1.950vw;
+    width: 108%;
+    margin-left: -0.1950vw;
+    margin-top: 0.50vw;
+}
+
+
+
+.interest-edit-section .interest-edit-button{
+    height: 0.9750vw;
+    width: 0.9750vw;
+    background: white;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.342);
+    border-radius: 100%;
+    border: 0.01950vw solid #ECECEC;
+    padding: 0.0130vw;
+}
+
+
+.interest-edit-section .interest-edit-button img{
+    height: 90%;
+    width: 90%;
+}
+
+
+.interest-ammount-input{
+    position: relative;
+    height: 1.950vw;
+    width: 5.850vw;
+    background: #E22424;
+}
+
+.interest-ammount-input .price-tk{
+    position: absolute;
+    top: 0.3250vw;
+    right: 2.60vw;
+    height: 1.950vw;
+    width: 1.30vw;
+    font-size: 1.2350vw;
+    font-weight: 800;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+    .interest-ammount-input #interest-input{
+        position: absolute;
+        height: 1.950vw;
+        width: 5.850vw;
+        padding: 0vw;
+        padding-left: 0.40vw;
+        font-size: 1.040vw;
+        z-index: 1;
+        background: white;
+        border: 0.065vw solid #E22424;
+        outline: none;
+        border-radius: 0.260vw;
+        box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
+        left: 0vw;
+    }
+
+
+    .interest-ammount-input #interest-input::-webkit-inner-spin-button{
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    .interest-ammount-input .spinner-button-container{
+        display: grid;
+        justify-content: center;
+        position: absolute;
+        right: 6.50vw;
+        z-index: 2;
+        height: 1.950vw;
+        width: 1.170vw;
+        pointer-events: none;
+        background: #E22424;
+        transform: translate(4.2250vw,0vw);
+        border-radius:0vw 0.40vw 0.40vw 0vw;
+        overflow: hidden;
+    }
+
+    .interest-ammount-input .spinner-button{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        height: 1.040vw;
+        width: 0.650vw;
+        margin: auto;
+        pointer-events: none;
+        background: #E22424;
+    }
+
+
+    .interest-ammount-input #inc-button{
+        width: 0.50vw;
+        border-bottom: 0.050vw solid white;
+    }
+
+    .interest-ammount-input #dec-button{
+        top: 2.2750vw;
+    }
+
+    .interest-ammount-input .spinner-button img{
+        height: 0.9750vw;
+        width: 0.9750vw;
+    }
+
+
+
+/* EDIT INTEREST SECTION END */
+/* EDIT INTEREST SECTION END */
+/* EDIT INTEREST SECTION END */
+
+
+
+
+
+
+
+
+/* INSTALMENT TABLE ROW 2 */
+.installment-table-row-2{
+    display: grid;
+    align-items: center;
+    height: 7.150vw;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    border-bottom: 0.050vw solid #ECECEC;
+}
+
+
+
+/* INSTALMENT TABLE ROW 1 COLUMN 1 & COLUMN 2 */
+
+.installment-table-row-2 > div{
+    font-size: 1.170vw;
+    height: 5.850vw;
+    padding: 0.650vw;
+    width: 100%;
+}
+
+
+.installment-table-row-2 > div:nth-child(1){
+    display: grid;
+    border-right: 0.050vw solid #ECECEC;
+    position: relative;
+
+}
+
+
+
+.installment-table-row-2 > div p{
+    margin: 0.3250vw;
+}
+
+.installment-paid-ammount{
+    display: block;
+}
+
+
+
+
+
+.installment-table-row-2 .paid-three-dots,
+.installment-table-row-2-compounding .paid-three-dots,
+.paid-amount-section .paid-three-dots{
+    position: absolute;
+    height: 1.30vw;
+    width: 0.650vw;
+    padding: 0.0650vw;
+    margin-left: 0.40vw;
+    margin-top: 0.1950vw;
+}
+
+
+
+.installment-table-row-2 .paid-three-dots img,
+.installment-table-row-2-compounding .paid-three-dots img,
+.paid-amount-section .paid-three-dots img{
+    position: relative;
+    height: 80%;
+    width: 80%;
+}
+
+
+.paid-edit-hover{
+    display: none;
+    font-size: 0.780vw;
+    position: absolute;
+    right: -6.50vw;
+    top: -0.130vw;
+    width: 6.50vw;
+    background: white;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.219);
+}
+
+
+.paid-three-dots:hover .paid-edit-hover{
+    display: grid;
+}
+
+
+
+
+
+
+    /* PAID AMMOUNT INPUT SECTION START */
+    /* PAID AMMOUNT INPUT SECTION START */
+    /* PAID AMMOUNT INPUT SECTION START */
+
+
+    .paid-edit-section{
+        display: none;
+        justify-content: space-around;
+        height: 2.2750vw;
+        width: 100%;
+        margin-top: 0.50vw;
+    }
+
+
+    .paid-edit-section .paid-edit-button{
+        height: 2.080vw;
+        width: 2.080vw;
+        background: white;
+        box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.178);
+        border-radius: 100%;
+        padding: 0.50vw;
+        border: 0.01950vw solid rgba(0, 0, 0, 0.100);
+    }
+
+
+    .paid-edit-section .paid-edit-button img{
+        height: 100%;
+        width: 100%;
+    }
+
+
+
+
+    .paid-ammount-input{
+        position: relative;
+        height: 2.2750vw;
+        width: 9.750vw;
+        margin-left: 1.30vw;
+    }
+
+    .paid-ammount-input .price-tk{
+        position: absolute;
+        top: 0.3250vw;
+        right: 2.60vw;
+        height: 1.950vw;
+        width: 1.30vw;
+        font-size: 1.2350vw;
+        font-weight: 800;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+
+        .paid-ammount-input #paid-ammount-input{
+            position: absolute;
+            height: 2.2750vw;
+            width: 9.750vw;
+            padding: 0vw;
+            padding-left: 0.910vw;
+            font-size: 1.170vw;
+            border: solid 0.5px #000;
+            z-index: 1;
+            background: white;
+            border: 0.050vw solid #E22424;
+            outline: none;
+            border-radius: 0.260vw;
+            box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
+            left: 0vw;
+        }
+
+
+        .paid-ammount-input #paid-ammount-input::-webkit-inner-spin-button{
+            transform: scale(3);
+            opacity: 0;
+        }
+
+        .paid-ammount-input .spinner-button-container{
+            display: grid;
+            justify-content: center;
+            position: absolute;
+            right: 6.50vw;
+            z-index: 2;
+            height: 2.2750vw;
+            width: 2.2750vw;
+            pointer-events: none;
+            background: #E22424;
+            transform: translate(4.2250vw,0vw);
+            border-radius:0vw 0.40vw 0.40vw 0vw;
+            overflow: hidden;
+        }
+
+        .paid-ammount-input .spinner-button{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            height: 1.170vw;
+            width: 0.650vw;
+            margin: auto;
+            pointer-events: none;
+            background: #E22424;
+        }
+
+
+        .paid-ammount-input #inc-button{
+            width: 1.820vw;
+            border-bottom: 0.050vw solid white;
+        }
+
+        .paid-ammount-input #dec-button{
+            top: 2.2750vw;
+        }
+
+        .paid-ammount-input .spinner-button img{
+            height: 0.9750vw;
+            width: 0.9750vw;
+        }
+
+    /* PAID AMMOUNT  INPUT SECTION END */
+    /* PAID AMMOUNT  INPUT SECTION END */
+    /* PAID AMMOUNT  INPUT SECTION END */
+
+
+
+
+/* INSTALMENT TABLE END */
+/* INSTALMENT TABLE END */
+/* INSTALMENT TABLE END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER BUTTON SECTION */
+.footer-button-container{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.30vw;
+    padding-bottom: 2.60vw;
+}
+
+
+
+
+
+
+/* ALL PAYMENT DETAILS SECTION START */
+/* ALL PAYMENT DETAILS SECTION START */
+/* ALL PAYMENT DETAILS SECTION START */
+
+
+.all-payment-details-section{
+    width: 100%;
+    margin: auto;
+    margin-top: 3.90vw;
+    margin-bottom: 6.50vw;
+}
+
+
+
+
+
+
+ /* ALL PAYMENT DETAILS TITLE*/
+
+.all-payment-details-section .all-payment-details-title{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 55% 45%;
+    width: 100%;
+    height: 3.90vw;
+    font-weight: 490;
+    text-align: center;
+    font-size: 1.560vw;
+}
+
+
+
+
+
+ /* ALL PAYMENT DETAILS BOX */
+
+.all-payment-details-section .all-payment-details-box{
+    width: 95%;
+    height: 39.0vw;
+    margin: auto;
+    margin-top: 1.30vw;
+    border-radius: 0.650vw;
+    overflow-y: auto;
+    box-shadow: 0px 0px 10px 1px #ECECEC;
+    padding-bottom: 2.60vw;
+    overflow-x: hidden;
+}
+
+
+
+
+/* Scrollbar customization */
+.all-payment-details-box::-webkit-scrollbar{
+    width: 0.5vw;
+    background: #FBF6F6;
+}
+
+
+.all-payment-details-box::-webkit-scrollbar-thumb{
+    background: #9e9e9e;
+    border-radius: 5vw;
+    border: 0.2vw solid rgba(0, 0, 0, 0);
+}
+
+
+
+.all-payment-details-box::-webkit-scrollbar-button:single-button {
+    background-color: white;
+    display: block;
+    border-style: solid;
+    height: 1.5vw;
+    width: 1vw;
+  }
+
+  .all-payment-details-box::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0vw .3vw 0.4vw .3vw;
+    border-color: transparent transparent #555555 transparent;
+}
+
+
+  .all-payment-details-box::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width:0vw 0.3vw  0.4vw 0 0.3vw;
+    border-color: #555555 transparent transparent transparent;
+  }
+
+
+
+
+
+
+
+    /* ALL PAYMENT DETAILS BOX ROW 1*/
+.all-payment-details-box-row-1:nth-child(1){
+    height: 5.850vw;
+    font-size: 1.560vw;
+}
+
+
+.all-payment-details-box-row-1:nth-child(1) .all-payment-details-box-left{
+    margin-bottom: 2.60vw;
+}
+
+.all-payment-details-box-row-1:nth-child(1) .all-payment-details-box-left .condition-of-all-payment{
+    top: 3.5750vw !important;
+}   
+
+
+.all-payment-details-box-row-1:nth-child(1) .all-payment-details-box-right{
+    display: grid;
+    grid-template-columns: 100%;
+    border-bottom: 0.050vw solid rgba(0, 0, 0, 0.158);
+}
+
+
+
+
+
+
+.all-payment-details-box-row-1{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 55% 45%;
+    height: 9.750vw;
+    padding-left: 1.30vw;
+}
+
+
+
+
+ /* ALL PAYMENT DETAILS BOX LEFT*/
+
+.all-payment-details-box-left{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-right: 0.050vw solid rgba(0, 0, 0, 0.075);
+    border-bottom: 0.050vw solid rgba(0, 0, 0, 0.158);
+    padding-top: 1.950vw;
+}
+
+
+.all-payment-details-box-left div > div:nth-child(1){
+    margin-bottom: 1.040vw;
+}
+
+.all-payment-details-box-left .condition-of-all-payment{
+    position: absolute;
+    top: 1.950vw;
+    right: 3.250vw;
+    height: 1.560vw;
+    width: 5.20vw;
+    font-size: 0.780vw;
+    border-radius: 0.50vw;
+    padding: 0.1950vw;
+}
+
+
+
+/* ALL PAYMENT DETAILS BOX LEFT TITLE */
+
+.all-payment-details-box-left-title{
+    font-size: 1.430vw;
+    position: relative;
+    margin-left: -1vw;
+    width: 90%;
+}
+
+
+
+
+.condition-of-installment{
+    position: absolute;
+    top: 0.260vw;
+    right: 1.30vw;
+    height: 1.560vw;
+    width: 5.20vw;
+    background: #E22424;
+    font-size: 0.780vw;
+    border-radius: 0.50vw;
+    color: white;
+    padding: 0.1950vw;
+}
+
+.condition-of-installment-paid{
+    background: white;
+    border: 0.050vw solid #E22424;
+    color: #E22424;
+    font-weight: 600;
+}
+
+
+
+.condition-of-installment-due{
+    background: #E22424;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* ALL PAYMENT DETAILS BOX RIGHT */
+
+.all-payment-details-box-right{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-right: 1.30vw;
+}
+
+
+
+ /* ALL PAYMENT DETAILS BOX RIGHT REMAINING & PAID SECTION */
+
+
+.all-payment-details-box-right .remaining-section,
+.all-payment-details-box-right .paid-section{
+    display: grid;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 1.30vw;
+    font-size: 1.30vw;
+    border-bottom: 0.050vw solid rgba(0, 0, 0, 0.158);
+    padding: 1.040vw 0vw 1.040vw 0vw;
+}
+
+
+.all-payment-details-box-right .remaining-section{
+    border-right: 0.050vw solid rgba(0, 0, 0, 0.075);
+    margin-right: -1.30vw;
+    width: 105%;
+}
+
+
+.all-payment-details-box-right .paid-section .all-payment-details-ammount{
+    margin-left: 2.60vw;
+}
+
+
+
+/* REMAINING & PAID SECTION TITLE */
+
+.all-payment-details-box-right-title{
+    text-align: center;
+    font-size: 1.30vw;
+}
+
+
+
+.all-payment-details-box-right .paid-section .all-payment-details-box-right-title{
+    margin-right: -0.650vw;
+}
+
+
+
+
+
+
+    /* PAYMENT AMMOUNT  INPUT SECTION START */
+    /* PAYMENT AMMOUNT  INPUT SECTION START */
+    /* PAYMENT AMMOUNT  INPUT SECTION START */
+
+.all-payment-details-ammount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9.10vw;
+    height: 3.250vw;
+    padding: 0vw 0.9750vw 0vw 0.9750vw;
+    position: relative;
+    margin: auto;
+}
+
+.all-payment-details-ammount .tk-sign{
+    width: 1.30vw;
+    text-align: right;
+}
+
+
+
+
+
+
+/* All payment details Date */
+
+.all-payment-details-date-container{
+    display: flex;
+    width: 90%;
+    margin: auto
+}
+
+
+
+.all-payment-details-date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.60vw;
+    font-size: 0.9750vw;
+    width: 13.650vw;
+
+}
+
+.all-payment-details-date-container .to{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 1.950vw;
+    height: 2.60vw;
+    font-size: 0.9750vw;
+}
+
+
+.all-payment-details-week{
+    margin-right: 0.50vw;
+}
+
+/* ALL PAYMENT DETAILS SECTION END */
+/* ALL PAYMENT DETAILS SECTION END */
+/* ALL PAYMENT DETAILS SECTION END */
+
+
+
+
+.tk-sign{
+    font-weight: 800 !important;
+}
+
+
+
+
+/* ### Interest Rate Compounding START ### */
+/* ### Interest Rate Compounding START ### */
+/* ### Interest Rate Compounding START ### */
+/* ### Interest Rate Compounding START ### */
+
+.installment-table-row-2-compounding{
+    display: grid;
+    align-items: center;
+    height: 7.150vw;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    border-bottom: 0.050vw solid #ECECEC;
+}
+
+.installment-table-row-2-compounding p{
+    margin-bottom: 1.2vw;
+}
+
+
+.installment-table-row-2-compounding > div:nth-child(2) {
+    padding-top: 1.30vw;
+    font-size: 1vw;
+}
+
+.installment-table-row-2-compounding > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    font-size: 1.040vw;
+    height: 100%;
+    width: 100%;
+    border-right: 0.050vw solid #ECECEC;
+}
+
+.installment-table-row-2-compounding > div:nth-child(1) div{
+    padding-top: 1.30vw;
+}
+
+.installment-table-row-2-compounding > div:nth-child(1) > div{
+    border-right: 0.050vw solid #ECECEC;
+    height: 100%;
+    padding-top: 1.560vw ;
+}
+
+
+
+.installment-table-row-2-compounding > div p:nth-child(2){
+    margin-top: -0.9750vw;
+}
+
+
+
+
+
+
+/* Advance payment Online  */
+.advance-payment-table-online{
+    height: 18.20vw;
+}
+
+
+
+.advance-payment-table-online .advance-payment-row-3{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 6.50vw;
+    width: 100%;
+}
+
+.advance-payment-note{
+    color: #E22424;
+}
+
+
+.advance-payment-bottom{
+    font-size: 1.1050vw;
+    height: 3.250vw;
+    width: 13.0vw;
+    border-radius: 0.50vw;
+    border: 0.050vw solid #E22424;
+    padding: 0.5850vw;
+}
+
+
+
+
+
+
+/* ### Interest  Rate Compounding END ### */
+/* ### Interest  Rate Compounding END ### */
+/* ### Interest  Rate Compounding END ### */
+/* ### Interest  Rate Compounding END ### */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ### WITHOUT Interest Rate START ### */
+/* ### WITHOUT Interest Rate START ### */
+/* ### WITHOUT Interest Rate START ### */
+/* ### WITHOUT Interest Rate START ### */
+
+.installment-table-container-parent-without-interest{
+    padding-bottom: 6.50vw !important;
+}
+
+
+
+
+/* Installment Table */
+.installment-table-section-without-interest{
+    position: relative;
+    margin-bottom: 1.170vw;
+    margin-top: 0.650vw;
+    width: 95%;
+    padding-bottom: 3.90vw;
+    margin: auto;
+    margin-bottom: 3.250vw;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.144);
+
+}
+
+
+.installment-table-section-without-interest:nth-child(2){
+    margin-top: 1.6250vw;
+}
+
+
+
+
+
+.installment-table-section-without-interest .side-dashed-border{
+    border-left: 0.050vw dashed #ECECEC;
+    width: 97%;
+    margin: auto;
+    height: 9.750vw;
+    overflow: hidden;
+}
+
+.installment-table-section-without-interest .installment-table{
+    border-top: 0.0650vw solid white !important;
+    margin-top: 1.30vw;
+}
+
+.installment-table-section-without-interest .installment-table:nth-child(1){
+    margin-top: 0.130vw;
+}
+
+
+
+.installment-table-section-without-interest .installment-table > div{
+    border-bottom: 0.050vw solid #ECECEC;
+
+}
+
+
+.installment-table-section-without-interest .installment-completed{
+    height: 13.650vw;
+    bottom: 0vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* INSTALMENT TABLE DATE START */
+.installment-table-date{
+    height: 1.6250vw;
+    padding: 0.260vw 0vw 0.260vw 0vw;
+    font-size: 0.9750vw;
+    border-bottom: 0.0650vw solid white !important;
+}
+
+
+
+/* INSTALMENT TABLE AMOUNT START */
+
+.installment-table-amount{
+    display: flex;
+    justify-content: center;
+    height: 2.60vw;
+    padding: 0.1950vw 0vw 0.1950vw 0vw;
+    font-size: 1.170vw;
+    width: 90%;
+    margin: auto;
+    margin-left: 5vw;
+    border-bottom: none !important;
+}
+
+.installment-table-amount p{
+    width: 100%;
+    margin: 0vw;
+    padding: 0vw;
+    text-align: right;
+}
+
+
+
+.installment-table-amount .installment-ammount{
+    margin-left: 1.950vw;
+    position: relative;
+    text-align: left;
+    margin-top: 0.3vw;
+
+}
+
+
+.installment-amount-three-dots{
+    position: absolute;
+    height: 1.30vw;
+    width: 0.650vw;
+    padding: 0.1950vw;
+    top: 0.260vw;
+    right: -0.9750vw;
+}
+
+.installment-amount-three-dots img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.installment-amount-hover{
+    display: none;
+    width: 6.50vw;
+    position: absolute;
+    font-size: 0.8450vw;
+    right: -6.50vw;
+    top: 0vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.308);
+}
+
+
+.installment-amount-three-dots:hover .installment-amount-hover{
+    display: grid;
+}
+
+
+/* INSTALMENT TABLE AMOUNT END */
+
+
+
+
+
+
+
+/* INSTALMENT TABLE PAID & REMAINING START*/
+.installment-table-3rd-section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 5.20vw;
+    font-size: 1.170vw;
+}
+
+
+.installment-table-3rd-section div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 5.20vw;
+    width: 100%;
+    margin: auto;
+    padding: 0.650vw 0vw 0.650vw 0vw;
+    border-top: 0.050vw solid #ECECEC;
+}
+
+.installment-table-3rd-section div:nth-child(1){
+    border-right: 0.050vw solid #ECECEC;
+    height: 5.20vw;
+}
+
+.installment-table-3rd-section div p{
+    padding: 0vw;
+    margin: 0vw;
+}
+
+.installment-table-3rd-section div p:nth-child(2){
+    margin-top: 0.650vw;
+}
+
+/* INSTALMENT TABLE PAID & REMAINING END */
+
+
+
+
+
+/* INSTALMENT TABLE NUMBER START*/
+.installment-table-number{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+    height: 1.1050vw;
+    width: 1.1050vw;
+    background: #E22424;
+    border-radius: 100%;
+    font-size: 0.650vw;
+    color: white;
+    z-index: 3;
+}
+/* INSTALMENT TABLE NUMBER END */
+
+
+
+/* COLLAPSE BUTTON SECTION START */
+.collapse-button{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -1.6250vw;
+    left: 14.4950vw;
+    width: 3.90vw;
+    height: 3.90vw;
+    border-radius: 100%;
+    z-index: 5;
+}
+
+.collapse-button img{
+    height: 100%;
+    width: 100%;
+
+}
+
+/* COLLAPSE BUTTON SECTION END */
+
+
+
+
+
+
+
+
+
+
+/* ### WITHOUT Interest Rate END ### */
+/* ### WITHOUT Interest Rate END ### */
+/* ### WITHOUT Interest Rate END ### */
+/* ### WITHOUT Interest Rate END ### */

@@ -1,0 +1,33 @@
+/* All member list Container */
+#main-list-full-screen{
+    /* display: none; */
+}
+
+
+
+#main-list-bargaining{
+    display: block;
+}
+
+
+
+
+/* Single Client list Online */
+#client-list-online-full-screen{
+    display: none;
+}
+
+
+/* Single Client list Offline */
+#client-list-offline-full-screen{
+    display: none;
+}
+
+
+/* For All Sections */
+.big-section{
+    display: none;
+}
+
+
+

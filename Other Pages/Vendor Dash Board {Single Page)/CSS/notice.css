@@ -1,0 +1,523 @@
+.notice-main-section{
+    width: 100%;
+    padding: 2vw 1.5vw 0vw 2.5vw;
+}
+
+
+
+/*   NOTICE TOP SECTION START   */
+
+.notice-top-section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 6vw;
+}
+
+
+
+/* NOTICE TOP TITLE */
+.notice-top-section .notice-top-title h4{
+    font-size: 1.6vw;
+}
+
+
+
+
+
+/* NOTICE TOP SEARCH START */
+.notice-top-section .notice-top-search-container{
+    height: 5vw;
+    width: 11vw;
+}
+
+
+.notice-top-search-container h6,
+.create-note-date h6{
+    font-size: 0.9vw;
+}
+
+
+
+
+
+/* NOTICE CALENDER INPUT START */
+.note-date-input{
+    position: relative;
+    width: 11vw;
+    height: 2.8vw;
+    border-radius: 0.6vw;
+}
+
+
+.note-date-input #note-date{
+    display: inline;
+    height: 2.5vw;
+    width: 11vw;
+    font-size: 0.9vw;
+    color: slategray;
+    outline: none;
+    border: 0.1vw solid #E22424;
+    border-radius: 0.5vw;
+    padding: 0vw;
+    padding-left: 0.7vw;
+    text-align: center;
+}
+
+
+.note-date-input #note-date::-webkit-calendar-picker-indicator{
+    transform: scale(1.6);
+    margin-right: 0.6vw;
+}
+
+.note-date-input .calender-icon{
+    position: absolute;
+    height: 2.5vw;
+    width: 2.7vw;
+    right: 0vw !important;
+    top: 0vw;
+    pointer-events: none;
+    z-index: 10;
+    background: #E22424;
+    border-radius: 0.4vw;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/resite/calendar-line.svg);
+}
+/* NOTICE CALENDER INPUT START */
+
+
+
+
+/* NOTICE TOP SEARCH END */
+
+/*   NOTICE TOP SECTION END   */
+
+
+
+
+
+
+/* ALL NOTICE SECTION START */
+.all-notice-section-container{
+    width: 100%;
+    height: auto;
+    padding: 2vw;
+    padding-bottom: 3vw;
+}
+
+
+/* CREATE NEW NOTE SECTION START */
+.add-notice-section{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    height: 14vw;
+    border-radius: 0.4vw;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+    background-image: url(../images/icons/list.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 3%;
+}
+
+.add-notice-button-section{
+    display: flex;
+    align-items: center;
+    font-size: 1.2vw;
+    height: 2.6vw;
+}
+
+.add-notice-button-section h6{
+    font-size: 1.2vw;
+    margin-left: 0.6vw;
+    margin-top: 0.4vw;
+    color: #666666;
+}
+
+
+.add-notice-button-section .notice-icon{
+    height: 1.6vw;
+    width: 1.6vw;
+    outline: none;
+    border:none;
+    padding: 0vw;
+    margin-top: -0.1vw;
+}
+
+
+.add-notice-button-section .notice-icon img{
+    height: 100%;
+    width: 100%;
+}
+/* CREATE NEW NOTE SECTION END */
+
+
+
+
+.notice-body-section{
+    height: auto;
+    width: 100%;
+    background: white;
+    margin-top: 2vw;
+    border-radius: 0.4vw;
+    overflow: hidden;
+    border-radius: 0.4vw;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    padding-bottom: 4vw;
+
+    background-image: url(../images/resite/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 15%;
+}
+
+
+
+.notice-body-top-icon{
+    display: grid;
+    width: 100%;
+    height: 5vw;
+}
+
+
+
+.notice-body-icon-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-self: flex-end;
+    width: 9vw;
+    height: 5vw;
+    margin-right: 2vw;
+}
+
+.notice-body-icon-container div{
+    height: 1.2vw;
+    width: 1.2vw;
+}
+
+.notice-body-icon-container div img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+/* NOTICE BODY TITLE */
+.notice-body-title{
+    display: grid;
+    align-items: center;
+    width: 96%;
+    margin: auto;
+    height: 3vw;
+    border-bottom: 0.05vw solid #dfdfdf;
+}
+
+.notice-body-title h4{
+    font-size: 1.4vw;
+    padding-left: 14vw;
+}
+
+
+
+
+/* NOTICE BODY INFO START */
+.notice-body-info-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    height: 6vw;
+    margin: auto;
+    margin-top: 0.3vw;
+    border-top: 0.05vw solid #dfdfdf;
+    padding: 1.6vw 0vw;
+}
+
+
+
+/* NOTICE BODY INFO ID */
+/* NOTICE BODY INFO DATE */
+.notice-body-info-section .notice-body-info-id,
+.notice-body-info-section .notice-body-info-date{
+    display: grid;
+    align-items: center;
+    height: 4vw;
+    width: 12vw;
+    font-size: 0.9vw;
+}
+
+.notice-body-info-section .notice-body-info-id p{
+    margin: 0vw;
+}
+
+.notice-body-info-section .notice-body-info-date{
+    width: 8vw;
+}
+/* NOTICE BODY INFO End */
+
+
+
+
+/* NOTICE BODY SUBJECT START */
+.notice-body-subject-section{
+    display: grid;
+    align-items: center;
+    width: 100%;
+    height: 5vw;
+    padding-left: 2vw;
+    border-top: 0.05vw solid #dfdfdf;
+    border-bottom: 0.05vw solid #dfdfdf;
+}
+
+.notice-body-subject-section h3{
+    font-size: 1.3vw;
+}
+
+/* NOTICE BODY SUBJECT End */
+
+
+
+/* NOTICE BODY TEXT START */
+.notice-body-text-section{
+    width: 100%;
+    height: auto;
+    font-size: 0.9vw;
+    padding: 2vw 8vw 2vw 2vw;
+}
+
+/* NOTICE BODY TEXT End */
+
+.notice-body-footer-section{
+    display: grid;
+    justify-content: flex-end;
+    height: 4vw;
+    width: 100%;
+}
+
+
+
+.notice-body-footer-section div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 4vw;
+    width: 10vw;
+    text-align: center;
+}
+
+
+.notice-body-footer-section div h6{
+    font-size: 1vw;
+}
+
+
+/* ALL NOTICE SECTION END */
+
+
+
+
+
+
+
+
+/* NOTICE CREATE SECTION START */
+/* NOTICE CREATE SECTION START */
+/* NOTICE CREATE SECTION START */
+
+.create-new-notice-section{
+    display: none;
+    width: 100%;
+    padding: 2vw 1.5vw 0vw 2.5vw;
+}
+
+.create-new-notice-container{
+    background: rgb(255, 255, 255);
+    width: 96%;
+    margin: auto;
+    padding: 2vw 0vw;
+    border-radius: 0.4vw;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.create-new-notice-container > div{
+    padding: 1vw 0vw;
+    border-top: 0.1vw solid #ECECEC;
+}
+
+
+.create-new-notice-container > div:nth-child(1){
+    border-top: none;
+}
+
+.create-note-date-section{
+    display: grid;
+    justify-content: flex-end;
+    width: 96%;
+}
+
+
+
+
+/* NOTICE CREATE DATE START */
+.create-note-info-section{
+    width: 96%;
+    margin: auto;
+    padding: 0.6vw 0vw;
+}
+
+.create-new-notice-container h6{
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+.create-note-info-section input{
+    border: none;
+    outline: none;
+    background: #F5F5F5;
+    margin-left: 0.2vw;
+    height: 1.7vw;
+    border: 0.1vw solid #ececec8c;
+    border-radius: 0.4vw;
+    font-size: 0.9vw;
+    padding-left: 0.6vw;
+}
+
+/* NOTICE CREATE DATE END */
+
+
+
+
+
+/* NOTICE CREATE SUBJECT START */
+
+.create-note-subject-section{
+    width: 96%;
+    margin: auto;
+}
+
+.create-note-subject-section input{
+    border: none;
+    outline: none;
+    height: 3vw;
+    width: 100%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 0.4vw;
+    padding-left: 1vw;
+}
+
+/* NOTICE CREATE SUBJECT END */
+
+
+
+
+
+/* NOTICE CREATE TEXT START */
+
+.create-note-text-section{
+    width: 96%;
+    margin: auto;
+}
+
+.create-note-text-section textarea{
+    border: none;
+    outline: none;
+    font-size: 0.9vw;
+    height: 16vw;
+    width: 100%;
+    padding: 1vw 2vw;
+    padding-left: 0.6vw;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 0.4vw;
+}
+
+/* NOTICE CREATE TEXT END */
+
+
+
+/* NOTICE CREATE FOOTER START */
+
+.create-note-footer-section{
+    display: grid;
+    justify-content: flex-end;
+    width: 96%;
+    margin: auto;
+    border: none;
+}
+
+.create-note-footer-section .create-note-footer{
+    width: 16vw;
+    padding: 0.1vw 1vw;
+}
+
+.create-note-footer input{
+    border: none;
+    outline: none;
+    background: #F5F5F5;
+    height: 2.2vw;
+    width: 100%;
+    border: 0.1vw solid #ecececd7;
+    border-radius: 0.4vw;
+    font-size: 0.9vw;
+    padding-left: 0.6vw;
+}
+
+
+.create-note-footer-section .create-note-footer h6:nth-child(3){
+    margin-top: 1vw;
+}
+
+.create-note-footer-section .create-note-footer select{
+    border:0.1vw solid red;
+    outline: none;
+    border-radius: 0.4vw;
+    font-size: 0.9vw;
+    height: 2.2vw;
+    width: 100%;
+}
+
+/* NOTICE CREATE FOOTER END */
+
+
+
+
+/* NOTICE CREATE BUTTON START */
+
+.create-note-button-section{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5vw;
+}
+
+.create-note-button-section button{
+    font-size: 1.2vw;
+    padding: 0.5vw 2.4vw;
+}
+
+/* NOTICE CREATE BUTTON END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NOTICE CREATE SECTION END */
+/* NOTICE CREATE SECTION END */
+/* NOTICE CREATE SECTION END */

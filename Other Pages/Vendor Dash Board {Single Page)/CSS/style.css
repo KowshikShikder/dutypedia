@@ -1,0 +1,3233 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #FFF1F2;
+    font-family: aller, sans-serif;
+}
+
+
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+a{
+    color: black;
+}
+
+
+/* TOP NAV BAR START */
+/* TOP NAV BAR START */
+/* TOP NAV BAR START */
+.top-nav-bar-section{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    width: 100%;
+    height: 5vw;
+    box-shadow:0px 0px 10px -4px rgba(0, 0, 0, 0.493);
+    background: white;
+    position: fixed;
+    z-index: 1000;
+}
+
+
+/* TOP NAV LEFT */
+/* TOP NAV LEFT */
+.top-nav-left{
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    justify-content: space-between;
+    width: 12vw;
+    height: 90%;
+    margin-left: 1.5vw;
+    background: white;
+}
+
+
+/* logo */
+.top-nav-left .logo{
+    height: 48%;
+    width: 6.5vw;
+}
+
+.top-nav-left .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* TOP BAR SECOND SECTION */
+
+.top-navigation-button-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-self: center;
+    height: 90%;
+    width: 28vw;
+    margin-left: 8vw;
+}
+
+
+.top-navigation-button-section .nav-button{
+    height: 3vw;
+    width: 3vw;
+    background: #F9F9F9;
+    border-radius: 100%;
+    padding: 0.7vw;
+    box-shadow: 0px 3px 10px -4px rgba(0, 0, 0, 0.397);
+    transition: 0.2s;
+}
+
+
+.top-navigation-button-section .nav-button:hover{
+    transform: scale(1.015);
+    box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.397);
+}
+
+
+.top-navigation-button-section .nav-button img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.top-navigation-button-section .nav-account{
+    display: flex;
+    align-items: center;
+    height: 57%;
+    width: 10vw;
+    border-radius: 2vw ;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px -5px rgba(0, 0, 0, 0.507);
+}
+
+.nav-account-image{
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 0.05vw solid rgba(255, 0, 0, 0.377);
+}
+
+.nav-account-image img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.top-navigation-button-section .nav-account p{
+    font-size: 0.9vw;
+    margin: auto;
+}
+
+/* Shadow remover & Filling top start */
+
+.shadow-remover{
+    display: grid;
+    background: white;
+    position: absolute;
+    box-shadow: 0px 0px 0px -1px transparent;
+    top: 4.1vw;
+    width: 4vw;
+    height: 1.5vw;
+    position: fixed;
+    z-index: 1400;
+    transition: 0.5s;
+}
+
+
+.fill-space-top{
+    background-color: transparent;
+    width: 100%;
+    height: 5vw;
+}
+
+/* Shadow remover & Filling top end */
+
+
+
+/* SIDE NAVIGATION START */
+/* SIDE NAVIGATION START */
+/* SIDE NAVIGATION START */
+.vendor-section{
+    background: white;
+    height: 100%;
+    width: 4vw;
+    margin-top: 5vw;
+    box-shadow:0px 0px 10px -3px rgba(0, 0, 0, 0.432);
+    position: fixed;
+    z-index: 1000;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+
+/* closing Side bar start */
+/* closing Side bar start */
+
+.vendor-section .vendor-nav-text,
+.vendor-section .vendor-nav-btn,
+.vendor-section .vendor-about{
+    display: none !important;
+}
+
+.vendor-section:hover .vendor-nav-text,
+.vendor-section:hover .vendor-nav-btn,
+.vendor-section:hover .vendor-about{
+    display: grid !important;
+}
+
+.vendor-section:hover{
+    width: 20vw;
+}
+
+
+
+/* closing Side bar end */
+/* closing Side bar end */
+
+
+
+
+
+
+.vendor-section .vendor-about{
+    display: none;
+    min-width: 100%;
+    height: 12vw;
+    z-index: 100;
+    padding-top: 1.8vw;
+    transition: 0.5s;
+}
+
+
+.vendor-about .vendor-image{
+    width: 5.5vw;
+    height: 5.5vw;
+    margin: auto;
+    border-radius: 0.9vw;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.308);
+}
+
+
+.vendor-about .vendor-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.vendor-about .vendor-name{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    min-width: 100%;
+    height: 5.5vw;
+    font-size: 1vw;
+}
+
+.vendor-about .vendor-name p{
+    padding: 0vw;
+    margin: 0vw;
+}
+
+.vendor-about .vendor-name span{
+    margin-top: -2.4vw;
+    font-size: 0.8vw;
+}
+
+
+.vendor-section .vendor-navigation{
+    min-width: 100%;
+    height: 35vw;
+    padding: 0.6vw;
+    padding-left: 0vw;
+    padding-top: 0vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* Scrollbar customization */
+.vendor-navigation::-webkit-scrollbar,
+.edit-information-container::-webkit-scrollbar,
+.appoinment-container-upcoming::-webkit-scrollbar,
+.new-note-container::-webkit-scrollbar,
+.appointment-upcoming-description-text::-webkit-scrollbar,
+.appoinment-container-previous::-webkit-scrollbar,
+.appointment-previous-description-text::-webkit-scrollbar,
+.sent-request-section::-webkit-scrollbar,
+.appointment-sent-description-text::-webkit-scrollbar,
+.received-request-section::-webkit-scrollbar,
+.appointment-request-description-text::-webkit-scrollbar,
+.clients-note-section::-webkit-scrollbar{
+    width: 0.5vw;
+    background: #FBF6F6;
+}
+
+
+.vendor-navigation::-webkit-scrollbar-thumb,
+.edit-information-container::-webkit-scrollbar-thumb,
+.appoinment-container-upcoming::-webkit-scrollbar-thumb,
+.new-note-container::-webkit-scrollbar-thumb,
+.appointment-upcoming-description-text::-webkit-scrollbar-thumb,
+.appoinment-container-previous::-webkit-scrollbar-thumb,
+.appointment-previous-description-text::-webkit-scrollbar-thumb,
+.sent-request-section::-webkit-scrollbar-thumb,
+.appointment-sent-description-text::-webkit-scrollbar-thumb,
+.received-request-section::-webkit-scrollbar-thumb,
+.appointment-request-description-text::-webkit-scrollbar-thumb,
+.clients-note-section::-webkit-scrollbar-thumb{
+    background: #9e9e9e;
+    border-radius: 5vw;
+    border: 0.2vw solid rgba(0, 0, 0, 0);
+}
+
+.vendor-navigation::-webkit-scrollbar-button:single-button,
+.edit-information-container::-webkit-scrollbar-button:single-button,
+.appoinment-container-upcoming::-webkit-scrollbar-button:single-button,
+.new-note-container::-webkit-scrollbar-button:single-button,
+.appointment-upcoming-description-text::-webkit-scrollbar-button:single-button,
+.appoinment-container-previous::-webkit-scrollbar-button:single-button,
+.appointment-previous-description-text::-webkit-scrollbar-button:single-button,
+.sent-request-section::-webkit-scrollbar-button:single-button,
+.appointment-sent-description-text::-webkit-scrollbar-button:single-button,
+.received-request-section::-webkit-scrollbar-button:single-button,
+.appointment-request-description-text::-webkit-scrollbar-button:single-button,
+.clients-note-section::-webkit-scrollbar-button:single-button{
+    background-color: white;
+    display: block;
+    border-style: solid;
+    height: 1.5vw;
+    width: 1vw;
+}
+
+.vendor-navigation::-webkit-scrollbar-button:single-button:vertical:decrement,
+.edit-information-container::-webkit-scrollbar-button:single-button:vertical:decrement,
+.appoinment-container-upcoming::-webkit-scrollbar-button:single-button:vertical:decrement,
+.new-note-container::-webkit-scrollbar-button:single-button:vertical:decrement,
+.appointment-upcoming-description-text::-webkit-scrollbar-button:single-button:vertical:decrement,
+.appoinment-container-previous::-webkit-scrollbar-button:single-button:vertical:decrement,
+.appointment-previous-description-text::-webkit-scrollbar-button:single-button:vertical:decrement,
+.sent-request-section::-webkit-scrollbar-button:single-button:vertical:decrement,
+.appointment-sent-description-text::-webkit-scrollbar-button:single-button:vertical:decrement,
+.received-request-section::-webkit-scrollbar-button:single-button:vertical:decrement,
+.appointment-request-description-text::-webkit-scrollbar-button:single-button:vertical:decrement,
+.clients-note-section::-webkit-scrollbar-button:single-button:vertical:decrement{
+    border-width: 0vw .3vw 0.4vw .3vw;
+    border-color: transparent transparent #555555 transparent;
+}
+
+
+.vendor-navigation::-webkit-scrollbar-button:single-button:vertical:increment,
+.edit-information-container::-webkit-scrollbar-button:single-button:vertical:increment,
+.appoinment-container-upcoming::-webkit-scrollbar-button:single-button:vertical:increment,
+.new-note-container::-webkit-scrollbar-button:single-button:vertical:increment,
+.appointment-upcoming-description-text::-webkit-scrollbar-button:single-button:vertical:increment,
+.appoinment-container-previous::-webkit-scrollbar-button:single-button:vertical:increment,
+.appointment-previous-description-text::-webkit-scrollbar-button:single-button:vertical:increment,
+.sent-request-section::-webkit-scrollbar-button:single-button:vertical:increment,
+.appointment-sent-description-text::-webkit-scrollbar-button:single-button:vertical:increment,
+.received-request-section::-webkit-scrollbar-button:single-button:vertical:increment,
+.appointment-request-description-text::-webkit-scrollbar-button:single-button:vertical:increment,
+.clients-note-section::-webkit-scrollbar-button:single-button:vertical:increment{
+    border-width:0vw 0.3vw  0.4vw 0 0.3vw;
+    border-color: #555555 transparent transparent transparent;
+}
+
+
+
+
+
+
+
+/* Vendor side Navigation Start */
+/* Vendor side Navigation Start */
+/* Vendor side Navigation Start */
+
+
+.vendor-nav{
+    display: grid;
+    margin-top: 0.2vw;
+}
+
+
+
+
+.vendor-nav-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 2.8vw;
+    background: white;
+    margin: auto;
+    border-radius: 0.6vw;
+    padding: 0vw 0.8vw 0vw 0.8vw;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+
+.vendor-nav-main:hover,
+.vendor-nav-main:hover .vendor-nav-icon svg,
+.vendor-nav-main:hover .vendor-nav-btn svg{
+    background: #E22424;
+    color: white;
+    fill: white;
+    stroke:white;
+}
+
+
+
+/* vendor navigation icon */
+.vendor-nav-icon{
+    height: 2.2vw;
+    width: 2.4vw;
+    padding: 0.5vw;
+    pointer-events: none;
+}
+
+.vendor-nav-icon svg{
+    fill:#666;
+    height: 1.2vw;
+    width: 1.2vw;
+}
+
+
+
+
+.vendor-nav-icon img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+/* vendor navigation text */
+.vendor-nav-text{
+    display: grid;
+    align-items: center;
+    padding-left: 0.4vw;
+    height: 2.2vw;
+    width: 12vw;
+    font-size: 1vw;
+    pointer-events: none;
+}
+
+
+
+
+/* vendor navigation btn */
+.vendor-nav-btn{
+    height: 2vw;
+    width: 2vw;
+    padding: 0.4vw;
+    pointer-events: none;
+}
+
+.vendor-nav-btn svg{
+    stroke:rgb(143, 141, 141);
+    height: 1vw;
+    width: 1vw;
+}
+
+
+.vendor-nav-btn img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* vendor navigation more data */
+.vendor-nav-more{
+    justify-self: flex-end;
+    padding-top: 0.4vw;
+    width: 75%;
+    height: 0vw;
+    opacity: 0;
+}
+
+
+
+
+
+
+.vendor-nav-more p{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 10% 90%;
+    width: 100%;
+    height: 1.8vw;
+    margin: 0;
+    font-size: 0.9vw;
+    cursor: pointer;
+}
+
+
+.vendor-nav-more-icon img{
+    display: none;
+}
+
+
+.vendor-nav-more a:nth-child(1) .vendor-nav-more-icon img{
+    display: grid;
+}
+
+.vendor-nav-more a:nth-child(1) .vendor-nav-more-text{
+    color: #E22424;
+}
+
+
+
+
+
+.vendor-nav-more div:nth-child(1) .vendor-nav-more-icon img{
+    display: grid;
+}
+
+.vendor-nav-more div:nth-child(1) .vendor-nav-more-text{
+    color: #E22424;
+}
+
+/* Vendor side Navigation End */
+/* Vendor side Navigation End */
+/* Vendor side Navigation End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TOP NAV BAR END */
+/* TOP NAV BAR END */
+/* TOP NAV BAR END */
+
+.full-screen-section{
+    display: inline-block;
+    background: #FFF1F2;
+    width: calc(100% - 3vw);
+    margin-left: 3vw;
+    transition: 0.5s;
+}
+
+
+.full-screen-section-width-class{
+    margin-left: 19.5vw;
+    width: calc(100% - 19.5vw);
+}
+
+
+/* CLIENT SECTION START */
+/* CLIENT SECTION START */
+/* CLIENT SECTION START */
+
+.client-section-parent{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+
+.client-section{
+    display: grid;
+    justify-content: center;
+    width: 36vw;
+    height: 88vw;
+    padding: 2vw;
+    padding-top: 0vw;
+    margin-top: 1vw;
+    padding-bottom: 18vw;
+    transition: 0.5s;
+}
+
+.client-section::-webkit-scrollbar{
+    display: none;
+}
+
+.client-section-image-section{
+    display: grid;
+    grid-template-rows: 48% 52%;
+    width: 30vw;
+    height: 26vw;
+    border-radius: 1.1vw;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    box-shadow: 0px 0px 1.8vw -6px rgba(0, 0, 0, 0.322);
+    margin-top: 1vw;
+    margin-bottom: 1.5vw;
+    transition: 0.5s;
+}
+
+
+
+
+/* client image */
+.client-cover-image{
+    width: 100%;
+    height: 100%;
+}
+
+.client-cover-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/* client footer */
+.client-profile-footer-section{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+
+.client-profile-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 4vw;
+    align-self: flex-end;
+    margin-bottom: 0.4vw;
+    padding: 0px 1.5vw 0px 1.5vw;
+}
+
+.client-profile-footer .client-profile-icon{
+    height: 2.2vw;
+    width: 2.2vw;
+    background: white;
+    border-radius: 100%;
+    padding: 0.4vw;
+    box-shadow: 0px 3px 10px -4px rgba(0, 0, 0, 0.397);
+    transition: 0.1s;
+}
+
+
+.client-profile-footer .client-profile-icon:hover{
+    box-shadow: 0px 3px 10px -4px rgba(0, 0, 0, 0.397);
+    transform: scale(1.1);
+}
+
+
+
+.client-profile-footer .client-profile-icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.client-profile-footer .client-address{
+    width: 12vw;
+    height: 1.4vw;
+    font-size: 0.7vw;
+}
+
+.client-profile-footer .client-address > div{
+    display: inline-block;
+    height: 1.3vw;
+    width: 1.3vw;
+    padding: 0.1vw;
+    margin-right: 0.5vw;
+}
+
+.client-profile-footer .client-address div img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+/* CLIENT PROFILE IMAGE */
+.client-profile-image-container{
+    display: grid;
+    grid-template-rows: 65% 35%;
+    position: absolute;
+    height: 60%;
+    width: 35%;
+    top: 21%;
+    margin-left: 32%;
+    overflow: hidden;
+}
+
+
+
+/* upload image icon */
+.client-profile-image-container .upload-icon{
+    height: 1.6vw;
+    width: 1.6vw;
+    background: white;
+    position: absolute;
+    top: 0.6vw;
+    right: 0.4vw;
+    padding: 0.35vw;
+    border: 0.1vw solid #D1D1D1;
+    border-radius: 100%;
+}
+
+
+
+.client-profile-image-container .image{
+    height: 100%;
+    width: 95%;
+    margin: auto;
+    border-radius: 0.9vw;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.233);
+}
+
+.client-profile-image-container .image img{
+    height: 100%;
+    width: 100%;
+    align-self: center;
+    object-fit: cover;
+}
+
+
+.client-profile-image-container{
+    margin-top: 1.3vw;
+    font-size: 1.2vw;
+    text-align: center;
+    font-weight: 600;
+}
+
+.client-profile-image-container div:nth-child(2){
+    padding-top: 0.5vw ;
+}
+
+.client-profile-image-container p{
+    font-size: 0.9vw;
+    align-self: flex-end;
+    margin-top: 0vw;
+
+}
+
+
+
+
+
+
+/* client information */
+/* client information */
+/* client information */
+.clients-more-info-section{
+    background: white;
+    display: grid;
+    position: relative;
+    grid-template-rows:20% 80%;
+    width: 30vw;
+    height: 26vw;
+    height: 20vw !important;
+    border-radius: 1.5vw;
+    overflow: hidden;
+    margin: auto;
+    box-shadow: 0px 0px 1.8vw -6px rgba(0, 0, 0, 0.322);
+    margin-bottom: 1.5vw;
+    transition: 0.5s;
+}
+
+.clients-more-info-button-container{
+    display: flex;
+    justify-content: center;
+    background: white;
+}
+
+.clients-more-info-button-container > div{
+    display: inline-block;
+    width: 45%;
+    height: 5vw;
+    color: rgb(179, 176, 176);
+    padding: 1.2vw;
+    margin-right: 0.1vw;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2vw;
+    font-weight: 500;
+    border-bottom:0.05vw solid darkgray;
+}
+
+.clients-more-info-button-container > div:nth-child(1) p{
+    border-right: 0.08vw solid rgba(0, 0, 0, 0.11);
+    width: 113%;
+}
+
+.clients-information-active-button{
+    border-bottom: .08vw solid #E22424 !important;
+    color: #E22424 !important;
+}
+
+
+
+.clients-more-info-1-parent{
+    position: relative;
+    padding-top: 1.8vw;
+    height: 100%;
+    width: 100%;
+}
+
+
+.clients-more-info-1{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+}
+
+.clients-more-info-1 .image{
+    height: 1.6vw;
+    width: 1.6vw;
+}
+
+
+
+.clients-more-info-1 .image img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.clients-more-info-1 > div{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    height: 2.5vw;
+    width: 100%;
+    margin: auto;
+    padding: 2vw;
+    font-size: 1vw;
+    margin-left: 1vw;
+}
+
+.clients-more-info-1 > div:nth-child(1){
+    padding-top: 1.5vw;
+}
+
+
+
+
+.three-dots-info-container{
+    position: absolute;
+    height: 1.6vw;
+    width: 1.6vw;
+    right: 1vw;
+    bottom: 1vw;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.473);
+    border-radius: 100%;
+}
+
+
+.three-dots-info-container .three-dots-info{
+    background: White;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.three-dots-info-container .three-dots-info img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.5);
+}
+
+.three-dots-info-container .three-dots-info{
+    position: relative;
+}
+
+
+.three-dots-info-container .edit-info{
+    display: none;
+    font-size: 1vw;
+    position: absolute;
+    top: 0px;
+    left: -8vw;
+    background-color: White;
+    cursor: pointer;
+}
+
+
+.three-dots-info-container .three-dots-info:hover .edit-info{
+    display: inline-block;
+}
+
+
+
+
+/* Edit Information */
+/* Edit Information */
+/* Edit Information */
+
+.edit-information-section{
+    display: none;
+    height: 100%;
+    width: 100%;
+    padding: 1vw;
+}
+
+.edit-information-container{
+    width: 22vw;
+    width: 98%;
+    height: 100%;
+    background: white;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 2vw;
+}
+
+
+
+
+.edit-information-container .title{
+    height: 2vw;
+    width: 100%;
+    font-size: 1.2vw;
+    text-align: left;
+    border-bottom: 0.1vw solid #ECECEC;
+}
+
+.edit-information-container .title p{
+    margin-left: 4.5vw;
+    color: #E22424;
+}
+
+
+.edit-information-container div{
+    margin-top: 0.8vw;
+}
+
+.edit-information-container .image{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 2vw;
+    width: 2vw;
+    background: White;
+    border-radius: 100%;
+    box-shadow: 0vw 0px 12px -5px black;
+}
+
+.edit-information-container .image img{
+    height: 100%;
+    width: 100%;
+}
+
+.edit-information-container input{
+    border: 0.05vw solid #ECECEC;
+    border-radius: 0.4vw;
+    height: 2.2vw;
+    font-size: 0.9vw;
+}
+
+.edit-information-container input:focus{
+    outline: none;
+}
+
+.edit-information-container input::-webkit-inner-spin-button{
+    display: none;
+}
+
+/* edit email */
+.edit-information-container .email,
+.edit-information-container .mobile,
+.edit-information-container .location{
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    grid-template-columns: 10% 80%;
+    font-size: 1.2vw;
+}
+
+
+
+
+
+/* edit select */
+.edit-information-container select,
+.edit-information-container option{
+    width: 16.8vw ;
+    margin-top: 0.4vw;
+    border: 0.05vw solid #ECECEC;
+    border-radius: 0.4vw;
+    height: 2.2vw;
+    font-size: 0.9vw;
+}
+
+.edit-information-container select:focus{
+    outline: none;
+}
+
+
+
+/* Edit Location */
+.edit-information-container .location .image{
+    align-self: flex-start;
+    margin-top: 2vw;
+}
+
+
+
+.more-location-data{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+
+
+
+.more-location-data > div .title,
+.address .title{
+    text-align: left;
+    font-size: 1vw;
+    border-bottom: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.more-location-data > div select,
+.more-location-data > div option{
+    width: 7.5vw ;
+    margin-top: 0.4vw;
+    border: 0.05vw solid #ECECEC;
+    border-radius: 0.4vw;
+    height: 2.2vw;
+    font-size: 0.9vw;
+}
+
+
+.edit-information-container .address textarea{
+    width: 100%;
+    height: 5vw;
+    display: grid;
+    font-size: 0.9vw;
+    padding: 0.1vw;
+    outline: none;
+    border: 0.05vw solid #ECECEC;
+}
+
+.edit-information-container .address textarea:hover{
+    border: 0.08vw solid rgba(0, 0, 0, 0.185);
+}
+
+.edit-information-container .button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 72%;
+    justify-self: flex-end;
+    margin-left: 5.5vw;
+}
+
+.edit-information-container .button-container .btn{
+    width: 45%;
+    height: 2.5vw;
+    font-size: 1vw;
+    border-radius: 0.4vw;
+    padding: 0.4vw;
+    border: 0.08vw solid #E22424;
+}
+
+
+
+/* Client NOTE */
+/* Client NOTE */
+/* Client NOTE */
+
+.clients-more-info-2-parent{
+    display: grid;
+    padding: 0vw 1vw 0vw 1.2vw;
+    position: relative;
+    height: 100%;
+    padding-top: 3vw;
+}
+
+
+.clients-note-section{
+    height: 85%;
+    width: 100%;
+    overflow-y: auto;
+    padding-right: 0.5vw;
+}
+
+
+
+
+
+.clients-note-section .clients-note{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 10% 70% 10%;
+    width: 100%;
+    height: 3vw;
+    background: #ffff;
+    padding-left: 0.5vw;
+    cursor: pointer;
+}
+
+
+.clients-note-section .clients-note .note-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    height: 1.7vw;
+    width: 1.8vw;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 1vw;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.247);
+    transition: 0.1s;
+}
+
+.clients-note-section .clients-note:hover .note-number{
+    color: #E22424;
+}
+
+.clients-note-section .clients-note .note-number p{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.clients-note-section .clients-note .note-title{
+    margin-left: 1vw;
+    font-size: 1.1vw;
+    transition: 0.1s;
+}
+
+
+.clients-note-section .clients-note:hover .note-title{
+    color: #E22424;
+}
+
+
+.clients-note-section .clients-note .note-icon{
+    height: 1vw;
+    width: 1vw;
+    transition: 0.2s;
+}
+
+.clients-note-section .clients-note:hover .note-icon{
+    transform: rotate(20deg);
+}
+
+
+/* Note Reminder added Icon */
+.note-reminder-added #Path_5050{
+    fill:#E22424 !important;
+}
+
+
+/* Create New Notes */
+/* Create New Notes */
+/* Create New Notes */
+
+
+.new-note-section{
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    padding: 1vw;
+    background: #f09fa43d;
+    padding: 1.5vw 3vw 1.5vw 2vw;
+}
+
+
+.new-note-section > div{
+    border-radius: 0.7vw;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 0px 11px -4px rgba(0, 0, 0, 0.377);
+}
+
+
+.new-note-container{
+    width: 22vw;
+    width: 98%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1vw 0.5vw 2vw 2vw;
+    background: white;
+}
+
+
+
+
+
+
+.new-note-container .new-note-title{
+    background: white;
+    font-size: 1.3vw;
+    color: #E22424;
+    border-bottom: 0.1vw solid #E22424;
+}
+
+
+.new-note-container .new-note-title p{
+    margin-bottom: 0.5vw;
+}
+
+
+.new-note-container .input-title,
+.new-note-container textarea{
+    font-size: 1.2vw;
+    margin-top: 0.8vw;
+
+}
+
+
+.new-note-container input{
+    height: 2.2vw;
+    border-radius: 0.45vw;
+    border: 0.1vw solid #b8b6b6;
+    margin-left: 0.2vw;
+    margin-top: 0.7vw;
+    font-size: 0.7vw;
+    width: 97%;
+}
+
+
+.new-note-container input:focus,
+.new-note-container textarea:focus{
+    outline: none;
+}
+
+.new-note-container textarea{
+    height: 4vw;
+    width: 97%;
+    font-size: 0.7vw;
+    border-radius: 0.45vw;
+    margin-left: 0.2vw;
+    border: 0.1vw solid #ECECEC;
+}
+
+.text-area-note{
+    width: 96%;
+    text-align: right;
+    color: #E22424;
+    font-size: 0.8vw;
+}
+
+
+
+.new-note-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 85%;
+    height: 4vw;
+    margin: auto;
+    margin-top: 2vw;
+}
+
+.new-note-button-container .btn{
+    width: 45%;
+    height: 2.5vw;
+    font-size: 1.2vw;
+    border-radius: 0.4vw;
+    padding: 0.2vw;
+    border: 0.08vw solid #E22424;
+}
+
+
+
+
+/* Set Reminder  */
+/* Set Reminder  */
+/* Set Reminder  */
+
+.note-reminder-section{
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    padding: 1vw;
+    background: #f09fa43d;
+    padding: 1.5vw 2.2vw 1.5vw 2.2vw;
+
+}
+
+
+.note-reminder-container{
+    width: 30vw;
+    height: 100%;
+    padding: 1vw 0.5vw 2vw 2vw;
+    background: white;
+    border-radius: 0.7vw;
+}
+
+
+.note-reminder-container > div{
+    width: 60%;
+    height: 100%;
+    background: White;
+}
+
+.note-title-date,
+.note-title-time{
+    font-size: 1.3vw;
+}
+
+
+.note-title-time{
+    margin-top: 1vw;
+
+}
+
+
+
+/* note date */
+.note-reminder-container #note-date{
+    height: 2vw;
+    width: 100%;
+    font-size: 0.9vw;
+    padding-left: 0.4vw;
+    color: slategray;
+    margin-top: 0.6vw;
+    outline: none;
+    border: 0.06vw solid #E22424;
+    border-radius: 0.3vw;
+}
+
+.time-input-icon{
+    position: absolute;
+    background: #E22424;
+    height: 2.4vw;
+    width: 2vw;
+    top: 0vw;
+    right: 0vw;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url(../images/resite/clock.svg);
+    background-position: center center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+
+
+/* .note-reminder-container #note-date::-webkit-calendar-picker-indicator{
+    background: #E22424;
+    height: 50%;
+    margin: -0.1vw;
+    padding:0.6vw 0.7vw 0.4vw 0.6vw;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/resite/calendar-line.svg);
+    border-radius: 0.3vw;
+} */
+
+
+
+
+
+.time-container{
+    display: grid;
+    height: 2.5vw;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.7vw;
+}
+
+
+
+.number-wrapper{
+    height: 2.5vw;
+    display: inline-block;
+    position: relative;
+    border-radius: 0.4vw;
+    margin-top: 0.7vw;
+    overflow: hidden;
+    border-radius: 0.4v;
+    border: 0.06vw solid #E22424;
+    margin-top: -0.1vw;
+}
+
+
+
+#note-time{
+    height: 100%;
+    width: 100%;
+    width: 10vw;
+    outline: none;
+    font-size: 1.1vw;
+}
+
+
+
+
+
+/* Note Reminder Date Cpntainer Start */
+.note-date-input-container{
+    width: 13vw !important;
+    height: 2vw !important;
+    border-radius: 0.6vw;
+}
+
+
+.note-date-input-container #instalment-date{
+    height: 2vw !important;
+    width: 13vw !important;
+    padding-left: 0.3vw !important;
+}
+
+.note-date-input-container .calender-icon{
+    height: 2.3vw !important;
+    width: 2.3vw !important;
+    right: 0vw !important;
+    left: 10.6vw;
+}
+
+
+.time-container{
+    display: grid;
+    height: 2.5vw;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.7vw;
+}
+
+
+
+.number-wrapper{
+    height: 2.5vw;
+    display: inline-block;
+    position: relative;
+    border-radius: 0.4vw;
+    margin-top: 0.7vw;
+    overflow: hidden;
+    border-radius: 0.4v;
+    border: 0.06vw solid #E22424;
+    margin-top: -0.1vw;
+}
+
+
+
+#note-time{
+    height: 100%;
+    width: 100%;
+    width: 10vw;
+    outline: none;
+    font-size: 1.1vw;
+    border: none;
+}
+
+
+
+
+
+.note-reminder-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    margin-top: 1.6vw;
+}
+
+
+.note-reminder-button-container .btn{
+    width: 47%;
+    font-size: 0.9vw;
+    border-radius: 0.4vw;
+    padding: 0.25vw;
+    border: 0.08vw solid #E22424;
+}
+
+
+
+
+
+/* Note Description section */
+/* Note Description section */
+
+.note-description-section{
+    display: none;
+    position: absolute;
+    height: 75%;
+    width: 100%;
+    top: 25%;
+    background: White;
+    padding: 1.2vw;
+    padding-top: 0.2vw;
+}
+
+
+.note-description-section .note-description-back{
+    display: flex;
+    align-items: center;
+}
+
+
+.note-description-section .note-description-back .image{
+    height: 1vw;
+    width: 2vw;
+    cursor: pointer;
+}
+
+.note-description-section .note-description-back .image img{
+    height: 100%;
+    width: 100%;
+}
+
+.note-description-section .note-description-top{
+    position: relative;
+    height: 2.3vw;
+    width: 100%;
+    margin-top: 0.8vw;
+}
+
+
+.note-description-section .note-description-top .note-description-title{
+    font-size: 1.6vw;
+}
+
+
+
+.note-description-section .note-description-top .note-description-icon{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0vw;
+    right: 0vw;
+    height: 100%;
+    width: 2vw;
+}
+
+.note-description-section .note-description-top .note-description-icon .image{
+    height: 1.6vw;
+    width: 1.2vw;
+    cursor: pointer;
+}
+
+.note-description-section .note-description-top .note-description-icon .image img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.note-description-section .note-description-text{
+    font-size: 0.9vw;
+}
+
+
+
+
+
+
+
+/* NOTE DESCRIPTION DELETE */
+/* NOTE DESCRIPTION DELETE */
+.note-description-delete-section{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f09fa43d;
+    padding: 2.5vw;
+}
+
+.note-description-delete-container{
+    height: 100%;
+    width: 100%;
+    background: white;
+    border-radius: 1vw;
+    padding: 3.5vw 0vw 5vw 0vw;
+}
+
+.note-description-delete-title{
+    background: white;
+    font-size: 1.5vw;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+
+
+.note-description-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 18vw;
+    height: 5vw;
+    margin: auto;
+    margin-top: 1vw;
+}
+
+
+.note-description-button-container .btn{
+    width: 8vw;
+    height: 3vw;
+}
+
+
+
+
+
+
+
+
+/* Three Dot Notes */
+.three-dots-note-container{
+    position: absolute;
+    height: 1.6vw;
+    width: 1.6vw;
+    right: 3vw;
+    bottom: 1vw;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.473);
+    border-radius: 100%;
+}
+
+
+.three-dots-note-container .three-dots-note{
+    background: white;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    margin: 0vh;
+}
+
+.three-dots-note-container .three-dots-note img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transform: scale(1.5);
+}
+
+.three-dots-note-container .three-dots-note{
+    position: relative;
+}
+
+
+.three-dots-note-container .new-note{
+    display: none;
+    font-size: 1vw;
+    position: absolute;
+    top: 0vw;
+    left: -5.5vw;
+    background-color: White;
+    cursor: pointer;
+}
+
+
+.three-dots-note-container .three-dots-note:hover .new-note{
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* APPOINTMENT SECTION */
+/* APPOINTMENT SECTION */
+/* APPOINTMENT SECTION */
+.appointment-section{
+    display: grid;
+    position: relative;
+    background: white;
+    width: 30vw;
+    height: 26vw;
+    border-radius: 1.7vw;
+    overflow: hidden;
+    padding-right: 0.5vw;
+    box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.322);
+    transition: 0.5s;
+}
+
+
+.appointment-section .appoinment-title{
+    display: grid;
+    font-size: 1.4vw;
+    height: 2.4vw;
+    width: 100%;
+    text-align: center;
+    padding-top: 0.9vw;
+    margin-bottom: 0.6vw;
+}
+
+
+.appointent-nav-bar{
+    display: flex;
+    align-items: center;
+    height: 3vw;
+    font-size: 0.8vw;
+    border-bottom: 0.1vw solid rgba(116, 114, 114, 0.247);
+    margin-bottom: 0.7vw;
+}
+
+
+.appointent-nav-bar div{
+    font-weight: 400;
+    width: 50%;
+    height: 3vw;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 0.8vw;
+}
+
+
+.appointment-nav-bar-active{
+    border-bottom: 0.1vw solid #E22424;
+
+}
+
+
+
+
+.appointent-nav-bar div:nth-child(1),
+.appointent-nav-bar div:nth-child(2){
+    border-right: 0.1vw solid rgba(0, 0, 0, 0.089);
+}
+
+
+
+
+
+.appoinment-container-upcoming{
+    display: grid;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+
+
+
+.appoinment-container-upcoming > div{
+    display: grid;
+    position: relative;
+    justify-content: center;
+    width: 95%;
+    grid-template-columns: 15%  70% 15%;
+    background: white;
+    padding: 0.7vw 0vw 0.7vw 0vw;
+    font-size: 0.9vw;
+    margin-top: 0.5vw;
+    cursor: pointer;
+}
+
+
+
+/* Appointment All Icons Style */
+/* Appointment All Icons Style */
+/* Appointment All Icons Style */
+
+.appoinment-container-upcoming .appoinment-icon,
+.appoinment-container-previous .appoinment-icon,
+.sent-request-section .appoinment-icon,
+.received-request-section .appoinment-icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    background: white;
+    height: 1.7vw;
+    width: 1.8vw;
+    border-radius: 100%;
+    margin-left: 0.4vw;
+    text-align: center;
+    font-size: 1vw;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.247);
+    transition: 0.1s;
+}
+
+
+.appoinment-container-upcoming div:hover .appoinment-icon,
+.appoinment-container-previous div:hover .appoinment-icon,
+.sent-request-section div:hover .appoinment-icon,
+.received-request-section div:hover .appoinment-icon
+{
+    color: #E22424;
+}
+
+
+
+
+
+
+
+
+.appoinment-container-upcoming .appoinment-text{
+    align-self: center;
+    margin-left: 0.4vw;
+}
+
+
+
+
+
+
+/* APPOINTMENT upcoming DESCRIPTION */
+.appointment-upcoming-description-section{
+    display: none;
+    position: absolute;
+    height: 75%;
+    width: 100%;
+    background: White;
+    margin-top: 22%;
+    padding: 2.5vw;
+    padding-top: 1vw;
+    z-index: 1;
+}
+
+
+.appointment-upcoming-description-back{
+    height: 2vw;
+    background: white;
+}
+
+.appointment-upcoming-description-back .image{
+    height: 1.5vw;
+    width: 1.5vw;
+    cursor: pointer;
+}
+
+.appointment-upcoming-description-back .image img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.appointment-upcoming-description-title{
+    height: 2vw;
+    font-size: 1vw;
+    margin-top: 1vw;
+}
+
+.appointment-upcoming-description-text{
+    font-size: 0.9vw;
+    height: 45%;
+    overflow-y: auto;
+    margin-top: 0.6vw;
+}
+
+
+
+
+
+
+
+
+.appointment-upcoming-description-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    align-self: center;
+    margin: auto;
+    margin-top: 1vw;
+}
+
+
+
+.appointment-upcoming-description-button-container .btn{
+    height: 2.3vw;
+    width: 9vw;
+    font-size: 0.8vw;
+    padding: 0.4vw;
+    border-radius: 0.35vw;
+    border: 0.08vw solid  #E22424;
+}
+
+
+
+.appointment-upcoming-description-button-container .btn:nth-child(2){
+    margin-left: 0.6vw;
+}
+
+
+.appointment-request-description-condition{
+    margin-top: 0.7vw;
+}
+
+
+
+
+
+
+
+
+
+
+/* Appointment Three Dots */
+.three-dots-appo-container{
+    height: 2.6vw;
+    width: 2.5vw;
+    position: absolute;
+    right: -1vw;
+    bottom: 0.3vw;
+    cursor: pointer;
+}
+
+.three-dots-appo-container .three-dots-appo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.three-dots-appo-container .three-dots-appo{
+    position: relative;
+}
+
+
+.three-dots-appo-container .cancel-appo{
+    display: none;
+    width: 12vw;
+    font-size: 1vw;
+    position: absolute;
+    top: -0.5vw;
+    left: -8vw;
+    background-color: White;
+    cursor: pointer;
+}
+
+
+.three-dots-appo-container .three-dots-appo:hover .cancel-appo{
+    display: inline-block;
+}
+
+
+.three-dots-appo-container .cancel-appo-btn{
+    display: none;
+    font-size: 0.9vw;
+    position: absolute;
+    top: -1.5vw;
+    left: 3vw;
+    padding: 0.3vw;
+    width: 9.5vw;
+    background-color: white;
+    border: 0.08vw solid rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.089);
+    cursor: pointer;
+    animation: cancelAppoButton 0.3s linear forwards;
+}
+
+@keyframes cancelAppoButton {
+    from{ left: 3vw;   }
+    to {  transform: translateX(-11vw);   }
+}
+
+
+
+
+
+/* permission-to-cancel-appo-container */
+.permission-to-cancel-appo-section{
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background: #f09fa43d;
+    text-align: center;
+}
+
+.permission-to-cancel-appo-container{
+    display: flex;
+    background: white;
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.377);
+    height: 50%;
+    width: 80%;
+    border-radius: 1.5vw;
+    margin: auto;
+}
+
+.permission-to-cancel-appo-container > div{
+    height: 10vw;
+    width: 100%;
+    border-radius: 1.5vw;
+    margin: auto;
+    padding: 1.2vw;
+}
+
+.permission-to-cancel-appo-container .permission-title{
+    font-size: 1vw;
+
+}
+
+.permission-to-cancel-appo-container .cancel-appointment-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 18vw;
+    height: 5vw;
+    margin: auto;
+    margin-top: 1vw;
+}
+
+
+.permission-to-cancel-appo-container .cancel-appointment-button-container .btn{
+    width: 8vw;
+    height: 3vw;
+}
+
+
+
+.appoinment-cancel-section{
+    color: #E22424;
+    font-size: 0.8vw;
+    position: absolute;
+    bottom: -0.4vw;
+    left: 16.6%;
+}
+
+
+
+
+
+
+
+
+
+/* APPOINTMENT PREVIOUS */
+/* APPOINTMENT PREVIOUS */
+/* APPOINTMENT PREVIOUS */
+.appoinment-container-previous{
+    display: none;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: white;
+}
+
+
+
+
+
+
+.appoinment-container-previous > div{
+    display: grid;
+    position: relative;
+    justify-content: center;
+    width: 95%;
+    grid-template-columns: 15%  70% 15%;
+    background: white;
+    padding: 0.7vw 0vw 0.7vw 0vw;
+    font-size: 0.9vw;
+    margin-top: 0.5vw;
+    cursor: pointer;
+}
+
+
+.appoinment-container-previous .appoinment-text{
+    align-self: center;
+    margin-left: 0.4vw;
+}
+
+
+
+
+
+
+/* APPOINTMENT upcoming DESCRIPTION */
+.appointment-previous-description-section{
+    display: none;
+    position: absolute;
+    height: 75%;
+    width: 100%;
+    background: White;
+    margin-top: 22%;
+    padding: 2.5vw;
+    padding-top: 1vw;
+    z-index: 1;
+}
+
+
+
+.appointment-previous-description-back{
+    height: 2vw;
+    background: white;
+}
+
+.appointment-previous-description-back .image{
+    height: 1.5vw;
+    width: 1.5vw;
+    cursor: pointer;
+}
+
+.appointment-previous-description-back .image img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.appointment-previous-description-title{
+    height: 2vw;
+    font-size: 1vw;
+    margin-top: 1vw;
+}
+
+.appointment-previous-description-text{
+    font-size: 0.9vw;
+    height: 45%;
+    overflow-y: auto;
+    margin-top: 0.6vw;
+}
+
+
+
+
+.appointment-previous-description-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    align-self: center;
+    margin: auto;
+    margin-top: 1vw;
+}
+
+
+
+
+
+.appointment-previous-description-condition{
+    margin-top: 0.7vw;
+    font-size: 1vw;
+    color: #E22424;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* APPOINTMENT REQUEST */
+/* APPOINTMENT REQUEST */
+/* APPOINTMENT REQUEST */
+
+.appoinment-container-request{
+    display: none;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.appoinment-container-request-nav-bar{
+    display: flex;
+    justify-content: center;
+    align-self: baseline;
+    height: 2vw;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 0vw;
+    border-bottom: 0.08vw solid #ECECEC;
+    margin-bottom: 0.1vw;
+}
+
+.appoinment-container-request-nav-bar div{
+    height: 2vw;
+    width: 6vw;
+    text-align: right;
+    font-size: 1vw;
+    padding: 0vw;
+    cursor: pointer;
+    border-bottom: 0.08vw solid #BCBCBC;
+}
+
+
+
+.appoinment-container-request-nav-bar .appoinment-request-nav-received{
+    text-align: left;
+    border-left: 0.1vw solid #BCBCBC;
+    padding-left: 0.8vw;
+}
+
+
+.appoinment-container-request-nav-bar .appoinment-request-nav-sent{
+    padding-right: 0.8vw;
+}
+
+.appoinment-request-nav-active-button{
+    border-bottom: 0.08vw solid #E22424 !important;
+}
+
+
+
+
+
+/* APPOINTMENT request  SENT SECTION */
+.sent-request-section{
+    display: grid;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    background: white;
+}
+
+
+
+
+
+
+.sent-request-section > div{
+    display: grid;
+    position: relative;
+    justify-content: center;
+    width: 95%;
+    grid-template-columns: 15% 58% 32%;
+    background: white;
+    padding: 0.7vw 0vw 0.7vw 0vw;
+    font-size: 0.9vw;
+    margin-top: 0.3vw;
+}
+
+
+
+.sent-request-section div .appoinment-text{
+    align-self: center;
+    margin-left: 0.4vw;
+    cursor: pointer;
+}
+
+
+
+.request-cancel-button{
+    display: flex;
+    padding: 0.45vw;
+    background-color: White;
+    color: #E22424;
+    width: 6.6vw;
+    height: 2vw;
+    font-size: 0.8vw;
+    border-radius: 0.2vw;
+    border: 0.08vw solid  #E22424;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.request-cancel-button:hover{
+    background-color: #E22424;
+    color: white;
+}
+
+
+.request-sent-canceled-text{
+    color: #E22424;
+    font-size: 0.7vw;
+    padding-top: 0.9vw;
+    width: 80%;
+    text-align: center;
+}
+
+
+
+
+/* APPOINTMENT SENT DESCRIPTION */
+/* APPOINTMENT SENT DESCRIPTION */
+/* APPOINTMENT SENT DESCRIPTION */
+
+.appointment-sent-description-section{
+    display: none;
+    position: absolute;
+    height: 72%;
+    width: 100%;
+    background: White;
+    margin-top: 22.5%;
+    padding: 2.5vw;
+    padding-top: 1vw;
+    z-index: 1;
+}
+
+
+.appointment-sent-description-back{
+    height: 2vw;
+    background: white;
+}
+
+.appointment-sent-description-back .image{
+    height: 1.5vw;
+    width: 1.5vw;
+    cursor: pointer;
+}
+
+.appointment-sent-description-back .image img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.appointment-sent-description-title{
+    height: 2vw;
+    font-size: 1vw;
+    margin-top: 1vw;
+}
+
+.appointment-sent-description-text{
+    font-size: 0.9vw;
+    height: 45%;
+    overflow-y: auto;
+    margin-top: 0.6vw;
+}
+
+
+
+
+
+
+
+
+.appointment-sent-description-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    align-self: center;
+    margin: auto;
+    margin-top: 1.6vw;
+}
+
+
+
+.appointment-sent-description-button-container .btn{
+    background-color: #E22424;
+    color: white;
+    height: 2.3vw;
+    width: 9vw;
+    font-size: 0.8vw;
+    padding: 0.4vw;
+    border-radius: 0.35vw;
+    border: 0.08vw solid  #E22424;
+    transition: 0.2s;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.2s;
+}
+
+
+
+.appointment-sent-description-button-container .btn:nth-child(2){
+    margin-left: 0.6vw;
+}
+
+
+
+.appointment-sent-description-button-container .btn .camera-icon{
+    display: inline-block;
+    height: 100%;
+    width: 2vw;
+    padding: 0.2vw;
+}
+
+.appointment-sent-description-button-container .btn .camera-icon img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* APPOINTMENT request  RECEIVED SECTION */
+/* APPOINTMENT request  RECEIVED SECTION */
+/* APPOINTMENT request  RECEIVED SECTION */
+
+
+.received-request-section{
+    display: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    background: white;
+}
+
+
+
+
+
+.received-request-section > div{
+    display: grid;
+    position: relative;
+    justify-content: center;
+    width: 95%;
+    grid-template-columns: 15% 58% 32%;
+    background: white;
+    padding: 0.7vw 0vw 0.7vw 0vw;
+    font-size: 0.9vw;
+    margin-top: 0.3vw;
+}
+
+
+
+
+
+.received-request-section div .appoinment-text{
+    align-self: center;
+    margin-left: 0.4vw;
+    cursor: pointer;
+}
+
+
+.request-received-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1.7vw;
+    align-self: center;
+}
+
+
+.request-received-button-container .btn{
+    padding: 0.3vw;
+    height: 1.8vw;
+    width: 6.6vw;
+    font-size: 0.8vw;
+    border-radius: 0.2vw;
+    border: 0.08vw solid  #E22424;
+}
+
+
+
+
+.request-received-button-container .btn:nth-child(2){
+    margin-left: 0.2vw;
+}
+
+
+
+.request-canceled-text{
+    color: #E22424;
+    font-size: 0.7vw;
+    padding-top: 0.9vw;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* REQUEST RECEIVED DESCRIPTION DELETE */
+/* REQUEST RECEIVED DESCRIPTION DELETE */
+
+.appointment-request-description-section{
+    display: none;
+    position: absolute;
+    height: 72%;
+    width: 100%;
+    background: White;
+    margin-top: 22.5%;
+    padding: 2.5vw;
+    padding-top: 1vw;
+}
+
+.appointment-request-description-back{
+    height: 2vw;
+    background: white;
+}
+
+
+
+.appointment-request-description-back .image{
+    height: 1.5vw;
+    width: 1.5vw;
+    cursor: pointer;
+}
+
+
+
+.appointment-request-description-back .image img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.appointment-request-description-title{
+    height: 2vw;
+    font-size: 1vw;
+    margin-top: 1vw;
+}
+
+.appointment-request-description-text{
+    font-size: 0.9vw;
+    overflow-y: auto;
+}
+
+
+
+
+.appointment-request-description-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1.7vw;
+    width: 50%;
+    align-self: center;
+    margin: auto;
+    margin-top: 1.5vw;
+}
+
+
+
+.appointment-request-description-button-container .btn{
+    padding: 0.3vw;
+    background-color: White;
+    color: #E22424;
+    height: 1.8vw;
+    width: 6.6vw;
+    font-size: 0.8vw;
+    border-radius: 0.35vw;
+    border: 0.08vw solid  #E22424;
+    transition: 0.2s;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.2s;
+}
+
+
+.appointment-request-description-button-container .btn:hover{
+    background-color: #E22424;
+    color: white;
+}
+
+
+
+.appointment-request-description-button-container .btn:nth-child(2){
+    margin-left: 0.2vw;
+}
+
+
+
+.appointment-request-description-condition{
+    height: 2vw;
+    font-size: 1vw;
+    text-align: center;
+    color: #E22424;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* New Appointment Icon */
+.new-appoinment-icon{
+    justify-self: flex-end;
+    position: relative;
+    width: 3vw;
+    height: 3vw;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    cursor: pointer;
+}
+
+
+.new-appoinment-icon img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.new-appoinment-icon:hover .create-new-appointment-text{
+    display: block;
+}
+
+.create-new-appointment-text{
+    display: none;
+    position: absolute;
+    top: 0vw;
+    left: -11vw;
+    height: 2vw;
+    width: 11vw;
+    padding: 0.2vw;
+    font-size: 0.9vw;
+    box-shadow: 0px 0px 10px -1px #ECECEC;
+}
+
+
+
+/* NEW APPOINTMENT SECTION */
+/* NEW APPOINTMENT SECTION */
+
+.new-appoinment-section{
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #d1564d2c;
+    padding: 1.2vw;
+}
+
+
+.new-appointment-container{
+    height: 100%;
+    width: 100%;
+    background: white;
+    border-radius: 0.7vw;
+    padding: 0.05vw 0.5vw 0.05vw 1vw;
+}
+
+.new-appointment-section-close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0.5w;
+    right: 0.4vw;
+    height: 2.2vw;
+    width: 2.2vw;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.089);
+}
+
+.new-appointment-section-close img{
+    height: 100%;
+    width: 100%;
+    transform: scale(1.7);
+    object-fit: cover;
+}
+
+
+
+.new-appo-title-date{
+    margin-top: 1vw;
+    background: white;
+    font-size: 1.3vw;
+}
+
+
+
+/* All Input Date Container Start */
+.date-input-container{
+    position: relative;
+    margin-top: 0.4vw;
+    width: 14vw;
+    height: 2.5vw;
+    border-radius: 0.6vw;
+}
+
+
+.date-input-container #instalment-date{
+    display: inline;
+    height: 2.5vw;
+    width: 14vw;
+    font-size: 1vw;
+    padding-left: 0.4vw;
+    color: slategray;
+    outline: none;
+    border: 0.1vw solid #E22424;
+    border-radius: 0.5vw;
+    padding: 1vw;
+    box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
+}
+
+
+
+.date-input-container .calender-icon{
+    position: absolute;
+    height: 2.5vw;
+    width: 2.6vw;
+    right: 0vw !important;
+    top: 0vw;
+    pointer-events: none;
+    z-index: 10;
+    background: #E22424;
+    border-radius: 0.4vw;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/resite/calendar-line.svg);
+}
+
+
+/* All Input Date Container End */
+
+
+
+
+
+
+
+.new-appo-title-time{
+    margin-top: 0.7vw;
+    font-size: 1.3vw;
+}
+
+
+.new-appo-time-container-text{
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.new-appo-time-container-parent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-top: 0.4vw;
+    padding-right: 0.9vw;
+}
+
+
+.new-appointment-container .calender-icon{
+    left: 11.5vw !important;
+}
+
+
+
+.new-appo-to{
+    margin-top: 0.4vw;
+    font-size: 1.2vw;
+}
+
+
+
+
+.new-appo-title-description{
+    margin-top: 0.4vw;
+    font-size: 1.3vw;
+}
+
+.new-appointment-container textarea{
+    height: 5vw;
+    width: 90%;
+    margin-top: 0.3vw;
+    border-radius: 0.4vw;
+    outline: none;
+    font-size: 1vw;
+    border: 0.08vw solid #E22424;
+}
+
+
+
+.new-appointment-button-container{
+    display: grid;
+    width: 45%;
+    font-size: 0.9vw;
+    border-radius: 0.4vw;
+    padding: 1vw 0.5vw 1vw 0.5vw;
+    background: #E22424;
+    color: white;
+    margin: auto;
+    text-align: center;
+    margin-top: 0.8vw;
+    cursor: pointer;
+}
+
+
+.new-app-request-success{
+    font-size: 1vw;
+    text-align: center;
+    margin-top: 0.8vw;
+    color: #E22424;
+}
+
+
+
+
+
+
+/* CLIENT SERVICE DESCRIPTION */
+/* CLIENT SERVICE DESCRIPTION */
+/* CLIENT SERVICE DESCRIPTION */
+.client-service-description{
+    display: grid;
+    /* grid-template-rows: 18% 82%; */
+    grid-template-rows: 14vw calc(100% - 14vw);
+    background: #FFF1F2;
+    padding: 0.4vw;
+    width: 100%;
+    min-height: 70vw !important;
+}
+
+.vendor-dashboard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 100%; */
+    height: 14vw;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0.5vw;
+    padding:1vw;
+}
+
+.vendor-dashboard .swiper-wrapper{
+    height: auto;
+}
+
+.vendor-dashboard a{
+    margin-right: 3vw !important;
+}
+
+
+
+.vendor-dashboard .vendor-services{
+    display: grid;
+    justify-content: start;
+    height: 10vw !important;
+    width: 12.5vw !important;
+    border-radius: 0.5vw;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.123);
+    transition: 0.2s;
+    border: 0.2vw solid transparent;
+}
+
+
+.vendor-service-border{
+    width: 90%;
+    height: 0.2vw;
+    position: absolute;
+    bottom: 0vw;
+    margin: auto;
+}
+
+
+.vendor-service-active-border{
+    background: #E22424;
+}
+
+
+.vendor-dashboard .vendor-services:hover{
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.39);
+    transform: scale(1.015);
+    border: 0.2vw solid white;
+
+}
+
+
+
+.vendor-dashboard  .vendor-services div:nth-child(1){
+    font-size: 1.15vw;
+    height: 2.8vw;
+    margin-top: 2.3vw;
+    margin-left: 2vw;
+}
+
+.vendor-dashboard  .vendor-services div:nth-child(2){
+    font-size: 0.9vw;
+    font-weight: 500;
+    height:1.9vw;
+    margin-top: -2.8vw;
+    margin-left: 2.1vw;
+    color: black;
+}
+
+/* CLIENT SECTION END */
+/* CLIENT SECTION END */
+/* CLIENT SECTION END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* VENDOR DASHBOARD START */
+/* VENDOR DASHBOARD START */
+/* VENDOR DASHBOARD START */
+
+.vendor-service-circle-1, .vendor-service-circle-2{
+    position: absolute;
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 100%;
+}
+
+
+/* individual services */
+
+.client-service-description .vendor-dashboard  .vendor-services-bargaining{
+    background:#E8F8FF ;
+    color: #27AB91;
+}
+
+
+/* circle */
+.vendor-services-bargaining .vendor-service-circle-1{
+    bottom: -1.3vw;
+    left: 2.2vw;
+    background: #65BCAB;
+}
+
+.vendor-services-bargaining .vendor-service-circle-2{
+    top: 1.3vw;
+    right: -1.3vw;
+    background: #A5EAFF;
+}
+
+
+
+.client-service-description .vendor-dashboard  .vendor-services-fixed{
+    background:#FFE9F4 ;
+    color: #CA6F2E;
+}
+
+
+/* circle */
+.vendor-services-fixed .vendor-service-circle-1{
+    bottom: -1.3vw;
+    right: 1.8vw;
+    background: #F5A478;
+}
+
+.vendor-services-fixed .vendor-service-circle-2{
+    top: 3vw;
+    left: -1.3vw;
+    background: #FFEEC5;
+}
+
+
+
+
+
+
+.client-service-description .vendor-dashboard  .vendor-services-installment{
+    background:#FFF6F1 ;
+    color: #FF00A1;
+}
+
+
+/* circle */
+.vendor-services-installment .vendor-service-circle-1{
+    bottom: -1.2vw;
+    right: 1.8vw;
+    background: #FF96DA;
+}
+
+.vendor-services-installment .vendor-service-circle-2{
+    top: 3.2vw;
+    left: -1.25vw;
+    background: #FF7EC2;
+}
+
+
+
+
+
+
+.client-service-description .vendor-dashboard  .vendor-services-subscription{
+    background:#F5FFFD ;
+    color: #B9AAB6;
+}
+
+
+/* circle */
+.vendor-services-subscription .vendor-service-circle-1{
+    bottom: -1.3vw;
+    left: 1.8vw;
+    background: #D8DBFF;
+}
+
+.vendor-services-subscription .vendor-service-circle-2{
+    top: -1.3vw;
+    right: 1.8vw;
+    background: #A4E2FF;
+}
+
+
+
+.client-service-description .vendor-dashboard  .vendor-services-package{
+    background:#FFE9F4 ;
+    color: #CA6F2E;
+}
+
+
+/* circle */
+.vendor-services-package .vendor-service-circle-1{
+    bottom: -1.3vw;
+    right: 1.8vw;
+    background: #F5A478;
+}
+
+.vendor-services-package .vendor-service-circle-2{
+    top: 3vw;
+    left: -1.3vw;
+    background: #FFEEC5;
+}
+
+/* VENDOR DASHBOARD END */
+/* VENDOR DASHBOARD END */
+/* VENDOR DASHBOARD END */
+
+
+
+/* VENDOR DASHBOARD START */
+/* VENDOR DASHBOARD START */
+/* VENDOR DASHBOARD START */
+
+.vendor-resit-section{
+    background-color: #FFF1F2;
+    margin: auto;
+    align-self: baseline;
+    width: 100%;
+    padding: 0vw;
+    margin-top: 2vw;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+
+/* .vendor-resit-section iframe{
+    height: 100%;
+    width: 100%;
+    border-radius: 1vw;
+    background: #FFF1F2;
+} */
+
+
+
+
+
+.tk-sign{
+    font-weight: 800 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Animation Data Loading Start */
+.testing-section{
+    height: 3vw;
+    width: 10vw;
+    background: royalblue;
+}
+
+
+
+.loader,
+.loader:before,
+.loader:after{
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+}
+
+
+.loader{
+    color: #E22424;
+    font-size: 4px;
+    margin: 80px auto;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 3.5em;
+}
+
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+
+/* Animation Data Loading End */
+
+
+textarea{
+    resize: none;
+}
