@@ -1,0 +1,1278 @@
+.fixed-resit-section{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0vw;
+    padding-top: 0.8450vw;
+    padding-bottom: 2.60vw;
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.247);
+    border-radius: 0.650vw;
+    background: white;
+    background-image: url(../images/resite/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 25%;
+}
+
+
+.fixed-resit-section > div{
+    width: 100%;
+    /* border-bottom: 0.050vw solid #ECECEC; */
+}
+
+
+
+/* qr code section */
+.qr-code-section{
+    display: flex;
+    justify-content: space-between;
+    height: 5.4vw;
+    width: 100%;
+    border-bottom: none !important;
+}
+
+
+
+.qr-code-section .qr-code-side{
+    display: grid;
+    grid-template-columns:30% 70%;
+    height: 100%;
+    width: 17vw;
+    margin-left: 0.8450vw;
+    padding: 0.650vw;
+}
+
+.qr-code-section .qr-code-side .qr-code img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.qr-code-section .qr-code-side .resit-name-section{
+    display: grid;
+    padding: 0.650vw;
+    font-size: .85vw;
+}
+
+
+.qr-code-section .qr-code-side .resit-name-section div:nth-child(2){
+    font-size: 0.72vw;
+}
+
+
+
+
+
+
+/* print & share Section */
+.qr-code-section .print-share-side{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    height: 100%;
+    width: 7.8vw;
+    margin-right: .85vw;
+    padding-top: .85vw;
+}
+
+.qr-code-section .print-share-side div{
+    height: 1.430vw;
+    width: 1.430vw;
+}
+
+.qr-code-section .print-share-side .print{
+    cursor: pointer;
+}
+
+.qr-code-section .print-share-side div img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+/* title */
+/* title */
+.fixed-resit-section .resit-title{
+    width: 35%;
+    font-size: 1.8vw;
+    margin: auto;
+    color: #E22424;
+    border-bottom:  0.050vw solid #E22424;
+    font-weight: 500;
+    padding: 0.40vw;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/* barcode section */
+/* barcode section */
+.fixed-resit-section .resit-barcode{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 7.8vw;
+    margin: auto;
+    padding: 0.650vw 0.8450vw 0px 0.8450vw;
+}
+
+
+
+.resit-barcode-invoice{
+    display: grid;
+    position: relative;
+    grid-template-rows: 20% 60%;
+    height:100%;
+    width: 100%;
+}
+
+
+.resit-barcode-invoice > div:nth-child(1){
+    font-size: 0.8vw;
+    align-self: start;
+}
+
+.resit-barcode-invoice > div:nth-child(2){
+    align-self: end;
+    font-size: 1.3vw;
+}
+
+
+
+/* barcode */
+.bar-code-container{
+    width: 16.25vw;
+    height: 100%;
+    position: absolute;
+    right: 0vw;
+}
+
+.bar-code-image{
+    width: 15.6vw;
+    height: 65%;
+    padding: 0.1950vw;
+    position: absolute;
+    right: 0.40vw;
+}
+
+.bar-code-image img{
+    height: 100%;
+    width: 100%;
+}
+
+.bar-code-date{
+    font-size: 1.040vw;
+    position: absolute;
+    bottom: 0.065vw;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* fixed price 2nd section */
+/* fixed price 2nd section */
+.vendor-resit-section-two{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding: 0.8450vw;
+}
+
+
+
+
+.vendor-resit-section-two .service-items{
+    padding-right: 0.5850vw;
+    overflow-y: hidden;
+    height: 18.20vw;
+    padding: 0.065vw;
+    border-bottom: 0.065vw solid #ECECEC;
+
+}
+
+
+
+.vendor-resit-section-two .service-items .service-item-table{
+    background: white;
+    height: 100%;
+    width: 100%;
+    font-size: 1.3vw;
+    padding-top: 0vw;
+    padding: 0.650vw;
+    overflow-y: auto;
+}
+
+
+
+
+
+
+
+
+
+/* Scrollbar customization */
+
+.service-item-table::-webkit-scrollbar{
+    width: 0.340vw;
+    background: #FBF6F6;
+}
+
+
+
+.service-item-table::-webkit-scrollbar-thumb{
+    background: #9e9e9e;
+    border-radius: 3.250vw;
+    border: 0.2vw solid rgba(0, 0, 0, 0);
+}
+
+
+
+
+.service-item-table::-webkit-scrollbar-button:single-button{
+    background-color: #ffffff;
+    display: block;
+    border-style: solid;
+    height: 0.9750vw;
+    width: 0.650vw;
+}
+
+
+
+
+.service-item-table::-webkit-scrollbar-button:single-button:vertical:decrement{
+    border-width: 0vw .3vw 0.40vw .3vw;
+    border-color: transparent transparent #555555 transparent;
+}
+
+
+
+
+
+.service-item-table::-webkit-scrollbar-button:single-button:vertical:increment{
+    border-width:0vw 0.1950vw  0.40vw 0 0.1950vw;
+    border-color: #555555 transparent transparent transparent;
+}
+
+
+
+
+
+
+.vendor-resit-section-two table{
+    width: 99%;
+    margin-bottom: 0.8450vw;
+    margin-right: 4.230vw;
+    border-top-right-radius: 0.650vw;
+    border-top-left-radius: 0.650vw;
+    overflow: hidden;
+    padding: 0.650vw;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.151);
+}
+
+
+.vendor-resit-section-two table th,
+.vendor-resit-section-two table td{
+    font-size: 0.80vw;
+}
+
+
+.vendor-resit-section-two table td{
+    width: 100%;
+    border-bottom:  0.050vw solid #ECECEC;
+    padding: 0.60vw;
+}
+
+
+.vendor-resit-section-two table th{
+    display: grid;
+    align-items: center;
+    background-color: #E22424;
+    color: white;
+    border-top-right-radius: 0.340vw;
+    border-top-left-radius: 0.340vw;
+    padding: 0.60vw;
+}
+
+
+.vendor-resit-section-two table th p{
+    display: inline-block;
+    margin: auto;
+    margin-left: 2.60vw;
+    font-weight: 500;
+}
+
+
+.vendor-resit-section-two table td p{
+    display: inline-block;
+    margin: auto;
+    margin-left: 0.8450vw;
+}
+
+
+
+
+
+/* 2nd section right side */
+/* 2nd section right side */
+
+
+/* price section */
+.vendor-resit-price-section{
+    display: grid;
+    height: 100%;
+    border-left:  0.050vw solid rgba(0, 0, 0, 0.062);
+}
+
+
+
+.price{
+    display: grid;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.560vw;
+    font-weight: 500;
+    height: 7.150vw;
+}
+
+
+.price span{
+    font-size: 1.170vw;
+    font-weight: 400;
+    margin-top: -0.650vw;
+}
+
+
+
+
+
+
+
+
+
+
+/* delivery Section */
+.vendor-resit-price-section .delivery{
+    padding-top: 0.340vw;
+    display: grid;
+    align-items: center;
+    width: 100%;
+    font-size: 1.430vw;
+    font-weight: 500;
+    text-align: center;
+    border-top:  0.050vw solid #ECECEC;
+}
+
+
+
+.vendor-resit-price-section .delivery p{
+    font-size: 0.70vw;
+    display: inline-block;
+    height: 2.340vw;
+    border:  0.050vw solid #E22424;
+    padding: 0.40vw;
+    padding-right: 2.6vw;
+    border-radius: 0.460vw;
+    overflow: hidden;
+    padding-top: 0.60vw;
+}
+
+
+
+.vendor-resit-price-section .delivery p span{
+    padding-right: 0.4vw;
+}
+
+
+
+.delivery-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0.8450vw;
+    padding-left: 0.8450vw;
+}
+
+.delivery-date > div{
+    align-self: start;
+}
+
+.delivery-date p{
+    display: inline-block;
+    position: relative;
+    padding-right: 2vw;
+}
+
+.delivery-date .calander-icon{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* height: 2.2vw; */
+    height: 100%;
+    width: 2.2vw;
+    right: 0vw;
+    top: 0vw;
+    padding: 0.5vw !important;
+    margin: 0vw;
+    background: #E22424;
+    z-index: 100;
+    border-radius: 0.150vw;
+}
+
+
+.delivery-date .calander-icon img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.delivery-date input{
+    height: 2.2750vw;
+    width: 13.0vw;
+    border-radius: 0.520vw;
+    border:  0.050vw solid #E22424;
+    font-size: 1.3vw;
+}
+
+.old-delivery{
+    opacity: 0.7;
+}
+
+
+.new-delivery{
+    border-top: none !important;
+}
+
+
+.new-delivery .waiting-for-accept{
+    font-size: 0.9750vw;
+    font-weight: 400;
+}
+
+.new-delivery .cancel-request-button{
+    width: 7.40vw;
+    height: 1.8vw;
+    font-size: 0.70vw;
+    padding: 0.40vw;
+    border:  0.050vw solid #E22424;
+    margin: auto;
+    margin-top: 0.8450vw;
+    border-radius: 0.520vw;
+}
+
+
+.new-delivery .new-delivery-note{
+    color: #E22424;
+    margin-top: 0.780vw;
+    font-size: 0.9750vw;
+    text-align: left;
+    padding: 0.8450vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FACILITIES & PAYMENT */
+/* FACILITIES & PAYMENT */
+.facilities-payment-section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+.facilities-payment-section .facilities{
+    padding: 0.8450vw;
+}
+
+.facilities-payment-section .facilities > div{
+    font-size: 1.690vw;
+}
+
+
+
+
+.facilities-payment-section .facilities ol{
+    font-size: 1.240vw;
+    padding-left: 3.250vw;
+}
+
+
+
+/* payment section */
+/* payment section */
+/* payment section */
+.facilities-payment-section .payment{
+    display: grid;
+    text-align: center;
+    border-left: 0.050vw solid #ECECEC;
+    padding-top: 0.8450vw;
+}
+
+.facilities-payment-section .payment > div{
+    height: 7.8vw;
+    padding:1.4vw 0.8450vw 0.5850vw 0.8450vw;
+    border-bottom: 0.050vw solid #ECECEC;
+
+}
+
+
+.facilities-payment-section .payment .payment-status > div:nth-child(1){
+    font-size: 1.560vw;
+}
+
+.facilities-payment-section .payment .payment-status > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3vw;
+}
+
+
+
+
+.facilities-payment-section .payment .payment-status .cross{
+    display: inline-block;
+    align-items: center;
+    border-radius: 100%;
+    height: 100%;
+    width: 0.9750vw;
+    margin-left: 0.650vw;
+    margin-top: 0.065vw;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.9750vw;
+}
+
+
+.facilities-payment-section .payment .payment-status .cross img{
+    height: 100%;
+    width: 100%;
+}
+
+.facilities-payment-section .payment .service-status > div:nth-child(1){
+    font-size: 1.430vw;
+
+}
+
+.facilities-payment-section .payment .service-status > div:nth-child(2){
+    font-size: 0.9750vw;
+}
+
+
+
+.facilities-payment-section .payment .delivery-status{
+    display: grid;
+    height: 9.10vw;
+    border-bottom: none;
+}
+
+
+
+
+.facilities-payment-section .payment .delivery-status > .btn{
+    width: 10.40vw;
+    margin: auto;
+    font-size: 0.650vw;
+    font-weight: 500;
+    padding: 0.40vw 0.650vw 0.40vw 0.650vw;
+    border-radius: 0.60vw;
+    border:  0.050vw solid  #E22424;
+    margin-top: 0.340vw;
+}
+
+
+
+
+
+
+
+/* Instruction section */
+/* Instruction section */
+
+.facilities-instruction-section{
+    display: grid;
+    min-height: 10.40vw;
+    width: 100%;
+    padding: 0.8450vw;
+}
+
+.facilities-instruction-section .title{
+    font-size: 1.82vw;
+}
+
+.facilities-instruction-section .instruction-data-btn{
+    display: inline;
+    color: #E22424;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.facilities-instruction-section > div:nth-child(1){
+    height: 3.250vw;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+/* instruction paragraph */
+.facilities-instruction-section > div:nth-child(2){
+    font-size: 1.040vw;
+}
+
+
+
+
+.more-instruction-data{
+    display: none;
+}
+
+
+
+
+
+
+
+/* BUTTON SECTION */
+/* BUTTON SECTION */
+.facilities-button-section{
+    display: grid;
+    grid-template-columns: 42% 58%;
+    width: 100%;
+    height: 4.230vw;
+    border-bottom: none !important;
+    position: relative;
+    margin-top: 1vw;
+}
+
+.facilities-button-section .button-container{
+    display: flex;
+    height: 4.230vw;
+    width: 100%;
+}
+
+
+.facilities-button-section .button-container .btn{
+    display: grid;
+    align-items: center;
+    width: 11.250vw !important;
+    height: 3.0vw;
+    text-align: center;
+    margin: auto;
+    border-radius: 0.50vw;
+    font-size: 0.9vw;
+    padding: 0vw;
+    border:  0.050vw solid  #E22424;
+}
+
+
+
+
+/* need help section */
+.facilities-button-section .need-help{
+    display: grid;
+    justify-self: end;
+    align-items: center;
+    height: 4vw;
+    width: 11.70vw;
+}
+
+.facilities-button-section .need-help p{
+    font-size: 0.80vw;
+}
+
+.facilities-button-section .need-help a{
+    font-size: 0.650vw;
+    color: #E22424;
+}
+
+.btn{
+    padding: 0.40vw;
+}
+
+
+
+/* FOOTER BUTTON SECTION */
+
+.footer-button-container{
+    display: grid;
+    justify-content: right;
+    position: absolute;
+    top: 0.8450vw;
+    z-index: 100;
+    width: 60%; 
+    padding: 1vw;
+}
+
+
+.footer-button-container .btn{
+    display: grid;
+    align-items: center;
+    width: 16.250vw !important;
+    height: 3.90vw;
+    text-align: center;
+    margin: auto;
+    border-radius: 0.8450vw;
+    font-size: 1.3vw;
+    padding: 0vw;
+    border:  0.050vw solid  #E22424;
+}
+
+
+.footer-button-container .after-review-text{
+    display: grid;
+    align-items: center;
+    height: 3.90vw;
+    font-size: 1.040vw;
+    color: #E22424;
+}
+
+
+
+
+/* client decline request canceled */
+.client-decline-section{
+    width: 100%;
+    text-align: center;
+    color: #E22424;
+    margin-top: 0.650vw;
+}
+
+.client-decline-section a{
+    color: black;
+    border-bottom:  0.050vw solid black;
+
+}
+
+.client-decline-section a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+/* All Pop-Ups section */
+/* All Pop-Ups section */
+/* All Pop-Ups section */
+.cancel-after-payment-pop-up,
+.cancel-before-payment-pop-up,
+.delivery-confirm-pop-up,
+.new-delivery-date-pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0vw;
+    left: 0vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #f09fa43d;
+    z-index: 2000;
+}
+
+.cancel-after-payment-container,
+.cancel-before-payment-container,
+.delivery-confirm-container{
+    display: grid;
+    justify-content: center;
+    width: 30.10vw;
+    height: 20.10vw;
+    background: white;
+    border-radius: 0.680vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
+}
+
+
+
+.cancel-after-payment-title,
+.cancel-before-payment-title,
+.delivery-confirm-title,
+.new-delivery-date-title{
+    text-align: center;
+    font-size: 1.670vw;
+    height: 2.270vw;
+    margin-top: 5.20vw;
+}
+
+
+.cancel-after-payment-warning{
+    font-size: 0.80vw;
+    color: #E22424;
+    margin-top: -0.4vw;
+    text-align: center;
+}
+
+.cancel-after-payment-button-container,
+.cancel-before-payment-button-container,
+.delivery-confirm-button-container,
+.new-delivery-date-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5.850vw;
+    width: 19.50vw;
+    margin: auto;
+    margin-bottom: 3.80vw;
+}
+
+
+.cancel-after-payment-button-container .btn,
+.cancel-before-payment-button-container .btn,
+.delivery-confirm-button-container .btn,
+.new-delivery-date-button-container .btn{
+    width: 8.10vw;
+    height: 2.650vw;
+    font-size: 1.0vw;
+    padding: 0.50vw;
+    border-radius: 0.650vw;
+    border:  0.050vw solid  #E22424;
+}
+
+
+
+
+
+
+/* NEW DELIVERY DATE popUp section */
+/* NEW DELIVERY DATE popUp section */
+/* NEW DELIVERY DATE popUp section */
+
+
+
+.new-delivery-date-container{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    width: 36.250vw;
+    height: 24.0vw;
+    background: rgb(255, 255, 255);
+    border-radius: 0.680vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
+}
+
+
+
+
+
+/* ADVANCE PAYMENT date input Start */
+/* ADVANCE PAYMENT date input Start */
+/* ADVANCE PAYMENT date input Start */
+
+.advanced-payment-date-input-container{
+    display: grid;
+    height: 2.50vw;
+    width: 26.0vw;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 45% 10% 45%;
+    text-align: center;
+    margin-left: -1.30vw;
+    position: relative;
+    padding: 0vw;
+}
+
+
+.advanced-payment-date-input-container div{
+    display: grid;
+    align-items: center;
+    font-size: 1.3vw;
+}
+
+
+.advanced-payment-date-input-container #instalment-date{
+    display: inline;
+    padding: 0.650vw;
+    height: 2.50vw;
+    width: 100%;
+    font-size: 1.040vw;
+    padding-left: 0.650vw;
+    color: slategray;
+    background: white;
+    outline: none;
+    border: 0.06vw solid #E22424;
+    border-radius: 0.60vw;
+    box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.253);
+
+    position: relative;
+}
+
+.calender-icon{
+    position: absolute;
+    height: 2.50vw;
+    width: 2.2750vw;
+    right: 0vw !important;
+    pointer-events: none;
+    z-index: 10;
+    background: #E22424;
+    border-radius: 0.50vw;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/resite/calendar-line.svg);
+}
+
+.calender-icon:nth-child(2){
+    right: 14.40vw !important;
+}
+
+/* ADVANCE PAYMENT date input End */
+/* ADVANCE PAYMENT date input End */
+/* ADVANCE PAYMENT date input End */
+
+
+/* new delivery close button */
+
+.new-delivery-date-close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -3.25vw;
+    right: -1.950vw;
+    height: 3.250vw;
+    width: 3.250vw;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px 1px #ECECEC;
+    transform: scale(1.02);
+}
+
+
+.new-delivery-date-close img{
+    height: 100%;
+    width: 100%;
+    transform: scale(1.6);
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+/* REQUEST SENT POPUP SECTION */
+/* REQUEST SENT POPUP SECTION */
+/* REQUEST SENT POPUP SECTION */
+
+.loading-animation-pop-up{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0vw;
+    left: 0vw;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #ffffff3d;
+    z-index: 2000;
+}
+
+
+
+.loading-animation-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 36.250vw;
+    height: 24.50vw;
+    background: rgb(255, 255, 255);
+    border-radius: 0.680vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.377);
+    padding: 0.80vw;
+}
+
+
+/* REQUEST SENT ANIMATION START */
+.loading-animation-animation-container{
+    display: grid;
+    height: 14.0vw;
+    width: 24.50vw;
+    margin: auto;
+}
+
+
+.loading-animation-animation-container .image{
+    position: relative;
+    align-self: flex-end;
+    justify-self: center;
+    height: 10.0vw;
+    width: 10.0vw;
+    margin-bottom: 0.8450vw;
+}
+
+
+
+.loading-animation-animation-container .image img{
+    height: 100%;
+    width: 100%;
+    transform: scale(0);
+    /* animation: bubbleAnimations 0.4s linear 2s forwards; */
+    animation: bubbleAnimations 0.4s linear 1.2s forwards;
+}
+
+
+.loading-animation-animation-container .image .bubble{
+    position: absolute;
+    height: 1.270vw;
+    width: 1.270vw;
+}
+
+.loading-animation-animation-container .image .bubble img{
+    height: 100%;
+    width: 100%;
+}
+
+.loading-animation-animation-container .image .bubble:nth-child(2){
+    top: -1.70vw;
+    left: -4.20vw;
+    transform: translateY(5.20vw);
+    animation: bubbleAnimation 0.8s linear 0.3s forwards;
+}
+
+
+.loading-animation-animation-container .image .bubble:nth-child(3){
+    height: 2.0vw;
+    width: 2.0vw;
+    top: -0.650vw;
+    right: -1.90vw;
+    transform: translateY(5.20vw);
+    animation: bubbleAnimation 1.2s ease-out forwards;
+
+}
+
+
+.loading-animation-animation-container .image .bubble:nth-child(4){
+    height: 0.680vw;
+    width: 0.680vw;
+    bottom: 3.90vw;
+    right: -3.00vw;
+    transform: translateY(5.20vw);
+    animation: bubbleAnimation 0.9s ease-in 0.4s forwards;
+}
+
+
+.loading-animation-animation-container .image .bubble:nth-child(5){
+    height: 0.780vw;
+    width: 0.780vw;
+    left: -1.630vw;
+    bottom: 5.850vw;
+    transform: translateY(5.20vw);
+    animation: bubbleAnimation .8s ease-in-out forwards;
+}
+
+@keyframes bubbleAnimation {
+    from{ transform: translateY(5.20vw); }
+    to{ transform: translateY(0vw); }
+}
+
+
+@keyframes bubbleAnimations {
+    from{ transform: scale(0); }
+    to{ transform: scale(1);  }
+}
+
+
+.loader{
+    position: absolute;
+    top: -19.5vw;
+    overflow: hidden;
+}
+
+
+
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 8em;
+  height: 8em;
+}
+
+.loader:after{
+    left:0vw;
+}
+
+.loader {
+    margin: 8.7vw 15.2vw;
+    font-size: 1.28vw;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.8vw solid rgba(0, 0, 0, 0.2);
+  border-right: 0.8vw solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.8vw solid rgba(255, 255, 255, 0.2);
+  border-left: 0.8vw solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  /* -webkit-animation:  load8 2.5s 1 linear forwards;
+  animation: load8 2.5s 1 linear forwards; */
+  -webkit-animation:  load8 1.4s 1 linear forwards;
+  animation: load8 1.4s 1 linear forwards;
+}
+
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  99% {
+    -webkit-transform: rotate(1260deg);
+    transform: rotate(1260deg);
+  }
+  100%{
+      opacity: 0;
+  }
+}
+
+
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  99% {
+    -webkit-transform: rotate(1260deg);
+    transform: rotate(1260deg);
+  }
+  100%{
+      opacity: 0;
+  }
+}
+
+
+
+
+
+/* REQUEST SENT ANIMATION END */
+.request-sent-title,
+.loading-animation-title{
+    text-align: center;
+    font-size: 1.7550vw;
+    height: 1.270vw;
+    margin-top: -50.50vw;
+    opacity: 0;
+    /* animation: textAnimations 0.4s linear 2s forwards; */
+    animation: textAnimations 0.4s linear 1.2s forwards;
+
+}
+
+.loading-animation-title{
+    font-size: 1.560vw;
+}
+
+.request-sent-button-container,
+.loading-animation-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5.850vw;
+    width: 19.50vw;
+    margin: auto;
+    margin-top: -24.0vw;
+    opacity: 0;
+    /* animation: textAnimations 0.4s linear 2s forwards; */
+    animation: textAnimations 0.4s linear 1.2s forwards;
+
+}
+
+
+.request-sent-button-container .btn,
+.loading-animation-button-container .btn{
+    width: 9.10vw;
+    height: 2.60vw;
+    font-size: 1.040vw;
+    padding: 0.40vw;
+    border-radius: 0.650vw;
+    border:  0.050vw solid  #E22424;
+}
+
+
+
+
+@keyframes textAnimations {
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+
+
+
+
+/* CLIENT REQUEST TO CANCEL ORDER */
+.client-request-cancel-order-section{
+    height: 9.750vw;
+    width: 26.0vw !important;
+    background: #ffffff;
+    margin: auto;
+    padding: 0.8450vw;
+}
+
+
+.client-request-cancel-order-title{
+    width: 100%;
+    background: white;
+    text-align: center;
+    font-size: 1.170vw;
+}
+
+
+.client-request-cancel-order-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3.90vw;
+    width: 22.750vw;
+    margin: auto;
+    margin-top: 0.8450vw;
+
+}
+
+
+
+.client-request-cancel-order-button-container .btn{
+    width: 45%;
+    height: 2.60vw;
+    font-size: 1.040vw;
+}
+
+
+
+.tk-sign{
+    font-weight: 800 !important;
+}

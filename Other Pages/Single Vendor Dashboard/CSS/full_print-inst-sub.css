@@ -1,0 +1,278 @@
+.fixed-resit-section{
+    padding: 1.30vw;
+}
+
+
+/* Service and Facilities Section Start */
+.service-item-facilities-section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding: 1.30vw;
+    background-image: url(../images/resite/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 25%;
+}
+
+
+
+
+
+.service-item-section{
+    display: grid;
+    grid-template-columns: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0vw;
+}
+
+
+
+.service-item-facilities-section .service-item-section .service-items{
+    height: auto;
+    width: 100%;
+    margin: auto;
+    padding-right: 1.040vw;
+}
+
+
+.service-items .service-item-table{
+    width: 100% !important;
+    padding: 0.650vw;
+    background: transparent !important;
+}
+
+.service-items .service-item-table table{
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.247) !important;
+}
+
+
+.service-items .service-item-table table td{
+    background: transparent !important;
+}
+
+
+/* Service and Facilities Section End */
+
+
+
+
+
+/* Facilities Section start*/
+
+.facilities-section{
+    border-left: 0.0520vw solid #ECECEC;
+}
+
+
+/* title */
+.facilities-title{
+    position: absolute;
+    bottom: 1.170vw;
+    left: 2.210vw;
+    font-size: 1.3650vw !important;
+}
+
+
+
+.service-item-section .service-items{
+    border-bottom: 0.650vw solid transparent;
+}
+
+
+.facilities-section li{
+    margin-top: 0.390vw;
+}
+
+
+
+
+/* Facilities Section End*/
+
+
+/* Installment price Section start */
+
+.installment-price-section{
+    height: 18.20vw;
+    width: 100%;
+    padding: 1.30vw 0vw 1.30vw 0vw;
+}
+
+.print-fixed-price-section{
+    height: 10vw;
+}
+
+
+.installment-price-section div{
+    border-left: 0.0vw solid transparent;
+    font-weight: 400;
+
+}
+
+.installment-price-section > div > div{
+    padding: 0.650vw 0vw 0.650vw 0vw !important;
+}
+
+
+/* Installment price Section end */
+
+
+
+/* Installment Number Section start */
+
+.installment-number-section{
+    display: grid;
+    align-items: center;
+    width: 100%;
+
+}
+
+.installment-number-section .installment-number-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.30vw 0vw 1.30vw 0vw;
+}
+
+.installment-number-section .installment-number-container > div:nth-child(1){
+    border-right: 0.0520vw solid #ECECEC;
+    height: 100% !important;
+}
+
+
+
+
+.installment-number-section .installment-number-container > div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+}
+
+
+.installment-number-section .installment-number-container:nth-child(1){
+    border-bottom: 0.0520vw solid #ECECEC;
+}
+
+.installment-number-section .installment-number-container > div div:nth-child(2){
+    margin-top: 0.325vw;
+}
+
+
+
+/* Installment Number Section end */
+
+/* Installment Table Section start */
+
+.subscription-table-container-parent{
+    text-align: center;
+}
+
+
+.installment-table-main-section{
+    height: auto;
+    width: 100% !important;
+    margin: auto;
+    margin-top: 2.60vw;
+}
+
+
+
+.installment-table-title-button,
+.installment-table-section-without-interest .installment-table{
+    text-align: center;
+}
+
+
+.installment-table-main-section .installment-table-container .side-dashed-border,
+.installment-table-section-without-interest .side-dashed-border{
+    height: auto !important;
+}
+
+
+.installment-table:nth-last-child(1){
+    margin-bottom: 0vw;
+}
+
+
+.installment-table-main-section .advance-payment-table .installment-table-row-2{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.installment-table-main-section .installment-table-row-2-compounding{
+    text-align: center;
+}
+
+
+
+.installment-table-row-2-compounding > div:nth-child(1) > div:nth-child(2){
+    border-right: 0.0520vw solid transparent;
+}
+
+
+.installment-table-row-1{
+    text-align: center;
+}
+
+
+.installment-table-row-1 .installment-table-col-left{
+    padding-left: 0vw;
+    /* padding-right: 20%; */
+    padding-right: 1vw;
+}
+
+
+.print-resit-table .installment-table-row-1 .installment-table-col-left .date p{
+    padding-left: 3.5vw;
+}
+
+.note-about-changes{
+    text-align: center;
+    padding: 0.650vw 0vw 0.650vw 0vw;
+}
+
+
+.note-about-changes P{
+    margin: 0vw !important;
+    margin-top: 0.260vw !important;
+}
+
+
+.installment-table-success-note{
+    border-right: 0.008vw solid transparent;
+    border-left: 0.008vw solid transparent;
+    background-size: 12%;
+    margin-top: 0vw;
+}
+
+/* Installment Table Section End */
+
+
+
+
+
+
+
+
+/* Installment Interest Start */
+
+.installment-table-row-2{
+    text-align: center;
+}
+
+/* Installment Interest End */
+
+
+
+
+
+
+
+

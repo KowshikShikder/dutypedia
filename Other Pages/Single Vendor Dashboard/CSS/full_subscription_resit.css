@@ -1,0 +1,726 @@
+/* Subscription Table Start Start */
+
+
+.facilities-payment-section .payment{
+    min-width: 36vw;
+}
+
+
+
+
+/* Subscription Table 1st Row Start */
+.subscription-table-container-parent .side-dashed-border > div{
+    border-bottom: 0.050vw solid #ECECEC;
+    padding: 1.30vw 0.650vw 1.30vw 0.650vw;
+    background: white;
+}
+
+
+.subscription-table-container-parent .sub-first-row{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    width: 100%;
+}
+
+
+
+
+
+/* Table  */
+.subscription-table-container-parent .side-dashed-border{
+    border-left: none;
+}
+
+
+
+
+
+.sub-payment-date-title{
+    position: relative;
+    background: white;
+    font-size: 1.2350vw;
+    margin-bottom: 0.260vw;
+    padding-right: 0vw;
+}
+
+
+/* Price and Duration hover text  */
+.sub-payment-date .hover-edit-price{
+    width: 8.450vw;
+    right: -2.1250vw !important;
+}
+
+.hover-edit-price{
+    width: 8.450vw;
+    right: -8.1250vw !important;
+}
+
+
+/* Payment Date hover text */
+.hover-edit-payment-date{
+    right: 1.560vw;
+    top: 0.390vw;
+    width: 8.450vw;
+    font-size: 0.910vw;
+}
+
+
+
+
+/* Old Date Section */
+.sub-old-date-section{
+    opacity: 0.5;
+}
+
+
+
+.sub-old-date{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    font-size: 0.780vw;
+    text-align: center;
+    padding: 0.650vw 0.650vw 0vw 0.650vw;
+}
+
+
+/* title */
+.sub-date-title{
+    font-size: 1.0vw;
+    padding-top: 0.520vw;
+    width:100%;
+}
+
+
+/* Dates */
+.sub-date-dates ol{
+    padding-left: 2.340vw;
+    margin-bottom: 0.3250vw;
+}
+
+.sub-date-dates ol li{
+    margin-top: 0.780vw;
+    padding-left: 0.130vw;
+    text-align: left;
+}
+
+.sub-new-date .sub-date-dates div{
+    display: grid;
+    grid-template-columns: 5% 77% 17%;
+    padding-top: 0.7150vw;
+    width: 14.950vw;
+    padding-left: 1.30vw;
+}
+
+.sub-new-date{
+    padding-top: 0vw;
+}
+
+
+/* New Delivery Icon */
+.new-delivery-img-container{
+    width: 1.040vw;
+    height: 1.040vw;
+    border-radius: 100%;
+    margin-right: 0.130vw;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.493);
+    padding: 0.1950vw;
+    background: white;
+}
+
+
+.new-delivery-img-container img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+/* Payment Status Section */
+.subscription-table-container-parent .sub-first-row .sub-payment-status{
+    display: grid;
+    align-items: center;
+    background: white;
+    border-left: 0.050vw solid #ECECEC;
+}
+
+.payment-drop-down-section{
+    right: -0.6vw;
+}
+
+
+.payment-drop-down-option-section .drop-down-option,
+.payment-drop-down-section .payment-drop-down-top{
+    font-size: 0.7vw;
+}
+
+.payment-drop-down-option-section .cross{
+    height: 0.90vw !important;
+    width: 0.90vw !important;
+}
+
+/* For Only Subscription Start*/
+.subscription-table-container-parent .drop-down-top{
+    transform: translateX(-1.6vw);
+}
+
+.subscription-table-container-parent .payment-drop-down-section{
+    transform: translateX(0.3vw);
+}
+
+/* For Only Subscription End*/
+
+
+
+/* Not For subs and install Start*/
+.my-payment-dropdown{
+    width: 4vw !important;
+    margin: auto !important;
+}
+
+.my-payment-dropdown .drop-down-top{
+    margin-top: 0.6vw !important;
+    transform: translate(-1.8vw,-0.4vw) !important;
+}
+
+/* Not For subs and install End*/
+
+
+
+
+
+/* DropDown Customization */
+.payment-drop-down-section{
+    /* margin-right: 2.60vw; */
+    margin-left: 2.60vw;
+    padding: 0.8vw;
+}
+
+.drop-down-top{
+    /* padding-right: 1.30vw; */
+    /* padding-right: 6.5vw; */
+    /* width: 6.50vw; */
+    width: 3.50vw;
+    transform: translate(-3vw,-0.4vw);
+}
+
+
+.drop-down-option-section{
+    height: 6.9550vw;
+}
+
+
+.drop-down-option .cross,
+.drop-down-top .cross{
+    height: 0.9750vw;
+    width: 0.9750vw;
+}
+
+
+.drop-down-option .cross img,
+.drop-down-top .cross img{
+    height:100%;
+    width: 100%;
+}
+
+
+/* Subscription Table 1st Row End */
+
+
+
+
+
+/* Subscription Table 2nd Row Start */
+.sub-second-row > div{
+    margin-bottom: 0.650vw;
+}
+
+.sub-second-row .sub-date-text{
+    position: relative;
+    font-size: 1.170vw;
+    font-weight: 600;
+}
+
+.sub-second-row  .sub-date-dates{
+    display: grid;
+    grid-template-columns: 4% 77% 18%;
+    width: 14.950vw;
+    padding-left: 1.30vw;
+    font-size: 0.780vw;
+    margin: auto;
+    margin-bottom: 0.910vw;
+}
+
+
+
+
+/* Delivery Date Section */
+.delivery-date-container{
+    display: grid;
+    grid-template-columns: 48% 52%;
+    width: 100%;
+}
+
+.sub-delivery-date-list{
+    opacity: 0.5;
+    display: grid;
+    justify-content: center;
+}
+
+.old-delivery-date-section .sub-delivery-date-list{
+    padding-right: 1.30vw;
+}
+
+.delivery-date-title{
+    position: relative;
+    font-size: 1.1050vw;
+}
+
+
+.old-delivery-date-section .delivery-date-title{
+    padding-right: 1.30vw;
+}
+
+
+.sub-delivery-date-list{
+    background: white;
+    font-size: 0.910vw;
+}
+
+.old-delivery-date-section{
+    border-right: 0.050vw solid #ECECEC;
+
+}
+
+
+.sub-delivery-date-list ol{
+    /* padding-left: 1.3vw; */
+    padding-left: 1vw;
+}
+
+
+
+.sub-delivery-date-list ol li{
+    margin-top: 0.780vw;
+    padding-left: 0.130vw;
+    text-align: left;
+}
+
+
+
+
+
+/* New Delivery Section */
+.new-delivery-date-section .sub-date-dates{
+    padding-top: 0.910vw;
+}
+
+
+/* Delivery Date hover text */
+.hover-edit-delivery-date{
+    right: 3.2vw !important;
+    top: 0.390vw;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sub-second-row .btn{
+    display: grid;
+    align-items: center;
+    width: 9.10vw;
+    height: 2.60vw;
+    text-align: center;
+    margin: auto;
+    border-radius: 0.520vw;
+    font-size: 0.9750vw;
+    padding: 0vw;
+    border: 0.050vw solid  #E22424;
+}
+
+
+
+.sub-second-row .sub-need-help{
+    font-size: 0.780vw;
+    margin-top: 0.260vw;
+}
+
+
+
+.sub-second-row .sub-need-help u{
+    color: #E22424;
+    cursor: pointer;
+
+}
+
+
+
+/* Delivery text section */
+.delivered-text{
+    margin-top: 1.170vw;
+}
+
+
+
+
+/* Subscription Table 2nd Row End */
+
+
+/* Subscription Table Start End */
+
+/* All Payment details section start */
+
+.subscription-all-payment-details-section .all-payment-details-box-left-title{
+    font-size: 1.30vw;
+    margin-left: -2.60vw;
+}
+
+
+.all-payment-details-service-status{
+    font-size: 0.8450vw;
+    margin-left: 0.650vw;
+    text-align: center;
+    background: transparent;
+}
+
+
+
+.subscription-all-payment-details-section:nth-child(10) .all-payment-details-box{
+    height: 29.250vw;
+}
+
+
+.all-payment-details-delivery-status .all-payment-details-service-status{
+    font-size: 1.040vw;
+}
+
+
+/* All Payment details section End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Online Subscription start */
+/* Online Subscription start */
+/* Online Subscription start */
+
+
+
+/* CLIENT REQUEST TO CHANGE DATE START */
+.client-change-request-section{
+    margin-top: 1.040vw;
+}
+
+
+.client-change-request-section p{
+    font-size: 0.650vw;
+    margin-bottom: 1.040vw;
+    color: #E22424;
+}
+
+
+
+.client-change-request-button-container{
+    display: flex;
+    width: 11vw;
+    margin: auto;
+}
+
+.client-change-request-button-container .btn{
+    display: grid;
+    align-items: center;
+    /* width: 6.50vw !important; */
+    width: 4vw !important;
+    height: 1.4vw;
+    text-align: center;
+    margin: auto;
+    border-radius: 0.390vw;
+    font-size: 0.6vw;
+    padding: 0vw;
+    border: 0.050vw solid  #E22424;
+}
+
+/* CLIENT REQUEST TO CHANGE DATE END */
+
+
+
+
+
+
+
+
+
+
+/* Payment status Start */
+.payment-status > div:nth-child(1){
+    font-size: 1.0vw !important;
+}
+
+.payment-status > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.040vw !important;
+    margin-top: 0.260vw !important;
+}
+
+
+.payment-status .cross{
+    display: inline-block;
+    align-items: center;
+    border-radius: 100%;
+    height: 100%;
+    width: 1.040vw !important;
+    margin-left: 0.650vw !important;
+    margin-top: 0.0650vw !important;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.040vw !important;
+}
+
+
+
+
+
+/* .payment-status > div:nth-child(1){
+    font-size: 1.0vw;
+}
+
+.payment-status > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.040vw;
+    margin-top: 0.260vw;
+}
+
+
+.payment-status .cross{
+    display: inline-block;
+    align-items: center;
+    border-radius: 100%;
+    height: 100%;
+    width: 1.040vw;
+    margin-left: 0.650vw;
+    margin-top: 0.0650vw;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.040vw;
+} */
+
+
+
+
+
+
+
+
+
+
+.payment-status .cross img{
+    /* height: 100%;
+    width: 100%; */
+}
+
+/* Payment status End */
+
+
+
+/* Service status Start */
+
+.service-status > div:nth-child(1){
+    font-size: 1.430vw !important;
+
+}
+
+.service-status > div:nth-child(2){
+    font-size: 0.9750vw !important;
+}
+
+
+/* Service status End */
+
+
+/* Request New Service Start */
+.request-new-service{
+    margin-top: 0.910vw;
+}
+
+.request-new-service p{
+    font-size: 0.780vw;
+    margin: 0vw;
+    margin-bottom: 0.910vw;
+    color: #E22424;
+}
+
+.request-new-service-button-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 2.60vw;
+    width: 5.20vw;
+    margin: auto;
+}
+
+
+.request-new-service-button-container > div{
+    height: 1.6250vw;
+    width: 1.7550vw;
+    background: white;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.315);
+    padding: 0.390vw;
+    cursor: pointer;
+}
+
+
+.request-new-service-button-container > div img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Request New Service End */
+
+
+/* New date requested Section Start */
+
+.cancel-request-hover .hover-edit-request-date{
+    right: -1.80vw !important;
+    top: -.90vw !important;
+    font-size: 0.8vw;
+}
+
+
+.new-delivery-req-text{
+    color: #E22424;
+    font-size: 0.910vw;
+}
+
+
+
+.new-delivery-req-date{
+    font-size: 0.910vw;
+    margin-top: 0.520vw;
+}
+
+/* New date requested Section End */
+
+
+/* After Service Cancel Section Start */
+
+.delivery-date-after-cancel{
+    grid-template-columns: 4% 88% 8%;
+    width: 14.950vw;
+    height: 1.30vw;
+    font-size: 0.87750vw !important;
+    margin-top: 0.650vw !important;
+    padding-left: 0vw !important;
+}
+
+.delivery-date-after-cancel span:nth-child(2){
+    text-align: left;
+    /* padding-left: 0.650vw; */
+    padding-left: 0.3vw;
+}
+
+
+
+/* After Service Cancel Section End */
+
+
+
+/* Service Cancel Timer Section Start */
+
+.service-cancel-timer-section{
+    margin-top: 5.20vw;
+}
+
+
+.service-cancel-timer{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.170vw;
+    width: 7.80vw;
+    margin: auto;
+}
+
+.service-cancel-timer .service-cancel-timer-icon{
+    height: 1.950vw;
+    width: 1.950vw;
+    padding: 0.260vw;
+    /* margin-right: 0.650vw; */
+}
+
+.service-cancel-timer .service-cancel-timer-icon img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.service-cancel-timer-text{
+    font-size: 0.910vw;
+    padding: 0.520vw 0vw 0.520vw 0vw;
+}
+
+.service-cancel-timer-text u{
+    color: #E22424;
+}
+/* Service Cancel Timer Section End */
+.facilities-instruction-section .title{
+    width: auto;
+    margin: auto;
+    padding: 0vw 2vw 0vw 2vw;
+}
+
+
+.instruction-edit-icon{
+    right: 0vw;
+}
+
+
+
+.all-payment-details-box-left-title{
+    margin-left: -1vw !important;
+    
+}
+
+.condition-of-installment{
+    right: -1.6vw;
+}
+
+/* Online Subscription End */
+/* Online Subscription End */
+/* Online Subscription End */
