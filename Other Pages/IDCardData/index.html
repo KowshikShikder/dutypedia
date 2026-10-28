@@ -169,15 +169,22 @@ async function init(){
 $("file").onchange=async ev=>{for(const f of ev.target.files){const b=await createImageBitmap(f);await enqueue(b,b.width,b.height);b.close()}ev.target.value=""};
 $("gal").onchange=async ev=>{for(const f of ev.target.files){while(pending()>=MAXQ)await new Promise(r=>setTimeout(r,500));const b=await createImageBitmap(f);await enqueue(b,b.width,b.height);b.close()}ev.target.value=""};
 $("clear").onclick=ev=>{ev.preventDefault();if(entries.length&&confirm("Remove ALL scanned students?")){entries.forEach(e=>e.el.remove());entries=[];save();summary()}};
-$("dl").onclick=async()=>{
+
+/* Excel download: plain browser download (works locally and on GitHub Pages) */
+$("dl").onclick=()=>{
+  if(typeof XLSX==="undefined"){st("Excel library didn’t load. Check internet and reload.");return}
   const rows=entries.filter(e=>e.status==="ok"||e.status==="check").map(e=>[e.n,e.id,e.name,e.phone,e.status==="ok"?"OK":"CHECK"]);
   const ws=XLSX.utils.aoa_to_sheet([["#","Student ID","Name","Phone (emergency)","Status"],...rows]);
   ws["!cols"]=[{wch:5},{wch:12},{wch:32},{wch:18},{wch:8}];
   const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,"Students");
-  const data=new Uint8Array(XLSX.write(wb,{type:"array",bookType:"xlsx"}));
-  try{const d=await claude.use("downloads");if(!d){st("Downloads aren’t available in this view.");return}
-    await d.save({filename:"students.xlsx",data});st("Excel saved.")}
-  catch(e){if(!e||e.code!=="declined")st("Download failed: "+((e&&(e.code||e.message))||"unknown error"))}
+  const data=XLSX.write(wb,{type:"array",bookType:"xlsx"});
+  const blob=new Blob([data],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="students.xlsx";
+  document.body.append(a);a.click();
+  setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},4000);
+  st("Excel downloaded ("+rows.length+" rows). Check your Downloads folder.");
 };
 init();
 </script></body></html>
