@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HSC Result Tool</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1b1f24;--muted:#5f6b7a;--line:#dde2e8;--accent:#1f6feb;--accent-t:#fff;--ok:#1a7f37;--okbg:#e6f4ea;--bad:#b42318;--badbg:#fdecea;--warn:#8a5a00;--warnbg:#fff4d6;--head:#eef2f7}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1318;--card:#171c23;--text:#e6e9ee;--muted:#9aa5b4;--line:#2a323d;--accent:#4c8dff;--accent-t:#06101f;--ok:#56d364;--okbg:#10301a;--bad:#ff8b81;--badbg:#3a1613;--warn:#f2c14e;--warnbg:#33290c;--head:#1f2630}}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 Arial,Helvetica,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:17px;margin:0 0 10px}h3{font-size:15px;margin:16px 0 6px}
+p.sub{margin:0 0 16px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+.card.off{opacity:.55;pointer-events:none}
+.drop{border:2px dashed var(--line);border-radius:12px;padding:24px 12px;text-align:center;cursor:pointer;color:var(--muted)}
+.drop.over{border-color:var(--accent);color:var(--accent)}.drop b{color:var(--text)}
+button{font:inherit;background:var(--accent);color:var(--accent-t);border:0;border-radius:8px;padding:9px 14px;cursor:pointer}
+button.sec{background:transparent;color:var(--text);border:1px solid var(--line)}
+button:disabled{opacity:.5;cursor:default}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.status{padding:10px 12px;border-radius:8px;margin-top:12px}
+.status.ok{background:var(--okbg);color:var(--ok)}.status.bad{background:var(--badbg);color:var(--bad)}.status.warn{background:var(--warnbg);color:var(--warn)}
+.status ul{margin:6px 0 0;padding-left:18px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-top:12px}
+.stat{border:1px solid var(--line);border-radius:8px;padding:8px 10px}.stat b{display:block;font-size:20px}.stat span{color:var(--muted);font-size:12px}
+.scroll{overflow:auto;border:1px solid var(--line);border-radius:8px;margin-top:8px}
+table{border-collapse:collapse;width:100%}
+th,td{padding:6px 8px;border:1px solid var(--line);text-align:center;font-variant-numeric:tabular-nums;font-size:13px;white-space:nowrap}
+th{background:var(--head);font-weight:600}
+td.l{text-align:left}tr.tot td{font-weight:bold;background:var(--head)}
+.pv{max-height:360px}.pv td,.pv th{text-align:left}.pv th{position:sticky;top:0}
+td.f{color:var(--bad);font-weight:bold}
+input[type=search],input[type=text],textarea{font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;width:100%}
+textarea{min-height:80px;font-size:13px}
+label{font-size:13px;color:var(--muted);display:block;margin:10px 0 3px}
+details summary{cursor:pointer;color:var(--muted);margin-top:10px}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<main>
+  <h1>HSC Result Tool</h1>
+  <p class="sub">Step 1: upload the board result PDF. Step 2: upload your student list to get the result statistics. Everything stays in your browser.</p>
+
+  <div class="card" id="c1">
+    <h2>Step 1 · Result PDF</h2>
+    <div class="drop" id="drop1"><b>Click to choose the result PDF</b> or drop it here<input id="file1" type="file" accept="application/pdf" class="hidden"></div>
+    <details><summary>PDF not loading? Paste the text instead</summary>
+      <textarea id="paste" placeholder="Select all text in the PDF, copy, and paste here"></textarea>
+      <div class="row" style="margin-top:8px"><button id="runPaste" class="sec">Extract from pasted text</button></div>
+    </details>
+    <div id="status1"></div>
+    <div id="pdfout" class="hidden">
+      <div class="stats" id="pdfstats"></div>
+      <details><summary>Show roll / GPA list</summary>
+        <div class="row" style="margin-top:8px"><button id="copy" class="sec">Copy for Excel</button><input id="q" type="search" placeholder="Search roll…" style="flex:1;min-width:140px;width:auto"></div>
+        <div class="scroll pv"><table><thead><tr><th>Roll</th><th>GPA / Result</th></tr></thead><tbody id="tb"></tbody></table></div>
+      </details>
+    </div>
+  </div>
+
+  <div class="card off" id="c2">
+    <h2>Step 2 · Student list (Excel)</h2>
+    <div class="row" style="margin-bottom:10px"><button id="sample" class="sec">Download sample student list</button><span style="color:var(--muted);font-size:13px">Use its headings for your own data.</span></div>
+    <div class="drop" id="drop2"><b>Click to choose the student list (.xlsx)</b> or drop it here<input id="file2" type="file" accept=".xlsx" class="hidden"></div>
+    <div id="status2"></div>
+  </div>
+
+  <div class="card hidden" id="c3">
+    <h2>Result statistics</h2>
+    <div class="row">
+      <div style="flex:2;min-width:240px"><label for="ttl">Title</label><input id="ttl" type="text"></div>
+      <div style="flex:1;min-width:200px"><label for="pub">Result published on</label><input id="pub" type="text"></div>
+    </div>
+    <div class="row" style="margin-top:12px"><button id="dl">Download result Excel</button></div>
+    <h3>With irregular (all students)</h3><div class="scroll" id="t1"></div>
+    <h3>Without irregular (REGULAR only)</h3><div class="scroll" id="t2"></div>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js"></script>
+<script>
+/*CORE-START*/
+const GRADES=['A+','A','A-','B','C','D','F'];
+const GROUPS=['Science','Humanities','Business Studies'];
+const VERS=['Bangla','English'];
+
+function extractResults(text){
+  const rows=[], re=/(?<!\d)(\d{6})\s*\[\s*([^\]\s]+)\s*\]/g; let m;
+  while((m=re.exec(text))!==null){
+    const raw=m[2];
+    rows.push({roll:m[1],result:/^\d+(\.\d+)?$/.test(raw)?parseFloat(raw):raw});
+  }
+  let expected=0,hasTotals=false,t; const tre=/\]\s*=\s*(\d+)/g;
+  while((t=tre.exec(text))!==null){expected+=+t[1];hasTotals=true;}
+  const ex=/Examinee:\s*(\d+)/.exec(text), examinee=ex?+ex[1]:null;
+  const seen=new Set(),duplicates=[];
+  for(const r of rows){if(seen.has(r.roll))duplicates.push(r.roll);seen.add(r.roll);}
+  const verified=hasTotals&&rows.length===expected&&(examinee===null||rows.length===examinee)&&duplicates.length===0;
+  return{rows,found:rows.length,expected:hasTotals?expected:null,examinee,duplicates,verified};
+}
+// Same cut-offs as the school workbook; a non-numeric result (F1, F2 ...) is a FAIL.
+function gradeOf(r){
+  if(typeof r!=='number'||isNaN(r))return 'F';
+  if(r===5)return 'A+'; if(r>3.99)return 'A'; if(r>3.49)return 'A-';
+  if(r>2.99)return 'B'; if(r>1.99)return 'C'; if(r>0.99)return 'D'; return 'F';
+}
+const low=v=>String(v??'').trim().toLowerCase().replace(/\s+/g,' ');
+function normRoll(v){let s=String(v??'').trim(); if(/^\d+\.0+$/.test(s))s=s.split('.')[0]; return s;}
+function normGroup(v){const s=low(v);return s==='science'?'Science':s==='humanities'?'Humanities':s==='business studies'?'Business Studies':null;}
+function normVersion(v){const s=low(v); if(s.includes('bangla')||s.includes('bengali'))return 'Bangla'; if(s.includes('english'))return 'English'; return null;}
+const pct=(app,f)=>app?100-(f/app)*100:null;
+
+function buildStat(list,regularOnly){
+  const mk=()=>({app:[0,0],g:GRADES.map(()=>[0,0])});
+  const byG={}; GROUPS.forEach(g=>byG[g]=mk());
+  for(const s of list){
+    if(regularOnly&&s.type!=='REGULAR')continue;
+    const o=byG[s.group], vi=VERS.indexOf(s.version);
+    o.app[vi]++; o.g[GRADES.indexOf(s.grade)][vi]++;
+  }
+  const fin=o=>{
+    const f=o.g[6]; const passed=[o.app[0]-f[0],o.app[1]-f[1]];
+    return{app:o.app,g:o.g,passed,pct:pct(o.app[0]+o.app[1],f[0]+f[1])};
+  };
+  const rows=GROUPS.map(g=>({label:g,...fin(byG[g])}));
+  const tot=mk();
+  for(const o of Object.values(byG)){for(let v=0;v<2;v++){tot.app[v]+=o.app[v];tot.g.forEach((x,i)=>x[v]+=o.g[i][v]);}}
+  const total={label:'Total',...fin(tot)};
+  const sum=a=>a[0]+a[1];
+  const grand={label:'Grand Total',app:sum(total.app),g:total.g.map(sum),passed:sum(total.passed),pct:pct(sum(total.app),sum(total.g[6]))};
+  return{rows,total,grand};
+}
+function analyze(students,pdfRows){
+  const map=new Map(),conflicts=[];
+  for(const r of pdfRows){ if(map.has(r.roll)){ if(map.get(r.roll)!==r.result)conflicts.push(r.roll);} else map.set(r.roll,r.result); }
+  const out=[],notFound=[],badGroup=[],badVersion=[],dup=[],seen=new Set();
+  for(const s of students){
+    const roll=normRoll(s.roll), group=normGroup(s.group), version=normVersion(s.version), type=String(s.type??'').trim().toUpperCase();
+    const found=map.has(roll), result=found?map.get(roll):null, grade=found?gradeOf(result):'F';
+    if(!found)notFound.push(roll);
+    if(!group)badGroup.push(`${roll} (${s.group||'blank'})`);
+    if(!version)badVersion.push(`${roll} (${s.version||'blank'})`);
+    if(seen.has(roll))dup.push(roll); seen.add(roll);
+    out.push({roll,name:s.name||'',group,groupRaw:s.group,type,typeRaw:s.type,version,versionRaw:s.version,found,result,grade});
+  }
+  const counted=out.filter(x=>x.group&&x.version);
+  return{students:out,counted:counted.length,total:out.length,notFound,badGroup,badVersion,dup,conflicts,
+         stats:{all:buildStat(counted,false),regular:buildStat(counted,true)}};
+}
+/*CORE-END*/
+</script>
+
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+let pdfRows=[],pdfRes=null,analysis=null,passYear='';
+
+function setStatus(id,cls,html){$(id).innerHTML=html?`<div class="status ${cls}">${html}</div>`:"";}
+function wireDrop(dropId,fileId,handler){
+  const d=$(dropId);
+  d.onclick=()=>$(fileId).click();
+  $(fileId).onchange=e=>{handler(e.target.files[0]);e.target.value="";};
+  ["dragover","dragenter"].forEach(n=>d.addEventListener(n,e=>{e.preventDefault();d.classList.add("over");}));
+  ["dragleave","drop"].forEach(n=>d.addEventListener(n,e=>{e.preventDefault();d.classList.remove("over");}));
+  d.addEventListener("drop",e=>handler(e.dataTransfer.files[0]));
+}
+function saveBlob(blob,name){const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();}
+
+/* ---------- Step 1: PDF ---------- */
+async function pdfToText(buf){
+  pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  const pdf=await pdfjsLib.getDocument({data:buf}).promise; let all="";
+  for(let p=1;p<=pdf.numPages;p++){
+    const content=await (await pdf.getPage(p)).getTextContent(); let lastY=null,line="";
+    for(const it of content.items){
+      const y=it.transform?Math.round(it.transform[5]):null;
+      if(lastY!==null&&y!==null&&Math.abs(y-lastY)>2){all+=line+"\n";line="";}
+      line+=it.str; if(it.hasEOL){all+=line+"\n";line="";lastY=null;continue;}
+      if(y!==null)lastY=y;
+    }
+    all+=line+"\n";
+  }
+  return all;
+}
+function showPdf(res,text){
+  pdfRes=res; pdfRows=res.rows; analysis=null; $("c3").classList.add("hidden");
+  const ym=/RESULT OF HSC EXAMINATION,\s*(\d{4})/i.exec(text||""); window._pdfYear=ym?ym[1]:"";
+  if(!res.found){$("pdfout").classList.add("hidden");$("c2").classList.add("off");setStatus("status1","bad","No results found. This tool expects entries like 455278[4.25].");return;}
+  const gpa=res.rows.filter(r=>typeof r.result==="number");
+  $("pdfstats").innerHTML=[["Rolls found",res.found],["PDF total",res.expected??"–"],["GPA 5.00",gpa.filter(r=>r.result===5).length],["Failed (F1/F2…)",res.found-gpa.length]]
+    .map(([k,v])=>`<div class="stat"><b>${v}</b><span>${k}</span></div>`).join("");
+  if(res.verified)setStatus("status1","ok",`Verified: ${res.found} rolls found, matching the totals printed in the PDF, with no duplicates.`);
+  else{
+    const why=[];
+    if(res.expected===null)why.push("the PDF’s printed totals were not found");
+    else if(res.found!==res.expected)why.push(`found ${res.found} but the PDF says ${res.expected}`);
+    if(res.examinee!==null&&res.found!==res.examinee)why.push(`examinee count is ${res.examinee}`);
+    if(res.duplicates.length)why.push(`duplicate rolls: ${[...new Set(res.duplicates)].slice(0,5).join(", ")}`);
+    setStatus("status1","warn",`Not verified: ${why.join("; ")}. Please check the output before using it.`);
+  }
+  $("pdfout").classList.remove("hidden"); $("c2").classList.remove("off"); renderList();
+}
+const fmt=r=>typeof r.result==="number"?r.result.toFixed(2):r.result;
+function renderList(){
+  const q=$("q").value.trim(), rows=q?pdfRows.filter(r=>r.roll.includes(q)):pdfRows;
+  $("tb").innerHTML=rows.map(r=>`<tr><td>${r.roll}</td><td class="${typeof r.result==="string"?"f":""}">${fmt(r)}</td></tr>`).join("");
+}
+async function handlePdf(f){
+  if(!f)return; setStatus("status1","warn",`Reading ${esc(f.name)}…`);
+  try{const t=await pdfToText(await f.arrayBuffer()); showPdf(extractResults(t),t);}
+  catch(e){console.error(e);setStatus("status1","bad","Could not read the PDF here. Use “paste the text instead” below.");}
+}
+wireDrop("drop1","file1",handlePdf);
+$("runPaste").onclick=()=>{const t=$("paste").value;showPdf(extractResults(t),t);};
+$("q").oninput=renderList;
+$("copy").onclick=async()=>{
+  const txt="Roll\tGPA/Result\n"+pdfRows.map(r=>`${r.roll}\t${fmt(r)}`).join("\n");
+  try{await navigator.clipboard.writeText(txt);}catch(e){const a=document.createElement("textarea");a.value=txt;document.body.appendChild(a);a.select();document.execCommand("copy");a.remove();}
+  $("copy").textContent="Copied";setTimeout(()=>$("copy").textContent="Copy for Excel",2000);
+};
+
+/* ---------- Step 2: student list ---------- */
+const HEADERS=["SL","Registration No","Session","Group","Type","Version","Section","Class Roll","Student Name","Father Name","Board Roll","Gender","Passing Year","Board","Mother's Name"];
+async function downloadSample(){
+  const wb=new ExcelJS.Workbook(), ws=wb.addWorksheet("Sheet1");
+  ws.addRow(HEADERS).font={bold:true};
+  ws.addRow([1,1000000001,"2024-25","Science","REGULAR","Bangla","A",1001,"SAMPLE STUDENT ONE","SAMPLE FATHER","109001","Male",2026,"Dhaka","SAMPLE MOTHER"]);
+  ws.addRow([2,1000000002,"2024-25","Business Studies","IRREGULAR","English","B",1002,"SAMPLE STUDENT TWO","SAMPLE FATHER","455001","Female",2026,"Dhaka","SAMPLE MOTHER"]);
+  HEADERS.forEach((h,i)=>{ws.getColumn(i+1).width=Math.max(12,h.length+4);});
+  ws.views=[{state:"frozen",ySplit:1}];
+  saveBlob(new Blob([await wb.xlsx.writeBuffer()],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"}),"Student_List_Sample.xlsx");
+}
+$("sample").onclick=downloadSample;
+
+function cellText(v){
+  if(v===null||v===undefined)return "";
+  if(typeof v==="object"){
+    if(v instanceof Date)return "";
+    if("result" in v)return cellText(v.result);
+    if(v.richText)return v.richText.map(t=>t.text).join("");
+    if("text" in v)return cellText(v.text);
+    return "";
+  }
+  return String(v);
+}
+async function readStudents(buf){
+  const wb=new ExcelJS.Workbook(); await wb.xlsx.load(buf);
+  for(const ws of wb.worksheets){
+    for(let r=1;r<=Math.min(ws.rowCount,10);r++){
+      const map={}; ws.getRow(r).eachCell((c,col)=>{map[low(cellText(c.value))]=col;});
+      if(map["board roll"]){
+        const need=["board roll","group","type","version"], miss=need.filter(n=>!map[n]);
+        if(miss.length)throw new Error(`Missing column(s): ${miss.join(", ")}. Please use the headings from the sample student list.`);
+        const list=[]; passYear="";
+        const years={};
+        for(let i=r+1;i<=ws.rowCount;i++){
+          const row=ws.getRow(i), g=n=>map[n]?cellText(row.getCell(map[n]).value).trim():"";
+          const s={roll:g("board roll"),group:g("group"),type:g("type"),version:g("version"),name:g("student name")};
+          if(!s.roll&&!s.group&&!s.type&&!s.version)continue;
+          list.push(s);
+          const y=g("passing year"); if(/^\d{4}$/.test(y))years[y]=(years[y]||0)+1;
+        }
+        passYear=Object.keys(years).sort((a,b)=>years[b]-years[a])[0]||"";
+        return list;
+      }
+    }
+  }
+  throw new Error("No “Board Roll” heading found. Please use the headings from the sample student list.");
+}
+async function handleStudents(f){
+  if(!f)return; setStatus("status2","warn",`Reading ${esc(f.name)}…`);
+  try{
+    const students=await readStudents(await f.arrayBuffer());
+    if(!students.length)throw new Error("The file has no student rows.");
+    analysis=analyze(students,pdfRows); showStats();
+  }catch(e){console.error(e);setStatus("status2","bad",esc(e.message||"Could not read this Excel file."));$("c3").classList.add("hidden");}
+}
+wireDrop("drop2","file2",handleStudents);
+
+/* ---------- Stats table ---------- */
+const L4=[5,'4+','3.5+','3+','2+','1+',0], L5=['80-100','70-79','60-69','50-59','40-49','33-39','00-32'], L6=['(A+)','(A)','(A-)','(B)','(C)','(D)','(F)'];
+const p2=v=>v===null?"":v.toFixed(2);
+function statHTML(st){
+  let h=`<table><thead><tr><th rowspan="3">Group</th><th colspan="2" rowspan="2">Appeared</th><th colspan="14">GRADE POINT AVERAGE (GPA)</th><th colspan="2" rowspan="2">Passed</th><th rowspan="3">Pass %</th></tr><tr>`;
+  h+=GRADES.map((g,i)=>`<th colspan="2">${g}<br><small>${L4[i]} · ${L5[i]}</small></th>`).join("")+`</tr><tr>`;
+  h+=Array(9).fill("<th>Bang</th><th>Eng</th>").join("")+`</tr></thead><tbody>`;
+  const line=(r,cls)=>`<tr class="${cls}"><td class="l">${r.label}</td><td>${r.app[0]}</td><td>${r.app[1]}</td>`+
+    r.g.map(x=>`<td>${x[0]}</td><td>${x[1]}</td>`).join("")+`<td>${r.passed[0]}</td><td>${r.passed[1]}</td><td>${p2(r.pct)}</td></tr>`;
+  st.rows.forEach(r=>h+=line(r,""));
+  h+=line(st.total,"tot");
+  const g=st.grand;
+  h+=`<tr class="tot"><td class="l">Grand Total</td><td colspan="2">${g.app}</td>`+g.g.map(x=>`<td colspan="2">${x}</td>`).join("")+`<td colspan="2">${g.passed}</td><td>${p2(g.pct)}</td></tr></tbody></table>`;
+  return h;
+}
+function showStats(){
+  const a=analysis, w=[];
+  const lst=(arr,n=8)=>esc(arr.slice(0,n).join(", ")+(arr.length>n?` … (+${arr.length-n} more)`:""));
+  if(a.notFound.length)w.push(`<b>${a.notFound.length}</b> student roll(s) were not found in the PDF and are counted as <b>F</b> (as in your workbook): ${lst(a.notFound)}`);
+  if(a.badGroup.length)w.push(`<b>${a.badGroup.length}</b> student(s) have an unrecognised Group (use Science, Humanities or Business Studies) and are <b>left out</b> of the statistics: ${lst(a.badGroup)}`);
+  if(a.badVersion.length)w.push(`<b>${a.badVersion.length}</b> student(s) have an unrecognised Version (use Bangla or English) and are <b>left out</b>: ${lst(a.badVersion)}`);
+  if(a.dup.length)w.push(`Duplicate Board Roll in the student list: ${lst(a.dup)}`);
+  if(a.conflicts.length)w.push(`The PDF lists these rolls with different results: ${lst(a.conflicts)}`);
+  if(pdfRes&&!pdfRes.verified)w.push("The PDF extraction was not verified (see Step 1).");
+  const fcoded=a.students.filter(s=>s.found&&typeof s.result==="string").length;
+  const head=`${a.total} students read, ${a.counted} counted. ${fcoded} have a fail code in the PDF (F1/F2…) and are counted as F.`;
+  setStatus("status2",w.length?"warn":"ok",head+(w.length?`<ul>${w.map(x=>`<li>${x}</li>`).join("")}</ul>`:""));
+  $("t1").innerHTML=statHTML(a.stats.all); $("t2").innerHTML=statHTML(a.stats.regular);
+  const yr=passYear||window._pdfYear||"";
+  $("ttl").value=`RESULT OF HSC EXAM - ${yr} : BANGLADESH AIR FORCE SHAHEEN COLLEGE DHAKA`;
+  $("pub").value=new Date().toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"});
+  $("c3").classList.remove("hidden");
+}
+
+/* ---------- Result workbook ---------- */
+const thin={style:"thin"}, BORDER={top:thin,left:thin,bottom:thin,right:thin};
+function writeStatSheet(wb,name,st,title,published){
+  const ws=wb.addWorksheet(name,{pageSetup:{orientation:"landscape",fitToPage:true,fitToWidth:1,fitToHeight:0}});
+  ws.getCell("A1").value=title; ws.getCell("A1").font={name:"Calibri",size:18,bold:true};
+  ws.getCell("A3").value="Group"; ws.getCell("B3").value="No of Students Appeared"; ws.getCell("D3").value="GRADE POINT AVERAGE (GPA)";
+  ws.getCell("R3").value="No of Students Passed"; ws.getCell("T3").value="Pass (%)";
+  ws.getCell("U3").value="Dhaka Board's Pass % & Total No of GPA 5"; ws.getCell("V3").value="Rmks";
+  const merges=["A1:V1","A3:A6","B3:C6","D3:Q3","R3:S6","T3:T6","U3:U6","V3:V6","U7:U12","A15:L15"];
+  for(let i=0;i<7;i++){
+    const c=4+2*i;
+    ws.getCell(4,c).value=L4[i]; ws.getCell(5,c).value=L5[i]; ws.getCell(6,c).value=L6[i];
+    [4,5,6,12].forEach(r=>merges.push(`${ws.getCell(r,c).address}:${ws.getCell(r,c+1).address}`));
+  }
+  merges.push("B12:C12","R12:S12");
+  ws.getCell("A7").value="Version";
+  for(let c=2;c<=19;c++)ws.getCell(7,c).value=c%2===0?"Bang":"Eng";
+  const put=(r,row)=>{
+    ws.getCell(r,1).value=row.label; ws.getCell(r,2).value=row.app[0]; ws.getCell(r,3).value=row.app[1];
+    row.g.forEach((x,i)=>{ws.getCell(r,4+2*i).value=x[0];ws.getCell(r,5+2*i).value=x[1];});
+    ws.getCell(r,18).value=row.passed[0]; ws.getCell(r,19).value=row.passed[1]; ws.getCell(r,20).value=row.pct;
+  };
+  st.rows.forEach((row,i)=>put(8+i,row)); put(11,st.total);
+  const g=st.grand; ws.getCell(12,1).value="Grand Total"; ws.getCell(12,2).value=g.app;
+  g.g.forEach((x,i)=>ws.getCell(12,4+2*i).value=x); ws.getCell(12,18).value=g.passed; ws.getCell(12,20).value=g.pct;
+  ws.getCell("A15").value=`Result Published on: ${published}`; ws.getCell("A15").font={name:"Calibri",size:18,bold:true};
+  merges.forEach(m=>ws.mergeCells(m));
+  for(let r=3;r<=12;r++)for(let c=1;c<=22;c++){
+    const cell=ws.getCell(r,c); cell.border=BORDER;
+    cell.alignment={horizontal:"center",vertical:r<=6?"top":"center",wrapText:true};
+    if(!cell.font||!cell.font.size)cell.font={name:"Calibri",size:11};
+    if(c===20&&r>=8)cell.numFmt="0.00";
+  }
+  ws.getCell("A1").alignment={horizontal:"center"}; ws.getCell("A15").alignment={horizontal:"left",vertical:"top"};
+  ws.getCell("U7").numFmt="0.00%";
+  for(let i=0;i<22;i++)ws.getColumn(i+1).width=i===0?16:i===19?8:i===20?16:i===21?10:i%2===1?6.5:5.5;
+  [[1,23.25],[3,26.25],[7,31.5],[8,39],[9,39],[10,39],[11,39],[12,39],[15,23.25]].forEach(([r,h])=>ws.getRow(r).height=h);
+  ws.getRow(3).height=45;
+}
+async function downloadResult(){
+  const a=analysis, wb=new ExcelJS.Workbook(), title=$("ttl").value, pub=$("pub").value;
+  const ws=wb.addWorksheet("Result"); ws.addRow(["Board Roll","GPA"]).font={bold:true};
+  pdfRows.forEach(r=>ws.addRow([Number(r.roll),r.result])); ws.getColumn(1).width=12; ws.getColumn(2).width=8;
+  ws.getColumn(2).numFmt="0.00";
+  writeStatSheet(wb,"Result Stat With Irregular",a.stats.all,title,pub);
+  writeStatSheet(wb,"Result Stat Without Irregular",a.stats.regular,title,pub);
+  const sg=wb.addWorksheet("Student Grades");
+  sg.addRow(["Board Roll","Student Name","Group","Type","Version","GPA / Result","Grade","Note"]).font={bold:true};
+  a.students.forEach(s=>sg.addRow([Number(s.roll)||s.roll,s.name,s.group||s.groupRaw,s.type,s.version||s.versionRaw,
+    s.found?s.result:"",s.grade,!s.found?"Not found in PDF (counted as F)":typeof s.result==="string"?"Fail code in PDF":""]));
+  [12,30,18,13,10,12,8,32].forEach((w,i)=>{sg.getColumn(i+1).width=w;}); sg.views=[{state:"frozen",ySplit:1}];
+  sg.autoFilter={from:"A1",to:"H1"};
+  saveBlob(new Blob([await wb.xlsx.writeBuffer()],{type:"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"}),"HSC_Result_Statistics.xlsx");
+}
+$("dl").onclick=downloadResult;
+</script>
+</body>
+</html>
