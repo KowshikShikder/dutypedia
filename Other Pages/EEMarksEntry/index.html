@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Khata Entry</title>
+<meta name="theme-color" content="#1e4fd8">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Khata%20Entry%22%2C%22short_name%22%3A%22Khata%22%2C%22display%22%3A%22fullscreen%22%2C%22start_url%22%3A%22.%22%2C%22background_color%22%3A%22%230c1118%22%2C%22theme_color%22%3A%22%231e4fd8%22%7D">
+<style>
+/* Layout: sticky top bar + file tabs, one scrolling view, fixed bottom nav. Big thumb targets. */
+:root{--bg:#f3f5f8;--sf:#fff;--sf2:#e8ecf2;--fg:#0f1722;--mu:#566274;--ln:#cdd5e0;--ac:#1e4fd8;--acf:#fff;
+--ok:#12803a;--okb:#d8f3e2;--bad:#c4281c;--badb:#fde2df;--wn:#8a5a00;--wnb:#fff0c9;--ab:#7a3fb0;--abb:#eadcf7;
+--ui:system-ui,-apple-system,"Segoe UI","Noto Sans Bengali","Kalpurush","SolaimanLipi",Roboto,sans-serif;--r:12px}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0c1118;--sf:#161d28;--sf2:#212b3a;--fg:#eef2f8;--mu:#9aa7ba;--ln:#334156;--ac:#7ea3ff;--acf:#07122e;
+--ok:#4fd883;--okb:#12341f;--bad:#ff7b6e;--badb:#3d1713;--wn:#f5c451;--wnb:#3a2d0a;--ab:#c99bf2;--abb:#2e1c40;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0c1118;--sf:#161d28;--sf2:#212b3a;--fg:#eef2f8;--mu:#9aa7ba;--ln:#334156;--ac:#7ea3ff;--acf:#07122e;
+--ok:#4fd883;--okb:#12341f;--bad:#ff7b6e;--badb:#3d1713;--wn:#f5c451;--wnb:#3a2d0a;--ab:#c99bf2;--abb:#2e1c40;color-scheme:dark}
+*{box-sizing:border-box}body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:16px;margin:0;padding-bottom:84px;
+padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:max(12px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--sf);z-index:30}
+button,input,select,textarea{font:inherit;color:inherit}
+button{background:var(--sf2);border:1px solid var(--ln);border-radius:var(--r);padding:12px 14px;min-height:48px;cursor:pointer;font-weight:600}
+button:active{transform:scale(.97)}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ac);outline-offset:1px}
+button.pri{background:var(--ac);color:var(--acf);border-color:var(--ac)}button.bad{background:var(--bad);color:#fff;border-color:var(--bad)}
+button.sm{min-height:36px;padding:6px 10px;font-size:14px}
+input,select,textarea{background:var(--sf);border:2px solid var(--ln);border-radius:var(--r);padding:10px 12px;min-height:46px;width:100%}
+label{display:block;font-size:13px;color:var(--mu);margin:10px 0 4px;font-weight:600}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--sf);margin:0 calc(-1*max(12px,env(safe-area-inset-left,0px)));padding:6px 12px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--ln)}
+header h1{font-size:17px;margin:0;flex:1}header button{min-height:38px;padding:4px 10px}
+#saved{font-size:12px;font-weight:700;color:var(--ok);min-width:64px;text-align:right}#saved.err{color:var(--bad)}
+#tabs{display:flex;gap:6px;overflow-x:auto;padding:8px 0;scrollbar-width:thin}
+#tabs button{white-space:nowrap;min-height:40px;padding:6px 12px;flex:none;max-width:60vw;overflow:hidden;text-overflow:ellipsis}
+#tabs button.on{background:var(--ac);color:var(--acf);border-color:var(--ac)}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:var(--r);padding:12px;margin:8px 0}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row>*{min-width:0}.grow{flex:1}
+.mu{color:var(--mu);font-size:13px}.stats{display:flex;gap:6px}.stats div{flex:1;background:var(--sf);border:1px solid var(--ln);border-radius:10px;padding:6px;text-align:center;font-size:12px;color:var(--mu)}
+.stats b{display:block;font-size:19px;color:var(--fg);font-variant-numeric:tabular-nums}
+.bar{height:12px;background:var(--sf2);border-radius:9px;overflow:hidden;margin:6px 0}.bar i{display:block;height:100%;background:var(--ac);width:0;transition:width .2s}
+.bar.full i{background:var(--ok)}.bar.over i{background:var(--bad)}
+#roll{font-size:clamp(44px,16vw,84px);font-weight:800;text-align:center;font-variant-numeric:tabular-nums;letter-spacing:1px;line-height:1.1;margin:4px 0}
+#rname{text-align:center;min-height:20px}#old{text-align:center;min-height:26px;font-weight:700}
+#marks{font-size:clamp(40px,14vw,68px);font-weight:800;text-align:center;min-height:84px;border-color:var(--ac);font-variant-numeric:tabular-nums}
+#marks.ok{border-color:var(--ok);background:var(--okb)}#marks.er{border-color:var(--bad);background:var(--badb)}
+.act{display:grid;grid-template-columns:1fr 1.7fr;gap:8px;margin-top:8px}.act button{min-height:60px;font-size:19px}
+.warn{background:var(--wnb);color:var(--wn);border:2px solid var(--wn);border-radius:var(--r);padding:10px;margin:8px 0;font-weight:600}
+.warn.er{background:var(--badb);color:var(--bad);border-color:var(--bad)}
+#sug{display:flex;flex-direction:column;gap:4px;margin-top:4px}#sug button{text-align:left;min-height:40px}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:4px;max-height:230px;overflow-y:auto;padding:2px}
+#grid button{min-height:34px;padding:2px;font-size:12.5px;border-radius:7px;font-variant-numeric:tabular-nums;background:var(--sf2)}
+#grid .d{background:var(--okb);color:var(--ok);border-color:var(--ok)}#grid .a{background:var(--abb);color:var(--ab);border-color:var(--ab)}
+#grid .c{background:var(--ac);color:var(--acf);border-color:var(--ac);outline:2px solid var(--fg)}#grid .hid{display:none}
+.chips button{min-height:34px;padding:4px 10px;font-size:13px}.chips button.on{background:var(--fg);color:var(--bg)}
+nav{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--sf);border-top:1px solid var(--ln);display:flex;padding:6px max(8px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px));gap:4px}
+nav button{flex:1;min-height:50px;padding:4px;font-size:13px;border:0;background:transparent;color:var(--mu)}nav button.on{color:var(--ac);background:var(--sf2)}
+footer{text-align:center;font-size:10px;opacity:.4;padding:14px 0 4px}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}td,th{border-bottom:1px solid var(--ln);padding:5px 6px;text-align:left}.sc{overflow-x:auto}
+.pos{color:var(--ok);font-weight:700}.neg{color:var(--bad);font-weight:700}
+#modal{position:fixed;inset:0;background:#0009;z-index:50;display:flex;align-items:flex-end;justify-content:center}#modal[hidden]{display:none}
+#mbox{background:var(--sf);border-radius:18px 18px 0 0;padding:16px max(16px,env(safe-area-inset-left,0px)) calc(16px + env(safe-area-inset-bottom,0px));width:100%;max-width:560px;max-height:88%;overflow:auto}
+#mbox .row{margin-top:12px}#mbox .row button{flex:1}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:96px;background:var(--fg);color:var(--bg);padding:8px 14px;border-radius:20px;z-index:60;font-size:14px;max-width:90%}
+.tg{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0}.tg input{width:26px;min-height:26px}
+html,body{min-height:100dvh}
+.mrow{display:flex;flex-wrap:nowrap;gap:8px;align-items:stretch}.mrow #marks{flex:1 1 auto;min-width:0;width:auto}
+#bMic{flex:none;width:64px;min-height:84px;font-size:26px;padding:0}#bMic.rec{background:var(--bad);color:#fff;animation:pl 1s infinite}@keyframes pl{50%{opacity:.6}}
+#marks[data-abs]{border-color:var(--ab);background:var(--abb)}#marks[data-abs]::placeholder{color:var(--ab);opacity:1;font-weight:800;letter-spacing:2px}
+.badge{display:inline-block;background:var(--ab);color:var(--bg);border-radius:8px;padding:2px 10px;font-weight:800;letter-spacing:1px}
+#kp{display:none;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}.kp #kp{display:grid}.kp .act{display:none}
+#kp button{min-height:62px;font-size:26px;padding:4px}#kp [data-k=next]{grid-column:span 2}#kp [data-k=prev]{font-size:18px}
+.kb nav,.kb footer{display:none}.kb{padding-bottom:8px}
+</style>
+</head>
+<body>
+<header><h1>খাতা Entry</h1><span id="saved">Saved ✓</span><button id="bWake" title="Keep screen awake">☀</button><button id="bFs" hidden title="Full screen">⛶</button><button id="bTheme" title="Theme">◐</button></header>
+<div id="tabs"></div><div id="hint" class="warn" hidden></div>
+<main>
+<section id="v-entry">
+ <div id="bstrip" class="card"></div>
+ <div class="stats" id="stats"></div>
+ <div class="card" style="position:relative">
+  <input id="q" type="text" inputmode="decimal" placeholder="🔍 Jump to roll or search…">
+  <div id="sug"></div>
+ </div>
+ <div class="card">
+  <div id="roll">—</div><div id="rname" class="mu"></div><div id="old"></div>
+  <div class="mrow" id="mrow"><input id="marks" inputmode="decimal" placeholder="Marks"><button id="bMic" hidden title="Voice">🎤</button></div><div id="vst" class="mu" hidden></div>
+  <div id="warn" hidden></div><div id="kp"></div>
+  <div class="act"><button id="bPrev">◀ Prev</button><button id="bNext" class="pri">Save &amp; Next ▶</button></div>
+  <div class="row" style="margin-top:8px"><button id="bUndo" class="sm grow">↶ Undo last</button></div>
+ </div>
+ <div class="card"><div class="row chips" id="gf"></div><div id="grid"></div></div>
+</section>
+<section id="v-bundle" hidden></section>
+<section id="v-report" hidden></section>
+<section id="v-settings" hidden></section>
+<section id="v-empty" hidden></section>
+</main>
+<footer>Made by Kowshik Shikder - Kowshik.bafsd@gmail.com</footer>
+<nav id="nav"><button data-v="entry">✏️<br>Entry</button><button data-v="bundle">📦<br>Bundle</button><button data-v="report">📋<br>Reports</button><button data-v="settings">⚙️<br>Settings</button></nav>
+<div id="modal" hidden><div id="mbox"></div></div>
+<input type="file" id="fi" accept=".xlsx,.xls" multiple hidden>
+<input type="file" id="fr" accept=".json" hidden>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+'use strict';
+/* ===== helpers ===== */
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const bn=s=>String(s??'').replace(/[০-৯]/g,d=>'০১২৩৪৫৬৭৮৯'.indexOf(d));
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const parseMarks=s=>{s=bn(s).trim().replace(',','.');return /^\d+(\.\d+)?$/.test(s)?parseFloat(s):NaN};
+const disp=m=>m==null?'—':m==='A'?'Absent':m;
+const colL=n=>{let s='';for(n++;n>0;n=((n-1)/26)|0)s=String.fromCharCode(65+(n-1)%26)+s;return s};
+const colN=s=>[...s].reduce((a,c)=>a*26+c.charCodeAt(0)-64,0)-1;
+const ls={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let prefs=Object.assign({vib:true,snd:true,theme:'auto',wake:false,vlang:'bn-BD',vauto:false,keypad:true},ls.get('prefs',{}));
+const savePrefs=()=>ls.set('prefs',prefs);
+if(!prefs.v2){prefs.vlang='bn-BD';prefs.v2=1;savePrefs()}
+let toastT;function toast(m){let t=$('#toast');if(!t){t=document.createElement('div');t.id='toast';document.body.appendChild(t)}t.textContent=m;t.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>t.hidden=true,2200)}
+let AC;const ac=()=>{try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume()}catch(e){}return AC};
+const canVib='vibrate' in navigator;
+document.addEventListener('pointerdown',ac,{passive:true});/* unlock audio on first tap */
+function beep(ok){if(prefs.vib&&canVib)try{navigator.vibrate(ok?40:[200,100,200])}catch(e){}
+ if(!prefs.snd)return;try{const c=ac(),t=(f,s,d)=>{const o=c.createOscillator(),g=c.createGain();o.frequency.value=f;g.gain.value=.12;o.connect(g);g.connect(c.destination);o.start(c.currentTime+s);o.stop(c.currentTime+s+d)};ok?t(880,0,.08):(t(200,0,.18),t(140,.26,.24))}catch(e){}}
+function dl(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{a.remove();URL.revokeObjectURL(a.href)},3000)}
+const fmt=t=>new Date(t).toLocaleString([], {day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit',second:'2-digit'});
+
+/* ===== IndexedDB: 'meta' (file state, saved after every entry) + 'bufs' (original Excel bytes) ===== */
+let db,pending=0;
+const idb=()=>new Promise((res,rej)=>{if(db)return res(db);const q=indexedDB.open('khata-entry',1);
+ q.onupgradeneeded=()=>{q.result.createObjectStore('meta',{keyPath:'id'});q.result.createObjectStore('bufs')};
+ q.onsuccess=()=>res(db=q.result);q.onerror=()=>rej(q.error)});
+async function tx(store,mode,fn){try{const d=await idb();return await new Promise((res,rej)=>{const t=d.transaction(store,mode);const r=fn(t.objectStore(store));t.oncomplete=()=>res(r?r.result:null);t.onerror=t.onabort=()=>rej(t.error)})}catch(e){console.error(e);return undefined}}
+function setSaved(ok){const s=$('#saved');s.textContent=ok?'Saved ✓':'Save failed!';s.className=ok?'':'err'}
+async function save(f){pending++;$('#saved').textContent='Saving…';const r=await tx('meta','readwrite',s=>s.put(f));pending--;if(!pending)setSaved(r!==undefined)}
+const saveBuf=(id,b)=>tx('bufs','readwrite',s=>s.put(b,id));
+/* ===== state ===== */
+const S={files:[],cur:null,view:'entry'},BUF={},IDX={};
+const F=()=>S.files.find(f=>f.id===S.cur);
+const absRe=f=>new RegExp('^('+((f.set.absent??'')?(f.set.absent).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'|':'')+'a|ab|abs|absent|অনুপস্থিত)$','i');
+function reindex(f){const m=new Map();f.rows.forEach((r,i)=>{if(!m.has(r.k))m.set(r.k,i)});IDX[f.id]=m}
+function stats(f){let e=0,a=0,p=0;for(const r of f.rows){if(r.m==null)p++;else if(r.m==='A')a++;else e++}return{e,a,p,t:f.rows.length}}
+const status=r=>r.m==null?'p':r.m==='A'?'a':'d';
+
+/* ===== Excel parsing ===== */
+function sheetAoa(wb,name){const ws=wb.Sheets[name];const r0=ws['!ref']?XLSX.utils.decode_range(ws['!ref']).s.r:0;
+ return{aoa:XLSX.utils.sheet_to_json(ws,{header:1,raw:true,defval:null,blankrows:true}),r0}}
+function guessHeader(aoa){let best=0,sc=-1;aoa.slice(0,40).forEach((row,i)=>{const t=row.filter(c=>typeof c==='string'&&c.trim()).length;
+ const s=t+(row.some(c=>/roll/i.test(c))?50:0)+(row.some(c=>/mark/i.test(c))?20:0);if(t>=2&&s>sc){sc=s;best=i}});return best}
+function guessCols(h,old){const f=re=>h.findIndex(c=>re.test(String(c??'')));
+ return{roll:old?.roll??f(/roll|রোল/i),marks:old?.marks??f(/mark|নম্বর/i),name:old?.name??f(/^(?!.*post).*(name|নাম)/i)}}
+function buildRows(aoa,r0,hdr,map,f){const out=[],re=absRe(f);
+ for(let i=hdr+1;i<aoa.length;i++){const row=aoa[i]||[],k=row[map.roll];if(k==null||String(k).trim()==='')continue;
+  let m=map.marks>=0?row[map.marks]:null;if(m==null||String(m).trim()==='')m=null;else if(typeof m==='string'){const t=m.trim();m=re.test(t)?'A':isNaN(parseMarks(t))?null:parseMarks(t)}
+  out.push({r:i+r0+1,k:String(k).trim(),n:map.name>=0&&row[map.name]!=null?String(row[map.name]):'',m,o:m})}
+ return out}
+/* Modal helpers */
+function modal(html,wire){return new Promise(res=>{const b=$('#mbox');b.innerHTML=html;$('#modal').hidden=false;
+ const close=v=>{$('#modal').hidden=true;res(v)};b.querySelectorAll('[data-r]').forEach(x=>x.onclick=()=>close(x.dataset.r==='1'));if(wire)wire(b,close)})}
+const ask=(msg,ok='OK',no='Cancel',bad)=>modal(`<div>${msg}</div><div class="row"><button data-r="0">${no}</button><button data-r="1" class="${bad?'bad':'pri'}">${ok}</button></div>`);
+async function danger(msg){return await ask(msg,'Continue','Cancel',true)&&await ask('<b>Final check.</b> This cannot be undone easily.<br>'+msg,'Yes, do it','Go back',true)}
+/* Column picker: sheet, header row, Roll / Marks / Name */
+function pickColumns(wb,sheet,init){return new Promise(res=>{let sh=sheet,{aoa,r0}=sheetAoa(wb,sh),hdr=init?.hdr??guessHeader(aoa),map=init?.map;
+ const draw=()=>{const h=aoa[hdr]||[],n=Math.max(h.length,...aoa.slice(hdr+1,hdr+4).map(r=>r.length),1);map=guessCols(h,map);
+  const opts=(sel,opt)=>`<select data-c="${sel}">${opt?'<option value="-1">(none)</option>':''}${Array.from({length:n},(_,i)=>`<option value="${i}" ${map[sel]===i?'selected':''}>${colL(i)} — ${esc(h[i]??'')}</option>`).join('')}</select>`;
+  const smp=aoa.slice(hdr+1,hdr+4).map(r=>'<tr>'+Array.from({length:Math.min(n,8)},(_,i)=>`<td>${esc(r[i]??'')}</td>`).join('')+'</tr>').join('');
+  $('#mbox').innerHTML=`<h3 style="margin:0">Choose columns</h3>
+  <label>Sheet</label><select id="pS">${wb.SheetNames.map(s=>`<option ${s===sh?'selected':''}>${esc(s)}</option>`).join('')}</select>
+  <label>Header row number (auto-detected)</label><input id="pH" type="number" min="1" value="${hdr+r0+1}">
+  <label>Roll column</label>${opts('roll')}<label>Marks column</label>${opts('marks')}<label>Name column (optional)</label>${opts('name',1)}
+  <div class="sc mu" style="margin-top:8px"><table>${smp}</table></div>
+  <div class="row"><button data-x="0">Cancel</button><button data-x="1" class="pri">Use these</button></div>`;
+  $('#pS').onchange=e=>{sh=e.target.value;({aoa,r0}=sheetAoa(wb,sh));hdr=guessHeader(aoa);map=undefined;draw()};
+  $('#pH').onchange=e=>{hdr=Math.max(0,+e.target.value-r0-1);map=undefined;draw()};
+  $$('#mbox select[data-c]').forEach(s=>s.onchange=()=>map[s.dataset.c]=+s.value);
+  $$('#mbox [data-x]').forEach(b=>b.onclick=()=>{$('#modal').hidden=true;res(b.dataset.x==='1'?{sheet:sh,hdr,r0,aoa,map}:null)})};
+ $('#modal').hidden=false;draw()})}
+/* ===== files: upload, switch, delete ===== */
+async function addFile(file){try{const buf=await file.arrayBuffer();const wb=XLSX.read(buf,{type:'array'});
+ const saved=ls.get('maps',{})[file.name];const sheet=saved?.sheet&&wb.SheetNames.includes(saved.sheet)?saved.sheet:wb.SheetNames[0];
+ const p=await pickColumns(wb,sheet,saved);if(!p)return;
+ const f={id:uid(),name:file.name,sheet:p.sheet,hdr:p.hdr+p.r0+1,map:p.map,set:{max:100,absent:'',skipAbs:true},rows:[],pos:0,bundle:null,bundles:[],log:[],created:Date.now()};
+ f.rows=buildRows(p.aoa,p.r0,p.hdr,p.map,f);if(!f.rows.length){toast('No rows found. Check the roll column.');return}
+ const mk=ls.get('maps',{});mk[file.name]={sheet:p.sheet,hdr:p.hdr,map:p.map};ls.set('maps',mk);
+ BUF[f.id]=buf;await saveBuf(f.id,buf);S.files.push(f);reindex(f);await save(f);switchFile(f.id);toast(f.rows.length+' rolls loaded')}
+ catch(e){console.error(e);toast('Could not read this file')}}
+function switchFile(id){S.cur=id;ls.set('cur',id);gridBuilt=null;S.view='entry';render()}
+async function remap(f){const wb=XLSX.read(BUF[f.id],{type:'array'});const p=await pickColumns(wb,f.sheet,{hdr:f.hdr-1,map:f.map});if(!p)return;
+ if(!await ask('Re-read the file with new columns? Marks you entered here are kept (matched by roll).','Re-read','Cancel'))return;
+ const keep={};f.rows.forEach(r=>{if(r.m!==r.o)keep[r.k]=r.m});f.sheet=p.sheet;f.hdr=p.hdr+p.r0+1;f.map=p.map;f.rows=buildRows(p.aoa,p.r0,p.hdr,p.map,f);
+ f.rows.forEach(r=>{if(r.k in keep)r.m=keep[r.k]});f.pos=0;reindex(f);gridBuilt=null;await save(f);render()}
+
+/* ===== entry screen ===== */
+let pendAct=null,gridBuilt=null,gridF='all',G=[];
+function warn(msg,act,er){pendAct=act;const w=$('#warn');w.hidden=false;w.className='warn'+(er?' er':'');
+ w.innerHTML=esc(msg)+(act?`<div class="row"><button class="sm" id="wNo">Cancel</button><button class="sm pri" id="wOk">${esc(act.label)}</button></div>`:'');
+ if(act){$('#wOk').onclick=()=>{const a=pendAct;clearWarn();a.fn()};$('#wNo').onclick=()=>{clearWarn();$('#marks').focus()}}beep(false)}
+function clearWarn(){pendAct=null;$('#warn').hidden=true}
+function flash(c){const m=$('#marks');m.className=c;setTimeout(()=>{if(m.className===c)m.className=''},350)}
+function addLog(f,row,nw,kind){const e={id:uid(),t:Date.now(),roll:row.k,old:row.m,nw,kind:kind||'set',b:f.bundle?.no??null,add:false};
+ if(f.bundle&&nw!=null&&nw!=='A'&&!f.bundle.ent.includes(row.k)){f.bundle.ent.push(row.k);e.add=true}f.log.push(e);return e}
+function apply(row,v){const f=F();
+ if(row.m!==v)addLog(f,row,v,v==='A'?'absent':'set');else if(f.bundle&&v!=='A'&&!f.bundle.ent.includes(row.k))f.bundle.ent.push(row.k);
+ row.m=v;save(f);beep(true);flash('ok');updCell(f.pos);refreshTop();go(1,true)}
+function tryCommit(fc={}){const f=F();if(!f)return;const row=f.rows[f.pos],raw=bn($('#marks').value).trim();
+ if(!raw){if(row.m==null){addLog(f,row,'A','absent');row.m='A';updCell(f.pos);save(f);refreshTop()}return go(1)}
+ const v=parseMarks(raw);if(isNaN(v)){flash('er');return warn('"'+raw+'" is not a valid number.',null,true)}
+ if((v<0||v>f.set.max)&&!fc.rg){flash('er');return warn(`${v} is outside 0–${f.set.max}. Check the khata.`,{label:'Save anyway',fn:()=>tryCommit({...fc,rg:1})},true)}
+ if(row.m!=null&&row.m!=='A'&&row.m!==v&&!fc.ov)return warn(`Roll ${row.k} already has ${disp(row.m)}. Replace with ${v}?`,{label:'Overwrite',fn:()=>tryCommit({...fc,ov:1})});
+ apply(row,v)}
+/* move to next/prev roll; skips absent rolls when enabled */
+function go(d,quiet){const f=F();let i=f.pos+d;const sk=r=>d>0&&f.set.skipAbs&&r.m==='A';while(i>=0&&i<f.rows.length&&sk(f.rows[i]))i+=d;
+ if(i<0||i>=f.rows.length){if(!quiet||true)toast(d>0?'End of list':'Start of list');if(d>0&&quiet){$('#marks').value='';showRoll()}return}
+ setPos(i)}
+function setPos(i){const f=F();f.pos=i;clearWarn();$('#marks').value='';showRoll();setCur();save(f);$('#marks').focus()}
+function showRoll(){const f=F(),r=f.rows[f.pos];if(!r)return;$('#roll').textContent=r.k;$('#rname').textContent=r.n||'';
+ const o=$('#old'),mk=$('#marks');r.m==='A'?mk.setAttribute('data-abs','1'):mk.removeAttribute('data-abs');mk.placeholder=r.m==='A'?'ABSENT':'Marks';
+ o.innerHTML=r.m==null?'<span class="mu">Pending</span>':r.m==='A'?'<span class="badge">ABSENT</span> <span class="mu">type marks to replace</span>':`<span style="color:var(--ok)">Current: ${esc(disp(r.m))}</span>`;
+ const dup=IDX[f.id].get(r.k)!==f.pos;if(dup)o.innerHTML+=' <span class="neg">· duplicate roll</span>'}
+function jumpTo(k){const f=F();const i=IDX[f.id].get(String(k).trim());if(i==null)return false;setPos(i);$('#q').value='';$('#sug').innerHTML='';return true}
+function suggest(){const f=F(),q=bn($('#q').value).trim().toLowerCase();const s=$('#sug');s.innerHTML='';if(!q)return;const sc=r=>{const k=r.k.toLowerCase();return k===q?0:k.endsWith(q)?1:k.startsWith(q)?2:k.includes(q)?3:(r.n&&r.n.toLowerCase().includes(q))?4:9};
+ const out=[];for(let i=0;i<f.rows.length&&out.length<400;i++){const c=sc(f.rows[i]);if(c<9)out.push([c,i])}out.sort((a,b)=>a[0]-b[0]);
+ out.slice(0,6).forEach(([,i])=>{const r=f.rows[i],b=document.createElement('button');b.innerHTML=`<b>${esc(r.k)}</b> ${esc(r.n)} <span class="mu">${esc(disp(r.m))}</span>`;b.onclick=()=>setPos(i);s.appendChild(b)});
+ if(!out.length)s.innerHTML='<div class="mu">No match</div>'}
+function undoLast(){const f=F();for(let i=f.log.length-1;i>=0;i--){const e=f.log[i];if(e.kind==='undo'||e.undone||e.kind==='clear')continue;
+  const idx=IDX[f.id].get(e.roll),row=f.rows[idx];row.m=e.old;e.undone=true;if(e.add&&f.bundle)f.bundle.ent=f.bundle.ent.filter(k=>k!==e.roll);
+  f.log.push({id:uid(),t:Date.now(),roll:e.roll,old:e.nw,nw:e.old,kind:'undo',b:f.bundle?.no??null});save(f);updCell(idx);refreshTop();setPos(idx);toast(`Undone: roll ${e.roll} back to ${disp(e.old)}`);return}
+ toast('Nothing to undo')}
+/* roll grid: built once per file, then only class changes */
+function buildGrid(){const f=F(),g=$('#grid');g.innerHTML='';G=f.rows.map((r,i)=>{const b=document.createElement('button');b.dataset.i=i;b.textContent=r.k;g.appendChild(b);return b});gridBuilt=f.id;f.rows.forEach((_,i)=>updCell(i));setCur()}
+function updCell(i){const f=F(),r=f.rows[i],b=G[i];if(!b)return;const s=status(r);b.className=(s==='d'?'d':s==='a'?'a':'')+(gridF!=='all'&&gridF!==s?' hid':'')+(i===f.pos?' c':'')}
+let lastCur=-1;function setCur(){const f=F();if(lastCur>=0)updCell(lastCur);lastCur=f.pos;updCell(f.pos);const b=G[f.pos],g=$('#grid');if(b&&g.clientHeight)g.scrollTop=b.offsetTop-g.offsetTop-g.clientHeight/2}
+function renderGridChips(){$('#gf').innerHTML=[['all','All'],['p','Pending'],['d','Entered'],['a','Absent']].map(([k,l])=>`<button data-g="${k}" class="${gridF===k?'on':''}">${l}</button>`).join('')}
+function refreshTop(){const f=F();renderStrip();const s=stats(f);
+ $('#stats').innerHTML=`<div><b>${s.e}</b>Entered</div><div><b>${s.p}</b>Pending</div><div><b>${s.a}</b>Absent</div><div><b>${s.t}</b>Total</div>`}
+function renderEntry(){const f=F();if(gridBuilt!==f.id)buildGrid();renderGridChips();showRoll();refreshTop();
+ $('#q').setAttribute('inputmode',f.map.name>=0?'text':'decimal');applyKeypad();setCur()}
+function renderStrip(){const f=F(),b=f.bundle,el=$('#bstrip');if(!b){el.innerHTML=`<div class="row"><span class="grow mu">No bundle started</span><button class="sm pri" data-act="goBundle">Start bundle</button></div>`;return}
+ const ex=b.base+b.adj,n=b.ent.length,pc=ex>0?Math.min(100,n/ex*100):0;
+ el.innerHTML=`<div class="row"><b class="grow">Bundle ${esc(b.no||'')} · <span id="bcnt">${n} / ${ex}</span></b><button class="sm" data-act="adj" data-d="-1">−1</button><button class="sm" data-act="adj" data-d="1">+1</button></div>
+ <div class="bar ${n===ex?'full':n>ex?'over':''}"><i style="width:${pc}%"></i></div><div class="mu">Expected ${b.base}${b.adj?(b.adj>0?' +':' ')+b.adj:''} · tap −1 / +1 for missing or extra khatas</div>`}
+/* ===== bundles ===== */
+function startBundle(base,no){const f=F();f.bundle={no,base,adj:0,note:'',ent:[],t:Date.now()};save(f);render()}
+function bundleSummary(f){const b=f.bundle,ex=b.base+b.adj,n=b.ent.length,d=n-ex;return{b,ex,n,d}}
+async function finishBundle(){const f=F(),{b,ex,n,d}=bundleSummary(f);
+ const ok=await modal(`<h3 style="margin:0">Finish bundle ${esc(b.no||'')}</h3><div class="card"><table><tr><td>Entered</td><td><b>${n}</b></td></tr><tr><td>Expected</td><td><b>${ex}</b></td></tr>
+ <tr><td>Difference</td><td class="${d===0?'pos':'neg'}">${d>0?'+':''}${d} ${d===0?'✓ matches':d>0?'(more entered)':'(fewer entered)'}</td></tr></table></div>
+ <label>Note</label><textarea id="fn" rows="2">${esc(b.note)}</textarea><div class="row"><button data-r="0">Back</button><button data-r="1" class="pri">Save &amp; close bundle</button></div>`);
+ if(!ok)return;b.note=$('#fn')?.value??b.note;const rs=b.ent;
+ f.bundles.push({no:b.no,entered:n,expected:ex,diff:d,note:b.note,from:rs[0]||'',to:rs[rs.length-1]||'',start:b.t,end:Date.now()});f.bundle=null;await save(f);render();toast('Bundle saved')}
+async function reviewBundle(){const f=F(),b=f.bundle;const rows=b.ent.map(k=>f.rows[IDX[f.id].get(k)]);
+ await modal(`<h3 style="margin:0">Review · ${rows.length} entered</h3><div class="sc"><table><tr><th>#</th><th>Roll</th><th>Marks</th><th></th></tr>${rows.map((r,i)=>`<tr><td>${i+1}</td><td>${esc(r.k)}</td><td><b>${esc(disp(r.m))}</b></td><td><button class="sm" data-j="${esc(r.k)}">Edit</button></td></tr>`).join('')}</table></div><div class="row"><button data-r="0">Close</button></div>`,
+ (bx,close)=>bx.querySelectorAll('[data-j]').forEach(x=>x.onclick=()=>{close();S.view='entry';render();jumpTo(x.dataset.j)}))}
+function renderBundle(){const f=F(),el=$('#v-bundle'),b=f.bundle;let h='';
+ if(!b)h=`<div class="card"><h3 style="margin:0 0 6px">Start bundle</h3><label>Bundle number (optional)</label><input id="bNo" placeholder="e.g. 7">
+ <label>Khatas in bundle</label><div class="row chips" id="bq">${[20,25,30,33].map(n=>`<button data-n="${n}" class="${n===20?'on':''}">${n}</button>`).join('')}<input id="bCu" type="number" inputmode="numeric" placeholder="Custom" style="width:100px"></div>
+ <button class="pri" id="bGo" style="width:100%;margin-top:12px;min-height:56px">Start bundle</button></div>`;
+ else{const{ex,n,d}=bundleSummary(f);h=`<div class="card"><h3 style="margin:0">Bundle ${esc(b.no||'')}</h3><div style="font-size:40px;font-weight:800">${n} <span class="mu">/ ${ex}</span></div>
+ <div class="bar ${d===0?'full':d>0?'over':''}"><i style="width:${ex?Math.min(100,n/ex*100):0}%"></i></div>
+ <div class="row"><span class="grow mu">Adjust expected for missing / extra khatas</span><button data-act="adj" data-d="-1">−1</button><button data-act="adj" data-d="1">+1</button></div>
+ <label>Note</label><input id="bNote" value="${esc(b.note)}" placeholder="e.g. roll 170045 missing">
+ <div class="row"><button data-act="review">Review entries</button><button class="pri" data-act="finish">Finish bundle</button></div>
+ <button class="sm" data-act="resetB" style="margin-top:10px;color:var(--bad)">Reset bundle count…</button></div>`}
+ const s=stats(f);h+=`<div class="card"><b>Totals</b> · entered ${s.e} · absent ${s.a} · pending ${s.p} · bundles done ${f.bundles.length}</div>
+ <div class="card"><div class="row"><b class="grow">Bundle history</b><button class="sm" data-act="dlBundles">Download</button></div><div class="sc"><table><tr><th>No</th><th>Ent/Exp</th><th>Diff</th><th>Rolls</th><th>Note</th></tr>
+ ${f.bundles.slice().reverse().map(x=>`<tr><td>${esc(x.no)}</td><td>${x.entered}/${x.expected}</td><td class="${x.diff===0?'pos':'neg'}">${x.diff>0?'+':''}${x.diff}</td><td>${esc(x.from)}–${esc(x.to)}</td><td>${esc(x.note)}</td></tr>`).join('')||'<tr><td colspan=5 class="mu">None yet</td></tr>'}</table></div></div>`;
+ el.innerHTML=h;$('#bq')?.addEventListener('click',e=>{const n=e.target.dataset.n;if(n){$$('#bq button').forEach(x=>x.classList.toggle('on',x===e.target));$('#bCu').value=''}});
+ $('#bGo')&&($('#bGo').onclick=()=>{const c=+$('#bCu').value,q=+($('#bq .on')?.dataset.n||20);startBundle(c>0?c:q,$('#bNo').value.trim())});
+ $('#bNote')&&($('#bNote').oninput=e=>{f.bundle.note=e.target.value;save(f)})}
+/* ===== reports ===== */
+function ranges(a){const o=[];let s=null,p=null;for(const k of a){const n=+k;if(s!==null&&n===+p+1&&!isNaN(n)){p=k;continue}if(s!==null)o.push(s===p?s:s+'–'+p);s=p=k}if(s!==null)o.push(s===p?s:s+'–'+p);return o}
+function renderReport(){const f=F(),pend=f.rows.filter(r=>r.m==null).map(r=>r.k);const seen={},dups=[];f.rows.forEach(r=>{seen[r.k]=(seen[r.k]||0)+1});for(const k in seen)if(seen[k]>1)dups.push(k);
+ const cnt={};f.log.forEach(e=>{if(e.kind==='set'&&!e.undone)cnt[e.roll]=(cnt[e.roll]||0)+1});const twice=Object.keys(cnt).filter(k=>cnt[k]>1);
+ const oor=f.rows.filter(r=>typeof r.m==='number'&&(r.m>f.set.max||r.m<0)).map(r=>r.k+'='+r.m);
+ $('#v-report').innerHTML=`<div class="card"><b>Pending rolls (${pend.length})</b><div class="mu">${ranges(pend).join(', ')||'None 🎉'}</div></div>
+ <div class="card"><b>Rolls appearing twice in the sheet (${dups.length})</b><div class="mu">${dups.join(', ')||'None'}</div></div>
+ <div class="card"><b>Rolls entered / changed more than once (${twice.length})</b><div class="mu">${twice.join(', ')||'None'}</div></div>
+ <div class="card"><b>Marks outside 0–${f.set.max} (${oor.length})</b><div class="mu">${oor.join(', ')||'None'}</div></div>
+ <div class="card"><div class="row"><b class="grow">Entry log (last 100)</b><button class="sm" data-act="dlLog">Download</button></div><div class="sc"><table><tr><th>Time</th><th>Roll</th><th>Old</th><th>New</th></tr>
+ ${f.log.slice(-100).reverse().map(e=>`<tr style="${e.undone?'opacity:.5;text-decoration:line-through':''}"><td>${fmt(e.t)}</td><td>${esc(e.roll)}</td><td>${esc(disp(e.old))}</td><td>${esc(e.kind==='undo'?'↶ '+disp(e.nw):disp(e.nw))}</td></tr>`).join('')||'<tr><td colspan=4 class="mu">Empty</td></tr>'}</table></div></div>`}
+/* ===== settings ===== */
+const tg=(id,l,v)=>`<label class="tg" style="font-size:16px;color:var(--fg);margin:0">${l}<input type="checkbox" id="${id}" ${v?'checked':''}></label>`;
+function renderSettings(){const f=F();$('#v-settings').innerHTML=`<div class="card"><b>${esc(f.name)}</b> <span class="mu">· sheet ${esc(f.sheet)}</span>
+ <label>Maximum marks</label><input id="sMax" type="number" inputmode="decimal" value="${f.set.max}"><label>Absent text (empty = blank cell in Excel)</label><input id="sAb" value="${esc(f.set.absent??'')}" placeholder="(empty)">
+ ${tg('sSk','Skip absent rolls automatically',f.set.skipAbs)}
+ <div class="mu">Columns: Roll ${colL(f.map.roll)}, Marks ${colL(f.map.marks)}${f.map.name>=0?', Name '+colL(f.map.name):''} · header row ${f.hdr}</div>
+ <div class="row" style="margin-top:8px"><button data-act="remap">Change columns</button><button class="pri" data-act="dlXlsx">Download Excel</button></div>
+ <div class="row"><button data-act="clearMarks" style="color:var(--bad)">Clear all marks…</button><button data-act="delFile" style="color:var(--bad)">Delete file…</button></div></div>
+ <div class="card"><b>App</b>${tg('pKp','In-app keypad (no phone keyboard)',prefs.keypad)}${tg('pSnd','Sound on save / error',prefs.snd)}${canVib?tg('pVib','Vibrate on save / error',prefs.vib):'<div class="mu">Vibration is not supported on this device (e.g. iPhone).</div>'}<button class="sm" data-act="testFx">Test sound / vibration</button>${tg('pWake','Keep screen awake',prefs.wake)}
+ <label>Voice language</label><select id="pVl"><option value="en-US">English</option><option value="bn-BD">বাংলা</option></select></div>
+ <div class="card"><b>Backup</b><div class="mu">Everything is stored only in this browser. Keep a backup file.</div><div class="row" style="margin-top:8px"><button data-act="backup" class="pri">Export all data (JSON)</button><button data-act="restore">Import backup…</button></div></div>`;
+ $('#pVl').value=prefs.vlang;const on=(id,fn)=>{const e=$('#'+id);if(e)e.onchange=fn};
+ on('sMax',e=>{f.set.max=+e.target.value||100;save(f)});on('sAb',e=>{f.set.absent=e.target.value.trim();save(f)});on('sSk',e=>{f.set.skipAbs=e.target.checked;save(f)});
+ on('pVib',e=>{prefs.vib=e.target.checked;savePrefs()});on('pSnd',e=>{prefs.snd=e.target.checked;savePrefs()});on('pKp',e=>{prefs.keypad=e.target.checked;savePrefs();applyKeypad()});
+ on('pVl',e=>{prefs.vlang=e.target.value;savePrefs()});on('pWake',e=>{prefs.wake=e.target.checked;savePrefs();wake()})}
+/* ===== export ===== */
+async function patchXlsx(f){const zip=await JSZip.loadAsync(BUF[f.id]),P=new DOMParser(),X=new XMLSerializer(),RN='http://schemas.openxmlformats.org/officeDocument/2006/relationships';
+ const wbx=P.parseFromString(await zip.file('xl/workbook.xml').async('string'),'text/xml'),rel=P.parseFromString(await zip.file('xl/_rels/workbook.xml.rels').async('string'),'text/xml');
+ const sh=[...wbx.getElementsByTagName('sheet')].find(s=>s.getAttribute('name')===f.sheet);const rid=sh.getAttributeNS(RN,'id');
+ let t=[...rel.getElementsByTagName('Relationship')].find(r=>r.getAttribute('Id')===rid).getAttribute('Target');t=t.startsWith('/')?t.slice(1):'xl/'+t;
+ const doc=P.parseFromString(await zip.file(t).async('string'),'text/xml'),NS=doc.documentElement.namespaceURI,sd=doc.getElementsByTagName('sheetData')[0],rows=new Map();
+ [...sd.children].forEach(r=>rows.set(+r.getAttribute('r'),r));
+ const getRow=n=>{let el=rows.get(n);if(el)return el;el=doc.createElementNS(NS,'row');el.setAttribute('r',n);sd.insertBefore(el,[...sd.children].find(x=>+x.getAttribute('r')>n)||null);rows.set(n,el);return el};
+ const setCell=(rn,col,val)=>{const rowEl=getRow(rn),ref=colL(col)+rn;let c=[...rowEl.children].find(x=>x.getAttribute('r')===ref);
+  if(!c){c=doc.createElementNS(NS,'c');c.setAttribute('r',ref);rowEl.insertBefore(c,[...rowEl.children].find(x=>colN(x.getAttribute('r').replace(/\d/g,''))>col)||null)}
+  c.removeAttribute('t');while(c.firstChild)c.removeChild(c.firstChild);if(val==null||val==='')return;
+  if(typeof val==='number'){const v=doc.createElementNS(NS,'v');v.textContent=val;c.appendChild(v)}
+  else{c.setAttribute('t','inlineStr');const is=doc.createElementNS(NS,'is'),x=doc.createElementNS(NS,'t');x.textContent=val;is.appendChild(x);c.appendChild(is)}};
+ f.rows.forEach(r=>{if(r.m!==r.o)setCell(r.r,f.map.marks,r.m==='A'?(f.set.absent??''):r.m)});
+ const s=stats(f),last=Math.max(...rows.keys())+2;[['Total entered',s.e],['Total absent',s.a],['Total pending',s.p]].forEach(([l,v],i)=>{setCell(last+i,f.map.roll,l);setCell(last+i,f.map.marks,v)});
+ zip.file(t,X.serializeToString(doc));
+ let w=X.serializeToString(wbx);if(/<calcPr/.test(w)){if(!/fullCalcOnLoad/.test(w))w=w.replace(/<calcPr/,'<calcPr fullCalcOnLoad="1"')}zip.file('xl/workbook.xml',w);
+ return zip.generateAsync({type:'blob',mimeType:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'})}
+async function downloadXlsx(f){const base=f.name.replace(/\.[^.]+$/,'');try{
+ if(/\.xlsx$/i.test(f.name)){dl(await patchXlsx(f),base+'_entered.xlsx');toast('Downloaded');return}throw 0}catch(e){
+ try{const wb=XLSX.read(BUF[f.id],{type:'array',cellStyles:true}),ws=wb.Sheets[f.sheet];
+  f.rows.forEach(r=>{if(r.m!==r.o){const a=colL(f.map.marks)+r.r;ws[a]=(r.m==null||(r.m==='A'&&!f.set.absent))?{t:'z'}:typeof r.m==='number'?{t:'n',v:r.m}:{t:'s',v:f.set.absent}}});
+  const s=stats(f);let last=XLSX.utils.decode_range(ws['!ref']).e.r+2;[['Total entered',s.e],['Total absent',s.a],['Total pending',s.p]].forEach(([l,v],i)=>{ws[colL(f.map.roll)+(last+i+1)]={t:'s',v:l};ws[colL(f.map.marks)+(last+i+1)]={t:'n',v}});
+  ws['!ref']=ws['!ref'].replace(/\d+$/,last+3);XLSX.writeFile(wb,base+'_entered'+(/\.xls$/i.test(f.name)?'.xls':'.xlsx'));toast('Downloaded (basic formatting)')}catch(e2){console.error(e2);toast('Export failed')}}}
+function sheetFile(rows,name,file){const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(rows),name);XLSX.writeFile(wb,file)}
+/* ===== backup / restore ===== */
+const b64=b=>{let s='';const u=new Uint8Array(b);for(let i=0;i<u.length;i+=8192)s+=String.fromCharCode.apply(null,u.subarray(i,i+8192));return btoa(s)};
+const unb64=s=>{const t=atob(s),u=new Uint8Array(t.length);for(let i=0;i<t.length;i++)u[i]=t.charCodeAt(i);return u.buffer};
+function backup(){try{const o={v:1,t:Date.now(),files:S.files.map(f=>({meta:f,buf:b64(BUF[f.id])}))};dl(new Blob([JSON.stringify(o)],{type:'application/json'}),'khata-backup-'+new Date().toISOString().slice(0,10)+'.json');toast('Backup downloaded')}catch(e){toast('Backup failed')}}
+async function restore(file){try{const o=JSON.parse(await file.text());if(!o.files)throw 0;const clash=o.files.filter(x=>S.files.some(f=>f.id===x.meta.id));
+ if(clash.length&&!await danger(clash.length+' file(s) in this backup already exist here and will be replaced by the backup version.'))return;
+ for(const x of o.files){BUF[x.meta.id]=unb64(x.buf);await saveBuf(x.meta.id,BUF[x.meta.id]);await save(x.meta);const i=S.files.findIndex(f=>f.id===x.meta.id);i<0?S.files.push(x.meta):S.files[i]=x.meta;reindex(x.meta)}
+ gridBuilt=null;if(!S.cur)S.cur=S.files[0]?.id;render();toast('Restored '+o.files.length+' file(s)')}catch(e){console.error(e);toast('Not a valid backup file')}}
+/* ===== wake lock, theme, voice ===== */
+let wl;async function wake(){try{if(prefs.wake&&'wakeLock' in navigator&&document.visibilityState==='visible')wl=await navigator.wakeLock.request('screen');else if(wl){await wl.release();wl=null}}catch(e){}$('#bWake').style.opacity=prefs.wake?1:.45}
+const applyTheme=()=>{const r=document.documentElement;prefs.theme==='auto'?r.removeAttribute('data-theme'):r.setAttribute('data-theme',prefs.theme)};
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+/* ===== voice: Web Speech API, Bangla + English number words ===== */
+const inFrame=(()=>{try{return window.self!==window.top}catch(e){return true}})();
+const nb=x=>x.replace(/[ঁ়]/g,'').replace(/ঊ/g,'উ');
+const BNW='শূন্য এক দুই তিন চার পাঁচ ছয় সাত আট নয় দশ এগারো বারো তেরো চৌদ্দ পনেরো ষোলো সতেরো আঠারো উনিশ বিশ একুশ বাইশ তেইশ চব্বিশ পঁচিশ ছাব্বিশ সাতাশ আঠাশ ঊনত্রিশ ত্রিশ একত্রিশ বত্রিশ তেত্রিশ চৌত্রিশ পঁয়ত্রিশ ছত্রিশ সাঁইত্রিশ আটত্রিশ ঊনচল্লিশ চল্লিশ একচল্লিশ বিয়াল্লিশ তেতাল্লিশ চুয়াল্লিশ পঁয়তাল্লিশ ছেচল্লিশ সাতচল্লিশ আটচল্লিশ ঊনপঞ্চাশ পঞ্চাশ একান্ন বায়ান্ন তিপ্পান্ন চুয়ান্ন পঞ্চান্ন ছাপ্পান্ন সাতান্ন আটান্ন ঊনষাট ষাট একষট্টি বাষট্টি তেষট্টি চৌষট্টি পঁয়ষট্টি ছিষট্টি সাতষট্টি আটষট্টি ঊনসত্তর সত্তর একাত্তর বাহাত্তর তিয়াত্তর চুয়াত্তর পঁচাত্তর ছিয়াত্তর সাতাত্তর আটাত্তর ঊনআশি আশি একাশি বিরাশি তিরাশি চুরাশি পঁচাশি ছিয়াশি সাতাশি আটাশি ঊননব্বই নব্বই একানব্বই বিরানব্বই তিরানব্বই চুরানব্বই পঁচানব্বই ছিয়ানব্বই সাতানব্বই আটানব্বই নিরানব্বই'.split(' ');
+const NUMW={};BNW.forEach((w,i)=>NUMW[nb(w)]=i);
+Object.entries({এগার:11,বার:12,তের:13,পনের:15,ষোল:16,সতের:17,আঠার:18,ছ:6,একশ:100,একশো:100,একশত:100,zero:0,one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10,eleven:11,twelve:12,thirteen:13,fourteen:14,fifteen:15,sixteen:16,seventeen:17,eighteen:18,nineteen:19,twenty:20,thirty:30,forty:40,fifty:50,sixty:60,seventy:70,eighty:80,ninety:90}).forEach(([k,v])=>NUMW[nb(k)]=v);
+const HUND=new Set(['hundred','শ','শো','শত']);
+function wordsToNum(t){t=bn(t).toLowerCase().replace(/[-,।]/g,' ').replace(/\b(point|dot)\b|দশমিক/g,' . ');
+ const m=t.match(/\d+(\s*\.\s*\d+)?/);if(m)return parseFloat(m[0].replace(/\s/g,''));
+ let cur=0,fp='',dec=false,any=false;
+ for(const w0 of t.split(/\s+/).filter(Boolean)){const w=nb(w0);if(w==='.'){dec=true;continue}
+  let v=NUMW[w];if(v==null&&HUND.has(w))v='H';
+  if(v==null){const h=w.match(/^(.+?)(শো|শত|শ)$/);if(h&&NUMW[h[1]]>=1&&NUMW[h[1]]<=9)v=NUMW[h[1]]*100}
+  if(v==null)continue;any=true;if(dec){fp+=v;continue}
+  if(v==='H')cur=(cur||1)*100;else cur+=v}
+ return any?parseFloat(cur+(fp?'.'+fp:'')):null}
+const MIC_ERR={'not-allowed':'Microphone permission denied. Tap the lock icon in the address bar, set Microphone to Allow, then tap 🎤 again.','service-not-allowed':'Speech service is blocked. Use Chrome in a normal tab over HTTPS and turn on speech/voice typing in system settings.','no-speech':'No speech heard for about 8 seconds. Move closer to the mic and tap 🎤 again.','audio-capture':'No working microphone found or another app is using it. Close other apps and check the mic.','network':'Voice needs internet (Chrome sends audio to Google). Check your connection and try again.','language-not-supported':'This language is not supported here. Switch the voice language in Settings.'};
+let rec=null,recT=null,micOn=false,micStop=true;
+const say=t=>{const v=$('#vst');v.hidden=!t;v.textContent=t||''};
+function micUi(on){micOn=on;$('#bMic').textContent=on?'⏹':'🎤';$('#bMic').classList.toggle('rec',on)}
+function stopMic(){micStop=true;clearTimeout(recT);try{rec&&rec.stop()}catch(e){}micUi(false)}
+function micFail(code){stopMic();say('');warn(MIC_ERR[code]||('Voice error: '+code),null,true)}
+async function listen(){
+ if(micOn)return stopMic();
+ if(inFrame||!SR||!window.isSecureContext)return warn('Open this page directly in Chrome for voice (voice only works in a normal browser tab over HTTPS).',null,true);
+ clearWarn();
+ try{const st=await navigator.mediaDevices.getUserMedia({audio:true});st.getTracks().forEach(t=>t.stop())}catch(e){return micFail(e.name==='NotFoundError'?'audio-capture':'not-allowed')}
+ micStop=false;micUi(true);say('Listening… say the marks');let last=Date.now(),got=false,bad=false;
+ const arm=()=>{clearTimeout(recT);recT=setTimeout(()=>{if(micOn&&!got)micFail('no-speech')},8000)};arm();
+ const run=()=>{if(!micOn||micStop)return;rec=new SR();rec.lang=prefs.vlang;rec.continuous=false;rec.interimResults=true;rec.maxAlternatives=3;
+  rec.onresult=e=>{last=Date.now();arm();const r=e.results[e.results.length-1];let n=null;for(let j=0;j<r.length&&n==null;j++)n=wordsToNum(r[j].transcript);
+   say('Heard: '+r[0].transcript);if(n!=null){$('#marks').value=n;$('#marks').className=''}
+   if(r.isFinal){got=true;stopMic();say(n!=null?`Heard "${r[0].transcript}" → ${n}. Press Next to save.`:`Heard "${r[0].transcript}" but no number. Tap 🎤 to try again.`)}};
+  rec.onerror=e=>{if(e.error==='aborted'||e.error==='no-speech')return;bad=true;micFail(e.error)};
+  rec.onend=()=>{if(!micOn||micStop||got||bad)return;if(Date.now()-last<8000)setTimeout(run,200);else micFail('no-speech')};
+  try{rec.start()}catch(e){}};
+ run()}
+/* ===== render + events ===== */
+function render(){const f=F();$('#v-empty').hidden=!!f;
+ $$('main>section').forEach(s=>s.hidden=true);$('#nav').style.display=f?'flex':'none';
+ $('#tabs').innerHTML=S.files.map(x=>`<button data-f="${x.id}" class="${x.id===S.cur?'on':''}">${esc(x.name.replace(/\.[^.]+$/,''))}</button>`).join('')+'<button data-act="add">＋ Add file</button>';
+ if(!f){const e=$('#v-empty');e.hidden=false;e.innerHTML=`<div class="card" style="text-align:center;padding:28px 14px"><h2 style="margin-top:0">Upload an Excel file to begin</h2><p class="mu">Pick the Roll and Marks columns once. Your entries are saved on this device after every roll.</p><button class="pri" data-act="add" style="min-height:56px;width:100%">Choose Excel file (.xlsx / .xls)</button><div class="row" style="margin-top:10px"><button data-act="restore" class="grow">Import backup</button></div></div>`;return}
+ $$('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===S.view));$('#v-'+S.view).hidden=false;
+ ({entry:renderEntry,bundle:renderBundle,report:renderReport,settings:renderSettings})[S.view]();
+ if(S.view==='entry'&&matchMedia('(pointer:fine)').matches)$('#marks').focus()}
+const ACT={add:()=>$('#fi').click(),goBundle:()=>{S.view='bundle';render()},
+ adj:(el)=>{const f=F();f.bundle.adj+=+el.dataset.d;save(f);S.view==='bundle'?renderBundle():renderStrip()},
+ review:reviewBundle,finish:finishBundle,
+ resetB:async()=>{const f=F();if(await danger('Reset this bundle? The entered count restarts at 0 (marks already in the sheet are kept).')){f.bundle.ent=[];f.bundle.adj=0;await save(f);render()}},
+ dlBundles:()=>{const f=F();sheetFile([['Bundle','Entered','Expected','Difference','From roll','To roll','Note','Started','Finished'],...f.bundles.map(x=>[x.no,x.entered,x.expected,x.diff,x.from,x.to,x.note,fmt(x.start),fmt(x.end)])],'Bundles',f.name.replace(/\.[^.]+$/,'')+'_bundles.xlsx')},
+ dlLog:()=>{const f=F();sheetFile([['Time','Roll','Old','New','Type','Bundle','Undone'],...f.log.map(e=>[fmt(e.t),e.roll,disp(e.old),disp(e.nw),e.kind,e.b??'',e.undone?'yes':''])],'Log',f.name.replace(/\.[^.]+$/,'')+'_log.xlsx')},
+ remap:()=>remap(F()),dlXlsx:()=>downloadXlsx(F()),backup,restore:()=>$('#fr').click(),testFx:()=>{beep(true);setTimeout(()=>beep(false),700)},
+ clearMarks:async()=>{const f=F();if(await danger('Clear ALL marks in "'+f.name+'"? Old values stay in the entry log.')){f.rows.forEach(r=>{if(r.m!=null){f.log.push({id:uid(),t:Date.now(),roll:r.k,old:r.m,nw:null,kind:'clear',b:null});r.m=null}});if(f.bundle)f.bundle.ent=[];await save(f);render()}},
+ delFile:async()=>{const f=F();if(await danger('Delete "'+f.name+'" and all its marks, bundles and logs from this device? Download it first.')){S.files=S.files.filter(x=>x!==f);delete BUF[f.id];await tx('meta','readwrite',s=>s.delete(f.id));await tx('bufs','readwrite',s=>s.delete(f.id));S.cur=S.files[0]?.id||null;gridBuilt=null;render()}}};
+document.addEventListener('click',e=>{const t=e.target.closest('[data-act],[data-f],#grid button,[data-g],#nav button');if(!t)return;
+ if(t.dataset.act)return ACT[t.dataset.act](t);if(t.dataset.f)return switchFile(t.dataset.f);
+ if(t.dataset.g){gridF=t.dataset.g;renderGridChips();F().rows.forEach((_,i)=>updCell(i));return}
+ if(t.dataset.v){S.view=t.dataset.v;return render()}if(t.dataset.i!=null)setPos(+t.dataset.i)});
+$('#bNext').onclick=()=>tryCommit();$('#bPrev').onclick=()=>go(-1);$('#bUndo').onclick=undoLast;
+$('#marks').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();tryCommit()}});$('#marks').addEventListener('input',()=>{$('#marks').className='';if(!$('#warn').hidden)clearWarn()});
+$('#q').addEventListener('input',suggest);$('#q').addEventListener('keydown',e=>{if(e.key==='Enter'){const q=bn($('#q').value);if(!jumpTo(q)){const b=$('#sug button');b?b.click():toast('Roll not found');$('#q').value='';$('#sug').innerHTML=''}}});
+$('#fi').onchange=async e=>{for(const f of e.target.files)await addFile(f);e.target.value=''};$('#fr').onchange=e=>{if(e.target.files[0])restore(e.target.files[0]);e.target.value=''};
+$('#bTheme').onclick=()=>{prefs.theme={auto:'dark',dark:'light',light:'auto'}[prefs.theme];savePrefs();applyTheme();toast('Theme: '+prefs.theme)};
+$('#bWake').onclick=()=>{prefs.wake=!prefs.wake;savePrefs();wake()};
+if(SR||inFrame){$('#bMic').hidden=false;$('#bMic').onclick=listen}
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')wake()});
+/* warn before leaving if a save is in flight or marks are typed but not saved */
+window.addEventListener('beforeunload',e=>{if(pending>0||$('#marks').value.trim()){e.preventDefault();e.returnValue=''}});
+/* ===== keypad, hardened inputs, fullscreen, keyboard-aware layout ===== */
+function applyKeypad(){document.body.classList.toggle('kp',!!prefs.keypad);$('#marks').setAttribute('inputmode',prefs.keypad?'none':'decimal')}
+$('#kp').innerHTML=['1','2','3','4','5','6','7','8','9','.','0','⌫'].map(k=>`<button data-k="${k}">${k}</button>`).join('')+'<button data-k="prev">◀ Prev</button><button data-k="next" class="pri">Next ▶</button>';
+$('#kp').addEventListener('click',e=>{const k=e.target.closest('[data-k]')?.dataset.k;if(!k)return;const m=$('#marks');
+ if(k==='next')return tryCommit();if(k==='prev')return go(-1);
+ if(!$('#warn').hidden)clearWarn();m.className='';
+ if(k==='⌫')m.value=m.value.slice(0,-1);else if(k==='.'){if(!m.value.includes('.'))m.value+=m.value?'.':'0.'}else m.value+=k});
+let hc=0;const HA={autocomplete:'off',autocorrect:'off',autocapitalize:'off',spellcheck:'false','data-lpignore':'true','data-form-type':'other',enterkeyhint:'next'};
+function harden(){document.querySelectorAll('input,textarea').forEach(el=>{if(el.type==='checkbox'||el.type==='file'||el.dataset.h)return;el.dataset.h=1;for(const k in HA)el.setAttribute(k,HA[k]);el.setAttribute('name','f'+(++hc)+'x')})}
+new MutationObserver(harden).observe(document.body,{childList:true,subtree:true});harden();
+const FS=document.documentElement,fsReq=FS.requestFullscreen||FS.webkitRequestFullscreen,standalone=matchMedia('(display-mode: standalone)').matches||navigator.standalone;
+if(fsReq){$('#bFs').hidden=false;$('#bFs').onclick=()=>{try{(document.fullscreenElement||document.webkitFullscreenElement)?(document.exitFullscreen||document.webkitExitFullscreen).call(document):fsReq.call(FS)}catch(e){}}}
+else if(!standalone&&!ls.get('hintX',false)){const h=$('#hint');h.hidden=false;h.innerHTML='For full screen: tap Share → <b>Add to Home Screen</b>, then open from the home screen.<div class="row"><button class="sm" id="hintX">Got it</button></div>';$('#hintX').onclick=()=>{h.hidden=true;ls.set('hintX',true)}}
+if(window.visualViewport){const vv=visualViewport;vv.addEventListener('resize',()=>{const kb=innerHeight-vv.height>120;document.body.classList.toggle('kb',kb);
+ if(kb){const a=document.activeElement;if(a&&(a.id==='marks'||a.id==='q'))setTimeout(()=>(a.id==='q'?a:$('#mrow')).scrollIntoView({block:'center',behavior:'smooth'}),60)}})}
+applyKeypad();
+/* ===== init ===== */
+(async()=>{applyTheme();wake();try{navigator.storage?.persist?.()}catch(e){}
+ const all=await tx('meta','readonly',s=>s.getAll());if(all===undefined)toast('Storage unavailable: data will not be kept!');
+ for(const f of all||[]){BUF[f.id]=await tx('bufs','readonly',s=>s.get(f.id));S.files.push(f);reindex(f)}
+ S.files.sort((a,b)=>a.created-b.created);const c=ls.get('cur',null);S.cur=S.files.some(f=>f.id===c)?c:S.files[0]?.id||null;render()})();
+</script>
+</body>
+</html>
